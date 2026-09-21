@@ -1,0 +1,12 @@
+# per-player state
+state.json
+overlay_pos.json
+quests.md
+notes.backup.txt
+
+# build output
+build/
+dist/
+*.spec
+__pycache__/
+*.zip
