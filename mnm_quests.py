@@ -85,8 +85,23 @@ NOISE_RE = re.compile(
 )
 
 ZONE_NAMES = {
-    "nightharbore": "Night Harbor",
+    "nightharbore": "Night Harbor East",
+    "nightharborw": "Night Harbor West",
+    "shadeddunes": "Shaded Dunes",
+    "sungreetstrand": "Sungreet Strand",
+    "saltbreezepark": "Saltbreeze Park",
+    "faelindral": "Faelindral",
+    "fallenpass": "Fallen Pass",
 }
+
+# A short task sentence that points at something said just before it ("head back down",
+# "take this to him") gets the previous sentence prepended for context.
+DANGLING_RE = re.compile(r"\b(down|up|back|there|here|it|him|her|them|that|those|the same)\b", re.I)
+# A task sentence that announces a list ("collect the following...") gets the next
+# sentences / lines appended.
+CONTINUES_RE = re.compile(r"(\.\.\.|:)\s*$|\b(the following|as follows|these items|this list)\b", re.I)
+CONTINUATION_WINDOW = timedelta(minutes=3)
+MAX_CONTINUATION_LINES = 3
 
 
 def pretty_zone(raw: str) -> str:
@@ -105,9 +120,10 @@ class Task:
     char: str
     npc: str
     when: datetime
-    text: str
+    text: str  # the task sentence, with neighbouring context folded in where it helps
     status: str = "open"  # open | likely-done | done | hidden
     zone: str = ""
+    context: str = ""  # the surrounding NPC lines, for click-to-expand in the overlay
 
 
 @dataclass
@@ -190,7 +206,7 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
             continue
         name = f.name
         entries: list[tuple[datetime, str]] = []
-        for raw in f.read_text("utf-8", errors="replace").splitlines():
+        for raw in f.read_text("utf-8-sig", errors="replace").splitlines():
             m = LINE_RE.match(raw)
             if not m:
                 continue
@@ -200,19 +216,46 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
         entries.sort()
         npc = Npc(char, name, entries[-1][0], zone=zone_at(timeline, entries[-1][0]))
         last_done: datetime | None = None
+        # (when, sentences) for every "says" line, in order, so tasks can borrow context.
+        says: list[tuple[datetime, list[str]]] = []
         for when, line in entries:
             body = line[len(name):].strip()
             if DONE_RE.search(body):
                 last_done = when
                 npc.turn_ins.append((when, TAG_RE.sub("", body)))
-            if not body.startswith("says "):
-                continue
-            speech = body[5:]
-            for s in split_sentences(speech):
-                if len(s) < MIN_LEN or NOISE_RE.search(s) or DONE_RE.search(s) or not TASK_RE.search(s):
+            if body.startswith("says "):
+                says.append((when, split_sentences(body[5:])))
+
+        def is_task(s: str) -> bool:
+            return len(s) >= MIN_LEN and not NOISE_RE.search(s) and not DONE_RE.search(s) and bool(TASK_RE.search(s))
+
+        for i, (when, sentences) in enumerate(says):
+            for j, s in enumerate(sentences):
+                if not is_task(s):
                     continue
+                text = s
+                # Context before: "Take this tunic and head back down." -> add the sentence before it.
+                if len(s) < 90 and DANGLING_RE.search(s):
+                    prev = sentences[j - 1] if j > 0 else (
+                        says[i - 1][1][-1] if i > 0 and when - says[i - 1][0] <= CONTINUATION_WINDOW
+                        and says[i - 1][1] else "")
+                    if prev and not is_task(prev) and not prev.endswith("?"):
+                        text = prev + " " + s
+                # Context after: "collect the following..." -> add what follows, across lines if needed.
+                if CONTINUES_RE.search(s):
+                    tail: list[str] = [x for x in sentences[j + 1:] if not is_task(x)]
+                    k, added = i + 1, 0
+                    while (not tail or CONTINUES_RE.search(tail[-1])) and k < len(says) \
+                            and added < MAX_CONTINUATION_LINES and says[k][0] - when <= CONTINUATION_WINDOW:
+                        tail += [x for x in says[k][1] if not is_task(x)]
+                        k, added = k + 1, added + 1
+                    if tail:
+                        text = text + " " + " ".join(tail)
+                # Full surrounding lines for the overlay's click-to-expand.
+                around = [" ".join(says[k][1]) for k in range(max(0, i - 1), min(len(says), i + 2))
+                          if abs(says[k][0] - when) <= CONTINUATION_WINDOW]
                 tid = hashlib.sha1(f"{char}|{name}|{s}".encode()).hexdigest()[:6]
-                npc.tasks.append(Task(tid, char, name, when, s, zone=npc.zone))
+                npc.tasks.append(Task(tid, char, name, when, text, zone=npc.zone, context="\n".join(around)))
         for t in npc.tasks:
             if t.id in state["hidden"]:
                 t.status = "hidden"

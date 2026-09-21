@@ -139,6 +139,7 @@ class App:
         self.show_help = False
         self.expanded: dict[str, bool] = {}
         self.show_archive: dict[str, bool] = {}
+        self.show_ctx: set[str] = set()  # task ids whose surrounding dialogue is expanded
         self.last_active: str | None = None
         self.last_snapshot: tuple | None = None
         self.q: "queue.Queue[tuple[str, str | None]]" = queue.Queue()
@@ -381,11 +382,25 @@ class App:
                        selectcolor="#2a2e3a",
                        command=lambda tid=t.id, v=var: self._mark("done" if v.get() else "undo", tid)).pack(
             side="left", anchor="n")
-        tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
-                 wraplength=WRAP, justify="left", anchor="w").pack(side="left", fill="x", expand=True)
+        lbl = tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
+                       wraplength=WRAP, justify="left", anchor="w", cursor="hand2" if t.context else "")
+        lbl.pack(side="left", fill="x", expand=True)
         tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
                   activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
             side="right", anchor="n")
+        if t.context:
+            # Click the text to see what the NPC said around it (answers "go down where?").
+            lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
+            if t.id in self.show_ctx:
+                tk.Label(self.body, text=t.context, bg="#1c1f27", fg=DIM, font=self.small, wraplength=WRAP,
+                         justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 6), pady=(0, 4))
+
+    def _toggle_ctx(self, tid: str) -> None:
+        if tid in self.show_ctx:
+            self.show_ctx.discard(tid)
+        else:
+            self.show_ctx.add(tid)
+        self._render(self._data, self._active)
 
     def _archive_row(self, t: mq.Task) -> None:
         tag = {"done": "done", "hidden": "hidden", "likely-done": "auto"}.get(t.status, t.status)
