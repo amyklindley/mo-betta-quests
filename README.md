@@ -51,8 +51,12 @@ Three ways, pick whichever is handy:
    your own notes; the line is applied and removed. Needs the watcher or the
    overlay running.
 2. **The overlay.** `overlay.bat` opens a small always-on-top window with a
-   checkbox per task and a hide button. Every character is a section; click a
-   character's header to fold or unfold it. The character you are playing
+   checkbox per task and a hide button. Ticking a box marks the task done but
+   keeps it listed, struck through, so a mis-click is one more click to undo.
+   A task leaves the main list only when you hide it or when every task from
+   that NPC is done. Each character has a "done & hidden" fold at the bottom
+   with an undo button per task, so nothing is lost for good. Every character
+   is a section; click a character's header to fold or unfold it. The character you are playing
    unfolds automatically when the game switches. Drag the window by its title
    bar, `–` collapses the whole thing, `×` closes it. It also keeps notes.txt current, so you do not need the
    watcher while it is open. Works when the game is windowed or borderless; in

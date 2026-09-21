@@ -31,6 +31,7 @@ class Overlay:
         self.force_char = force_char
         self.collapsed = False
         self.expanded: dict[str, bool] = {}  # per-character section state
+        self.show_archive: dict[str, bool] = {}  # per-character "done & hidden" fold
         self.last_active: str | None = None
         self.last_snapshot: tuple | None = None
         self.root = tk.Tk()
@@ -44,6 +45,7 @@ class Overlay:
         self.bold = tkfont.Font(family="Segoe UI", size=10, weight="bold")
         self.normal = tkfont.Font(family="Segoe UI", size=9)
         self.small = tkfont.Font(family="Segoe UI", size=8)
+        self.struck = tkfont.Font(family="Segoe UI", size=9, overstrike=True)
 
         header = tk.Frame(self.root, bg="#0e1015", cursor="fleur")
         header.pack(fill="x")
@@ -129,27 +131,61 @@ class Overlay:
             if not is_open:
                 continue
             shown = False
+            archive: list[mq.Task] = []  # done/hidden/likely-done tasks not in the main list
             for npc in npcs:
-                tasks = mq.open_tasks(npc)
-                if not tasks:
+                open_ = mq.open_tasks(npc)
+                if not open_:
+                    # Quest complete (or nothing asked): the group leaves the main list.
+                    archive += [t for t in npc.tasks if t.status != "open"]
                     continue
                 shown = True
+                # Done tasks stay visible, ticked, while the NPC still has open tasks.
+                listed = [t for t in npc.tasks if t.status in ("open", "done")]
+                archive += [t for t in npc.tasks if t.status in ("hidden", "likely-done")]
                 zone = f"  [{npc.zone}]" if npc.zone else ""
                 tk.Label(self.body, text=npc.name + zone, bg=BG, fg=ACCENT, font=self.bold, anchor="w",
                          padx=6).pack(fill="x", pady=(4, 0))
-                for t in tasks:
-                    row = tk.Frame(self.body, bg=BG)
-                    row.pack(fill="x", padx=(6, 0))
-                    var = tk.BooleanVar(value=False)
-                    tk.Checkbutton(row, variable=var, bg=BG, activebackground=BG, selectcolor="#22252e",
-                                   command=lambda tid=t.id: self._mark("done", tid)).pack(side="left", anchor="n")
-                    tk.Label(row, text=t.text, bg=BG, fg=FG, font=self.normal, wraplength=WRAP, justify="left",
-                             anchor="w").pack(side="left", fill="x", expand=True)
-                    tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
-                              activebackground="#22252e", activeforeground=FG, relief="flat",
-                              font=self.small).pack(side="right", anchor="n")
+                for t in listed:
+                    self._task_row(t)
             if not shown:
                 tk.Label(self.body, text="nothing open", bg=BG, fg=DIM, font=self.normal, padx=12).pack(anchor="w")
+            if archive:
+                arch_open = self.show_archive.get(char, False)
+                lbl = tk.Label(self.body, text=f"{'▾' if arch_open else '▸'} done & hidden ({len(archive)})",
+                               bg=BG, fg=DIM, font=self.small, anchor="w", padx=12, cursor="hand2")
+                lbl.pack(fill="x", pady=(4, 0))
+                lbl.bind("<Button-1>", lambda e, c=char: self._toggle_archive(c))
+                if arch_open:
+                    for t in sorted(archive, key=lambda t: t.when, reverse=True):
+                        self._archive_row(t)
+
+    def _task_row(self, t: mq.Task) -> None:
+        done = t.status == "done"
+        row = tk.Frame(self.body, bg=BG)
+        row.pack(fill="x", padx=(6, 0))
+        var = tk.BooleanVar(value=done)
+        tk.Checkbutton(row, variable=var, bg=BG, activebackground=BG, selectcolor="#22252e",
+                       command=lambda tid=t.id, v=var: self._mark("done" if v.get() else "undo", tid)).pack(
+            side="left", anchor="n")
+        tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
+                 wraplength=WRAP, justify="left", anchor="w").pack(side="left", fill="x", expand=True)
+        tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
+                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
+            side="right", anchor="n")
+
+    def _archive_row(self, t: mq.Task) -> None:
+        tag = {"done": "done", "hidden": "hidden", "likely-done": "auto"}.get(t.status, t.status)
+        row = tk.Frame(self.body, bg=BG)
+        row.pack(fill="x", padx=(18, 0))
+        tk.Label(row, text=f"[{tag}] {t.npc}: {t.text}", bg=BG, fg=DIM, font=self.small, wraplength=WRAP - 20,
+                 justify="left", anchor="w").pack(side="left", fill="x", expand=True)
+        tk.Button(row, text="undo", command=lambda tid=t.id: self._mark("undo", tid), bg=BG, fg=ACCENT,
+                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
+            side="right", anchor="n")
+
+    def _toggle_archive(self, char: str) -> None:
+        self.show_archive[char] = not self.show_archive.get(char, False)
+        self._render(self._data, self._active)
 
     def _toggle_char(self, char: str) -> None:
         self.expanded[char] = not self.expanded.get(char, False)

@@ -123,9 +123,10 @@ class Npc:
 # ---------------------------------------------------------------- state
 
 def load_state() -> dict:
+    state = {"done": {}, "hidden": [], "reopened": []}
     if STATE_FILE.exists():
-        return json.loads(STATE_FILE.read_text("utf-8"))
-    return {"done": {}, "hidden": []}
+        state.update(json.loads(STATE_FILE.read_text("utf-8")))
+    return state
 
 
 def save_state(state: dict) -> None:
@@ -217,7 +218,7 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 t.status = "hidden"
             elif t.id in state["done"]:
                 t.status = "done"
-            elif last_done and t.when < last_done:
+            elif last_done and t.when < last_done and t.id not in state["reopened"]:
                 t.status = "likely-done"
         if npc.tasks or npc.turn_ins:
             npcs.append(npc)
@@ -394,15 +395,20 @@ def apply_note_corrections(state: dict) -> bool:
 
 
 def _apply(state: dict, verb: str, tid: str) -> None:
+    state.setdefault("reopened", [])
     if verb == "done":
         state["done"][tid] = datetime.now().strftime("%Y-%m-%d")
         state["hidden"] = [h for h in state["hidden"] if h != tid]
+        state["reopened"] = [r for r in state["reopened"] if r != tid]
     elif verb == "undo":
+        # Clears a done/hidden mark, and also overrides an automatic "likely done".
         state["done"].pop(tid, None)
         state["hidden"] = [h for h in state["hidden"] if h != tid]
+        state["reopened"] = sorted(set(state["reopened"]) | {tid})
     elif verb == "hide":
         state["hidden"] = sorted(set(state["hidden"]) | {tid})
         state["done"].pop(tid, None)
+        state["reopened"] = [r for r in state["reopened"] if r != tid]
     print(f"{datetime.now():%H:%M:%S} {verb} {tid}")
 
 
