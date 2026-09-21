@@ -20,7 +20,7 @@ from pathlib import Path
 
 import mnm_quests as mq
 
-POS_FILE = Path(__file__).resolve().parent / "overlay_pos.json"
+POS_FILE = mq.HERE / "overlay_pos.json"  # next to the exe when packaged, next to the script otherwise
 BG, FG, DIM, ACCENT = "#14161c", "#e6e1d6", "#8d8a80", "#d9a441"
 WRAP = 400
 POLL_MS = 5000
