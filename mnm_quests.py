@@ -288,7 +288,7 @@ def open_tasks(npc: Npc) -> list[Task]:
     return [t for t in npc.tasks if t.status == "open"]
 
 
-def render_notes_block(data: dict[str, list[Npc]], active: str | None) -> str:
+def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text: bool = False) -> str:
     """Compact plain text for the in-game /note window.
 
     The active character's quests are listed in full; other characters are
@@ -298,7 +298,10 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None) -> str:
         BLOCK_START,
         f"updated {datetime.now():%b %d %H:%M}",
         "finished a task? change its leading '-' to 'x' (or 'h' to hide it), then close this window",
+        "type  /mnmquest help  on its own line above for all commands",
     ]
+    if help_text:
+        out += ["", HELP_TEXT]
     ordered = sorted(data, key=lambda c: (c != active, c))
     others: list[str] = []
     for char in ordered:
@@ -357,25 +360,49 @@ def write_notes(block: str, pre: str | None = None, post: str | None = None) -> 
 # Corrections typed inside the game's /note window.
 #   In your own notes area:   done 8c38db   /   hide 8c38db   /   undo 8c38db
 #   Inside the block:         x (8c38db) ...   or   - (8c38db) ... x
+#   App commands:             /mnmquest open   /   /mnmquest help   (see HELP_TEXT)
 CMD_RE = re.compile(r"^\s*(done|hide|undo|x)\s+\(?([0-9a-f]{6})\)?\s*$", re.I)
+APP_CMD_RE = re.compile(r"^\s*/mnmquests?\s+(\w+)(?:\s+(\S+))?\s*$", re.I)
+TASK_VERBS = ("done", "undo", "x")
+
+HELP_TEXT = """/mnmquest commands - type one on its own line up here, then close this window:
+  open | hide | toggle     show / hide the overlay (hotkey Ctrl+Shift+Q)
+  reload                   rebuild this list right now
+  done <id>  undo <id>     finish / reopen a task (ids are the codes below)
+  hide <id>                never show that line again
+  char <name> | auto       pin the overlay to one character / follow the game
+  startup on | off         start with Windows
+  quit                     close the app
+  help                     show this text (goes away on the next command)"""
 MARK_RE = re.compile(r"^\s*([xX+]|-\s*[xX]|\[[xX]\])\s*\(([0-9a-f]{6})\)|^\s*-\s*\(([0-9a-f]{6})\).*\s(x|X|done)\s*$")
 HIDE_MARK_RE = re.compile(r"^\s*[hH]\s*\(([0-9a-f]{6})\)")
 
 
-def apply_note_corrections(state: dict) -> bool:
-    """Read corrections the player typed in /note. Updates state, strips the command
-    lines from the player's notes, and returns True if anything changed."""
+def apply_note_corrections(state: dict) -> list[tuple[str, str | None]]:
+    """Read commands the player typed in /note. Task corrections are applied to
+    state and stripped from the player's notes. App commands (/mnmquest ...) are
+    stripped too and returned as (verb, arg) for the overlay app to act on."""
     pre, block, post = read_notes()
     changed = False
+    app_cmds: list[tuple[str, str | None]] = []
     kept: list[str] = []
     for line in pre.split("\n"):
         m = CMD_RE.match(line)
-        if not m:
-            kept.append(line)
+        if m:
+            verb, tid = m.group(1).lower(), m.group(2)
+            _apply(state, "done" if verb == "x" else verb, tid)
+            changed = True
             continue
-        verb, tid = m.group(1).lower(), m.group(2)
-        _apply(state, "done" if verb == "x" else verb, tid)
-        changed = True
+        m = APP_CMD_RE.match(line)
+        if m:
+            verb, arg = m.group(1).lower(), m.group(2)
+            if verb in TASK_VERBS or (verb == "hide" and arg and re.fullmatch(r"[0-9a-f]{6}", arg)):
+                _apply(state, "done" if verb == "x" else verb, arg or "")
+            else:
+                app_cmds.append((verb, arg))
+            changed = True
+            continue
+        kept.append(line)
     for line in block.split("\n"):
         m = MARK_RE.match(line)
         if m:
@@ -391,7 +418,7 @@ def apply_note_corrections(state: dict) -> bool:
         new_pre = "\n".join(kept)
         if new_pre != pre:
             write_notes(block or "", pre=new_pre, post=post)
-    return changed
+    return app_cmds
 
 
 def _apply(state: dict, verb: str, tid: str) -> None:

@@ -1,9 +1,14 @@
 @echo off
-rem Builds dist\MnMQuests.exe (overlay + note sync, no Python needed to run it).
+rem Builds dist\MnMQuests.exe and dist\MnMQuests-win64.zip (exe + install scripts + README).
 cd /d "%~dp0"
-python -m pip install --quiet pyinstaller
-python -m PyInstaller --onefile --noconsole --name MnMQuests --clean overlay.py
+python -m pip install --quiet -r requirements.txt
+python make_icon.py
+python -m PyInstaller --onefile --noconsole --icon icon.ico --name MnMQuests --clean overlay.py
 if errorlevel 1 exit /b 1
-copy /y README.md dist\README.md >nul
+copy /y README.md dist\ >nul
+copy /y install.bat dist\ >nul
+copy /y uninstall.bat dist\ >nul
+del /q dist\MnMQuests-win64.zip 2>nul
+powershell -NoProfile -Command "Compress-Archive -Path dist\MnMQuests.exe, dist\install.bat, dist\uninstall.bat, dist\README.md -DestinationPath dist\MnMQuests-win64.zip"
 echo.
-echo Built dist\MnMQuests.exe
+echo Built dist\MnMQuests.exe and dist\MnMQuests-win64.zip

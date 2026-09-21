@@ -1,96 +1,99 @@
-# mnm-quests
+# MnM Quests
 
-Quest reminders for Monsters & Memories, built from the game's own journal files.
-
-## Install (no Python needed)
-
-1. Download `MnMQuests.exe` from the latest release and put it in any folder
-   (it writes two small files next to itself: `state.json`, `overlay_pos.json`).
-2. Double-click it. Windows SmartScreen will warn the first time because the
-   file is not code-signed: click **More info**, then **Run anyway**.
-3. Play. The overlay lists your open quests, and the game's `/note` window
-   gets a quest block appended below your own notes.
-
-It reads only the game's journal files under
-`%USERPROFILE%\AppData\LocalLow\Niche Worlds Cult\Monsters and Memories`
-and writes only `notes.txt` in that folder plus its own two files. No network,
-no game memory access, nothing injected into the game.
-
-To run from source instead: install Python 3.12+, then `python overlay.py`.
-To rebuild the exe: `build.bat`.
+Quest reminders for Monsters & Memories, built from the game's own journal
+files. No addons, no memory reading, nothing injected into the game.
 
 The game writes every NPC line to
-`%USERPROFILE%\AppData\LocalLow\Niche Worlds Cult\Monsters and Memories\beta1\<Character>\journal\<NPC>`
+`%USERPROFILE%\AppData\LocalLow\Niche Worlds Cult\Monsters and Memories\<server>\<Character>\journal\<NPC>`
 and keeps the `/note` window in `...\Monsters and Memories\notes.txt`.
-This script reads the journals, keeps the sentences where an NPC told you to do
-something, and appends a quest block to `notes.txt` so it shows up in `/note`
-in-game. Anything you typed above the block is left alone.
+MnM Quests reads the journals, keeps the sentences where an NPC told you to do
+something, shows them in a small always-on-top overlay, and appends the same
+list to `notes.txt` so it shows up in `/note` in-game. Anything you typed in
+`/note` yourself is left alone.
 
-There is only one `notes.txt`, shared by every character (that is how the game
-does it). The block therefore shows the character you are currently playing in
-full and collapses the others to a count. "Currently playing" means the
-character whose folder the game wrote to most recently. Override it with
-`python mnm_quests.py write Denvan`.
+## Install
 
-## How the game treats notes.txt (tested 2026-09-21)
+1. Unzip `MnMQuests-win64.zip` anywhere and run `install.bat`. It copies the
+   app to `%LOCALAPPDATA%\MnMQuests`, adds a Start Menu shortcut, asks whether
+   to start with Windows, and launches it.
+2. Windows SmartScreen will warn the first time because the exe is not
+   code-signed: click **More info**, then **Run anyway**.
+3. Look for the gold check icon in the system tray. Play; the overlay fills in
+   as you talk to NPCs.
 
-- The game reads `notes.txt` from disk when you open `/note`, so an update shows
-  up without relaunching.
-- When you close `/note` the game writes its in-memory copy back, which throws
-  away any update made while the window was open. Your typed text is never
-  lost; the watcher just re-appends the block a few seconds later, and you see
-  the fresh one next time you open `/note`.
+`uninstall.bat` (in the install folder) removes everything, and asks whether
+to keep your done/hidden marks.
+
+Prefer no installer? Just run `MnMQuests.exe` from anywhere; it keeps its
+files next to itself.
+
+## Controlling it
+
+| How | What |
+|---|---|
+| **Ctrl+Shift+Q** | show / hide the overlay (works while the game has focus, if the game is windowed or borderless) |
+| **Tray icon** | left-click toggles the overlay; right-click for reload, start with Windows, log, quit |
+| **`/note` in-game** | type `/mnmquest <command>` on its own line above the quest block, then close the window |
+| **Run the exe again** | `MnMQuests.exe open`, `hide`, `toggle`, `reload`, `quit` (no argument = open) |
+
+`/mnmquest` commands:
+
+```
+open | hide | toggle     show / hide the overlay
+reload                   rebuild the list right now
+done <id>  undo <id>     finish / reopen a task (ids are the 6-character codes)
+hide <id>                never show that line again
+char <name> | auto       pin the overlay to one character / follow the game
+startup on | off         start with Windows
+help                     print this list into the note block
+quit                     close the app
+```
+
+The command line is removed from your notes once it has been applied. Nothing
+happens until you close the `/note` window, because that is when the game
+saves the file.
 
 ## Marking quests done
 
-Three ways, pick whichever is handy:
-
-1. **Inside the game's `/note` window.** Change the leading `-` of a task line
-   to `x` (or `h` to hide a false positive), then close the window. You can also
-   type `done 8c38db`, `hide 8c38db` or `undo 8c38db` on its own line anywhere in
-   your own notes; the line is applied and removed. Needs the watcher or the
-   overlay running.
-2. **The overlay.** `overlay.bat` opens a small always-on-top window with a
-   checkbox per task and a hide button. Ticking a box marks the task done but
-   keeps it listed, struck through, so a mis-click is one more click to undo.
-   A task leaves the main list only when you hide it or when every task from
-   that NPC is done. Each character has a "done & hidden" fold at the bottom
-   with an undo button per task, so nothing is lost for good. Every character
-   is a section; click a character's header to fold or unfold it. The character you are playing
-   unfolds automatically when the game switches. Drag the window by its title
-   bar, `–` collapses the whole thing, `×` closes it. It also keeps notes.txt current, so you do not need the
-   watcher while it is open. Works when the game is windowed or borderless; in
-   exclusive fullscreen you will only see it after alt-tab.
-3. **Command line / Claude.** `python mnm_quests.py done 8c38db`, or just tell
-   Claude who you turned it in to.
-
-## Use
-
-```bat
-overlay.bat             on-screen checklist + keeps notes.txt current
-update-notes.bat        rebuild notes.txt + quests.md once
-watch-notes.bat         keep rebuilding while you play, no window (checks every 20 s)
-python mnm_quests.py list            open quests, all characters
-python mnm_quests.py list Moirin     one character
-python mnm_quests.py all             include done / likely-done / hidden
-python mnm_quests.py done 485bbd     mark a task finished
-python mnm_quests.py undo 485bbd     reopen it
-python mnm_quests.py hide f63960     it was never a quest, stop showing it
-```
-
-Task ids are the 6-character codes shown next to each line.
+- **Overlay:** tick the box. The task stays listed, struck through, so a
+  mis-click is one more click to undo. It leaves the main list only when you
+  hit **hide** or when every task from that NPC is done. Each character has a
+  "done & hidden" fold at the bottom with an **undo** per task.
+- **In `/note`:** change the leading `-` of a task line to `x` (or `h` to hide
+  it), then close the window. Or `/mnmquest done <id>`.
 
 ## How status is decided
 
-- `[ ]` open: the NPC said it and nothing newer suggests it is finished.
-- `[~]` likely done: the same NPC later said a thank-you / well-done line.
-- `[x]` done: you marked it with `done`. Stored in `state.json`.
-- `[-]` hidden: you marked it with `hide`.
+- open: the NPC said it and nothing newer suggests it is finished.
+- likely done (shown under "done & hidden" as *auto*): the same NPC later said a
+  thank-you / reward line. Undo it if the tool guessed wrong.
+- done / hidden: your marks, stored in `state.json`.
 
-Turn-ins to a different NPC are not detected automatically; use `done`.
+Turn-ins to a different NPC than the one who asked are not detected; tick the
+box or use `done <id>`.
 
-## Files
+## Notes for the curious
 
-- `mnm_quests.py`: the tool. Regexes near the top decide what counts as a task.
-- `state.json`: your done / hidden marks.
-- `quests.md`: full markdown dump, handy for Claude to read.
+- Only one `notes.txt` exists, shared by all characters. The block shows the
+  character you are playing in full (the one whose folder the game wrote to
+  most recently) and the others as counts.
+- The game reads `notes.txt` when you open `/note` and writes its own copy
+  back when you close it. The app re-appends the block a few seconds later if
+  the game overwrote it. Your text is never lost.
+- Files the app writes: `notes.txt` in the game folder; `state.json`,
+  `overlay_pos.json`, `quests.md`, `mnmquests.log` next to the exe.
+- Exclusive-fullscreen games cover always-on-top windows. If you never see the
+  overlay while playing, switch the game to borderless/windowed, or rely on the
+  `/note` block.
+
+## Building from source
+
+```
+python -m pip install -r requirements.txt
+build.bat
+```
+
+Produces `dist\MnMQuests.exe` and `dist\MnMQuests-win64.zip`. To run from
+source instead: `python overlay.py`. `mnm_quests.py` is the parser and also a
+CLI (`list`, `all`, `write`, `watch`, `done`, `undo`, `hide`); the regexes near
+its top decide what counts as a task.
