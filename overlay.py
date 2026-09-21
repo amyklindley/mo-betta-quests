@@ -164,7 +164,8 @@ class Overlay:
         row = tk.Frame(self.body, bg=BG)
         row.pack(fill="x", padx=(6, 0))
         var = tk.BooleanVar(value=done)
-        tk.Checkbutton(row, variable=var, bg=BG, activebackground=BG, selectcolor="#22252e",
+        tk.Checkbutton(row, variable=var, bg=BG, fg=ACCENT, activebackground=BG, activeforeground=ACCENT,
+                       selectcolor="#2a2e3a",
                        command=lambda tid=t.id, v=var: self._mark("done" if v.get() else "undo", tid)).pack(
             side="left", anchor="n")
         tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
