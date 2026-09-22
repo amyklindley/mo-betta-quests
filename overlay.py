@@ -19,8 +19,10 @@ from __future__ import annotations
 import ctypes
 import ctypes.wintypes
 import json
+import os
 import queue
 import sys
+import tempfile
 import threading
 import tkinter as tk
 import traceback
@@ -39,7 +41,9 @@ except ImportError:  # running from source without the tray libs: overlay still 
 
 APP_NAME = "MnMQuests"
 POS_FILE = mq.HERE / "overlay_pos.json"  # next to the exe when packaged, next to the script otherwise
-CMD_FILE = mq.HERE / "command.txt"  # a second launch drops its command here for the running instance
+# A second launch drops its command here for the running instance. Shared per user, not per
+# copy of the exe, so a click on any copy reaches whichever copy is running.
+CMD_FILE = Path(os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()) / "MnMQuests.command"
 LOG_FILE = mq.HERE / "mnmquests.log"
 MUTEX_NAME = "Local\\MnMQuests-single-instance"
 BG, FG, DIM, ACCENT = "#14161c", "#e6e1d6", "#8d8a80", "#d9a441"
@@ -72,7 +76,11 @@ def already_running() -> bool:
 
 
 def send_to_running(cmd: str) -> None:
-    CMD_FILE.write_text(cmd + "\n", "utf-8")
+    try:
+        CMD_FILE.write_text(cmd + "\n", "utf-8")
+        log(f"already running; sent '{cmd}' to the running copy")
+    except OSError as e:
+        log(f"already running but could not hand over '{cmd}': {e}")
 
 
 # ---------------------------------------------------------------- start with Windows
@@ -239,7 +247,6 @@ class App:
             self.refresh()
         elif verb == "log":
             try:
-                import os
                 os.startfile(LOG_FILE)
             except OSError:
                 pass
