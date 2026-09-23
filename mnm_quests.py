@@ -827,11 +827,92 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
         if npc.tasks or npc.turn_ins or npc.unmatched or npc.given:
             npcs.append(npc)
     npcs.sort(key=lambda n: n.last_seen, reverse=True)
-    resolve_quests(npcs, char_dir)
+    resolve_quests(npcs, char_dir, state)
     return npcs
 
 
-def resolve_quests(npcs: list[Npc], char_dir: Path) -> None:
+@dataclass
+class Card:
+    """One quest as the overlay shows it: what it is, what to do now, what it wants."""
+    key: str  # wiki quest title, or "npc:<name>" when the wiki does not know the NPC
+    title: str
+    subtitle: str  # "lvl 1 · Night Harbor"
+    now: str  # the wiki's next step, else the newest open instruction from the NPC
+    say: str | None
+    url: str
+    by_name: bool
+    items: list[tuple[Item, str | None, int]]  # (item, task id or "wiki:<title>", 1-based index) for manual 'got'
+    tasks: list[Task]  # every task from every NPC in the group, newest first
+    npcs: list[Npc]
+    rewards: list[str]
+    given: list[str]
+    last_seen: datetime
+
+    @property
+    def open_tasks(self) -> list[Task]:
+        return [t for t in self.tasks if t.status == "open"]
+
+    @property
+    def open(self) -> bool:
+        return bool(self.open_tasks) or (not self.tasks and bool(self.now))
+
+
+def short(text: str, limit: int = 170) -> str:
+    """First sentence or two of an instruction, for the one-line 'now' on a card."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    for sep in (". ", "! ", "? "):
+        i = cut.rfind(sep)
+        if i > 60:
+            return cut[: i + 1]
+    return cut.rsplit(" ", 1)[0] + "..."
+
+
+def build_cards(npcs: list[Npc]) -> list[Card]:
+    """Group NPCs by wiki quest (NPCs the wiki does not know stand alone), newest conversation first."""
+    groups: dict[str, list[Npc]] = {}
+    order: list[str] = []
+    for npc in sorted(npcs, key=lambda n: n.last_seen, reverse=True):
+        key = npc.quest["title"] if npc.quest else f"npc:{npc.name}"
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(npc)
+    cards: list[Card] = []
+    for key in order:
+        group = groups[key]
+        lead = next((n for n in group if n.quest and not n.quest.get("summary_only")), group[0])
+        qd = lead.quest if lead.quest and not lead.quest.get("summary_only") else None
+        tasks = sorted((t for n in group for t in n.tasks), key=lambda t: t.when, reverse=True)
+        open_tasks = [t for t in tasks if t.status == "open"]
+        if qd:
+            title = qd["title"]
+            subtitle = " · ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"] or lead.zone) if x)
+        else:
+            title, subtitle = group[0].name, group[0].zone
+        now = qd["next_step"] if qd and qd["next_step"] else (short(open_tasks[0].text) if open_tasks else "")
+        items: list[tuple[Item, str | None, int]] = []
+        seen: set[str] = set()
+        if qd:
+            for i, it in enumerate(lead.quest_items, 1):
+                items.append((it, f"wiki:{title}", i))
+                seen.add(it.name.lower())
+        for t in open_tasks:
+            for i, it in enumerate(t.items, 1):
+                if it.name.lower() not in seen:
+                    items.append((it, t.id, i))
+                    seen.add(it.name.lower())
+        cards.append(Card(
+            key=key, title=title, subtitle=subtitle, now=now, say=qd["say"] if qd else None,
+            url=qd["url"] if qd else "", by_name=bool(qd and qd.get("by_name")), items=items, tasks=tasks,
+            npcs=group, rewards=qd["rewards"] if qd else [], given=[g for n in group for _, g in n.given],
+            last_seen=max(n.last_seen for n in group),
+        ))
+    return cards
+
+
+def resolve_quests(npcs: list[Npc], char_dir: Path, state: dict | None = None) -> None:
     """Several NPCs can belong to one quest. Progress is wherever the most recent conversation
     reached, so the full block goes under that NPC and the others get a one-line 'part of'."""
     by_title: dict[str, list[Npc]] = {}
@@ -855,6 +936,9 @@ def resolve_quests(npcs: list[Npc], char_dir: Path) -> None:
                 if nouns:
                     have, _ = match_loot(nouns, False, loot, set(nouns))
                     lead.quest_items.append(Item(it["name"], it["qty"], have))
+            for n in (state or {}).get("got", {}).get(f"wiki:{title}", []):
+                if 1 <= n <= len(lead.quest_items):
+                    lead.quest_items[n - 1].manual = True
         for npc in group:
             if npc is not lead:
                 npc.quest = {"title": title, "url": lead.quest["url"], "summary_only": True, "lead": lead.name,
@@ -968,29 +1052,19 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
             others.append(f"{char} {n_open}")
             continue
         out += ["", f"== {char} ({n_open} open) =="]
-        for npc in npcs:
-            tasks = open_tasks(npc)
-            if not tasks:
+        for card in build_cards(npcs):
+            if not card.open:
                 continue
-            zone = f" [{npc.zone}]" if npc.zone else ""
-            out.append(f"* {npc.name}{zone}")
-            if npc.given:
-                out.append("  gave you: " + ", ".join(item for _, item in npc.given[-3:]))
-            if npc.quest and npc.quest.get("summary_only"):
-                out.append(f"  part of: {npc.quest['title']} (see {npc.quest['lead']})")
-            elif npc.quest:
-                qd = npc.quest
-                out.append(f"  quest: {qd['title']}")
-                if qd["next_step"]:
-                    out.append(f"  next: {qd['next_step']}")
-                    for it in npc.quest_items:
-                        out.append(f"      {'x' if it.done else '.'} {it.name}  {it.counter}")
-                if qd["say"]:
-                    out.append(f"  say: \"{qd['say']}\"")
-            for t in tasks:
-                out.append(f"  - ({t.id}) {t.text}")
-                for n, it in enumerate(t.items, 1):
-                    out.append(f"      {'x' if it.done else '.'} {n}. {it.name}  {it.counter}")
+            sub = f" [{card.subtitle}]" if card.subtitle else ""
+            out.append(f"* {card.title}{sub}")
+            if card.now:
+                out.append(f"  now: {card.now}")
+            for it, _tid, _i in card.items:
+                out.append(f"      {'x' if it.done else '.'} {it.name}  {it.counter}")
+            if card.say:
+                out.append(f"  say: \"{card.say}\"")
+            for t in card.open_tasks:
+                out.append(f"  - ({t.id}) {short(t.text, 140)}")
     if others:
         out += ["", "other chars: " + ", ".join(others)]
     out.append(BLOCK_END)

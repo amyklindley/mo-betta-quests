@@ -48,6 +48,7 @@ CMD_FILE = Path(os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()) / "MoBe
 LOG_FILE = mq.HERE / "MoBettaQuests.log"
 MUTEX_NAME = "Local\\MoBettaQuests-single-instance"
 BG, FG, DIM, ACCENT = "#14161c", "#e6e1d6", "#8d8a80", "#d9a441"
+CARD = "#1a1d25"
 WRAP = 400
 TICK_MS = 1000  # command file / queue poll
 SCAN_TICKS = 5  # journal scan every N ticks
@@ -149,6 +150,9 @@ class App:
         self.expanded: dict[str, bool] = {}
         self.show_archive: dict[str, bool] = {}
         self.show_ctx: set[str] = set()  # task ids whose surrounding dialogue is expanded
+        self.open_cards: set[str] = set()  # quest cards showing their details
+        self.view_char: str | None = None  # character tab chosen by hand (None = follow the game)
+        self._cards: dict[str, list[mq.Card]] = {}
         self.last_active: str | None = None
         self.last_snapshot: tuple | None = None
         self.q: "queue.Queue[tuple[str, str | None]]" = queue.Queue()
@@ -237,11 +241,12 @@ class App:
             self.collapsed = True
             self.toggle_collapse()
         elif verb == "char" and arg:
-            self.force_char = arg
-            self.refresh()
+            match = [c for c in self._data if c.lower() == arg.lower()]
+            self.view_char = match[0] if match else None
+            self._render(self._data, self._active)
         elif verb == "auto":
-            self.force_char = None
-            self.refresh()
+            self.view_char = None
+            self._render(self._data, self._active)
         elif verb == "startup":
             on = (not startup_enabled()) if arg in (None, "toggle") else arg.lower() in ("on", "1", "yes", "true")
             try:
@@ -336,26 +341,25 @@ class App:
 
     # ---------------------------------------------------------------- ui
 
+    # ---------------------------------------------------------------- what is drawn
+
     def _signature(self, data: dict[str, list[mq.Npc]], active: str | None) -> tuple:
         """Everything that affects what is drawn. Same signature = no rebuild, no flicker."""
+        view = self.view_char or active
+        cards = self._cards.get(view, []) if view else []
         return (
-            active, self.collapsed, tuple(sorted(self.expanded.items())), tuple(sorted(self.show_archive.items())),
+            view, active, self.collapsed, tuple(sorted(self.open_cards)), self.show_archive.get(view or "", False),
             tuple(sorted(self.show_ctx)),
-            tuple(
-                (c, tuple(
-                    (n.name, n.zone, tuple(i for _, i in n.given),
-                     (n.quest or {}).get("title"), (n.quest or {}).get("next_step"), (n.quest or {}).get("say"),
-                     tuple((i.name, i.counter, i.done) for i in n.quest_items),
-                     tuple((t.id, t.status, t.text, tuple((i.name, i.counter, i.done) for i in t.items)) for t in n.tasks))
-                    for n in npcs))
-                for c, npcs in data.items()),
+            tuple((c, sum(len(mq.open_tasks(n)) for n in npcs)) for c, npcs in data.items()),
+            tuple((k.key, k.title, k.subtitle, k.now, k.say, tuple((i.name, i.counter, i.done) for i, _, _ in k.items),
+                   tuple((t.id, t.status, t.text) for t in k.tasks), tuple(k.given), tuple(k.rewards)) for k in cards),
         )
 
     def _render(self, data: dict[str, list[mq.Npc]], active: str | None) -> None:
         if active is not None and active != self.last_active:
-            for c in data:
-                self.expanded[c] = c == active
             self.last_active = active
+            self.view_char = None  # follow the game when it switches character
+        self._cards = {c: mq.build_cards(npcs) for c, npcs in data.items()}
         sig = self._signature(data, active)
         if sig == self._last_sig:
             return
@@ -363,16 +367,18 @@ class App:
         scroll_pos = self.canvas.yview()[0]
         for w in self.body.winfo_children():
             w.destroy()
-        if not active:
+        view = self.view_char if self.view_char in data else active
+        if not view or view not in data:
             tk.Label(self.body, text="no characters found - play a bit first", bg=BG, fg=DIM,
                      font=self.normal).pack()
             self._fit(scroll_pos)
             return
-        total = sum(len(mq.open_tasks(n)) for npcs in data.values() for n in npcs)
-        self.title.config(text=f"Mo Betta Quests  ·  {total} open")
+        n_quests = sum(1 for k in self._cards[view] if k.open)
+        self.title.config(text=f"Mo Betta Quests  ·  {view}  ·  {n_quests} quest{'s' if n_quests != 1 else ''}")
         if self.collapsed:
             return
-        self._build_body(data, active)
+        self._char_tabs(data, active, view)
+        self._build_cards(view)
         self._fit(scroll_pos)
 
     def _fit(self, scroll_pos: float = 0.0) -> None:
@@ -391,123 +397,162 @@ class App:
         if self.scroll.winfo_ismapped():
             self.canvas.yview_scroll(int(-e.delta / 120), "units")
 
-    def _build_body(self, data: dict[str, list[mq.Npc]], active: str) -> None:
-        for char in sorted(data, key=lambda c: (c != active, c)):
-            npcs = data[char]
-            n_open = sum(len(mq.open_tasks(n)) for n in npcs)
-            is_open = self.expanded.get(char, False)
-            arrow = "▾" if is_open else "▸"
-            you = "  (playing)" if char == active else ""
-            hdr = tk.Label(self.body, text=f"{arrow} {char}  ·  {n_open} open{you}", bg="#1c1f27",
-                           fg=FG if is_open else DIM, font=self.bold, anchor="w", padx=6, pady=3, cursor="hand2")
-            hdr.pack(fill="x", pady=(6, 0))
-            hdr.bind("<Button-1>", lambda e, c=char: self._toggle_char(c))
-            if not is_open:
-                continue
-            shown = False
-            archive: list[mq.Task] = []
-            for npc in npcs:
-                open_ = mq.open_tasks(npc)
-                if not open_:
-                    archive += [t for t in npc.tasks if t.status != "open"]
-                    continue
-                shown = True
-                listed = [t for t in npc.tasks if t.status in ("open", "done")]
-                archive += [t for t in npc.tasks if t.status in ("hidden", "likely-done")]
-                zone = f"  [{npc.zone}]" if npc.zone else ""
-                tk.Label(self.body, text=npc.name + zone, bg=BG, fg=ACCENT, font=self.bold, anchor="w",
-                         padx=6).pack(fill="x", pady=(4, 0))
-                if npc.given:
-                    tk.Label(self.body, text="gave you: " + ", ".join(item for _, item in npc.given[-3:]),
-                             bg=BG, fg=DIM, font=self.small, anchor="w", padx=12, wraplength=WRAP).pack(fill="x")
-                if npc.quest:
-                    self._quest_block(npc)
-                for t in listed:
-                    self._task_row(t)
-            if not shown:
-                tk.Label(self.body, text="nothing open", bg=BG, fg=DIM, font=self.normal, padx=12).pack(anchor="w")
-            if archive:
-                arch_open = self.show_archive.get(char, False)
-                lbl = tk.Label(self.body, text=f"{'▾' if arch_open else '▸'} done & hidden ({len(archive)})",
-                               bg=BG, fg=DIM, font=self.small, anchor="w", padx=12, cursor="hand2")
-                lbl.pack(fill="x", pady=(4, 0))
-                lbl.bind("<Button-1>", lambda e, c=char: self._toggle_archive(c))
-                if arch_open:
-                    for t in sorted(archive, key=lambda t: t.when, reverse=True):
-                        self._archive_row(t)
+    # ---------------------------------------------------------------- character tabs
 
-    def _quest_block(self, npc: mq.Npc) -> None:
-        """What the wiki knows: quest name (click opens the page), next step, what to say, rewards."""
-        qd = npc.quest
-        if qd.get("summary_only"):
-            lbl = tk.Label(self.body, text=f"part of: {qd['title']}  (progress under {qd['lead']})", bg=BG, fg=DIM,
-                           font=self.small, anchor="w", padx=12, cursor="hand2", wraplength=WRAP)
-            lbl.pack(fill="x")
-            lbl.bind("<Button-1>", lambda e, u=qd["url"]: webbrowser.open(u))
+    def _char_tabs(self, data: dict[str, list[mq.Npc]], active: str | None, view: str) -> None:
+        chars = sorted(data, key=lambda c: (c != active, c))
+        if len(chars) <= 1:
             return
-        box = tk.Frame(self.body, bg="#1a1d25")
-        box.pack(fill="x", padx=(12, 6), pady=(2, 4))
-        meta = "  ·  ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"]) if x)
-        label = "wiki (by name): " if qd.get("by_name") else "wiki: "
-        title = tk.Label(box, text=label + qd["title"] + (f"   ({meta})" if meta else ""), bg="#1a1d25", fg=ACCENT,
-                         font=self.small, anchor="w", padx=6, cursor="hand2", wraplength=WRAP)
-        title.pack(fill="x", pady=(3, 0))
-        title.bind("<Button-1>", lambda e, u=qd["url"]: webbrowser.open(u))
-        if qd["next_step"]:
-            tk.Label(box, text="next: " + qd["next_step"], bg="#1a1d25", fg=FG, font=self.small, anchor="w",
-                     padx=6, wraplength=WRAP, justify="left").pack(fill="x")
-            for it in npc.quest_items:
-                row = tk.Frame(box, bg="#1a1d25")
-                row.pack(fill="x", padx=(18, 6))
-                tk.Label(row, text="✔" if it.done else "○", bg="#1a1d25", fg=ACCENT if it.done else DIM,
-                         font=self.small, width=2).pack(side="left")
-                tk.Label(row, text=it.name, bg="#1a1d25", fg=DIM if it.done else FG, font=self.small,
-                         anchor="w").pack(side="left", fill="x", expand=True)
-                tk.Label(row, text=it.counter, bg="#1a1d25", fg=ACCENT if it.done else FG,
-                         font=self.small).pack(side="right")
-        else:
-            tk.Label(box, text="all wiki steps reached", bg="#1a1d25", fg=DIM, font=self.small, anchor="w",
-                     padx=6).pack(fill="x")
-        if qd["say"]:
-            tk.Label(box, text=f'say: "{qd["say"]}"', bg="#1a1d25", fg="#9fd3a8", font=self.small, anchor="w",
-                     padx=6, wraplength=WRAP, justify="left").pack(fill="x")
-        if qd["rewards"]:
-            tk.Label(box, text="reward: " + ", ".join(qd["rewards"]), bg="#1a1d25", fg=DIM, font=self.small,
-                     anchor="w", padx=6, wraplength=WRAP, justify="left").pack(fill="x", pady=(0, 3))
+        bar = tk.Frame(self.body, bg=BG)
+        bar.pack(fill="x", pady=(0, 6))
+        row = None
+        for i, c in enumerate(chars):
+            if i % 4 == 0:
+                row = tk.Frame(bar, bg=BG)
+                row.pack(fill="x", pady=(0, 3))
+            n_open = sum(1 for k in self._cards[c] if k.open)
+            is_view = c == view
+            text = f"{'● ' if c == active else ''}{c}  {n_open}"
+            chip = tk.Label(row, text=text, bg="#2a2e3a" if is_view else "#1c1f27", fg=ACCENT if is_view else DIM,
+                            font=self.small, padx=8, pady=3, cursor="hand2")
+            chip.pack(side="left", padx=(0, 4))
+            chip.bind("<Button-1>", lambda e, ch=c: self._view(ch))
 
-    def _task_row(self, t: mq.Task) -> None:
+    def _view(self, char: str) -> None:
+        self.view_char = None if char == self.last_active else char
+        self._render(self._data, self._active)
+
+    # ---------------------------------------------------------------- quest cards
+
+    def _build_cards(self, view: str) -> None:
+        cards = self._cards[view]
+        shown = [k for k in cards if k.open]
+        if not shown:
+            tk.Label(self.body, text="nothing open", bg=BG, fg=DIM, font=self.normal, padx=6).pack(anchor="w")
+        for k in shown:
+            self._card(k)
+        archive = [t for k in cards for t in k.tasks if t.status != "open"]
+        if archive:
+            arch_open = self.show_archive.get(view, False)
+            lbl = tk.Label(self.body, text=f"{'▾' if arch_open else '▸'} done & hidden ({len(archive)})",
+                           bg=BG, fg=DIM, font=self.small, anchor="w", padx=6, cursor="hand2")
+            lbl.pack(fill="x", pady=(4, 0))
+            lbl.bind("<Button-1>", lambda e, v=view: self._toggle_archive(v))
+            if arch_open:
+                for t in sorted(archive, key=lambda t: t.when, reverse=True):
+                    self._archive_row(t)
+
+    def _card(self, k: mq.Card) -> None:
+        f = tk.Frame(self.body, bg=CARD, highlightbackground="#2a2e3a", highlightthickness=1)
+        f.pack(fill="x", pady=(0, 6))
+        head = tk.Frame(f, bg=CARD)
+        head.pack(fill="x")
+        is_open = k.key in self.open_cards
+        title = tk.Label(head, text=f"{'▾' if is_open else '▸'} {k.title}", bg=CARD, fg=ACCENT, font=self.bold,
+                         anchor="w", padx=8, pady=4, cursor="hand2", wraplength=WRAP - 110, justify="left")
+        title.pack(side="left", fill="x", expand=True)
+        title.bind("<Button-1>", lambda e, key=k.key: self._toggle_card(key))
+        for text, verb in (("hide", "hide"), ("✔ done", "done")):
+            tk.Button(head, text=text, command=lambda v=verb, key=k.key: self._card_mark(key, v), bg=CARD,
+                      fg=ACCENT if verb == "done" else DIM, activebackground="#2a2e3a", activeforeground=FG,
+                      relief="flat", font=self.small, padx=6).pack(side="right", padx=(0, 4))
+        if k.subtitle or k.by_name:
+            sub = k.subtitle + ("   (wiki match by NPC name)" if k.by_name else "")
+            tk.Label(f, text=sub, bg=CARD, fg=DIM, font=self.small, anchor="w", padx=10).pack(fill="x")
+        if k.now:
+            tk.Label(f, text=k.now, bg=CARD, fg=FG, font=self.normal, anchor="w", padx=10, pady=2,
+                     wraplength=WRAP - 20, justify="left").pack(fill="x")
+        for it, tid, idx in k.items:
+            row = tk.Frame(f, bg=CARD)
+            row.pack(fill="x", padx=(22, 8))
+            g = tk.Label(row, text="✔" if it.done else "○", bg=CARD, fg=ACCENT if it.done else DIM, font=self.small,
+                         width=2, cursor="hand2")
+            g.pack(side="left")
+            g.bind("<Button-1>", lambda e, t=tid, i=idx, on=not it.manual: self._got(t, i, on))
+            tk.Label(row, text=it.name, bg=CARD, fg=DIM if it.done else FG, font=self.small, anchor="w",
+                     wraplength=WRAP - 90, justify="left").pack(side="left", fill="x", expand=True)
+            tk.Label(row, text=it.counter, bg=CARD, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
+        if k.say:
+            tk.Label(f, text=f'say: "{k.say}"', bg=CARD, fg="#9fd3a8", font=self.small, anchor="w", padx=10,
+                     wraplength=WRAP - 20, justify="left").pack(fill="x", pady=(2, 0))
+        if is_open:
+            self._card_details(f, k)
+        tk.Frame(f, bg=CARD, height=4).pack()
+
+    def _card_details(self, f: tk.Frame, k: mq.Card) -> None:
+        """Behind the fold: the NPC's own words with per-task controls, reward, hand-outs, wiki link."""
+        tk.Frame(f, bg="#2a2e3a", height=1).pack(fill="x", padx=8, pady=(4, 4))
+        for t in k.tasks:
+            if t.status in ("open", "done"):
+                self._task_row(f, t)
+        meta: list[str] = []
+        if k.rewards:
+            meta.append("reward: " + ", ".join(k.rewards))
+        if k.given:
+            meta.append("gave you: " + ", ".join(k.given[-4:]))
+        if len(k.npcs) > 1:
+            meta.append("NPCs: " + ", ".join(n.name for n in k.npcs))
+        for m in meta:
+            tk.Label(f, text=m, bg=CARD, fg=DIM, font=self.small, anchor="w", padx=10, wraplength=WRAP - 20,
+                     justify="left").pack(fill="x")
+        if k.url:
+            link = tk.Label(f, text="open wiki page", bg=CARD, fg="#7fb3ff", font=self.small, anchor="w", padx=10,
+                            cursor="hand2")
+            link.pack(fill="x", pady=(2, 2))
+            link.bind("<Button-1>", lambda e, u=k.url: webbrowser.open(u))
+
+    def _task_row(self, parent: tk.Frame, t: mq.Task) -> None:
         done = t.status == "done"
-        row = tk.Frame(self.body, bg=BG)
-        row.pack(fill="x", padx=(6, 0))
+        row = tk.Frame(parent, bg=CARD)
+        row.pack(fill="x", padx=(6, 4))
         var = tk.BooleanVar(value=done)
-        tk.Checkbutton(row, variable=var, bg=BG, fg=ACCENT, activebackground=BG, activeforeground=ACCENT,
+        tk.Checkbutton(row, variable=var, bg=CARD, fg=ACCENT, activebackground=CARD, activeforeground=ACCENT,
                        selectcolor="#2a2e3a",
                        command=lambda tid=t.id, v=var: self._mark("done" if v.get() else "undo", tid)).pack(
             side="left", anchor="n")
-        lbl = tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
-                       wraplength=WRAP, justify="left", anchor="w", cursor="hand2" if t.context else "")
+        lbl = tk.Label(row, text=t.text, bg=CARD, fg=DIM if done else FG, font=self.struck if done else self.small,
+                       wraplength=WRAP - 80, justify="left", anchor="w", cursor="hand2" if t.context else "")
         lbl.pack(side="left", fill="x", expand=True)
-        tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
-                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
+        tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=CARD, fg=DIM,
+                  activebackground="#2a2e3a", activeforeground=FG, relief="flat", font=self.small).pack(
             side="right", anchor="n")
         if t.context:
-            # Click the text to see what the NPC said around it (answers "go down where?").
             lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
-        # Required items as sub-tasks with their own counters, filled in from Ledger loot.
-        # Click the circle to mark one obtained by hand (bought, traded): the Ledger cannot see those.
-        for n, it in enumerate(t.items, 1):
-            sub = tk.Frame(self.body, bg=BG)
-            sub.pack(fill="x", padx=(34, 6))
-            glyph = "✔" if it.done else "○"
-            g = tk.Label(sub, text=glyph, bg=BG, fg=ACCENT if it.done else DIM, font=self.small, width=2, cursor="hand2")
-            g.pack(side="left")
-            g.bind("<Button-1>", lambda e, tid=t.id, i=n, on=not it.manual: self._got(tid, i, on))
-            tk.Label(sub, text=it.name, bg=BG, fg=DIM if (done or it.done) else FG, font=self.small, anchor="w",
-                     wraplength=WRAP - 40, justify="left").pack(side="left", fill="x", expand=True)
-            tk.Label(sub, text=it.counter, bg=BG, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
-        if t.context and t.id in self.show_ctx:
-            tk.Label(self.body, text=t.context, bg="#1c1f27", fg=DIM, font=self.small, wraplength=WRAP,
-                     justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 6), pady=(0, 4))
+            if t.id in self.show_ctx:
+                tk.Label(parent, text=t.context, bg="#12141a", fg=DIM, font=self.small, wraplength=WRAP - 40,
+                         justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 8), pady=(0, 4))
+
+    def _archive_row(self, t: mq.Task) -> None:
+        tag = {"done": "done", "hidden": "hidden", "likely-done": "auto"}.get(t.status, t.status)
+        row = tk.Frame(self.body, bg=BG)
+        row.pack(fill="x", padx=(12, 0))
+        tk.Label(row, text=f"[{tag}] {t.npc}: {t.text}", bg=BG, fg=DIM, font=self.small, wraplength=WRAP - 20,
+                 justify="left", anchor="w").pack(side="left", fill="x", expand=True)
+        tk.Button(row, text="undo", command=lambda tid=t.id: self._mark("undo", tid), bg=BG, fg=ACCENT,
+                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
+            side="right", anchor="n")
+
+    # ---------------------------------------------------------------- card actions
+
+    def _toggle_card(self, key: str) -> None:
+        if key in self.open_cards:
+            self.open_cards.discard(key)
+        else:
+            self.open_cards.add(key)
+        self._render(self._data, self._active)
+
+    def _card_mark(self, key: str, verb: str) -> None:
+        """✔ done / hide on a card applies to every open task in it."""
+        view = self.view_char if self.view_char in self._cards else self._active
+        card = next((k for k in self._cards.get(view, []) if k.key == key), None)
+        if not card:
+            return
+        state = mq.load_state()
+        for t in card.open_tasks:
+            mq._apply(state, verb, t.id)
+        mq.save_state(state)
+        self.open_cards.discard(key)
+        self.refresh()
 
     def _got(self, tid: str, n: int, on: bool) -> None:
         state = mq.load_state()
@@ -520,20 +565,6 @@ class App:
             self.show_ctx.discard(tid)
         else:
             self.show_ctx.add(tid)
-        self._render(self._data, self._active)
-
-    def _archive_row(self, t: mq.Task) -> None:
-        tag = {"done": "done", "hidden": "hidden", "likely-done": "auto"}.get(t.status, t.status)
-        row = tk.Frame(self.body, bg=BG)
-        row.pack(fill="x", padx=(18, 0))
-        tk.Label(row, text=f"[{tag}] {t.npc}: {t.text}", bg=BG, fg=DIM, font=self.small, wraplength=WRAP - 20,
-                 justify="left", anchor="w").pack(side="left", fill="x", expand=True)
-        tk.Button(row, text="undo", command=lambda tid=t.id: self._mark("undo", tid), bg=BG, fg=ACCENT,
-                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
-            side="right", anchor="n")
-
-    def _toggle_char(self, char: str) -> None:
-        self.expanded[char] = not self.expanded.get(char, False)
         self._render(self._data, self._active)
 
     def _toggle_archive(self, char: str) -> None:

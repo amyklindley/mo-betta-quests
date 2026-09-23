@@ -53,12 +53,31 @@ The command line is removed from your notes once it has been applied. Nothing
 happens until you close the `/note` window, because that is when the game
 saves the file.
 
+## What the overlay shows
+
+A row of character tabs (the one the game is on has a dot; click another to
+look at it, click the dotted one to follow the game again), then one card per
+quest for that character:
+
+- the quest name, with level and zone under it
+- what to do now: the wiki's next step when the quest is known, otherwise the
+  newest instruction the NPC gave you
+- the items it wants, one line each with a counter
+- what to say next, in green, when the next step is a keyword
+
+Click the card's name to unfold it: the NPC's own sentences with a checkbox
+and hide button each (click a sentence to see the lines around it), the
+reward, anything the NPC handed you, the other NPCs involved, and a link to
+the wiki page. **✔ done** on the card marks every open task in it done;
+**hide** hides them all. A "done & hidden" fold at the bottom lists everything
+you have finished or hidden, with an undo per line.
+
 ## Marking quests done
 
-- **Overlay:** tick the box. The task stays listed, struck through, so a
-  mis-click is one more click to undo. It leaves the main list only when you
-  hit **hide** or when every task from that NPC is done. Each character has a
-  "done & hidden" fold at the bottom with an **undo** per task.
+- **Overlay:** ✔ done on the card, or unfold it and tick single sentences. A
+  ticked sentence stays listed, struck through, so a mis-click is one more
+  click to undo. Each character has a "done & hidden" fold with an **undo** per
+  task.
 - **In `/note`:** change the leading `-` of a task line to `x` (or `h` to hide
   it), then close the window. Or `/mobetta done <id>`.
 
