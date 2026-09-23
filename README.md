@@ -95,6 +95,24 @@ to whoever maintains the library and the phrasing gets added.
 - **Turn-in emotes.** "takes the note", "accepts the items", "counting out the
   bat wings" count as completion cues, same as a thank-you line.
 
+## What the wiki adds
+
+The app ships with the walkthroughs of every quest on the community wiki
+(`quests.json`, built by `wiki_quests.py`). NPC dialogue in your journal is
+matched word for word against those walkthroughs, so under each NPC you get:
+
+- **which quest this is**, with level and zone; click the name to open the wiki page
+- **the next step** as the wiki phrases it ("Hand in 5 Bone Chips to Squire Ryland"),
+  with the wiki's exact items and a counter each
+- **what to say** when the next step is a keyword ("What is your task?")
+- **the reward**
+
+When several NPCs belong to one quest, progress is worked out from whichever
+conversation is most recent; that NPC shows the full block and the others say
+"part of". To refresh the walkthroughs after the wiki changes, run
+`python wiki_quests.py` and drop the new `quests.json` next to the exe (a file
+next to the exe beats the bundled one).
+
 ## How status is decided
 
 - open: the NPC said it and nothing newer suggests it is finished.

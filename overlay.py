@@ -26,6 +26,7 @@ import tempfile
 import threading
 import tkinter as tk
 import traceback
+import webbrowser
 import winreg
 from datetime import datetime
 from pathlib import Path
@@ -343,6 +344,8 @@ class App:
             tuple(
                 (c, tuple(
                     (n.name, n.zone, tuple(i for _, i in n.given),
+                     (n.quest or {}).get("title"), (n.quest or {}).get("next_step"), (n.quest or {}).get("say"),
+                     tuple((i.name, i.counter, i.done) for i in n.quest_items),
                      tuple((t.id, t.status, t.text, tuple((i.name, i.counter, i.done) for i in t.items)) for t in n.tasks))
                     for n in npcs))
                 for c, npcs in data.items()),
@@ -417,6 +420,8 @@ class App:
                 if npc.given:
                     tk.Label(self.body, text="gave you: " + ", ".join(item for _, item in npc.given[-3:]),
                              bg=BG, fg=DIM, font=self.small, anchor="w", padx=12, wraplength=WRAP).pack(fill="x")
+                if npc.quest:
+                    self._quest_block(npc)
                 for t in listed:
                     self._task_row(t)
             if not shown:
@@ -430,6 +435,44 @@ class App:
                 if arch_open:
                     for t in sorted(archive, key=lambda t: t.when, reverse=True):
                         self._archive_row(t)
+
+    def _quest_block(self, npc: mq.Npc) -> None:
+        """What the wiki knows: quest name (click opens the page), next step, what to say, rewards."""
+        qd = npc.quest
+        if qd.get("summary_only"):
+            lbl = tk.Label(self.body, text=f"part of: {qd['title']}  (progress under {qd['lead']})", bg=BG, fg=DIM,
+                           font=self.small, anchor="w", padx=12, cursor="hand2", wraplength=WRAP)
+            lbl.pack(fill="x")
+            lbl.bind("<Button-1>", lambda e, u=qd["url"]: webbrowser.open(u))
+            return
+        box = tk.Frame(self.body, bg="#1a1d25")
+        box.pack(fill="x", padx=(12, 6), pady=(2, 4))
+        meta = "  ·  ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"]) if x)
+        title = tk.Label(box, text=f"wiki: {qd['title']}" + (f"   ({meta})" if meta else ""), bg="#1a1d25", fg=ACCENT,
+                         font=self.small, anchor="w", padx=6, cursor="hand2", wraplength=WRAP)
+        title.pack(fill="x", pady=(3, 0))
+        title.bind("<Button-1>", lambda e, u=qd["url"]: webbrowser.open(u))
+        if qd["next_step"]:
+            tk.Label(box, text="next: " + qd["next_step"], bg="#1a1d25", fg=FG, font=self.small, anchor="w",
+                     padx=6, wraplength=WRAP, justify="left").pack(fill="x")
+            for it in npc.quest_items:
+                row = tk.Frame(box, bg="#1a1d25")
+                row.pack(fill="x", padx=(18, 6))
+                tk.Label(row, text="✔" if it.done else "○", bg="#1a1d25", fg=ACCENT if it.done else DIM,
+                         font=self.small, width=2).pack(side="left")
+                tk.Label(row, text=it.name, bg="#1a1d25", fg=DIM if it.done else FG, font=self.small,
+                         anchor="w").pack(side="left", fill="x", expand=True)
+                tk.Label(row, text=it.counter, bg="#1a1d25", fg=ACCENT if it.done else FG,
+                         font=self.small).pack(side="right")
+        else:
+            tk.Label(box, text="all wiki steps reached", bg="#1a1d25", fg=DIM, font=self.small, anchor="w",
+                     padx=6).pack(fill="x")
+        if qd["say"]:
+            tk.Label(box, text=f'say: "{qd["say"]}"', bg="#1a1d25", fg="#9fd3a8", font=self.small, anchor="w",
+                     padx=6, wraplength=WRAP, justify="left").pack(fill="x")
+        if qd["rewards"]:
+            tk.Label(box, text="reward: " + ", ".join(qd["rewards"]), bg="#1a1d25", fg=DIM, font=self.small,
+                     anchor="w", padx=6, wraplength=WRAP, justify="left").pack(fill="x", pady=(0, 3))
 
     def _task_row(self, t: mq.Task) -> None:
         done = t.status == "done"

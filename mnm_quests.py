@@ -35,6 +35,109 @@ MD_FILE = HERE / "quests.md"
 NOTES_FILE = GAME_DIR / "notes.txt"
 
 
+# Quest walkthroughs scraped from the community wiki (wiki_quests.py -> quests.json). Bundled into
+# the exe; a newer quests.json placed next to the exe wins.
+_BUNDLED = Path(getattr(sys, "_MEIPASS", HERE))
+QUESTS_FILE = HERE / "quests.json" if (HERE / "quests.json").exists() else _BUNDLED / "quests.json"
+_QUESTS: dict | None = None
+
+
+def norm_line(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+
+
+def load_quests() -> dict:
+    """{'quests': [...], 'exact': {norm text: [(qi, n)]}, 'prefix': {first 50 chars: [(qi, n)]}}"""
+    global _QUESTS
+    if _QUESTS is not None:
+        return _QUESTS
+    quests: list[dict] = []
+    try:
+        quests = json.loads(QUESTS_FILE.read_text("utf-8")).get("quests", [])
+    except (OSError, json.JSONDecodeError):
+        pass
+    exact: dict[str, list[tuple[int, int]]] = {}
+    prefix: dict[str, list[tuple[int, int]]] = {}
+    for qi, q in enumerate(quests):
+        for l in q.get("lines", []):
+            if l.get("kind") == "npc" and l.get("text"):
+                k = norm_line(l["text"])
+                exact.setdefault(k, []).append((qi, l["n"]))
+                if len(k) >= 50:
+                    prefix.setdefault(k[:50], []).append((qi, l["n"]))
+    _QUESTS = {"quests": quests, "exact": exact, "prefix": prefix}
+    return _QUESTS
+
+
+def match_wiki_line(text: str) -> list[tuple[int, int]]:
+    """Which wiki quests contain this NPC line, as (quest index, line number)."""
+    db = load_quests()
+    k = norm_line(text)
+    if k in db["exact"]:
+        return db["exact"][k]
+    if len(k) >= 50 and k[:50] in db["prefix"]:
+        return db["prefix"][k[:50]]
+    return []
+
+
+def identify_quest(npc_name: str, says: list[tuple[datetime, list[str]]]) -> dict | None:
+    """Pick the wiki quest this NPC conversation belongs to and where in it you are.
+
+    Votes: every journal line that matches a wiki line counts for that quest. Ties go to the
+    quest that lists this NPC as giver or related. The furthest matched line (by wiki order)
+    among the newest journal lines sets the position; the next step / thing to say follows it."""
+    db = load_quests()
+    if not db["quests"]:
+        return None
+    votes: dict[int, int] = {}
+    matched: list[tuple[datetime, int, int]] = []  # (journal time, qi, n)
+    for when, sentences in says:
+        line = " ".join(sentences)
+        hits = match_wiki_line(line)
+        if not hits:  # journal lines are whole; wiki sometimes splits or trims them, try the first sentence
+            hits = match_wiki_line(sentences[0]) if sentences else []
+        for qi, n in hits:
+            votes[qi] = votes.get(qi, 0) + 1
+            matched.append((when, qi, n))
+    if not votes:
+        return None
+    key = norm_line(npc_name)
+    def rank(qi: int) -> tuple:
+        q = db["quests"][qi]
+        listed = key in {norm_line(x) for x in q.get("npcs", [])}
+        return (votes[qi], listed, -len(q.get("lines", [])))
+    qi = max(votes, key=rank)
+    ours = [(w, n) for w, q2, n in matched if q2 == qi]
+    latest_time = max(w for w, _ in ours)
+    pos = max(n for w, n in ours if w == latest_time)
+    state = quest_state(qi, pos)
+    state.update(qi=qi, pos=pos, latest=latest_time, matched_lines=len(ours))
+    return state
+
+
+def quest_state(qi: int, pos: int) -> dict:
+    """The quest's next step, what to say, and rewards, given how far the dialogue has reached."""
+    q = load_quests()["quests"][qi]
+    lines = q.get("lines", [])
+    next_step = next((l for l in lines if l["kind"] == "step" and l["n"] > pos
+                      and l["text"].strip().lower() not in ("bold text", "italic text")), None)
+    say = None  # the first "You say" after the position, before the next NPC line
+    for l in lines:
+        if l["n"] <= pos:
+            continue
+        if l["kind"] == "say":
+            say = l["text"]
+            break
+        if l["kind"] == "npc":
+            break
+    return {
+        "title": q["title"], "url": q["url"], "zone": q.get("zone", ""), "level": q.get("min_level", ""),
+        "classes": q.get("classes", ""), "rewards": q.get("rewards", []),
+        "next_step": next_step["text"] if next_step else "", "next_items": (next_step or {}).get("items", []),
+        "say": say, "done": next_step is None, "summary_only": False,
+    }
+
+
 def _detect_server() -> str:
     """The game keeps one folder per server (beta1, ...). Pick the most recently used one."""
     best, best_t = "beta1", -1.0
@@ -528,6 +631,8 @@ class Npc:
     turn_ins: list[tuple[datetime, str]] = field(default_factory=list)  # reward/thanks lines
     unmatched: list[tuple[datetime, str]] = field(default_factory=list)  # recent sentences not treated as tasks
     given: list[tuple[datetime, str]] = field(default_factory=list)  # items the NPC handed you (from emotes)
+    quest: dict | None = None  # wiki quest identified from this NPC's dialogue (see identify_quest)
+    quest_items: list["Item"] = field(default_factory=list)  # the wiki's exact items for the next step, with counters
 
 
 # ---------------------------------------------------------------- state
@@ -690,6 +795,10 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 target.text = target.text.rstrip() + " " + s
                 npc.unmatched = [(w, u) for w, u in npc.unmatched if u != s]
 
+        # Wiki: which quest is this NPC part of (position resolved per quest further down).
+        if says:
+            npc.quest = identify_quest(name, says)
+
         for t in npc.tasks:
             if wanted_items(t.text):
                 # Whole Ledger history, not just since the task: you may already carry the items.
@@ -710,7 +819,36 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
         if npc.tasks or npc.turn_ins or npc.unmatched or npc.given:
             npcs.append(npc)
     npcs.sort(key=lambda n: n.last_seen, reverse=True)
+    resolve_quests(npcs, char_dir)
     return npcs
+
+
+def resolve_quests(npcs: list[Npc], char_dir: Path) -> None:
+    """Several NPCs can belong to one quest. Progress is wherever the most recent conversation
+    reached, so the full block goes under that NPC and the others get a one-line 'part of'."""
+    by_title: dict[str, list[Npc]] = {}
+    for npc in npcs:
+        if npc.quest:
+            by_title.setdefault(npc.quest["title"], []).append(npc)
+    loot = None
+    for title, group in by_title.items():
+        lead = max(group, key=lambda n: (n.quest["latest"], n.quest["pos"]))
+        state = quest_state(lead.quest["qi"], lead.quest["pos"])
+        lead.quest.update(state)
+        lead.quest_items = []
+        if state["next_items"]:
+            if loot is None:
+                loot = loot_since(char_dir, LEDGER_EPOCH)
+            for it in state["next_items"]:
+                nouns = [singular(w) for w in re.findall(r"[a-z]+", it["name"].lower()) if len(w) > 2]
+                if nouns:
+                    have, _ = match_loot(nouns, False, loot, set(nouns))
+                    lead.quest_items.append(Item(it["name"], it["qty"], have))
+        for npc in group:
+            if npc is not lead:
+                npc.quest = {"title": title, "url": lead.quest["url"], "summary_only": True, "lead": lead.name,
+                             "next_step": "", "say": None, "rewards": [], "zone": "", "level": ""}
+                npc.quest_items = []
 
 
 def parse_all(state: dict, only_char: str | None = None) -> dict[str, list[Npc]]:
@@ -740,6 +878,22 @@ def render_md(data: dict[str, list[Npc]], show_all: bool = False) -> str:
             lines.append(f"\n### {npc.name}{zone} - last spoke {npc.last_seen:%b %d %H:%M}")
             for when, item in npc.given:
                 lines.append(f"- gave you: {item} ({when:%b %d %H:%M})")
+            if npc.quest and npc.quest.get("summary_only"):
+                lines.append(f"- part of: [{npc.quest['title']}]({npc.quest['url']}) (progress shown under {npc.quest['lead']})")
+            elif npc.quest:
+                qd = npc.quest
+                meta = ", ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"]) if x)
+                lines.append(f"- **quest:** [{qd['title']}]({qd['url']}){f' ({meta})' if meta else ''}")
+                if qd["next_step"]:
+                    lines.append(f"  - next: {qd['next_step']}")
+                    for it in npc.quest_items:
+                        lines.append(f"    - {'[x]' if it.done else '[ ]'} {it.name} **{it.counter}**")
+                else:
+                    lines.append("  - all wiki steps reached")
+                if qd["say"]:
+                    lines.append(f"  - say: \"{qd['say']}\"")
+                if qd["rewards"]:
+                    lines.append(f"  - reward: {', '.join(qd['rewards'])}")
             for t in tasks:
                 mark = {"open": "[ ]", "likely-done": "[~]", "done": "[x]", "hidden": "[-]"}[t.status]
                 lines.append(f"- {mark} `{t.id}` {t.text}")
@@ -810,6 +964,17 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
             out.append(f"* {npc.name}{zone}")
             if npc.given:
                 out.append("  gave you: " + ", ".join(item for _, item in npc.given[-3:]))
+            if npc.quest and npc.quest.get("summary_only"):
+                out.append(f"  part of: {npc.quest['title']} (see {npc.quest['lead']})")
+            elif npc.quest:
+                qd = npc.quest
+                out.append(f"  quest: {qd['title']}")
+                if qd["next_step"]:
+                    out.append(f"  next: {qd['next_step']}")
+                    for it in npc.quest_items:
+                        out.append(f"      {'x' if it.done else '.'} {it.name}  {it.counter}")
+                if qd["say"]:
+                    out.append(f"  say: \"{qd['say']}\"")
             for t in tasks:
                 out.append(f"  - ({t.id}) {t.text}")
                 for n, it in enumerate(t.items, 1):
