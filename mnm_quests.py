@@ -155,6 +155,16 @@ OF_LIST_RE = re.compile(
     r"\b(?:the |an? |some )?(?P<what>[a-z]+) (?:of|from) (?P<list>" + _ENTRY + r"(?:, " + _ENTRY + r")+(?:,? (?:and|or) " + _ENTRY + r")?)",
     re.I,
 )
+# The "X of A, B and C" shape only counts when X is a creature part or drop; otherwise it
+# matches ordinary prose ("out of the ordinary, please report...").
+PARTS = {
+    "eye", "ear", "tooth", "fang", "tusk", "horn", "antler", "claw", "talon", "paw", "hoof", "hide", "pelt", "skin",
+    "scale", "fur", "hair", "whisker", "feather", "wing", "leg", "tail", "head", "skull", "heart", "liver", "brain",
+    "tongue", "bone", "rib", "spine", "blood", "venom", "poison", "gland", "shell", "carapace", "mandible", "antenna",
+    "stinger", "egg", "meat", "flesh", "essence", "spirit", "soul", "trophy", "remains", "sample", "part", "piece",
+    "silk", "web", "slime", "ichor", "dust", "ash", "core", "gem", "crystal", "ore", "root", "leaf", "petal", "seed",
+}
+
 # After "collect a fire beetle eye", more single items may follow: ", a rat tail, and a snake fang".
 MORE_SINGLE_RE = re.compile(r"^,?\s*(?:and |or )?(?:a|an|one)\s+(?P<noun>[a-z]+(?: [a-z]+){0,2})", re.I)
 
@@ -247,7 +257,7 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str, "set[str] | None"
         if any(a <= m.start() < b for a, b in seen_spans):
             continue
         what = singular(m.group("what").lower())
-        if what in STOP_NOUNS or what in TRAILING_WORDS or what in GENERIC_NOUNS or len(what) < 3:
+        if what not in PARTS:
             continue
         entries = re.split(r",\s*(?:and\s+|or\s+)?|\s+(?:and|or)\s+", m.group("list"))
         added = 0
