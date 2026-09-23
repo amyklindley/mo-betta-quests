@@ -12,7 +12,12 @@ Usage:
   python mnm_quests.py done ID [ID..]   mark a task finished (by its 6-char id)
   python mnm_quests.py undo ID          re-open a task
   python mnm_quests.py hide ID          hide a false positive forever
+  python mnm_quests.py got ID N         mark sub-item N of a task as in hand (bought, traded)
+  python mnm_quests.py ungot ID N       revert a "got" mark
   python mnm_quests.py all [CHAR]       list everything incl. done/hidden/likely-done
+
+Set MNM_GAME_DIR to point the tool at a non-default game data folder
+(moved install, Wine prefix, or a copy).
 """
 from __future__ import annotations
 
@@ -27,7 +32,19 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 
-GAME_DIR = Path(os.environ.get("USERPROFILE", "")) / "AppData/LocalLow/Niche Worlds Cult/Monsters and Memories"
+def _resolve_game_dir() -> Path:
+    """The game's data folder.
+
+    MNM_GAME_DIR overrides the default so the tool can be pointed at a moved
+    install, a Wine prefix, or a copy - and so tests can run fully offline.
+    """
+    override = os.environ.get("MNM_GAME_DIR")
+    if override:
+        return Path(override)
+    return Path(os.environ.get("USERPROFILE", "")) / "AppData/LocalLow/Niche Worlds Cult/Monsters and Memories"
+
+
+GAME_DIR = _resolve_game_dir()
 # When packaged with PyInstaller, keep state next to the .exe, not in the temp unpack dir.
 HERE = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
 STATE_FILE = HERE / "state.json"
@@ -36,9 +53,19 @@ NOTES_FILE = GAME_DIR / "notes.txt"
 
 
 # Quest walkthroughs scraped from the community wiki (wiki_quests.py -> quests.json). Bundled into
-# the exe; a newer quests.json placed next to the exe wins.
+# the exe; a newer quests.json placed next to the exe wins. pip installs keep it under sys.prefix.
 _BUNDLED = Path(getattr(sys, "_MEIPASS", HERE))
-QUESTS_FILE = HERE / "quests.json" if (HERE / "quests.json").exists() else _BUNDLED / "quests.json"
+
+
+def _quests_file() -> Path:
+    for cand in (HERE, _BUNDLED, Path(sys.prefix)):
+        p = cand / "quests.json"
+        if p.exists():
+            return p
+    return HERE / "quests.json"
+
+
+QUESTS_FILE = _quests_file()
 _QUESTS: dict | None = None
 
 
@@ -188,13 +215,20 @@ MIN_LEN = 30
 def is_task(s: str) -> bool:
     """Does this sentence read like something the NPC wants you to do?"""
     s = s.strip()
-    if len(s) < MIN_LEN or DONE_RE.search(s):
+    if len(s) < MIN_LEN:
         return False
-    if REQUEST_RE.search(s):  # explicit request wins, even when phrased as a question
+    request = bool(REQUEST_RE.search(s))
+    wording = bool(PHRASE_RE.search(s) or IMPERATIVE_RE.search(s))
+    # A thank-you / reward line ("bring the bag back, as promised") vetoes only when
+    # it carries no task wording of its own - a request that ends with reward
+    # language must still count as a task (and never as a turn-in).
+    if DONE_RE.search(s) and not (request or wording):
+        return False
+    if request:  # explicit request wins, even when phrased as a question
         return True
     if NOISE_RE.search(s) or s.endswith("?"):
         return False
-    return bool(PHRASE_RE.search(s) or IMPERATIVE_RE.search(s))
+    return wording
 
 
 ZONE_NAMES = {
@@ -302,10 +336,11 @@ GENERIC_NOUNS = {"portions", "portion", "pieces", "piece", "pairs", "pair", "sam
                  "bits", "bit", "units", "unit", "bundles", "bundle", "handfuls", "handful", "lots", "lot"}
 TRAILING_WORDS = {"and", "then", "from", "for", "to", "so", "that", "of", "with", "in", "on", "or", "but", "if", "when",
                   "before", "after", "into", "back", "here", "there", "each", "every", "as", "at", "by", "which"}
-STOP_NOUNS = {"part", "parts", "piece", "proof", "sample", "bit", "chance", "look", "hand", "word", "favor", "favour",
-              "moment", "few", "little", "lot", "reason", "message", "way", "step", "steps", "trip", "visit",
-              "of", "them", "more", "birds", "stone", "time", "thing", "things", "day", "days", "night", "nights",
-              "way", "ways", "hour", "hours", "week", "weeks", "gold", "silver", "copper", "platinum", "coins", "coin"}
+STOP_NOUNS = {"part", "parts", "piece", "pieces", "proof", "sample", "bit", "chance", "look", "hand", "word",
+              "favor", "favour", "moments", "moment", "advice", "few", "little", "lot", "reason", "message", "way",
+              "step", "steps", "trip", "visit", "of", "them", "more", "birds", "stone", "time", "thing", "things",
+              "day", "days", "night", "nights", "way", "ways", "hour", "hours", "week", "weeks", "gold", "silver",
+              "copper", "platinum", "coins", "coin"}
 
 
 def singular(word: str) -> str:
@@ -354,6 +389,10 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str, "set[str] | None"
             after = re.search(r"\b" + words[0] + r"\s+of\s+(?:either|the|their|its|some|any|fresh|raw|cooked)?\s*([a-z]+)",
                               text[m.start():], re.I)
             if not after:
+                continue
+            # "...of advice", "...of stone": the resolved noun must pass the same
+            # stop-word gate as any other counted item.
+            if singular(after.group(1).lower()) in STOP_NOUNS or len(after.group(1)) < 3:
                 continue
             words = [after.group(1).lower()]
             phrase = f"{phrase} of {words[0]}"
@@ -486,7 +525,7 @@ def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int,
     return out
 
 
-def match_loot(nouns: list[str], must_intact: bool, loot: list[tuple[datetime, str, int]],
+def match_loot(nouns: list[str], must_intact: bool, loot: list[tuple[datetime, str, int, str]],
                text_words: set[str] = frozenset()) -> tuple[int, str]:
     """(quantity looted, most common matching loot name) for one required item.
 
@@ -531,7 +570,7 @@ def match_loot(nouns: list[str], must_intact: bool, loot: list[tuple[datetime, s
     return have, best
 
 
-def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[Item]:
+def task_items(task_text: str, loot: list[tuple[datetime, str, int, str]]) -> list[Item]:
     must_intact = bool(re.search(r"\bintact\b", task_text, re.I))
     text_words = {singular(w) for w in re.findall(r"[a-z]+", task_text.lower())}
     items: list[Item] = []
@@ -548,12 +587,14 @@ def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[It
             # "Scarab Eye" from a dune scarab: keep the creature so it is not confused with the crypt scarab's.
             name = f"{loot_name} ({phrase})" if missing else loot_name
         else:
-            name = ("intact " if must_intact else "") + phrase
+            # The NPC's own wording may already carry "intact": do not double it.
+            prefix = "intact " if (must_intact and "intact" not in phrase) else ""
+            name = prefix + phrase
         items.append(Item(name, count, have))
     return items
 
 
-def loot_progress(task_text: str, loot: list[tuple[datetime, str, int]]) -> str:
+def loot_progress(task_text: str, loot: list[tuple[datetime, str, int, str]]) -> str:
     items = task_items(task_text, loot)
     if not items:
         return ""
@@ -730,7 +771,10 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
         says: list[tuple[datetime, list[str]]] = []
         for when, line in entries:
             body = line[len(name):].strip()
-            if DONE_RE.search(body):
+            speech = body[5:].strip() if body.startswith("says ") else None
+            if DONE_RE.search(body) and (speech is None or not is_task(speech)):
+                # A genuine thank-you / reward line (not a request that merely ends
+                # with reward language, e.g. "...and I will pay you as promised").
                 last_done = when
                 npc.turn_ins.append((when, TAG_RE.sub("", body)))
             if body.startswith("says "):
@@ -946,11 +990,19 @@ def resolve_quests(npcs: list[Npc], char_dir: Path, state: dict | None = None) -
                 npc.quest_items = []
 
 
+class GameDataNotFoundError(Exception):
+    """The game's data folder (or its files) is missing.
+
+    Raised instead of sys.exit() so callers can decide how to surface it: the
+    CLI prints a clean message, the overlay degrades to its empty state.
+    """
+
+
 def parse_all(state: dict, only_char: str | None = None) -> dict[str, list[Npc]]:
     root = GAME_DIR / SERVER
     result: dict[str, list[Npc]] = {}
     if not root.is_dir():
-        sys.exit(f"Game data folder not found: {root}")
+        raise GameDataNotFoundError(f"Game data folder not found: {root}")
     for d in sorted(root.iterdir()):
         if d.is_dir() and (not only_char or d.name.lower() == only_char.lower()):
             result[d.name] = parse_char(d, state)
@@ -1207,9 +1259,17 @@ def _apply(state: dict, verb: str, tid: str) -> None:
 
 # ---------------------------------------------------------------- commands
 
+def _parse_or_exit(state: dict, only_char: str | None = None) -> dict[str, list[Npc]]:
+    """parse_all, but report a missing game folder as a clean CLI error."""
+    try:
+        return parse_all(state, only_char)
+    except GameDataNotFoundError as e:
+        sys.exit(str(e))
+
+
 def cmd_write(state: dict, force_char: str | None = None) -> None:
     apply_note_corrections(state)
-    data = parse_all(state)
+    data = _parse_or_exit(state)
     active = force_char or active_character()
     if active and active not in data:
         match = [c for c in data if c.lower() == active.lower()]
@@ -1251,15 +1311,18 @@ def cmd_watch(state: dict, interval: float) -> None:
         time.sleep(interval)
 
 
-def main(argv: list[str]) -> None:
-    sys.stdout.reconfigure(line_buffering=True)  # so watch output shows up when redirected
+def main(argv: list[str] | None = None) -> None:
+    reconfigure = getattr(sys.stdout, "reconfigure", None)
+    if reconfigure is not None:
+        reconfigure(line_buffering=True)  # so watch output shows up when redirected
+    argv = list(sys.argv[1:] if argv is None else argv)
     state = load_state()
     cmd = argv[0] if argv else "list"
     args = argv[1:]
     if cmd == "list":
-        print(render_md(parse_all(state, args[0] if args else None)))
+        print(render_md(_parse_or_exit(state, args[0] if args else None)))
     elif cmd == "all":
-        print(render_md(parse_all(state, args[0] if args else None), show_all=True))
+        print(render_md(_parse_or_exit(state, args[0] if args else None), show_all=True))
     elif cmd == "write":
         cmd_write(state, args[0] if args else None)
     elif cmd == "watch":
@@ -1269,6 +1332,15 @@ def main(argv: list[str]) -> None:
             sys.exit("give at least one task id")
         for tid in args:
             _apply(state, cmd, tid)
+        save_state(state)
+        cmd_write(state)
+    elif cmd in ("got", "ungot"):
+        if len(args) != 2:
+            sys.exit(f"usage: {cmd} <task id> <sub-item number>")
+        try:
+            set_got(state, args[0], int(args[1]), cmd == "got")
+        except ValueError:
+            sys.exit(f"usage: {cmd} <task id> <sub-item number>")
         save_state(state)
         cmd_write(state)
     else:

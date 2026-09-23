@@ -164,9 +164,31 @@ build.bat
 ```
 
 Produces `dist\MoBettaQuests.exe` and `dist\MoBettaQuests-win64.zip`. To run from
-source instead: `python overlay.py`. `mnm_quests.py` is the parser and also a
-CLI (`list`, `all`, `write`, `watch`, `done`, `undo`, `hide`); the regexes near
-its top decide what counts as a task.
+source instead: `python overlay.py`. A `pip install .` gives you the same tools
+as console commands: `mnm-quests` (the parser CLI, pure stdlib, cross-platform),
+`mobetta-overlay` (Windows), and `wiki-quests` (re-fetch the bundled quest data
+from the community wiki).
+
+`mnm_quests.py` is the parser and also a
+CLI (`list`, `all`, `write`, `watch`, `done`, `undo`, `hide`, `got`, `ungot`);
+the regexes near its top decide what counts as a task.
+
+To point the tool at a non-default game data folder (moved install, Wine
+prefix, backup copy), set `MNM_GAME_DIR` to the `Monsters and Memories` folder;
+it wins over the default `%USERPROFILE%` path.
+
+## Testing
+
+The parser and the notes/state logic are pure Python and test without the game:
+
+```
+python -m pip install -e ".[dev]"
+python -m pytest
+```
+
+The suite builds a synthetic game folder (journals, Ledger, `/note` file) in a
+temp dir and exercises task extraction, loot matching, note-block rewriting and
+the CLI - no Monsters & Memories install needed.
 
 ## License
 
