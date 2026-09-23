@@ -396,6 +396,9 @@ class App:
         lbl = tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
                        wraplength=WRAP, justify="left", anchor="w", cursor="hand2" if t.context else "")
         lbl.pack(side="left", fill="x", expand=True)
+        tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
+                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
+            side="right", anchor="n")
         if t.context:
             # Click the text to see what the NPC said around it (answers "go down where?").
             lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
@@ -411,19 +414,15 @@ class App:
             tk.Label(sub, text=it.name, bg=BG, fg=DIM if (done or it.done) else FG, font=self.small, anchor="w",
                      wraplength=WRAP - 40, justify="left").pack(side="left", fill="x", expand=True)
             tk.Label(sub, text=it.counter, bg=BG, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
+        if t.context and t.id in self.show_ctx:
+            tk.Label(self.body, text=t.context, bg="#1c1f27", fg=DIM, font=self.small, wraplength=WRAP,
+                     justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 6), pady=(0, 4))
 
     def _got(self, tid: str, n: int, on: bool) -> None:
         state = mq.load_state()
         mq.set_got(state, tid, n, on)
         mq.save_state(state)
         self.refresh()
-        tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
-                  activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
-            side="right", anchor="n")
-        if t.context:
-            if t.id in self.show_ctx:
-                tk.Label(self.body, text=t.context, bg="#1c1f27", fg=DIM, font=self.small, wraplength=WRAP,
-                         justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 6), pady=(0, 4))
 
     def _toggle_ctx(self, tid: str) -> None:
         if tid in self.show_ctx:
