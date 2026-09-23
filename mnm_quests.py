@@ -118,7 +118,8 @@ ZONE_NAMES = {
 
 # A short task sentence that points at something said just before it ("head back down",
 # "take this to him") gets the previous sentence prepended for context.
-DANGLING_RE = re.compile(r"\b(down|up|back|there|here|it|him|her|them|that|those|the same)\b", re.I)
+DANGLING_RE = re.compile(r"\b(down|up|back|there|here|it|him|her|them|their|its|that|those|these|the same)\b", re.I)
+MAX_PREV_LINE = 200  # chars: borrow a whole previous line as context only if it is short
 # A task sentence that announces a list ("collect the following...") gets the next
 # sentences / lines appended.
 CONTINUES_RE = re.compile(r"(\.\.\.|:)\s*$|\b(the following|as follows|these items|this list)\b", re.I)
@@ -256,12 +257,23 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 if not is_task(s):
                     continue
                 text = s
-                # Context before: "Take this tunic and head back down." -> add the sentence before it.
+                # Context before: "Take this tunic and head back down." / "six of their legs"
+                # -> add the nearest earlier statement, skipping questions and other tasks.
                 if len(s) < 90 and DANGLING_RE.search(s):
-                    prev = sentences[j - 1] if j > 0 else (
-                        says[i - 1][1][-1] if i > 0 and when - says[i - 1][0] <= CONTINUATION_WINDOW
-                        and says[i - 1][1] else "")
-                    if prev and not is_task(prev) and not prev.endswith("?"):
+                    prev = ""
+                    follows_task = False  # an earlier task in the same line already gives the context
+                    for cand in reversed(sentences[:j]):
+                        if is_task(cand):
+                            follows_task = True
+                            break
+                        if not cand.endswith("?"):
+                            prev = cand
+                            break
+                    if not prev and not follows_task and i > 0 and when - says[i - 1][0] <= CONTINUATION_WINDOW:
+                        line = [x for x in says[i - 1][1] if not is_task(x) and not x.endswith("?")]
+                        joined = " ".join(line)
+                        prev = joined if len(joined) <= MAX_PREV_LINE else (line[-1] if line else "")
+                    if prev:
                         text = prev + " " + s
                 # Context after: "collect the following..." -> add what follows, across lines if needed.
                 if CONTINUES_RE.search(s):
