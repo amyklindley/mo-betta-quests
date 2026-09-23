@@ -53,17 +53,32 @@ BLOCK_START = "===== QUEST TRACKER (auto-generated, edits below are overwritten)
 BLOCK_END = "===== END QUEST TRACKER ====="
 
 # Sentences that read like an instruction. Matched case-insensitively.
+# Three shapes: (1) task phrases anywhere in the sentence, (2) "I need you to ...",
+# (3) a sentence that opens with an instruction verb ("Show this coin to ...").
+_VERBS = (
+    r"bring|return|deliver|take|show|give|hand|fill|seal|kill|slay|recover|retrieve|fetch|obtain|"
+    r"collect|gather|investigate|find|report|speak|talk|tell|go|head|seek|hunt|engage|track|search|"
+    r"look for|visit|meet|escort|defeat|destroy|clear|craft|forge|brew|cook|make|use|light|read|learn|"
+    r"carry|travel|venture|explore|scout|follow|come back|make sure|be sure|see to it|keep an eye"
+)
+_LEAD_IN = r"(?:(?:now|then|first|next|also|afterward|after that|but|and|so|please|but before [^,]+|once [^,]+|when [^,]+),?\s+)*"
 TASK_RE = re.compile(
     r"\b("
     r"bring (me|it|them|this|that|back|the|him|her|any)|return (it|them|the|this|to|with)|deliver|"
     r"fill (the|it|this|a)|seal it|kill|slay|recover|retrieve|fetch|obtain|collect|gather|"
     r"investigate|find (evidence|a|the|some|any|out)|report (it|them|this|that|to|directly|any|back)|"
-    r"take (this|these|the) .* (to|back)|speak (to|with)|talk to|tell (him|her|them|me (when|once|you))|"
-    r"go to|head (to|out|west|east|north|south)|seek out|hunt|engage|track down|slaughter|"
-    r"you (will|must|need to|are to|should|shall|'ll need to|'ll have to)|"
-    r"please (bring|return|deliver|take|find|kill|report|make note|see)|"
+    r"take (this|these|the) .* (to|back)|show (this|these|that|the|it|him|her|them) .* to|"
+    r"speak (to|with)|talk to|tell (him|her|them|me (when|once|you))|"
+    r"go (to|see|find|speak|talk)|head (to|out|over|back|into|west|east|north|south)|seek out|hunt|"
+    r"engage|track down|slaughter|look for|search (for|the)|meet (with )?[A-Z]|visit|escort|"
+    r"defeat|destroy|clear out|drive (off|away)|put down|dispose of|"
+    r"you (will|must|need to|are to|should|shall|'ll need to|'ll have to|'re to)|"
+    r"(i|we)('d| would|'ll| will)? ?(need|want|ask|require|expect|would like|'d like|like) (for )?you to|"
+    r"your (first|next|new|only) (task|mission|job|assignment|step|duty)|"
+    r"please (bring|return|deliver|take|find|kill|report|make note|see|show|give)|"
     r"keep an eye out|make note of|once (that's|you've|you have)|when you('re| are) done"
-    r")\b",
+    r")\b"
+    r"|^" + _LEAD_IN + r"(please\s+)?(" + _VERBS + r")\b",
     re.I,
 )
 # A line like this from the same NPC means everything they asked earlier is probably done.
@@ -79,8 +94,15 @@ NOISE_RE = re.compile(
     r"^(well met|how may i|yes, what is it|greetings|hail|hello)|\?$|^\.\.\.|"
     r"(do not misunderstand|i can't blame you|i take it you|you are a welcome addition|"
     r"you had to make a choice|i can tell you just came|of course, be there|take all the time|"
-    r"better acquainted|under the tutelage|as you likely know)|"
-    r"^(they|we|he|she|it) (have|has|had|are|is|were|will)\b",
+    r"better acquainted|under the tutelage|as you likely know|keep in mind|take care|"
+    r"make no mistake|make yourself|look, |see, |go on,? then|go ahead|tell me about|"
+    r"take a (look|seat|moment)|find (it|that|this) (odd|strange|hard|interesting|amusing)|"
+    r"give (me|us) a moment|it's a pleasure|pleasure to meet|let's cut to|take no offense|"
+    r"you must be (the|a|an|new|tired|wondering|exhausted|hungry|weary|joking|mistaken)|"
+    r"speak (quickly|freely|plainly|up)|come back (some ?time|any ?time|later|whenever)|"
+    r"during your (visit|stay)|mind that you|don't mince)|"
+    r"^i('ll| will|'m going to|'m about to) (?!need you|want you|ask you|require you)|"
+    r"^(they|we|he|she|it|that|this|there) (have|has|had|are|is|was|were|will)\b",
     re.I,
 )
 
