@@ -448,7 +448,8 @@ class App:
         box = tk.Frame(self.body, bg="#1a1d25")
         box.pack(fill="x", padx=(12, 6), pady=(2, 4))
         meta = "  ·  ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"]) if x)
-        title = tk.Label(box, text=f"wiki: {qd['title']}" + (f"   ({meta})" if meta else ""), bg="#1a1d25", fg=ACCENT,
+        label = "wiki (by name): " if qd.get("by_name") else "wiki: "
+        title = tk.Label(box, text=label + qd["title"] + (f"   ({meta})" if meta else ""), bg="#1a1d25", fg=ACCENT,
                          font=self.small, anchor="w", padx=6, cursor="hand2", wraplength=WRAP)
         title.pack(fill="x", pady=(3, 0))
         title.bind("<Button-1>", lambda e, u=qd["url"]: webbrowser.open(u))

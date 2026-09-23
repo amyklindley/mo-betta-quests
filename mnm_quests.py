@@ -99,9 +99,17 @@ def identify_quest(npc_name: str, says: list[tuple[datetime, list[str]]]) -> dic
         for qi, n in hits:
             votes[qi] = votes.get(qi, 0) + 1
             matched.append((when, qi, n))
-    if not votes:
-        return None
     key = norm_line(npc_name)
+    if not votes:
+        # No dialogue match (wiki text differs, or the page has no dialogue). Fall back to the quest
+        # that names this NPC as its giver, or the smallest quest that lists them at all.
+        cands = [qi for qi, q in enumerate(db["quests"]) if key in {norm_line(x) for x in q.get("npcs", [])}]
+        if not cands:
+            return None
+        qi = min(cands, key=lambda i: (norm_line(db["quests"][i].get("giver", "")) != key, len(db["quests"][i].get("npcs", []))))
+        state = quest_state(qi, 0)
+        state.update(qi=qi, pos=0, latest=max(w for w, _ in says), matched_lines=0, by_name=True)
+        return state
     def rank(qi: int) -> tuple:
         q = db["quests"][qi]
         listed = key in {norm_line(x) for x in q.get("npcs", [])}
@@ -134,7 +142,7 @@ def quest_state(qi: int, pos: int) -> dict:
         "title": q["title"], "url": q["url"], "zone": q.get("zone", ""), "level": q.get("min_level", ""),
         "classes": q.get("classes", ""), "rewards": q.get("rewards", []),
         "next_step": next_step["text"] if next_step else "", "next_items": (next_step or {}).get("items", []),
-        "say": say, "done": next_step is None, "summary_only": False,
+        "say": say, "done": next_step is None, "summary_only": False, "by_name": False,
     }
 
 
@@ -832,9 +840,12 @@ def resolve_quests(npcs: list[Npc], char_dir: Path) -> None:
             by_title.setdefault(npc.quest["title"], []).append(npc)
     loot = None
     for title, group in by_title.items():
-        lead = max(group, key=lambda n: (n.quest["latest"], n.quest["pos"]))
+        # Dialogue matches outrank name-only guesses when choosing whose position counts.
+        lead = max(group, key=lambda n: (not n.quest.get("by_name"), n.quest["latest"], n.quest["pos"]))
+        by_name = lead.quest.get("by_name", False)
         state = quest_state(lead.quest["qi"], lead.quest["pos"])
         lead.quest.update(state)
+        lead.quest["by_name"] = by_name
         lead.quest_items = []
         if state["next_items"]:
             if loot is None:
@@ -883,7 +894,8 @@ def render_md(data: dict[str, list[Npc]], show_all: bool = False) -> str:
             elif npc.quest:
                 qd = npc.quest
                 meta = ", ".join(x for x in (f"lvl {qd['level']}" if qd["level"] else "", qd["zone"]) if x)
-                lines.append(f"- **quest:** [{qd['title']}]({qd['url']}){f' ({meta})' if meta else ''}")
+                tag = " (matched by NPC name, not dialogue)" if qd.get("by_name") else ""
+                lines.append(f"- **quest:** [{qd['title']}]({qd['url']}){f' ({meta})' if meta else ''}{tag}")
                 if qd["next_step"]:
                     lines.append(f"  - next: {qd['next_step']}")
                     for it in npc.quest_items:

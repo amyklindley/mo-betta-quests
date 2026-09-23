@@ -84,6 +84,10 @@ REQUEST = [
     "you (are|'re) (hereby )?(ordered|instructed|assigned|charged|tasked|commanded|expected|required) to",
     "in (exchange|return|payment)(,| for)? (i|we)('ll| will)",
     "i (challenge|dare) you to",
+    # dialect / informal asks: "Ya got some? I love 'em.", "did the cappin' send ya for the tails bounty?"
+    "\\b(ya|you|yeh|ye) got (some|any|one|more|a few|em|'em)\\b", "(send|sent) (ya|you|yeh) (for|about) the \\w+ bounty",
+    "\\b\\w+s bounty\\b", "\\b(i|we)('ll| will|'d| would)? (take|buy|pay (for|ya|you)|trade (for|ya|you)) (them|those|all|any|every|as many|'em|em|some)\\b",
+    "\\b(bring|get|fetch|find) (me|us|ya|yer) (some|any|more|a few)\\b", "\\bgot (any|some) (more )?\\w+s (for|on) (me|ya|you)\\b",
 ]
 
 # Softer "you should / you must / your next task" wording. Treated like PHRASES: it counts
