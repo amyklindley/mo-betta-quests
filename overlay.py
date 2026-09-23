@@ -396,14 +396,22 @@ class App:
         lbl = tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
                        wraplength=WRAP, justify="left", anchor="w", cursor="hand2" if t.context else "")
         lbl.pack(side="left", fill="x", expand=True)
-        if t.progress and not done:
-            tk.Label(row, text=t.progress, bg=BG, fg=ACCENT, font=self.bold).pack(side="right", anchor="n", padx=(4, 0))
+        if t.context:
+            # Click the text to see what the NPC said around it (answers "go down where?").
+            lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
+        # Required items as sub-tasks with their own counters, filled in from Ledger loot.
+        for it in t.items:
+            sub = tk.Frame(self.body, bg=BG)
+            sub.pack(fill="x", padx=(34, 6))
+            glyph = "✔" if it.done else "○"
+            tk.Label(sub, text=glyph, bg=BG, fg=ACCENT if it.done else DIM, font=self.small, width=2).pack(side="left")
+            tk.Label(sub, text=it.name, bg=BG, fg=DIM if (done or it.done) else FG, font=self.small, anchor="w",
+                     wraplength=WRAP - 40, justify="left").pack(side="left", fill="x", expand=True)
+            tk.Label(sub, text=it.counter, bg=BG, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
         tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
                   activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
             side="right", anchor="n")
         if t.context:
-            # Click the text to see what the NPC said around it (answers "go down where?").
-            lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
             if t.id in self.show_ctx:
                 tk.Label(self.body, text=t.context, bg="#1c1f27", fg=DIM, font=self.small, wraplength=WRAP,
                          justify="left", anchor="w", padx=8, pady=4).pack(fill="x", padx=(30, 6), pady=(0, 4))

@@ -77,11 +77,15 @@ to whoever maintains the library and the phrasing gets added.
 - **Items NPCs hand you.** Emote lines like "hands you a small key" or "places
   a filthy bag on the bar" show up under the NPC as "gave you: ...", so you
   know which quest item in your bags belongs to whom.
-- **Progress counts.** When a task asks for a number of things ("six of their
-  legs", "eight bat wings") the app counts matching loot in the game's Ledger
-  since the task was given and shows it as `2/6`. It only counts corpse loot,
-  so items bought or crafted are not included, and "intact" tasks skip loot
-  named "broken".
+- **Item sub-tasks with counters.** When a task asks for things ("six of their
+  legs", "eight bat wings, then a fire beetle eye") each item gets its own line
+  under the task with a counter like `2/6`. The count is an estimate of what is
+  in your bags, worked out from the game's Ledger: everything that character
+  has looted from corpses, minus everything sold or dropped. The game does not
+  log hand-ins to NPCs or items bought or crafted, so after you turn a stack in
+  the counter stays full until you tick the task. "Intact" tasks skip loot
+  named "broken", and when the NPC names the creature the counter only takes
+  that creature's drops.
 - **Turn-in emotes.** "takes the note", "accepts the items", "counting out the
   bat wings" count as completion cues, same as a thank-you line.
 
