@@ -52,59 +52,37 @@ SERVER = _detect_server()
 BLOCK_START = "===== QUEST TRACKER (auto-generated, edits below are overwritten) ====="
 BLOCK_END = "===== END QUEST TRACKER ====="
 
-# Sentences that read like an instruction. Matched case-insensitively.
-# Three shapes: (1) task phrases anywhere in the sentence, (2) "I need you to ...",
-# (3) a sentence that opens with an instruction verb ("Show this coin to ...").
-_VERBS = (
-    r"bring|return|deliver|take|show|give|hand|fill|seal|kill|slay|recover|retrieve|fetch|obtain|"
-    r"collect|gather|investigate|find|report|speak|talk|tell|go|head|seek|hunt|engage|track|search|"
-    r"look for|visit|meet|escort|defeat|destroy|clear|craft|forge|brew|cook|make|use|light|read|learn|"
-    r"carry|travel|venture|explore|scout|follow|come back|make sure|be sure|see to it|keep an eye"
-)
-_LEAD_IN = r"(?:(?:now|then|first|next|also|afterward|after that|but|and|so|please|but before [^,]+|once [^,]+|when [^,]+),?\s+)*"
-TASK_RE = re.compile(
-    r"\b("
-    r"bring (me|it|them|this|that|back|the|him|her|any)|return (it|them|the|this|to|with)|deliver|"
-    r"fill (the|it|this|a)|seal it|kill|slay|recover|retrieve|fetch|obtain|collect|gather|"
-    r"investigate|find (evidence|a|the|some|any|out)|report (it|them|this|that|to|directly|any|back)|"
-    r"take (this|these|the) .* (to|back)|show (this|these|that|the|it|him|her|them) .* to|"
-    r"speak (to|with)|talk to|tell (him|her|them|me (when|once|you))|"
-    r"go (to|see|find|speak|talk)|head (to|out|over|back|into|west|east|north|south)|seek out|hunt|"
-    r"engage|track down|slaughter|look for|search (for|the)|meet (with )?[A-Z]|visit|escort|"
-    r"defeat|destroy|clear out|drive (off|away)|put down|dispose of|"
-    r"you (will|must|need to|are to|should|shall|'ll need to|'ll have to|'re to)|"
-    r"(i|we)('d| would|'ll| will)? ?(need|want|ask|require|expect|would like|'d like|like) (for )?you to|"
-    r"your (first|next|new|only) (task|mission|job|assignment|step|duty)|"
-    r"please (bring|return|deliver|take|find|kill|report|make note|see|show|give)|"
-    r"keep an eye out|make note of|once (that's|you've|you have)|when you('re| are) done"
-    r")\b"
-    r"|^" + _LEAD_IN + r"(please\s+)?(" + _VERBS + r")\b",
+# The vocabulary lives in phrases.py (plain lists, easy to extend). Compiled here.
+import phrases as P
+
+
+def _alt(items: list[str]) -> str:
+    return "|".join(f"(?:{p})" for p in items)
+
+
+NOISE_RE = re.compile(_alt(P.NOISE), re.I)
+REQUEST_RE = re.compile(r"\b(?:" + _alt(P.REQUEST) + r")", re.I)
+PHRASE_RE = re.compile(r"\b(?:" + _alt(P.PHRASES + P.OBLIGATION) + r")\b", re.I)
+IMPERATIVE_RE = re.compile(
+    r"^(?:(?:" + _alt(P.LEAD_INS) + r"),?\s+)*(?:please\s+)?(?:"
+    + _alt(sorted(P.IMPERATIVE_VERBS, key=len, reverse=True)) + r")\b",
     re.I,
 )
-# A line like this from the same NPC means everything they asked earlier is probably done.
-DONE_RE = re.compile(
-    r"(thank you for (bringing|returning|delivering|doing)|excellent work|well done|good work|"
-    r"nicely done|you('ve| have) (done|returned|brought|proven)|this is excellent|"
-    r"looks through the bag|nods appreciatively|good, you('ve| have)|done well to|"
-    r"accept this (gift|reward|token)|in return|for your (assistance|help|efforts|service))",
-    re.I,
-)
-# Sentences that match TASK_RE but are not actually tasks.
-NOISE_RE = re.compile(
-    r"^(well met|how may i|yes, what is it|greetings|hail|hello)|\?$|^\.\.\.|"
-    r"(do not misunderstand|i can't blame you|i take it you|you are a welcome addition|"
-    r"you had to make a choice|i can tell you just came|of course, be there|take all the time|"
-    r"better acquainted|under the tutelage|as you likely know|keep in mind|take care|"
-    r"make no mistake|make yourself|look, |see, |go on,? then|go ahead|tell me about|"
-    r"take a (look|seat|moment)|find (it|that|this) (odd|strange|hard|interesting|amusing)|"
-    r"give (me|us) a moment|it's a pleasure|pleasure to meet|let's cut to|take no offense|"
-    r"you must be (the|a|an|new|tired|wondering|exhausted|hungry|weary|joking|mistaken)|"
-    r"speak (quickly|freely|plainly|up)|come back (some ?time|any ?time|later|whenever)|"
-    r"during your (visit|stay)|mind that you|don't mince)|"
-    r"^i('ll| will|'m going to|'m about to) (?!need you|want you|ask you|require you)|"
-    r"^(they|we|he|she|it|that|this|there) (have|has|had|are|is|was|were|will)\b",
-    re.I,
-)
+DONE_RE = re.compile(_alt(P.DONE_CUES), re.I)
+MIN_LEN = 30
+
+
+def is_task(s: str) -> bool:
+    """Does this sentence read like something the NPC wants you to do?"""
+    s = s.strip()
+    if len(s) < MIN_LEN or DONE_RE.search(s):
+        return False
+    if REQUEST_RE.search(s):  # explicit request wins, even when phrased as a question
+        return True
+    if NOISE_RE.search(s) or s.endswith("?"):
+        return False
+    return bool(PHRASE_RE.search(s) or IMPERATIVE_RE.search(s))
+
 
 ZONE_NAMES = {
     "nightharbore": "Night Harbor East",
@@ -120,6 +98,26 @@ ZONE_NAMES = {
 # "take this to him") gets the previous sentence prepended for context.
 DANGLING_RE = re.compile(r"\b(down|up|back|there|here|it|him|her|them|their|its|that|those|these|the same)\b", re.I)
 MAX_PREV_LINE = 200  # chars: borrow a whole previous line as context only if it is short
+UNMATCHED_DAYS = timedelta(days=7)  # how far back unmatched.txt looks
+UNMATCHED_FILE = HERE / "unmatched.txt"
+
+
+def write_unmatched(data: "dict[str, list[Npc]]") -> None:
+    """Every recent NPC sentence the tool did NOT treat as a task. If a quest was
+    missed, this is the file to send along so the phrase library can be extended."""
+    lines = ["# NPC sentences from the last 7 days that were not treated as tasks.",
+             "# If one of these was a quest, send this file to whoever maintains the phrase library.", ""]
+    for char, npcs in data.items():
+        rows = sorted(((when, npc.name, s) for npc in npcs for when, s in npc.unmatched), reverse=True)
+        if not rows:
+            continue
+        lines.append(f"## {char}")
+        lines += [f"{when:%m-%d %H:%M} {name}: {s}" for when, name, s in rows]
+        lines.append("")
+    try:
+        UNMATCHED_FILE.write_text("\n".join(lines), "utf-8")
+    except OSError:
+        pass
 # A task sentence that announces a list ("collect the following...") gets the next
 # sentences / lines appended.
 CONTINUES_RE = re.compile(r"(\.\.\.|:)\s*$|\b(the following|as follows|these items|this list)\b", re.I)
@@ -157,6 +155,7 @@ class Npc:
     tasks: list[Task] = field(default_factory=list)
     zone: str = ""
     turn_ins: list[tuple[datetime, str]] = field(default_factory=list)  # reward/thanks lines
+    unmatched: list[tuple[datetime, str]] = field(default_factory=list)  # recent sentences not treated as tasks
 
 
 # ---------------------------------------------------------------- state
@@ -249,12 +248,12 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
             if body.startswith("says "):
                 says.append((when, split_sentences(body[5:])))
 
-        def is_task(s: str) -> bool:
-            return len(s) >= MIN_LEN and not NOISE_RE.search(s) and not DONE_RE.search(s) and bool(TASK_RE.search(s))
-
+        cutoff = datetime.now() - UNMATCHED_DAYS
         for i, (when, sentences) in enumerate(says):
             for j, s in enumerate(sentences):
                 if not is_task(s):
+                    if len(s) >= MIN_LEN and when >= cutoff and not s.endswith("?"):
+                        npc.unmatched.append((when, s))
                     continue
                 text = s
                 # Context before: "Take this tunic and head back down." / "six of their legs"
@@ -297,7 +296,7 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 t.status = "done"
             elif last_done and t.when < last_done and t.id not in state["reopened"]:
                 t.status = "likely-done"
-        if npc.tasks or npc.turn_ins:
+        if npc.tasks or npc.turn_ins or npc.unmatched:
             npcs.append(npc)
     npcs.sort(key=lambda n: n.last_seen, reverse=True)
     return npcs
@@ -526,6 +525,7 @@ def cmd_write(state: dict, force_char: str | None = None) -> None:
         match = [c for c in data if c.lower() == active.lower()]
         active = match[0] if match else None
     MD_FILE.write_text(render_md(data, show_all=True), "utf-8")
+    write_unmatched(data)
     changed = write_notes(render_notes_block(data, active))
     n = sum(len(open_tasks(npc)) for npcs in data.values() for npc in npcs)
     verb = "wrote" if changed else "already current:"

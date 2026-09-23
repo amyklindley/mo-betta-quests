@@ -1,0 +1,214 @@
+# NPC sentences from the last 7 days that were not treated as tasks.
+# If one of these was a quest, send this file to whoever maintains the phrase library.
+
+## Bannis
+09-21 10:20 Leila Ghasem: The local rats, bats, and jackals should provide a sufficient test for an initiate.
+09-21 10:20 Leila Ghasem: The battlefield is the ultimate way of knowing another being.
+09-21 10:20 Leila Ghasem: You have done well to bring this note to me.
+09-21 10:20 Leila Ghasem: It is because the feral heart of a beast beats within your chest.
+09-21 10:20 Leila Ghasem: I welcome you to our order as an initiate.
+09-21 10:19 Old Mother Roshan: I can sense the beast in you, child.
+09-21 10:19 Old Mother Roshan: That must have been a frightening dream.
+09-21 10:19 Old Mother Roshan: I cannot help you, but Errol Shrewtender can.
+09-21 10:19 Old Mother Roshan: The Seekers of the Lost Eye welcome you.
+
+## Denvan
+09-21 09:54 Moon Dances: I am called Moon Dances, though I am afraid that my namesake is not so true these past nights.
+09-21 09:50 Aerin Mossfang: This hunting is sanctioned, so long as it pertains to your bond.
+09-21 09:50 Aerin Mossfang: Wolves or bats will be your primary meat sources here in the Weald, so choose whichever suits your palate.
+09-21 09:50 Aerin Mossfang: I've given you some simple animal feed for now, but you'll have to show me that you can provide what's needed to support a partner from this point on.
+09-21 09:50 Aerin Mossfang: Good, you've sparked an animal's interest.
+09-21 09:49 Aerin Mossfang: You'll need to do more than just tend to wounds if you want form a strong bond with your companion, however.
+09-21 09:48 Aerin Mossfang: They're regal and proud creatures with unquestionable loyalty.
+09-21 09:48 Aerin Mossfang: I can't blame you for being drawn to the spirit of the wolf, as I was.
+09-21 09:48 Aerin Mossfang: You had to make a choice without any outside influence.
+09-21 09:44 Aerin Mossfang: Do not disturb any of the injured animals unless you're tending to them with a treatment kit, or else you'll have to answer to me.
+09-21 09:44 Aerin Mossfang: They'll react as any wild animal would if you try to tame them unexpectedly... with aggression.
+09-21 09:44 Aerin Mossfang: All the animals you see here are victims of poachers or other unnatural threats.
+09-21 09:43 Aerin Mossfang: They'll teach you the proper techniques to bond with an animal and call them to your side should they fall in battle.
+09-21 09:43 Aerin Mossfang: Well, your timing is impeccable.
+09-21 09:43 Aerin Mossfang: We've recently brought in some wounded animals that could use treatment and a strong partner in the Weald.
+09-21 09:43 Aerin Mossfang: You've also been marked by the beast spirits, which makes you more pleasant company than most.
+09-21 09:43 Aerin Mossfang: I'm not one for paperwork, but I can tell you just came from Relgen.
+09-21 09:43 Aerin Mossfang: The Den is no place for animal watching, so you'd better be here for a good reason.
+09-21 09:42 Captain Relgen Greenblade: She oversees the training of those like yourself who have a connection to bestial spirits.
+09-21 09:42 Captain Relgen Greenblade: You have the scent of the wild on you.
+09-21 09:42 Captain Relgen Greenblade: Take no offense, for we of the Ardent Keepers wish to preserve the natural order between the beasts of the Weald and Faelindral.
+09-21 09:42 Captain Relgen Greenblade: I have no mind for idle talk, unless you've something important to share.
+09-21 09:41 Myrielle Softglade: Ha, don't worry, I just have an eye for these things.
+09-21 09:41 Myrielle Softglade: Fair shades to you, Beastmaster.
+09-21 09:40 Sylvosa Pineweld: Wares are on the wall, and the forge is open if you need it.
+09-21 09:38 Pine Brightreed: Have a seat if you're here for a show, or feel free to mingle with the other patrons and enjoy what's on tap.
+09-21 09:38 Pine Brightreed: Hail and welcome to the stage of the Willows Whisper!
+
+## Isiss
+09-22 15:10 Jiselle Heyley: I haven't seen one of these flowers since my brother and I were children.
+09-22 15:10 Jiselle Heyley: I can't even begin to imagine where he found them.
+09-22 15:07 a priest of Eltindra: Welcome to our humble shrine, friend.
+09-22 15:07 a priest of Eltindra: I see the patroness of travelers has blessed your journey here.
+09-22 15:04 Elrind Steele: This time, I think I've found something he'll be just as excited about... but it's for his eyes only.
+09-22 15:03 Elrind Steele: I can't wait to read this tonight after supper!
+09-22 15:03 Elrind Steele: He's always so good at finding these things.
+09-22 14:48 Registrar Vauquelin: The city believes that mind magic is dangerous... and for good reason.
+09-22 14:48 Registrar Vauquelin: Powerful spells are forbidden, as are transformations of any sort.
+09-22 14:48 Registrar Vauquelin: All practitioners must register and adhere to city law regarding the application of such magic.
+09-22 14:45 Guard Jeskal: Please be careful when returning it to your people.
+09-22 14:45 Guard Jeskal: I got this from the councilman.
+09-22 14:45 Guard Jeskal: I can't wait to see her again!
+09-22 14:35 Harbormaster Daoud: You'll not want to tamper with that, lest the contents be dissolved.
+09-22 14:35 Harbormaster Daoud: Goodbye now, give Master Jamee my many thanks!
+09-22 14:35 Harbormaster Daoud: Master Jamee amazes me with his ability to find things that even I cannot.
+09-22 14:09 Jamee Langris: Should you have any questions about the names on the list, or perhaps about our humble troupe, you need only ask.
+09-22 14:09 Jamee Langris: If you receive something in return for our gifts, hide it in the bag's false bottom.
+09-22 14:09 Jamee Langris: This moment is always a joy to me.
+09-22 14:09 Jamee Langris: Bringing new talent into the fold is such a privilege, and I do look forward to introducing you to the others soon.
+
+## Leyten
+09-22 12:37 Petra Gyle: Even a novice like yourself should have the aptitude to force them to talk.
+09-22 12:36 Petra Gyle: We've captured a number of cultists that have yet to reveal to us their intentions.
+09-22 12:36 Petra Gyle: We shall see if there's truth to your words, or if they ring hollow.
+09-22 12:36 Petra Gyle: Our role as inquisitors is to protect our colleagues from such forces, while also routing out corruption before it has a chance to take hold.
+09-22 12:36 Petra Gyle: Magic is a powerful, yet extremely dangerous talent.
+09-22 12:36 Petra Gyle: Especially when used by those who collude with, or seek to benefit from, corrupted forces.
+09-22 12:34 Jaffar Jhaym: As an aspiring inquisitor, you will be under the tutelage of Petra Gyle.
+09-22 12:34 Jaffar Jhaym: I am sure we will get better acquainted in the days to come.
+09-22 12:34 Jaffar Jhaym: However, you must be tired, so I will delay your introduction to your trainer no longer.
+09-22 12:33 Jaffar Jhaym: The desert grows more dangerous by the day, you have arrived none too soon.
+09-22 12:33 Jaffar Jhaym: You have arrived safely, and I am indeed who you seek.
+09-22 12:33 Jaffar Jhaym: Welcome to the Spellbinders of the Spire!
+
+## Lyedra
+09-21 21:11 a wise elder: Your survival will depend on it!
+09-21 21:11 a wise elder: Very good, but know it's still very much dangerous going alone.
+09-21 21:11 a wise elder: I see you have a training weapon.
+09-21 21:11 a wise elder: It's perilous to leave by oneself!
+
+## Merpit
+09-21 22:32 Lurinda Steele: Their warriors' bracers will do.
+09-21 22:32 Lurinda Steele: Let our archers tend to their scouts.
+09-21 22:32 Lurinda Steele: Ashira have been harassing the city's borders of late, so this is a good opportunity to distinguish yourself as a competent member of the Steel Talons.
+09-21 22:32 Lurinda Steele: We train in the garrison, but true experience comes in the field.
+09-21 22:32 Lurinda Steele: That's where the Steel Talons excel, and that's why our most promising members are sought after by the City Watch and Red Mantles.
+09-21 22:32 Lurinda Steele: It will identify you as one of our trainees.
+09-21 22:32 Lurinda Steele: Just don't keep me waiting again.
+09-21 22:31 Elrind Steele: Come back some time, maybe we'll find a way to help each other again... unless your status changes, of course.
+09-21 22:30 Elrind Steele: You're also more than welcome to discard the list I previously gave you, as you'll no longer need it.
+09-21 22:30 Elrind Steele: Here is the research that my mother requested.
+09-21 22:30 Elrind Steele: I'll file your papers with the others under Status - Currently Alive.
+09-21 21:44 Elrind Steele: Here's the list of items, as well as some charcoal and parchment for the frottage.
+09-21 21:44 Elrind Steele: Truth be told, I'd rather stay in the library anyway.
+09-21 21:44 Elrind Steele: Unfortunately, it might be weeks before I can file your application.
+09-21 21:44 Elrind Steele: Mother has tasked me with important research, so I'm very busy.
+09-21 21:44 Elrind Steele: You're wanting to complete your registration at the academy, then.
+09-21 21:44 Elrind Steele: I'm sure you're eager to start your training.
+09-21 21:39 Lurinda Steele: He'll complete your registration at the academy so you can start your training.
+09-21 21:39 Lurinda Steele: But you might not be a complete waste of time.
+09-21 21:39 Lurinda Steele: You would-be recruits are stumbling in faster than copper coins falling from a drunkard's pouch!
+09-21 21:39 Lurinda Steele: By Porbor's shriveled organ, we've got another one!
+09-21 21:39 Fedamius Steele III: We'll see if you have what it takes soon enough...
+09-21 21:39 Fedamius Steele III: Hmph... you and a few hundred others.
+09-21 21:39 Fedamius Steele III: Speak quickly and don't mince your words.
+
+## Moirin
+09-21 13:36 Njau Hansou: Keep in mind, this task is separate from your work at the camps.
+09-21 13:36 Njau Hansou: We have received reports that cultists ambushed several of Petra's recruits in the city, which has caused such suspicion.
+09-21 13:36 Njau Hansou: ...Do not misunderstand, the inquisitors are our allies.
+09-21 13:35 Njau Hansou: I have heard reports that they are attempting to raid the smugglers' camp...
+09-21 13:35 Njau Hansou: I am interested in their intentions.
+09-21 13:35 Njau Hansou: I also need you to investigate an ashira camp on the way to the smugglers.
+09-21 13:33 Njau Hansou: I believe them to have a logbook in their possession.
+09-21 13:33 Njau Hansou: You will, of course, be there for legitimate reasons.
+09-21 13:33 Njau Hansou: Your next tasks will be in support of Petra's inquisitors.
+09-21 13:33 Njau Hansou: They have been assigned to investigate a group of smugglers at a camp far to the west of here, along the shores of Shaded Dunes.
+09-21 13:33 Njau Hansou: Thank you for bringing me this.
+09-21 13:26 Buckmarr Gorstagg: He's bound to be impressed by my conclusions.
+09-21 13:26 Buckmarr Gorstagg: And don't let that nosy librarian see it, he's a pest.
+09-21 13:26 Buckmarr Gorstagg: If the council put me in charge of running things, I'd likely have a much more efficient solution for dealing with the use of magic, etcetera, etcetera.
+09-21 13:26 Buckmarr Gorstagg: Well, these are interesting scorch marks.
+09-21 13:26 Buckmarr Gorstagg: I suppose that's what you people are in the habit of doing.
+09-21 13:26 Buckmarr Gorstagg: However, I find it interesting that both of our guilds are in the business of keeping magical things in check for the city, yet take such wildly different approaches.
+09-21 13:22 Brazzic Durraim: And if you think I mean your tongue...
+09-21 13:17 Sayyaad: We've heard reports of attacks in Saltbreeze Park and other places in the city.
+09-21 13:17 Sayyaad: A winged terror swoops through the skies at night.
+09-21 13:17 Sayyaad: These days it feels like there are monsters around every corner of Night Harbor.
+09-21 13:17 Sayyaad: I'm Sayyaad, a hunter of sorts.
+09-21 13:17 Sayyaad: I purge the unnatural from this realm.
+09-21 13:11 Njau Hansou: Buckmarr can be somewhat irritating, but I trust him.
+09-21 13:11 Njau Hansou: It is rather hard to miss its ominous green glow...
+09-21 13:11 Njau Hansou: You are a welcome addition to our ranks.
+09-21 13:11 Njau Hansou: I can tell your proficiency with a blade leaves nothing to be desired.
+09-21 12:05 Fadila: It's not much, but please accept this gift in return.
+09-21 12:05 Fadila: Krivea's blessings for your assistance!
+09-20 23:19 Farmer Ammar: We'll reward you with what we can.
+09-20 23:19 Farmer Ammar: We don't have much, but perhaps some of our supplies could help you on your journey.
+09-20 23:19 Farmer Ammar: My wife, Fadila, is in the house.
+09-20 23:19 Farmer Ammar: Oh, Krivea's blessing upon you, friend!
+09-20 23:19 Farmer Ammar: Our loyal farmhand and I can barely keep up with these filthy interlopers.
+09-20 23:19 Farmer Ammar: As you can see, we've been overrun by pests.
+09-20 23:07 a priest of Tilustra: Take all the time you need to bask in the glory of her understanding.
+09-20 22:43 Squire Ryland: Thank you for helping purge the land of the undead menace.
+09-20 22:43 Squire Ryland: I'll dispose of these remains.
+09-20 22:42 Squire Ryland: We can't risk them being used in a more sinister plot.
+09-20 22:42 Squire Ryland: We can always use some help cleaning up the weaker undead that roam the gates.
+09-20 22:42 Squire Ryland: They lack aggression during the day, but at night, they attack unsuspecting travelers.
+09-20 22:42 Squire Ryland: These brave paladins not only saved my life, but they are great and holy men.
+09-20 22:42 Squire Ryland: That is, unless you're too experienced.
+09-20 22:42 Squire Ryland: If you're looking to prove yourself, I have a simple task for you.
+09-20 21:05 Guard Jeskal: It's too hot out here for small talk.
+09-20 20:44 Njau Hansou: Should you correctly infuse your weapon, the remains you find shall bear the charred markings of a successful strike.
+09-20 20:44 Njau Hansou: As you likely know, we at the Spire investigate the misuse of magic in Night Harbor... but there is also a form of corruption at play throughout the entire region of Szuur.
+09-20 20:44 Njau Hansou: We will test your proficiency with the most basic weapon infusion... the arcane infusion.
+09-20 20:44 Njau Hansou: This task will serve several purposes, though.
+09-20 20:44 Njau Hansou: I take it you have spoken with Jaffar already... wonderful!
+09-20 20:41 Jaffar Jhaym: You likely passed him in the training yard on your way up to me.
+09-20 20:41 Jaffar Jhaym: I am sure we will get better acquainted in the days to come, but for now, you will be under the tutelage of Master Njau Hansou.
+09-20 20:41 Jaffar Jhaym: While I will not be training you myself, I am always excited to meet one of our new spellblades!
+09-20 20:41 Jaffar Jhaym: Welcome to the Spellbinders of the Spire!
+09-20 20:35 Domas Starseeker: Ah, yes... welcome to the orrery.
+09-20 20:31 Olvin Viscus: Welcome to the Chartered Academy of Arcane Inquiry.
+09-20 20:31 Olvin Viscus: I am Administrator Olvin Viscus.
+09-20 20:25 Spellbinder Kharash: Mind that you do not damage any of the tomes during your visit here, Spellblade.
+09-20 20:24 a Tarellian missionary: Much of what is said about our order is misinformed, especially in this city.
+09-20 20:23 a Tarellian missionary: As such, I'm rather unfamiliar with our congregation here.
+09-20 20:23 a Tarellian missionary: I'm here as part of a delegation from Tarellon to assess the status of our progress in this... place.
+
+## Robertpaulson
+09-22 16:30 Calaada Acaciathorn: It would seem that you've been training, initiate, but this task requires someone a little more seasoned.
+09-22 16:20 Rolan Talmula: Calaada is on the top floor of the guild, overlooking Saltbreeze Park with her companion, Oakheart.
+09-22 16:20 Rolan Talmula: You, too, will learn this skill in time.
+09-22 16:20 Rolan Talmula: We should thank any creature that gives its life, from the tiny insect to the giant beast, whether plant or animal.
+09-22 16:20 Rolan Talmula: Krivea teaches us that gratitude for all life is important.
+09-22 16:19 Rolan Talmula: You would do well not to be squeamish about bloodshed, it is part of the natural order.
+09-22 16:19 Rolan Talmula: We druids have a duty not just to life, but to death as well.
+09-22 16:19 Rolan Talmula: Very good, you have done well.
+09-22 12:16 Rolan Talmula: You were tasked with gathering those as well, initiate.
+09-22 12:16 Rolan Talmula: It looks like you have found the fire beetle eye, and a fine one at that!
+09-22 12:14 Tanna Tilva: Greetings, traveler, and welcome to the Shrine of Krivea.
+09-22 11:54 a priest of Porbor: Porbor, our wondrous god of pots, watches over you!
+09-22 11:54 a priest of Porbor: Please take a look around, grab some clay, and make yourself a nice pot or a little figurine!
+09-22 10:44 Rolan Talmula: Our goal is not to dam the river, so to speak, but to make sure that we have a place next to it.
+09-22 10:44 Rolan Talmula: Nature is not static, it moves like a river.
+09-22 10:44 Rolan Talmula: As you may already know, one of our duties here at the Circle of Scarce Rains is to maintain the delicate balance we have created here at the gardens.
+09-22 10:44 Rolan Talmula: We shall begin your training at once.
+09-22 10:44 Rolan Talmula: Thank you for bringing this note to me.
+09-22 10:44 Rolan Talmula: Ah, you must be the new initiate.
+
+## Steyina
+09-22 20:22 Halrinn Grimsul: We don't want any broken ones!
+09-22 20:22 Halrinn Grimsul: Then you can go back to whatever brave deeds you thought you'd be doing.
+09-22 20:22 Halrinn Grimsul: Just make sure those legs are intact and juicy looking.
+09-22 20:22 Halrinn Grimsul: We're short on staff, so I'm stuck up here for a bit while grain beetles gnaw away at our supplies in the cellar.
+09-22 20:22 Halrinn Grimsul: Also, our cook is running low on ingredients for the stew...
+09-22 20:21 Halrinn Grimsul: As a brave defender of whatever faith you claim to follow, I'm sure my task is a trivial endeavor.
+09-22 20:21 Halrinn Grimsul: It looks like you've become his courier, brave knight.
+09-22 20:21 Halrinn Grimsul: But first, you'll need to do the other thing he sent you here for.
+09-22 20:21 Halrinn Grimsul: Well, it's good to see that the old cuss finally found his appetite.
+09-22 20:18 Trey Fulton: This will be your first big mission.
+09-22 20:18 Trey Fulton: Most tell tales of ashira ambushes and hordes of undead appearing in the night.
+09-22 20:18 Trey Fulton: An increasing number of travelers are coming through our city gates, wounded or worse.
+09-22 20:18 Trey Fulton: We've got a lot of work ahead of us.
+09-22 20:17 Thibald Burlond: Your faith and your history are of no concern, but do not besmirch our good name.
+09-22 20:17 Thibald Burlond: This hospice is known to Night Harbor's citizens and authorities alike as a place of order and charity.
+09-22 20:16 Thibald Burlond: We accept all paladins who come to aid and maintain our order, no matter their background or faith.
+09-22 20:16 Thibald Burlond: Welcome to the Wayfarers Hospice.
+09-22 20:16 Thibald Burlond: I am Grandmaster Thibald Burlond of the Penitent Knights of the Hospice.

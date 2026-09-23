@@ -302,6 +302,7 @@ class App:
                 match = [c for c in data if active and c.lower() == active.lower()]
                 active = match[0] if match else next(iter(data), None)
             mq.MD_FILE.write_text(mq.render_md(data, show_all=True), "utf-8")
+            mq.write_unmatched(data)
             for verb, arg in app_cmds:
                 if verb == "help":
                     self.show_help = True

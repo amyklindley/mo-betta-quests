@@ -62,6 +62,16 @@ saves the file.
 - **In `/note`:** change the leading `-` of a task line to `x` (or `h` to hide
   it), then close the window. Or `/mnmquest done <id>`.
 
+## When a quest is missed
+
+The app decides what counts as a task from a phrase library in `phrases.py`:
+plain lists of request wording ("I need you to"), task phrases ("bring me",
+"fill the bag"), instruction verbs that open a sentence ("Show this coin to"),
+and noise to ignore ("take no offense"). If an NPC's instruction was not picked
+up, open `unmatched.txt` next to the exe: it lists every NPC sentence from the
+last 7 days that was not treated as a task. Send that file (or the missed line)
+to whoever maintains the library and the phrasing gets added.
+
 ## How status is decided
 
 - open: the NPC said it and nothing newer suggests it is finished.
