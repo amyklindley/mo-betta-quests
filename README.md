@@ -130,3 +130,7 @@ Produces `dist\MoBettaQuests.exe` and `dist\MoBettaQuests-win64.zip`. To run fro
 source instead: `python overlay.py`. `mnm_quests.py` is the parser and also a
 CLI (`list`, `all`, `write`, `watch`, `done`, `undo`, `hide`); the regexes near
 its top decide what counts as a task.
+
+## License
+
+MIT. Use it, fork it, share it. See LICENSE.
