@@ -56,7 +56,7 @@ HOTKEY_ID = 1
 WM_HOTKEY = 0x0312
 MOD_CONTROL, MOD_SHIFT, VK_Q = 0x0002, 0x0004, 0x51
 WINDOW_CMDS = ("open", "show", "hide", "close", "toggle", "reload", "refresh", "collapse", "expand",
-               "char", "auto", "startup", "quit", "exit", "help")
+               "char", "auto", "remove", "restore", "startup", "quit", "exit", "help")
 
 
 def log(msg: str) -> None:
@@ -153,6 +153,7 @@ class App:
         self.open_cards: set[str] = set()  # quest cards showing their details
         self.view_char: str | None = None  # character tab chosen by hand (None = follow the game)
         self._cards: dict[str, list[mq.Card]] = {}
+        self.hidden_chars: set[str] = set()
         self.last_active: str | None = None
         self.last_snapshot: tuple | None = None
         self.q: "queue.Queue[tuple[str, str | None]]" = queue.Queue()
@@ -247,6 +248,10 @@ class App:
         elif verb == "auto":
             self.view_char = None
             self._render(self._data, self._active)
+        elif verb in ("remove", "restore") and arg:
+            match = [c for c in self._data if c.lower() == arg.lower()]
+            if match:
+                self._hide_char(match[0], verb == "remove")
         elif verb == "startup":
             on = (not startup_enabled()) if arg in (None, "toggle") else arg.lower() in ("on", "1", "yes", "true")
             try:
@@ -320,7 +325,12 @@ class App:
             for verb, arg in app_cmds:
                 if verb == "help":
                     self.show_help = True
-            mq.write_notes(mq.render_notes_block(data, active, help_text=self.show_help))
+            self.hidden_chars = set(state.get("hidden_chars", []))
+            if active in self.hidden_chars:  # you are playing it: bring it back
+                self.hidden_chars.discard(active)
+                state["hidden_chars"] = sorted(self.hidden_chars)
+                mq.save_state(state)
+            mq.write_notes(mq.render_notes_block(data, active, help_text=self.show_help, hidden_chars=self.hidden_chars))
             self._data, self._active = data, active
             self._render(data, active)
             for verb, arg in app_cmds:
@@ -349,7 +359,7 @@ class App:
         cards = self._cards.get(view, []) if view else []
         return (
             view, active, self.collapsed, tuple(sorted(self.open_cards)), self.show_archive.get(view or "", False),
-            tuple(sorted(self.show_ctx)),
+            tuple(sorted(self.show_ctx)), tuple(sorted(self.hidden_chars)),
             tuple((c, sum(len(mq.open_tasks(n)) for n in npcs)) for c, npcs in data.items()),
             tuple((k.key, k.title, k.subtitle, k.now, k.say, tuple((i.name, i.counter, i.done) for i, _, _ in k.items),
                    tuple((t.id, t.status, t.text) for t in k.tasks), tuple(k.given), tuple(k.rewards)) for k in cards),
@@ -368,6 +378,8 @@ class App:
         for w in self.body.winfo_children():
             w.destroy()
         view = self.view_char if self.view_char in data else active
+        if view in self.hidden_chars and view != active:
+            view = active
         if not view or view not in data:
             tk.Label(self.body, text="no characters found - play a bit first", bg=BG, fg=DIM,
                      font=self.normal).pack()
@@ -400,27 +412,57 @@ class App:
     # ---------------------------------------------------------------- character tabs
 
     def _char_tabs(self, data: dict[str, list[mq.Npc]], active: str | None, view: str) -> None:
-        chars = sorted(data, key=lambda c: (c != active, c))
-        if len(chars) <= 1:
+        """A dropdown: pick a character to look at, follow the game, remove or restore characters."""
+        if len(data) <= 1:
             return
-        bar = tk.Frame(self.body, bg=BG)
-        bar.pack(fill="x", pady=(0, 6))
-        row = None
-        for i, c in enumerate(chars):
-            if i % 4 == 0:
-                row = tk.Frame(bar, bg=BG)
-                row.pack(fill="x", pady=(0, 3))
-            n_open = sum(1 for k in self._cards[c] if k.open)
-            is_view = c == view
-            text = f"{'● ' if c == active else ''}{c}  {n_open}"
-            chip = tk.Label(row, text=text, bg="#2a2e3a" if is_view else "#1c1f27", fg=ACCENT if is_view else DIM,
-                            font=self.small, padx=8, pady=3, cursor="hand2")
-            chip.pack(side="left", padx=(0, 4))
-            chip.bind("<Button-1>", lambda e, ch=c: self._view(ch))
+        n_open = sum(1 for k in self._cards[view] if k.open)
+        following = self.view_char is None or self.view_char == active
+        text = f"▾  {'● ' if view == active else ''}{view}   {n_open} open" + ("" if following else "   (pinned)")
+        btn = tk.Label(self.body, text=text, bg="#1c1f27", fg=ACCENT, font=self.small, anchor="w", padx=8, pady=4,
+                       cursor="hand2")
+        btn.pack(fill="x", pady=(0, 6))
+        btn.bind("<Button-1>", lambda e: self._char_menu(e, data, active))
 
-    def _view(self, char: str) -> None:
-        self.view_char = None if char == self.last_active else char
+    def _char_menu(self, e: tk.Event, data: dict[str, list[mq.Npc]], active: str | None) -> None:
+        m = tk.Menu(self.root, tearoff=0, bg="#1c1f27", fg=FG, activebackground="#2a2e3a", activeforeground=ACCENT,
+                    font=self.small, bd=0)
+        shown = sorted((c for c in data if c not in self.hidden_chars), key=lambda c: (c != active, c))
+        for c in shown:
+            n_open = sum(1 for k in self._cards[c] if k.open)
+            m.add_command(label=f"{'● ' if c == active else '   '}{c}   ({n_open} open)", command=lambda ch=c: self._view(ch))
+        m.add_separator()
+        m.add_command(label="Follow the game", command=lambda: self._view(None))
+        rm = tk.Menu(m, tearoff=0, bg="#1c1f27", fg=FG, activebackground="#2a2e3a", activeforeground=ACCENT, font=self.small)
+        for c in shown:
+            if c != active:
+                rm.add_command(label=c, command=lambda ch=c: self._hide_char(ch, True))
+        m.add_cascade(label="Remove from list…", menu=rm)
+        hidden = sorted(self.hidden_chars & set(data))
+        if hidden:
+            rs = tk.Menu(m, tearoff=0, bg="#1c1f27", fg=FG, activebackground="#2a2e3a", activeforeground=ACCENT, font=self.small)
+            for c in hidden:
+                rs.add_command(label=c, command=lambda ch=c: self._hide_char(ch, False))
+            m.add_cascade(label="Restore…", menu=rs)
+        try:
+            m.tk_popup(e.x_root, e.y_root)
+        finally:
+            m.grab_release()
+
+    def _view(self, char: str | None) -> None:
+        self.view_char = None if char in (None, self.last_active) else char
         self._render(self._data, self._active)
+
+    def _hide_char(self, char: str, hide: bool) -> None:
+        """Remove a character from the overlay and the in-game note (or bring it back). Game files are untouched."""
+        state = mq.load_state()
+        hidden = set(state.get("hidden_chars", []))
+        hidden.add(char) if hide else hidden.discard(char)
+        state["hidden_chars"] = sorted(hidden)
+        mq.save_state(state)
+        if hide and self.view_char == char:
+            self.view_char = None
+        log(f"{'removed' if hide else 'restored'} character {char}")
+        self.refresh()
 
     # ---------------------------------------------------------------- quest cards
 

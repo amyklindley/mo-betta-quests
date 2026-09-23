@@ -55,9 +55,11 @@ saves the file.
 
 ## What the overlay shows
 
-A row of character tabs (the one the game is on has a dot; click another to
-look at it, click the dotted one to follow the game again), then one card per
-quest for that character:
+A character dropdown at the top (the one the game is on has a dot; pick
+another to look at it, "Follow the game" to go back to automatic; "Remove from
+list" drops a retired character from the overlay and the in-game note, and
+"Restore" brings it back, as does logging into it), then one card per quest
+for that character:
 
 - the quest name, with level and zone under it
 - what to do now: the wiki's next step when the quest is known, otherwise the

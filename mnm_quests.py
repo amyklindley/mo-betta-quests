@@ -646,10 +646,11 @@ class Npc:
 # ---------------------------------------------------------------- state
 
 def load_state() -> dict:
-    state = {"done": {}, "hidden": [], "reopened": [], "got": {}}
+    state = {"done": {}, "hidden": [], "reopened": [], "got": {}, "hidden_chars": []}
     if STATE_FILE.exists():
         state.update(json.loads(STATE_FILE.read_text("utf-8")))
     state.setdefault("got", {})  # task id -> [sub-item numbers marked obtained by hand]
+    state.setdefault("hidden_chars", [])  # characters removed from the overlay / note (game files untouched)
     return state
 
 
@@ -1029,7 +1030,8 @@ def open_tasks(npc: Npc) -> list[Task]:
     return [t for t in npc.tasks if t.status == "open"]
 
 
-def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text: bool = False) -> str:
+def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text: bool = False,
+                       hidden_chars: "list[str] | set[str]" = ()) -> str:
     """Compact plain text for the in-game /note window.
 
     The active character's quests are listed in full; other characters are
@@ -1043,7 +1045,7 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
     ]
     if help_text:
         out += ["", HELP_TEXT]
-    ordered = sorted(data, key=lambda c: (c != active, c))
+    ordered = sorted((c for c in data if c not in set(hidden_chars) or c == active), key=lambda c: (c != active, c))
     others: list[str] = []
     for char in ordered:
         npcs = data[char]
@@ -1121,6 +1123,7 @@ HELP_TEXT = """/mobetta commands (/mbq works too) - type one on its own line up 
   got <id> <n>             sub-item n of that task is in hand (bought, traded): ungot <id> <n> reverts
   hide <id>                never show that line again
   char <name> | auto       pin the overlay to one character / follow the game
+  remove <name>            drop a character from the overlay and this note (restore <name> brings it back)
   startup on | off         start with Windows
   quit                     close the app
   help                     show this text (goes away on the next command)"""
@@ -1216,7 +1219,7 @@ def cmd_write(state: dict, force_char: str | None = None) -> None:
         active = match[0] if match else None
     MD_FILE.write_text(render_md(data, show_all=True), "utf-8")
     write_unmatched(data)
-    changed = write_notes(render_notes_block(data, active))
+    changed = write_notes(render_notes_block(data, active, hidden_chars=state.get("hidden_chars", [])))
     n = sum(len(open_tasks(npc)) for npcs in data.values() for npc in npcs)
     verb = "wrote" if changed else "already current:"
     print(f"{datetime.now():%H:%M:%S} {verb} {n} open task(s) in {NOTES_FILE.name} "
