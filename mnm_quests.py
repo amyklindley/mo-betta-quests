@@ -319,9 +319,9 @@ def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int,
             continue
         for e in data.get("c01", []):
             act = e.get("f01")
-            # act_13 = looted from a corpse (+), act_24 = sold to a vendor (-), act_11 = dropped (-).
-            # Hand-ins to NPCs are not logged by the game, so those cannot be subtracted.
-            sign = {"act_13": 1, "act_24": -1, "act_11": -1}.get(act)
+            # act_13 = looted from a corpse (+), act_27 = harvested (+), act_24 = sold (-), act_11 = dropped (-).
+            # Purchases and hand-ins to NPCs are not logged by the game at all; use the manual "got" mark.
+            sign = {"act_13": 1, "act_27": 1, "act_24": -1, "act_11": -1}.get(act)
             if sign is None:
                 continue
             try:
@@ -466,13 +466,18 @@ class Item:
     name: str  # loot name when the Ledger has seen it, else the phrase from the NPC
     want: int
     have: int
+    manual: bool = False  # marked obtained by hand (bought, traded, found in a chest: the Ledger cannot see those)
 
     @property
     def done(self) -> bool:
+        if self.manual:
+            return True
         return self.have >= self.want if self.want else self.have > 0
 
     @property
     def counter(self) -> str:
+        if self.manual:
+            return "got it" if self.want <= 1 else f"{self.want}/{self.want}"
         if not self.want:  # the NPC gave no number: show what you have
             return f"x{self.have}" if self.have else "none yet"
         return f"{min(self.have, self.want)}/{self.want}"
@@ -493,9 +498,10 @@ class Npc:
 # ---------------------------------------------------------------- state
 
 def load_state() -> dict:
-    state = {"done": {}, "hidden": [], "reopened": []}
+    state = {"done": {}, "hidden": [], "reopened": [], "got": {}}
     if STATE_FILE.exists():
         state.update(json.loads(STATE_FILE.read_text("utf-8")))
+    state.setdefault("got", {})  # task id -> [sub-item numbers marked obtained by hand]
     return state
 
 
@@ -654,6 +660,9 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 # Whole Ledger history, not just since the task: you may already carry the items.
                 # Net = looted - sold - dropped is the best estimate of what is in your bags.
                 t.items = task_items(t.text, loot_since(char_dir, LEDGER_EPOCH))
+                for n in state["got"].get(t.id, []):
+                    if 1 <= n <= len(t.items):
+                        t.items[n - 1].manual = True
                 counted = [i for i in t.items if i.want]
                 if counted:
                     t.progress = f"{min(sum(i.have for i in counted), sum(i.want for i in counted))}/{sum(i.want for i in counted)}"
@@ -699,8 +708,8 @@ def render_md(data: dict[str, list[Npc]], show_all: bool = False) -> str:
             for t in tasks:
                 mark = {"open": "[ ]", "likely-done": "[~]", "done": "[x]", "hidden": "[-]"}[t.status]
                 lines.append(f"- {mark} `{t.id}` {t.text}")
-                for it in t.items:
-                    lines.append(f"  - {'[x]' if it.done else '[ ]'} {it.name} **{it.counter}**")
+                for n, it in enumerate(t.items, 1):
+                    lines.append(f"  - {'[x]' if it.done else '[ ]'} {n}. {it.name} **{it.counter}**")
         if not any_out:
             lines.append("_nothing open_")
         if show_all:
@@ -768,8 +777,8 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
                 out.append("  gave you: " + ", ".join(item for _, item in npc.given[-3:]))
             for t in tasks:
                 out.append(f"  - ({t.id}) {t.text}")
-                for it in t.items:
-                    out.append(f"      {'x' if it.done else '.'} {it.name}  {it.counter}")
+                for n, it in enumerate(t.items, 1):
+                    out.append(f"      {'x' if it.done else '.'} {n}. {it.name}  {it.counter}")
     if others:
         out += ["", "other chars: " + ", ".join(others)]
     out.append(BLOCK_END)
@@ -814,6 +823,8 @@ def write_notes(block: str, pre: str | None = None, post: str | None = None) -> 
 #   Inside the block:         x (8c38db) ...   or   - (8c38db) ... x
 #   App commands:             /mobetta open   /   /mobetta help   (see HELP_TEXT); /mnmquest and /mbq also work
 CMD_RE = re.compile(r"^\s*(done|hide|undo|x)\s+\(?([0-9a-f]{6})\)?\s*$", re.I)
+# "got 6f1f38 3": sub-item 3 of that task is in hand (bought, traded...). "ungot" reverts.
+GOT_RE = re.compile(r"^\s*(?:/(?:mobetta(?:quests?)?|mbq|mnmquests?)\s+)?(got|ungot)\s+\(?([0-9a-f]{6})\)?\s+(\d{1,2})\s*$", re.I)
 APP_CMD_RE = re.compile(r"^\s*/(?:mobetta(?:quests?)?|mbq|mnmquests?)\s+(\w+)(?:\s+(\S+))?\s*$", re.I)
 TASK_VERBS = ("done", "undo", "x")
 
@@ -821,6 +832,7 @@ HELP_TEXT = """/mobetta commands (/mbq works too) - type one on its own line up 
   open | hide | toggle     show / hide the overlay (hotkey Ctrl+Shift+Q)
   reload                   rebuild this list right now
   done <id>  undo <id>     finish / reopen a task (ids are the codes below)
+  got <id> <n>             sub-item n of that task is in hand (bought, traded): ungot <id> <n> reverts
   hide <id>                never show that line again
   char <name> | auto       pin the overlay to one character / follow the game
   startup on | off         start with Windows
@@ -843,6 +855,11 @@ def apply_note_corrections(state: dict) -> list[tuple[str, str | None]]:
         if m:
             verb, tid = m.group(1).lower(), m.group(2)
             _apply(state, "done" if verb == "x" else verb, tid)
+            changed = True
+            continue
+        m = GOT_RE.match(line)
+        if m:
+            set_got(state, m.group(2), int(m.group(3)), m.group(1).lower() == "got")
             changed = True
             continue
         m = APP_CMD_RE.match(line)
@@ -871,6 +888,17 @@ def apply_note_corrections(state: dict) -> list[tuple[str, str | None]]:
         if new_pre != pre:
             write_notes(block or "", pre=new_pre, post=post)
     return app_cmds
+
+
+def set_got(state: dict, tid: str, n: int, got: bool) -> None:
+    """Mark sub-item n (1-based) of task tid as obtained by hand, or clear that mark."""
+    marks = set(state.setdefault("got", {}).get(tid, []))
+    marks.add(n) if got else marks.discard(n)
+    if marks:
+        state["got"][tid] = sorted(marks)
+    else:
+        state["got"].pop(tid, None)
+    print(f"{datetime.now():%H:%M:%S} {'got' if got else 'ungot'} {tid} #{n}")
 
 
 def _apply(state: dict, verb: str, tid: str) -> None:

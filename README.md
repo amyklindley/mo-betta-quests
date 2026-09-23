@@ -83,7 +83,10 @@ to whoever maintains the library and the phrasing gets added.
   in your bags, worked out from the game's Ledger: everything that character
   has looted from corpses, minus everything sold or dropped. The game does not
   log hand-ins to NPCs or items bought or crafted, so after you turn a stack in
-  the counter stays full until you tick the task. "Intact" tasks skip loot
+  the counter stays full until you tick the task. For something you bought or
+  were given, click the circle next to the sub-item in the overlay (or type
+  `/mobetta got <task id> <sub-item number>` in `/note`) to mark it in hand;
+  click again to revert. "Intact" tasks skip loot
   named "broken", and when the NPC names the creature the counter only takes
   that creature's drops. If you ask an NPC for specifics and they answer with a
   list ("meat from the four-legged ones, eggs from the snakes..."), that answer

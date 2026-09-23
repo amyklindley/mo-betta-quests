@@ -400,14 +400,23 @@ class App:
             # Click the text to see what the NPC said around it (answers "go down where?").
             lbl.bind("<Button-1>", lambda e, tid=t.id: self._toggle_ctx(tid))
         # Required items as sub-tasks with their own counters, filled in from Ledger loot.
-        for it in t.items:
+        # Click the circle to mark one obtained by hand (bought, traded): the Ledger cannot see those.
+        for n, it in enumerate(t.items, 1):
             sub = tk.Frame(self.body, bg=BG)
             sub.pack(fill="x", padx=(34, 6))
             glyph = "✔" if it.done else "○"
-            tk.Label(sub, text=glyph, bg=BG, fg=ACCENT if it.done else DIM, font=self.small, width=2).pack(side="left")
+            g = tk.Label(sub, text=glyph, bg=BG, fg=ACCENT if it.done else DIM, font=self.small, width=2, cursor="hand2")
+            g.pack(side="left")
+            g.bind("<Button-1>", lambda e, tid=t.id, i=n, on=not it.manual: self._got(tid, i, on))
             tk.Label(sub, text=it.name, bg=BG, fg=DIM if (done or it.done) else FG, font=self.small, anchor="w",
                      wraplength=WRAP - 40, justify="left").pack(side="left", fill="x", expand=True)
             tk.Label(sub, text=it.counter, bg=BG, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
+
+    def _got(self, tid: str, n: int, on: bool) -> None:
+        state = mq.load_state()
+        mq.set_got(state, tid, n, on)
+        mq.save_state(state)
+        self.refresh()
         tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
                   activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
             side="right", anchor="n")
