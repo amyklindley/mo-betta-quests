@@ -130,6 +130,24 @@ QTY_RE = re.compile(
     r"(?P<noun>[a-z]+(?:\s+[a-z]+){0,2})",
     re.I,
 )
+# "meat from the four-legged ones, eggs from the snakes, and legs from the beetles":
+# an item list without numbers. Only used when a sentence has two or more of these.
+FROM_RE = re.compile(r"\b(?P<what>[a-z]+) from (?:the |their |some )?(?P<source>[a-z-]+(?: [a-z-]+)?)", re.I)
+VAGUE_SOURCES = {"one", "ones", "thing", "things", "creature", "creatures", "beast", "beasts", "animal", "animals",
+                 "pest", "pests", "vermin", "monster", "monsters"}
+# The NPC is about to spell out what they want; the next sentence is a list even if it is a question.
+LIST_CUE_RE = re.compile(
+    r"(specifics|specific(ally)?|to be (specific|precise|clear)|here('s| is) (the|a|what|my)|what (i|we) (need|want|require|ask)|"
+    r"as follows|the following|namely|let me (be clear|spell it out|list)|(any|all) of (the following|these))",
+    re.I,
+)
+LIST_WINDOW = timedelta(minutes=5)
+
+
+def is_item_list(s: str) -> bool:
+    return len(FROM_RE.findall(s)) >= 2 or (s.count(",") >= 2 and " and " in s and len(wanted_items(s)) >= 2)
+
+
 # "collect a fire beetle eye", "bring me an ogre tooth": a single item after a fetch verb.
 SINGLE_RE = re.compile(
     r"\b(?:collect|gather|bring(?: me| back| us)?|fetch|get(?: me)?|find(?: me)?|retrieve|obtain|recover|"
@@ -171,10 +189,12 @@ def _noun_words(raw: str) -> list[str]:
     return out
 
 
-def wanted_items(text: str) -> list[tuple[int, list[str], str]]:
-    """Every 'N <things>' / 'collect a <thing>' in a task sentence, as
-    (count, [singular noun words], phrase as the NPC said it)."""
-    found: list[tuple[int, list[str], str]] = []
+def wanted_items(text: str) -> list[tuple[int, list[str], str, "set[str] | None"]]:
+    """Every 'N <things>' / 'collect a <thing>' / 'X from the Y' in a task sentence, as
+    (count, [singular noun words], phrase as the NPC said it, scope words or None).
+    count 0 means the NPC gave no number. Scope words, when set, replace the whole
+    sentence when scoring loot names (see match_loot)."""
+    found: list[tuple[int, list[str], str, set[str] | None]] = []
     seen_spans: list[tuple[int, int]] = []
     for m in QTY_RE.finditer(text):
         num = m.group("num").lower()
@@ -195,8 +215,24 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str]]:
             phrase = f"{phrase} of {words[0]}"
         elif singular(words[-1]) == words[-1]:
             continue  # "two birds with": the head noun must be plural when asking for several
-        found.append((count, [singular(w) for w in words if len(w) > 2], phrase))
+        found.append((count, [singular(w) for w in words if len(w) > 2], phrase, None))
         seen_spans.append(m.span())
+    froms = list(FROM_RE.finditer(text))
+    if len(froms) >= 2:
+        for m in froms:
+            if any(a <= m.start() < b for a, b in seen_spans):
+                continue
+            what = singular(m.group("what").lower())
+            if what in STOP_NOUNS or what in TRAILING_WORDS or len(what) < 3:
+                continue
+            src = [w for w in m.group("source").lower().replace("-", " ").split() if w not in TRAILING_WORDS]
+            src_head = singular(src[-1]) if src else ""
+            vague = not src_head or src_head in VAGUE_SOURCES
+            nouns = ([] if vague else [src_head]) + [what]
+            phrase = f"{m.group('what')} from the {m.group('source')}".lower()
+            # A vague source ("four-legged ones") must not be narrowed by other creatures named nearby.
+            found.append((0, nouns, phrase, {what} if vague else None))
+            seen_spans.append(m.span())
     for m in SINGLE_RE.finditer(text):
         if any(a <= m.start("noun") < b for a, b in seen_spans):
             continue
@@ -205,7 +241,7 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str]]:
             continue
         if singular(words[-1]) != words[-1] and not words[-1].endswith("ss"):
             continue  # "collect a few samples": plural after "a" is not a single item
-        found.append((1, [singular(w) for w in words if len(w) > 2], " ".join(words)))
+        found.append((1, [singular(w) for w in words if len(w) > 2], " ".join(words), None))
     return found
 
 
@@ -269,20 +305,25 @@ def match_loot(nouns: list[str], must_intact: bool, loot: list[tuple[datetime, s
     top = max(score.values())
     if top > 0:
         per_name = {n: q for n, q in per_name.items() if score[n] == top}
+    per_name = {n: q for n, q in per_name.items() if q > 0}
+    if not per_name:
+        return 0, ""
     have = sum(per_name.values())
-    best = max(per_name, key=per_name.get)
-    return max(have, 0), best
+    # One loot name: use it. Several (fire beetle legs + grain beetle legs): the caller keeps the NPC's phrase.
+    best = max(per_name, key=per_name.get) if len(per_name) == 1 else ""
+    return have, best
 
 
 def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[Item]:
     must_intact = bool(re.search(r"\bintact\b", task_text, re.I))
     text_words = {singular(w) for w in re.findall(r"[a-z]+", task_text.lower())}
     items: list[Item] = []
-    for count, nouns, phrase in wanted_items(task_text):
+    for count, nouns, phrase, scope in wanted_items(task_text):
         if not nouns:
             continue
-        have, loot_name = match_loot(nouns, must_intact, loot, text_words)
-        name = loot_name or (("intact " if must_intact else "") + phrase)
+        have, loot_name = match_loot(nouns, must_intact, loot, scope if scope is not None else text_words)
+        # A vague source keeps the NPC's wording, since several loot names may be counted together.
+        name = phrase if scope is not None else (loot_name or (("intact " if must_intact else "") + phrase))
         items.append(Item(name, count, have))
     return items
 
@@ -349,10 +390,12 @@ class Item:
 
     @property
     def done(self) -> bool:
-        return self.have >= self.want
+        return self.have >= self.want if self.want else self.have > 0
 
     @property
     def counter(self) -> str:
+        if not self.want:  # the NPC gave no number: show what you have
+            return f"x{self.have}" if self.have else "none yet"
         return f"{min(self.have, self.want)}/{self.want}"
 
 
@@ -508,13 +551,33 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                           if abs(says[k][0] - when) <= CONTINUATION_WINDOW]
                 tid = hashlib.sha1(f"{char}|{name}|{s}".encode()).hexdigest()[:6]
                 npc.tasks.append(Task(tid, char, name, when, text, zone=npc.zone, context="\n".join(around)))
+        # Second pass: a list-shaped answer ("meat from the rats, eggs from the snakes...") within a
+        # few minutes after a task from the same NPC is the detail for that task. Often a question,
+        # often prompted by the player asking for specifics, so is_task() never catches it.
+        for i, (when, sentences) in enumerate(says):
+            for j, s in enumerate(sentences):
+                prev = sentences[j - 1] if j > 0 else (" ".join(says[i - 1][1]) if i > 0 else "")
+                if not (is_item_list(s) or (LIST_CUE_RE.search(prev) and len(wanted_items(s)) >= 1)):
+                    continue
+                if any(t.text.endswith(s) for t in npc.tasks):
+                    continue
+                target = None
+                for t in npc.tasks:
+                    if t.when <= when and when - t.when <= LIST_WINDOW and s not in t.text:
+                        target = t
+                if target is None:
+                    continue
+                target.text = target.text.rstrip() + " " + s
+                npc.unmatched = [(w, u) for w, u in npc.unmatched if u != s]
+
         for t in npc.tasks:
             if wanted_items(t.text):
                 # Whole Ledger history, not just since the task: you may already carry the items.
                 # Net = looted - sold - dropped is the best estimate of what is in your bags.
                 t.items = task_items(t.text, loot_since(char_dir, LEDGER_EPOCH))
-                if t.items:
-                    t.progress = f"{min(sum(i.have for i in t.items), sum(i.want for i in t.items))}/{sum(i.want for i in t.items)}"
+                counted = [i for i in t.items if i.want]
+                if counted:
+                    t.progress = f"{min(sum(i.have for i in counted), sum(i.want for i in counted))}/{sum(i.want for i in counted)}"
             if t.id in state["hidden"]:
                 t.status = "hidden"
             elif t.id in state["done"]:

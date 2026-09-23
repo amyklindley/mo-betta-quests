@@ -85,7 +85,10 @@ to whoever maintains the library and the phrasing gets added.
   log hand-ins to NPCs or items bought or crafted, so after you turn a stack in
   the counter stays full until you tick the task. "Intact" tasks skip loot
   named "broken", and when the NPC names the creature the counter only takes
-  that creature's drops.
+  that creature's drops. If you ask an NPC for specifics and they answer with a
+  list ("meat from the four-legged ones, eggs from the snakes..."), that answer
+  is folded into the task and each entry becomes a sub-item with a running
+  count, even though the answer had no numbers in it.
 - **Turn-in emotes.** "takes the note", "accepts the items", "counting out the
   bat wings" count as completion cues, same as a thank-you line.
 
