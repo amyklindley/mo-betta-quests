@@ -15,3 +15,10 @@ shot_*.png
 # runtime output
 *.log
 unmatched.txt
+
+# packaging / tooling
+.venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/

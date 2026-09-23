@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mo-betta-quests"
+version = "1.1.0"
+description = "Quest overlay for Monsters & Memories - reads the game's own journal files, shows open tasks with loot counters, writes them into /note"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["monsters-and-memories", "quest", "overlay", "journal"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Win32 (MS Windows)",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+]
+# The parser CLI (mnm-quests) is pure stdlib; the tray overlay is Windows-only.
+dependencies = [
+    "pystray>=0.19; platform_system == 'Windows'",
+    "pillow>=10; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff"]
+
+[project.scripts]
+mnm-quests = "mnm_quests:main"
+mobetta-overlay = "overlay:main"
+wiki-quests = "wiki_quests:main"
+
+[tool.setuptools]
+py-modules = ["mnm_quests", "phrases", "overlay", "wiki_quests"]
+include-package-data = true
+
+[tool.setuptools.data-files]
+"." = ["quests.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["F", "E9"]

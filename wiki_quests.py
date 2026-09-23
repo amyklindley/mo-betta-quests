@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import json
 import re
-import sys
 import time
 import urllib.parse
 import urllib.request
@@ -111,7 +110,7 @@ def parse(title: str, text: str) -> dict:
             continue
         if not section.startswith("walk"):
             continue
-        m = YOU_SAY_RE.match(line)
+        m = YOU_SAY_RE.match(plain(line) if line.startswith(":") else line)
         if m:
             order += 1
             q["lines"].append({"n": order, "kind": "say", "text": plain(m.group(1)), "part": part})

@@ -326,6 +326,12 @@ class App:
             for verb, arg in app_cmds:
                 if verb != "help":
                     self.q.put((verb, arg))
+        except mq.GameDataNotFoundError as e:
+            # Fresh install / game not launched yet: show the empty state instead
+            # of dying (SystemExit used to escape the generic handler below).
+            log(f"no game data yet ({e}); showing empty state")
+            self._data, self._active = {}, None
+            self._render({}, None)
         except Exception:
             log("error during refresh:\n" + traceback.format_exc())
         try:

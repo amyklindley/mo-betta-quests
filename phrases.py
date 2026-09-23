@@ -13,7 +13,8 @@ Order of evaluation for each sentence:
 Questions that are not REQUESTs are ignored.
 
 DONE_CUES marks the moment an NPC thanks you, so earlier tasks from that NPC are
-flagged "likely done".
+flagged "likely done". A sentence that ALSO carries task wording ("bring me X ...
+as promised") is a task first: the reward language does not turn it into a turn-in.
 """
 
 # ---------------------------------------------------------------- 1. never a task
