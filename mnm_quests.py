@@ -101,6 +101,122 @@ MAX_PREV_LINE = 200  # chars: borrow a whole previous line as context only if it
 UNMATCHED_DAYS = timedelta(days=7)  # how far back unmatched.txt looks
 UNMATCHED_FILE = HERE / "unmatched.txt"
 
+# Emote lines where the NPC hands you something. The captured item is shown under the NPC.
+GIVE_RE = re.compile(
+    r"\b(?:hands? you|handing you|gives? you|giving you|passes you|tosses|throws|offers you|offers it|"
+    r"places|lays?|sets|slides|produces|pulls out|takes out|presents you with|presses)\s+"
+    r"(?P<item>(?:a|an|the|some|two|three|several|his|her|its|another)\s+[^,.;]+?)"
+    r"(?=\s+(?:into|in|to|on|onto|for|at|before|toward|towards|and|then|with|,|\.)|[,.]|$)",
+    re.I,
+)
+
+# "gives you a generous nod" is not an item.
+NOT_ITEM_RE = re.compile(
+    r"\b(nod|look|glance|smile|grin|wink|once-over|moment|chance|word|warning|thanks|blessing|salute|wave|"
+    r"shrug|laugh|chuckle|sigh|stare|glare|frown|scowl|kiss|hug|pat|slap|push|shove|hand|thought|idea|"
+    r"lesson|choice|task|job|mission|reason|answer|question|name|story|tale|hint|clue|sign|signal)s?\b",
+    re.I,
+)
+
+# "Bring me five of their bone chips": number + noun, used to count matching loot in the Ledger.
+NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8,
+                "nine": 9, "ten": 10, "a dozen": 12, "dozen": 12, "twelve": 12, "fifteen": 15, "twenty": 20}
+QTY_RE = re.compile(
+    r"\b(?P<num>one|two|three|four|five|six|seven|eight|nine|ten|twelve|fifteen|twenty|a dozen|\d+)\s+"
+    r"(?:of\s+(?:their|its|the|those|these|either|his|her)\s+)?"
+    r"(?P<noun>[a-z]+(?:\s+[a-z]+)?)",
+    re.I,
+)
+GENERIC_NOUNS = {"portions", "portion", "pieces", "piece", "pairs", "pair", "samples", "sample", "sets", "set",
+                 "bits", "bit", "units", "unit", "bundles", "bundle", "handfuls", "handful", "lots", "lot"}
+TRAILING_WORDS = {"and", "then", "from", "for", "to", "so", "that", "of", "with", "in", "on", "or", "but", "if", "when",
+                  "before", "after", "into", "back", "here", "there", "each", "every", "as", "at", "by", "which"}
+STOP_NOUNS = {"of", "them", "more", "birds", "stone", "time", "thing", "things", "day", "days", "night", "nights",
+              "way", "ways", "hour", "hours", "week", "weeks", "gold", "silver", "copper", "platinum", "coins", "coin"}
+
+
+def singular(word: str) -> str:
+    w = word.lower()
+    irregular = {"teeth": "tooth", "feet": "foot", "geese": "goose", "mice": "mouse", "lice": "louse", "leaves": "leaf",
+                 "knives": "knife", "wolves": "wolf", "halves": "half", "hooves": "hoof", "calves": "calf"}
+    if w in irregular:
+        return irregular[w]
+    if w.endswith("ies") and len(w) > 4:
+        return w[:-3] + "y"
+    if w.endswith(("ches", "shes", "sses", "xes", "zes")):
+        return w[:-2]
+    if w.endswith("s") and not w.endswith("ss") and len(w) > 3:
+        return w[:-1]
+    return w
+
+
+def wanted_quantity(text: str) -> tuple[int, list[str]] | None:
+    """(count, [singular noun words]) for the first 'N <things>' in a task sentence, or None."""
+    for m in QTY_RE.finditer(text):
+        num = m.group("num").lower()
+        count = NUMBER_WORDS.get(num) or (int(num) if num.isdigit() else 0)
+        if not count:
+            continue
+        if count < 2:
+            continue  # "one stone", "one properly": too ambiguous to count
+        words = [w for w in m.group("noun").lower().split() if w not in TRAILING_WORDS]
+        if not words or words[0] in STOP_NOUNS:
+            continue
+        if words[0] not in GENERIC_NOUNS and singular(words[-1]) == words[-1]:
+            continue  # "two birds with": the head noun must be plural when asking for several
+        if words[0] in GENERIC_NOUNS:
+            # "six portions of either meat" -> the noun after "of"
+            after = re.search(r"\b" + words[0] + r"\s+of\s+(?:either|the|their|its|some|any|fresh|raw|cooked)?\s*([a-z]+)", text[m.start():], re.I)
+            if not after:
+                continue
+            words = [after.group(1).lower()]
+        return count, [singular(w) for w in words if len(w) > 2]
+    return None
+
+
+def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int]]:
+    """(time, item name, quantity) for corpse loot after `when`, from the Ledger."""
+    out: list[tuple[datetime, str, int]] = []
+    ledger = char_dir / "Ledger"
+    if not ledger.is_dir():
+        return out
+    for f in ledger.glob("*.json"):
+        try:
+            data = json.loads(f.read_text("utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for e in data.get("c01", []):
+            if e.get("f01") != "act_13":  # loot from a corpse
+                continue
+            try:
+                t = datetime.fromisoformat(e["f04"]).replace(tzinfo=None)
+                d = json.loads(e.get("f03") or "{}")
+            except (ValueError, KeyError, json.JSONDecodeError):
+                continue
+            if t >= when and d.get("d04"):
+                out.append((t, d["d04"], int(d.get("d01") or 1)))
+    return out
+
+
+def loot_progress(task_text: str, loot: list[tuple[datetime, str, int]]) -> str:
+    want = wanted_quantity(task_text)
+    if not want:
+        return ""
+    count, nouns = want
+    key = nouns[-1]  # last word is the head noun: "bone chips" -> chip, "bat wings" -> wing
+    must_intact = bool(re.search(r"\bintact\b", task_text, re.I))
+    have = 0
+    for _, name, qty in loot:
+        words = [singular(w) for w in re.findall(r"[a-z]+", name.lower())]
+        if key not in words:
+            continue
+        if len(nouns) > 1 and nouns[0] not in words and nouns[0] not in ("their", "its"):
+            continue  # "bat wings" should not count "moth wings"
+        if must_intact and "broken" in words:
+            continue
+        have += qty
+    return f"{min(have, count)}/{count}" if have else f"0/{count}"
+
 
 def write_unmatched(data: "dict[str, list[Npc]]") -> None:
     """Every recent NPC sentence the tool did NOT treat as a task. If a quest was
@@ -145,6 +261,7 @@ class Task:
     status: str = "open"  # open | likely-done | done | hidden
     zone: str = ""
     context: str = ""  # the surrounding NPC lines, for click-to-expand in the overlay
+    progress: str = ""  # e.g. "2/6" when the Ledger shows matching loot since the task was given
 
 
 @dataclass
@@ -156,6 +273,7 @@ class Npc:
     zone: str = ""
     turn_ins: list[tuple[datetime, str]] = field(default_factory=list)  # reward/thanks lines
     unmatched: list[tuple[datetime, str]] = field(default_factory=list)  # recent sentences not treated as tasks
+    given: list[tuple[datetime, str]] = field(default_factory=list)  # items the NPC handed you (from emotes)
 
 
 # ---------------------------------------------------------------- state
@@ -228,7 +346,9 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
             continue
         name = f.name
         entries: list[tuple[datetime, str]] = []
-        for raw in f.read_text("utf-8-sig", errors="replace").splitlines():
+        # The game occasionally glues two entries onto one line; split on embedded timestamps.
+        text = re.sub(r"(?<!\n)(?=\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}: )", "\n", f.read_text("utf-8-sig", errors="replace"))
+        for raw in text.splitlines():
             m = LINE_RE.match(raw)
             if not m:
                 continue
@@ -247,6 +367,13 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 npc.turn_ins.append((when, TAG_RE.sub("", body)))
             if body.startswith("says "):
                 says.append((when, split_sentences(body[5:])))
+            else:
+                # Emote line: does the NPC hand you something? ("hands you a small key", "places a filthy bag on the bar")
+                g = GIVE_RE.search(TAG_RE.sub("", body))
+                if g:
+                    item = g.group("item").strip(" ,.")
+                    if item and len(item) < 60 and not NOT_ITEM_RE.search(item):
+                        npc.given.append((when, item))
 
         cutoff = datetime.now() - UNMATCHED_DAYS
         for i, (when, sentences) in enumerate(says):
@@ -290,13 +417,15 @@ def parse_char(char_dir: Path, state: dict) -> list[Npc]:
                 tid = hashlib.sha1(f"{char}|{name}|{s}".encode()).hexdigest()[:6]
                 npc.tasks.append(Task(tid, char, name, when, text, zone=npc.zone, context="\n".join(around)))
         for t in npc.tasks:
+            if wanted_quantity(t.text):
+                t.progress = loot_progress(t.text, loot_since(char_dir, t.when))
             if t.id in state["hidden"]:
                 t.status = "hidden"
             elif t.id in state["done"]:
                 t.status = "done"
             elif last_done and t.when < last_done and t.id not in state["reopened"]:
                 t.status = "likely-done"
-        if npc.tasks or npc.turn_ins or npc.unmatched:
+        if npc.tasks or npc.turn_ins or npc.unmatched or npc.given:
             npcs.append(npc)
     npcs.sort(key=lambda n: n.last_seen, reverse=True)
     return npcs
@@ -327,9 +456,12 @@ def render_md(data: dict[str, list[Npc]], show_all: bool = False) -> str:
             any_out = True
             zone = f" ({npc.zone})" if npc.zone else ""
             lines.append(f"\n### {npc.name}{zone} - last spoke {npc.last_seen:%b %d %H:%M}")
+            for when, item in npc.given:
+                lines.append(f"- gave you: {item} ({when:%b %d %H:%M})")
             for t in tasks:
                 mark = {"open": "[ ]", "likely-done": "[~]", "done": "[x]", "hidden": "[-]"}[t.status]
-                lines.append(f"- {mark} `{t.id}` {t.text}")
+                prog = f" **[{t.progress}]**" if t.progress else ""
+                lines.append(f"- {mark} `{t.id}` {t.text}{prog}")
         if not any_out:
             lines.append("_nothing open_")
         if show_all:
@@ -393,8 +525,11 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
                 continue
             zone = f" [{npc.zone}]" if npc.zone else ""
             out.append(f"* {npc.name}{zone}")
+            if npc.given:
+                out.append("  gave you: " + ", ".join(item for _, item in npc.given[-3:]))
             for t in tasks:
-                out.append(f"  - ({t.id}) {t.text}")
+                prog = f" [{t.progress}]" if t.progress else ""
+                out.append(f"  - ({t.id}) {t.text}{prog}")
     if others:
         out += ["", "other chars: " + ", ".join(others)]
     out.append(BLOCK_END)

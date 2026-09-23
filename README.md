@@ -72,6 +72,19 @@ up, open `unmatched.txt` next to the exe: it lists every NPC sentence from the
 last 7 days that was not treated as a task. Send that file (or the missed line)
 to whoever maintains the library and the phrasing gets added.
 
+## What else it reads
+
+- **Items NPCs hand you.** Emote lines like "hands you a small key" or "places
+  a filthy bag on the bar" show up under the NPC as "gave you: ...", so you
+  know which quest item in your bags belongs to whom.
+- **Progress counts.** When a task asks for a number of things ("six of their
+  legs", "eight bat wings") the app counts matching loot in the game's Ledger
+  since the task was given and shows it as `2/6`. It only counts corpse loot,
+  so items bought or crafted are not included, and "intact" tasks skip loot
+  named "broken".
+- **Turn-in emotes.** "takes the note", "accepts the items", "counting out the
+  bat wings" count as completion cues, same as a thank-you line.
+
 ## How status is decided
 
 - open: the NPC said it and nothing newer suggests it is finished.

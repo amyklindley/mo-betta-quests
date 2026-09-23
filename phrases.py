@@ -193,4 +193,9 @@ DONE_CUES = [
     "accept this (gift|reward|token|payment|coin|purse)", "(here|this) is your (reward|payment|share|due)", "in return", "as (promised|agreed|payment|a reward|thanks|a token)",
     "for your (assistance|help|efforts?|service|trouble|work|kindness|bravery|courage|deed)", "a (small |little |modest )?(token|reward|gift|something) (of|for)",
     "you('ve| have) earned", "(take|keep) (this|these|it) (as|for your)", "(consider|call) (it|us|this) (even|square|settled)",
+    # emote lines: the NPC takes or inspects what you brought
+    "^(takes|accepts|receives|grabs|snatches|collects|pockets) (the|your|a|an|each|all|both|them|it)",
+    "^(reads|reads over|skims|scans|examines|inspects|studies|looks over|unfurls|unrolls) (the|your|it|over the)",
+    "^(looks|peers|rummages|digs|sifts) (through|into|inside) (the|your|it)", "counting (out )?(the|your|each)",
+    "(weighs|hefts|sniffs|tastes|bites) (the|your|it|each)", "from your hands?", "sets? (it|them|the \\w+) aside",
 ]

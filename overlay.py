@@ -367,6 +367,9 @@ class App:
                 zone = f"  [{npc.zone}]" if npc.zone else ""
                 tk.Label(self.body, text=npc.name + zone, bg=BG, fg=ACCENT, font=self.bold, anchor="w",
                          padx=6).pack(fill="x", pady=(4, 0))
+                if npc.given:
+                    tk.Label(self.body, text="gave you: " + ", ".join(item for _, item in npc.given[-3:]),
+                             bg=BG, fg=DIM, font=self.small, anchor="w", padx=12, wraplength=WRAP).pack(fill="x")
                 for t in listed:
                     self._task_row(t)
             if not shown:
@@ -393,6 +396,8 @@ class App:
         lbl = tk.Label(row, text=t.text, bg=BG, fg=DIM if done else FG, font=self.struck if done else self.normal,
                        wraplength=WRAP, justify="left", anchor="w", cursor="hand2" if t.context else "")
         lbl.pack(side="left", fill="x", expand=True)
+        if t.progress and not done:
+            tk.Label(row, text=t.progress, bg=BG, fg=ACCENT, font=self.bold).pack(side="right", anchor="n", padx=(4, 0))
         tk.Button(row, text="hide", command=lambda tid=t.id: self._mark("hide", tid), bg=BG, fg=DIM,
                   activebackground="#22252e", activeforeground=FG, relief="flat", font=self.small).pack(
             side="right", anchor="n")
