@@ -155,6 +155,19 @@ OF_LIST_RE = re.compile(
     r"\b(?:the |an? |some )?(?P<what>[a-z]+) (?:of|from) (?P<list>" + _ENTRY + r"(?:, " + _ENTRY + r")+(?:,? (?:and|or) " + _ENTRY + r")?)",
     re.I,
 )
+# "collect the following... ...a natural light source, butchered from a proximal creature...
+# ...a reagent harvested from a bat... ...a venom gland, carefully removed from a snake..."
+# Entries are separated by ellipses; the item is the noun phrase right after the article,
+# and the participle clause after it is flavour.
+ELLIPSIS_ITEM_RE = re.compile(
+    r"(?:^|\.\.\.)\s*(?:and\s+|then\s+|finally\s+|lastly\s+)?(?P<num>a|an|the|some|one|two|three|four|five|six|\d+)\s+"
+    r"(?P<noun>[a-z][a-z' -]*?)"
+    r"(?=\s*,|\s+(?:butchered|harvested|removed|taken|cut|torn|pulled|plucked|found|gathered|collected|looted|"
+    r"carved|skinned|scraped|drawn|drained|extracted|that|which|from|off|of the|to help|which)\b|\s*\.\.\.|\s*[.!?]?\s*$)",
+    re.I,
+)
+PARTICIPLE_RE = re.compile(r"(ed|ing)$", re.I)
+
 # The "X of A, B and C" shape only counts when X is a creature part or drop; otherwise it
 # matches ordinary prose ("out of the ordinary, please report...").
 PARTS = {
@@ -237,7 +250,29 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str, "set[str] | None"
             continue  # "two birds with": the head noun must be plural when asking for several
         found.append((count, [singular(w) for w in words if len(w) > 2], phrase, None))
         seen_spans.append(m.span())
+    # Ellipsis-separated "the following..." list: one item per "...a <thing>" entry.
+    if re.search(r"\b(the following|as follows)\b", text, re.I) and text.count("...") >= 2:
+        for m in ELLIPSIS_ITEM_RE.finditer(text):
+            if any(a <= m.start("noun") < b for a, b in seen_spans):
+                continue
+            words = _noun_words(m.group("noun"))
+            if not words or words[0] in STOP_NOUNS or words[-1] in ("following", "follows", "test", "task"):
+                continue
+            num = m.group("num").lower()
+            count = NUMBER_WORDS.get(num) or (int(num) if num.isdigit() else 1)
+            nouns = [singular(w) for w in words if len(w) > 2]
+            phrase = " ".join(words)
+            # "...a reagent harvested from a bat..." -> name the creature, and let the corpse name match it.
+            tail = text[m.end("noun"):].split("...", 1)[0]
+            src = re.search(r"\bfrom\s+(?:a|an|the|one of the|some|any)?\s*(?:[a-z]+\s+)?([a-z]+)", tail, re.I)
+            if src and singular(src.group(1).lower()) not in VAGUE_SOURCES | {"below", "above", "here", "there"}:
+                creature = singular(src.group(1).lower())
+                phrase += f" (from {src.group(1).lower()})"
+                nouns = [creature] + nouns
+            found.append((count, nouns, phrase, None))
+            seen_spans.append(m.span("noun"))
     froms = list(FROM_RE.finditer(text))
+    froms = [m for m in froms if not PARTICIPLE_RE.search(m.group("what"))]  # "butchered from" is not an item
     if len(froms) >= 2:
         for m in froms:
             if any(a <= m.start() < b for a, b in seen_spans):
@@ -434,7 +469,7 @@ def write_unmatched(data: "dict[str, list[Npc]]") -> None:
 # sentences / lines appended.
 CONTINUES_RE = re.compile(r"(\.\.\.|:)\s*$|\b(the following|as follows|these items|this list)\b", re.I)
 CONTINUATION_WINDOW = timedelta(minutes=3)
-MAX_CONTINUATION_LINES = 3
+MAX_CONTINUATION_LINES = 6  # "the following..." lists can run one item per line
 
 
 def pretty_zone(raw: str) -> str:
