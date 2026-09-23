@@ -148,6 +148,16 @@ def is_item_list(s: str) -> bool:
     return len(FROM_RE.findall(s)) >= 2 or (s.count(",") >= 2 and " and " in s and len(wanted_items(s)) >= 2)
 
 
+# "the eye of a bat, a fire beetle, a dune scarab, and a crypt scarab": one part from each of
+# several creatures. Needs at least two comma-separated entries.
+_ENTRY = r"(?:an? |the |some )?(?!(?:and|or)\b)[a-z]+(?: (?!(?:and|or)\b)[a-z]+)?"
+OF_LIST_RE = re.compile(
+    r"\b(?:the |an? |some )?(?P<what>[a-z]+) (?:of|from) (?P<list>" + _ENTRY + r"(?:, " + _ENTRY + r")+(?:,? (?:and|or) " + _ENTRY + r")?)",
+    re.I,
+)
+# After "collect a fire beetle eye", more single items may follow: ", a rat tail, and a snake fang".
+MORE_SINGLE_RE = re.compile(r"^,?\s*(?:and |or )?(?:a|an|one)\s+(?P<noun>[a-z]+(?: [a-z]+){0,2})", re.I)
+
 # "collect a fire beetle eye", "bring me an ogre tooth": a single item after a fetch verb.
 SINGLE_RE = re.compile(
     r"\b(?:collect|gather|bring(?: me| back| us)?|fetch|get(?: me)?|find(?: me)?|retrieve|obtain|recover|"
@@ -233,15 +243,49 @@ def wanted_items(text: str) -> list[tuple[int, list[str], str, "set[str] | None"
             # A vague source ("four-legged ones") must not be narrowed by other creatures named nearby.
             found.append((0, nouns, phrase, {what} if vague else None))
             seen_spans.append(m.span())
+    for m in OF_LIST_RE.finditer(text):
+        if any(a <= m.start() < b for a, b in seen_spans):
+            continue
+        what = singular(m.group("what").lower())
+        if what in STOP_NOUNS or what in TRAILING_WORDS or what in GENERIC_NOUNS or len(what) < 3:
+            continue
+        entries = re.split(r",\s*(?:and\s+|or\s+)?|\s+(?:and|or)\s+", m.group("list"))
+        added = 0
+        for entry in entries:
+            words = [w for w in entry.lower().split() if w not in ("a", "an", "the", "some")]
+            words = _noun_words(" ".join(words))
+            if not words or words[0] in STOP_NOUNS:
+                continue
+            src = [singular(w) for w in words if len(w) > 2]
+            if not src or src[-1] in VAGUE_SOURCES:
+                continue
+            found.append((1, src + [what], f"{' '.join(src)} {what}", None))  # "bat eye", "wolf hide"
+            added += 1
+        if added:
+            seen_spans.append(m.span())
+
+    def add_single(raw: str) -> bool:
+        words = _noun_words(raw)
+        if not words or words[0] in STOP_NOUNS or words[-1] in GENERIC_NOUNS:
+            return False
+        if singular(words[-1]) != words[-1] and not words[-1].endswith("ss"):
+            return False  # "collect a few samples": plural after "a" is not a single item
+        found.append((1, [singular(w) for w in words if len(w) > 2], " ".join(words), None))
+        return True
+
     for m in SINGLE_RE.finditer(text):
         if any(a <= m.start("noun") < b for a, b in seen_spans):
             continue
-        words = _noun_words(m.group("noun"))
-        if not words or words[0] in STOP_NOUNS or words[-1] in GENERIC_NOUNS:
+        if not add_single(m.group("noun")):
             continue
-        if singular(words[-1]) != words[-1] and not words[-1].endswith("ss"):
-            continue  # "collect a few samples": plural after "a" is not a single item
-        found.append((1, [singular(w) for w in words if len(w) > 2], " ".join(words), None))
+        # ", a rat tail, and a snake fang" continuing the same list
+        pos = m.end()
+        while True:
+            n = MORE_SINGLE_RE.match(text[pos:])
+            if not n or any(a <= pos + n.start("noun") < b for a, b in seen_spans):
+                break
+            add_single(n.group("noun"))
+            pos += n.end()
     return found
 
 
