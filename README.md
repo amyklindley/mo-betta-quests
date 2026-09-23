@@ -1,4 +1,4 @@
-# MnM Quests
+# Mo Betta Quests
 
 Quest reminders for Monsters & Memories, built from the game's own journal
 files. No addons, no memory reading, nothing injected into the game.
@@ -6,15 +6,15 @@ files. No addons, no memory reading, nothing injected into the game.
 The game writes every NPC line to
 `%USERPROFILE%\AppData\LocalLow\Niche Worlds Cult\Monsters and Memories\<server>\<Character>\journal\<NPC>`
 and keeps the `/note` window in `...\Monsters and Memories\notes.txt`.
-MnM Quests reads the journals, keeps the sentences where an NPC told you to do
+Mo Betta Quests reads the journals, keeps the sentences where an NPC told you to do
 something, shows them in a small always-on-top overlay, and appends the same
 list to `notes.txt` so it shows up in `/note` in-game. Anything you typed in
 `/note` yourself is left alone.
 
 ## Install
 
-1. Unzip `MnMQuests-win64.zip` anywhere and run `install.bat`. It copies the
-   app to `%LOCALAPPDATA%\MnMQuests`, adds a Start Menu shortcut, asks whether
+1. Unzip `MoBettaQuests-win64.zip` anywhere and run `install.bat`. It copies the
+   app to `%LOCALAPPDATA%\MoBettaQuests`, adds a Start Menu shortcut, asks whether
    to start with Windows, and launches it.
 2. Windows SmartScreen will warn the first time because the exe is not
    code-signed: click **More info**, then **Run anyway**.
@@ -24,7 +24,7 @@ list to `notes.txt` so it shows up in `/note` in-game. Anything you typed in
 `uninstall.bat` (in the install folder) removes everything, and asks whether
 to keep your done/hidden marks.
 
-Prefer no installer? Just run `MnMQuests.exe` from anywhere; it keeps its
+Prefer no installer? Just run `MoBettaQuests.exe` from anywhere; it keeps its
 files next to itself.
 
 ## Controlling it
@@ -33,10 +33,10 @@ files next to itself.
 |---|---|
 | **Ctrl+Shift+Q** | show / hide the overlay (works while the game has focus, if the game is windowed or borderless) |
 | **Tray icon** | left-click toggles the overlay; right-click for reload, start with Windows, log, quit |
-| **`/note` in-game** | type `/mnmquest <command>` on its own line above the quest block, then close the window |
-| **Run the exe again** | `MnMQuests.exe open`, `hide`, `toggle`, `reload`, `quit` (no argument = open) |
+| **`/note` in-game** | type `/mobetta <command>` on its own line above the quest block, then close the window (`/mbq` and `/mnmquest` work too) |
+| **Run the exe again** | `MoBettaQuests.exe open`, `hide`, `toggle`, `reload`, `quit` (no argument = open) |
 
-`/mnmquest` commands:
+`/mobetta` commands:
 
 ```
 open | hide | toggle     show / hide the overlay
@@ -60,7 +60,7 @@ saves the file.
   hit **hide** or when every task from that NPC is done. Each character has a
   "done & hidden" fold at the bottom with an **undo** per task.
 - **In `/note`:** change the leading `-` of a task line to `x` (or `h` to hide
-  it), then close the window. Or `/mnmquest done <id>`.
+  it), then close the window. Or `/mobetta done <id>`.
 
 ## When a quest is missed
 
@@ -104,7 +104,7 @@ box or use `done <id>`.
   back when you close it. The app re-appends the block a few seconds later if
   the game overwrote it. Your text is never lost.
 - Files the app writes: `notes.txt` in the game folder; `state.json`,
-  `overlay_pos.json`, `quests.md`, `mnmquests.log` next to the exe.
+  `overlay_pos.json`, `quests.md`, `MoBettaQuests.log` next to the exe.
 - Exclusive-fullscreen games cover always-on-top windows. If you never see the
   overlay while playing, switch the game to borderless/windowed, or rely on the
   `/note` block.
@@ -116,7 +116,7 @@ python -m pip install -r requirements.txt
 build.bat
 ```
 
-Produces `dist\MnMQuests.exe` and `dist\MnMQuests-win64.zip`. To run from
+Produces `dist\MoBettaQuests.exe` and `dist\MoBettaQuests-win64.zip`. To run from
 source instead: `python overlay.py`. `mnm_quests.py` is the parser and also a
 CLI (`list`, `all`, `write`, `watch`, `done`, `undo`, `hide`); the regexes near
 its top decide what counts as a task.

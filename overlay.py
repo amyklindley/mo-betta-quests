@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MnM Quests: tray app + always-on-top quest overlay for Monsters & Memories.
+"""Mo Betta Quests: tray app + always-on-top quest overlay for Monsters & Memories.
 
 Runs in the system tray. The overlay window lists the active character's open
 tasks with a checkbox per task; closing the window only hides it.
@@ -7,8 +7,8 @@ tasks with a checkbox per task; closing the window only hides it.
 Ways to control it:
   * tray icon menu (right-click)
   * hotkey Ctrl+Shift+Q toggles the overlay
-  * "/mnmquest <command>" typed on its own line in the game's /note window
-  * running the exe again while it is open:  MnMQuests.exe open|hide|toggle|reload|quit
+  * "/mobetta <command>" typed on its own line in the game's /note window (/mbq, /mnmquest also work)
+  * running the exe again while it is open:  MoBettaQuests.exe open|hide|toggle|reload|quit
 
   python overlay.py            run
   python overlay.py Denvan     pin to one character instead of auto-detect
@@ -39,13 +39,13 @@ try:
 except ImportError:  # running from source without the tray libs: overlay still works
     pystray = None
 
-APP_NAME = "MnMQuests"
+APP_NAME = "MoBettaQuests"
 POS_FILE = mq.HERE / "overlay_pos.json"  # next to the exe when packaged, next to the script otherwise
 # A second launch drops its command here for the running instance. Shared per user, not per
 # copy of the exe, so a click on any copy reaches whichever copy is running.
-CMD_FILE = Path(os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()) / "MnMQuests.command"
-LOG_FILE = mq.HERE / "mnmquests.log"
-MUTEX_NAME = "Local\\MnMQuests-single-instance"
+CMD_FILE = Path(os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()) / "MoBettaQuests.command"
+LOG_FILE = mq.HERE / "MoBettaQuests.log"
+MUTEX_NAME = "Local\\MoBettaQuests-single-instance"
 BG, FG, DIM, ACCENT = "#14161c", "#e6e1d6", "#8d8a80", "#d9a441"
 WRAP = 400
 TICK_MS = 1000  # command file / queue poll
@@ -157,7 +157,7 @@ class App:
         self._active: str | None = None
 
         self.root = tk.Tk()
-        self.root.title("MnM Quests")
+        self.root.title("Mo Betta Quests")
         self.root.overrideredirect(True)
         self.root.attributes("-topmost", True)
         self.root.attributes("-alpha", 0.9)
@@ -171,7 +171,7 @@ class App:
 
         header = tk.Frame(self.root, bg="#0e1015", cursor="fleur")
         header.pack(fill="x")
-        self.title = tk.Label(header, text="MnM Quests", bg="#0e1015", fg=ACCENT, font=self.bold, anchor="w", padx=8)
+        self.title = tk.Label(header, text="Mo Betta Quests", bg="#0e1015", fg=ACCENT, font=self.bold, anchor="w", padx=8)
         self.title.pack(side="left", fill="x", expand=True)
         for text, cmd in (("refresh", self.refresh), ("–", self.toggle_collapse), ("×", self.hide_window)):
             tk.Button(header, text=text, command=cmd, bg="#0e1015", fg=DIM, activebackground="#22252e",
@@ -205,7 +205,7 @@ class App:
             pystray.MenuItem("Open log", lambda: self.q.put(("log", None))),
             pystray.MenuItem("Quit", lambda: self.q.put(("quit", None))),
         )
-        self.tray = pystray.Icon(APP_NAME, tray_image(), "MnM Quests  (Ctrl+Shift+Q)", menu)
+        self.tray = pystray.Icon(APP_NAME, tray_image(), "Mo Betta Quests  (Ctrl+Shift+Q)", menu)
         self.tray.run_detached()
 
     # ---------------------------------------------------------------- commands
@@ -339,7 +339,7 @@ class App:
                 self.expanded[c] = c == active
             self.last_active = active
         total = sum(len(mq.open_tasks(n)) for npcs in data.values() for n in npcs)
-        self.title.config(text=f"MnM Quests  ·  {total} open")
+        self.title.config(text=f"Mo Betta Quests  ·  {total} open")
         if self.collapsed:
             return
         for char in sorted(data, key=lambda c: (c != active, c)):

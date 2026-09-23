@@ -49,8 +49,10 @@ def _detect_server() -> str:
 
 SERVER = _detect_server()
 
-BLOCK_START = "===== QUEST TRACKER (auto-generated, edits below are overwritten) ====="
-BLOCK_END = "===== END QUEST TRACKER ====="
+BLOCK_START = "===== MO BETTA QUESTS (auto-generated, edits below are overwritten) ====="
+BLOCK_END = "===== END MO BETTA QUESTS ====="
+# Markers written by older versions; recognised so an upgrade replaces the old block instead of stacking a new one.
+OLD_MARKERS = [("===== QUEST TRACKER (auto-generated, edits below are overwritten) =====", "===== END QUEST TRACKER =====")]
 
 # The vocabulary lives in phrases.py (plain lists, easy to extend). Compiled here.
 import phrases as P
@@ -506,7 +508,7 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
         BLOCK_START,
         f"updated {datetime.now():%b %d %H:%M}",
         "finished a task? change its leading '-' to 'x' (or 'h' to hide it), then close this window",
-        "type  /mnmquest help  on its own line above for all commands",
+        "type  /mobetta help  on its own line above for all commands",
     ]
     if help_text:
         out += ["", HELP_TEXT]
@@ -544,10 +546,11 @@ def read_notes() -> tuple[str, str, str]:
     """Split notes.txt into (user text before block, current block or '', text after block)."""
     existing = NOTES_FILE.read_text("utf-8") if NOTES_FILE.exists() else ""
     existing = existing.replace("\r\n", "\n")
-    if BLOCK_START in existing and BLOCK_END in existing:
-        a = existing.index(BLOCK_START)
-        b = existing.index(BLOCK_END) + len(BLOCK_END)
-        return existing[:a], existing[a:b], existing[b:]
+    for start, end in [(BLOCK_START, BLOCK_END)] + OLD_MARKERS:
+        if start in existing and end in existing:
+            a = existing.index(start)
+            b = existing.index(end) + len(end)
+            return existing[:a], existing[a:b], existing[b:]
     return existing, "", ""
 
 
@@ -571,12 +574,12 @@ def write_notes(block: str, pre: str | None = None, post: str | None = None) -> 
 # Corrections typed inside the game's /note window.
 #   In your own notes area:   done 8c38db   /   hide 8c38db   /   undo 8c38db
 #   Inside the block:         x (8c38db) ...   or   - (8c38db) ... x
-#   App commands:             /mnmquest open   /   /mnmquest help   (see HELP_TEXT)
+#   App commands:             /mobetta open   /   /mobetta help   (see HELP_TEXT); /mnmquest and /mbq also work
 CMD_RE = re.compile(r"^\s*(done|hide|undo|x)\s+\(?([0-9a-f]{6})\)?\s*$", re.I)
-APP_CMD_RE = re.compile(r"^\s*/mnmquests?\s+(\w+)(?:\s+(\S+))?\s*$", re.I)
+APP_CMD_RE = re.compile(r"^\s*/(?:mobetta(?:quests?)?|mbq|mnmquests?)\s+(\w+)(?:\s+(\S+))?\s*$", re.I)
 TASK_VERBS = ("done", "undo", "x")
 
-HELP_TEXT = """/mnmquest commands - type one on its own line up here, then close this window:
+HELP_TEXT = """/mobetta commands (/mbq works too) - type one on its own line up here, then close this window:
   open | hide | toggle     show / hide the overlay (hotkey Ctrl+Shift+Q)
   reload                   rebuild this list right now
   done <id>  undo <id>     finish / reopen a task (ids are the codes below)
