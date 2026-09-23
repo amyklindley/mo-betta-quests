@@ -400,7 +400,7 @@ def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[It
             loot_words = {singular(w) for w in re.findall(r"[a-z]+", loot_name.lower())}
             missing = [n for n in nouns[:-1] if n not in loot_words]
             # "Scarab Eye" from a dune scarab: keep the creature so it is not confused with the crypt scarab's.
-            name = f"{loot_name} ({' '.join(missing + [nouns[-1]])})" if missing else loot_name
+            name = f"{loot_name} ({phrase})" if missing else loot_name
         else:
             name = ("intact " if must_intact else "") + phrase
         items.append(Item(name, count, have))
