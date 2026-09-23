@@ -180,8 +180,16 @@ class App:
             w.bind("<ButtonPress-1>", self._drag_start)
             w.bind("<B1-Motion>", self._drag_move)
 
-        self.body = tk.Frame(self.root, bg=BG, padx=8, pady=6)
-        self.body.pack(fill="both", expand=True)
+        # Scrollable body: a frame inside a canvas, height capped so a long list never runs off screen.
+        self.canvas = tk.Canvas(self.root, bg=BG, highlightthickness=0, bd=0, width=WRAP + 90)
+        self.scroll = tk.Scrollbar(self.root, orient="vertical", command=self.canvas.yview, width=8)
+        self.canvas.configure(yscrollcommand=self.scroll.set)
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.body = tk.Frame(self.canvas, bg=BG, padx=8, pady=6)
+        self.body_id = self.canvas.create_window((0, 0), window=self.body, anchor="nw")
+        self.canvas.bind("<Configure>", lambda e: self.canvas.itemconfigure(self.body_id, width=e.width))
+        self.root.bind_all("<MouseWheel>", self._wheel)
+        self._last_sig: tuple | None = None
 
         threading.Thread(target=hotkey_loop, args=(self.q,), daemon=True).start()
         self._start_tray()
@@ -327,21 +335,60 @@ class App:
 
     # ---------------------------------------------------------------- ui
 
+    def _signature(self, data: dict[str, list[mq.Npc]], active: str | None) -> tuple:
+        """Everything that affects what is drawn. Same signature = no rebuild, no flicker."""
+        return (
+            active, self.collapsed, tuple(sorted(self.expanded.items())), tuple(sorted(self.show_archive.items())),
+            tuple(sorted(self.show_ctx)),
+            tuple(
+                (c, tuple(
+                    (n.name, n.zone, tuple(i for _, i in n.given),
+                     tuple((t.id, t.status, t.text, tuple((i.name, i.counter, i.done) for i in t.items)) for t in n.tasks))
+                    for n in npcs))
+                for c, npcs in data.items()),
+        )
+
     def _render(self, data: dict[str, list[mq.Npc]], active: str | None) -> None:
+        if active is not None and active != self.last_active:
+            for c in data:
+                self.expanded[c] = c == active
+            self.last_active = active
+        sig = self._signature(data, active)
+        if sig == self._last_sig:
+            return
+        self._last_sig = sig
+        scroll_pos = self.canvas.yview()[0]
         for w in self.body.winfo_children():
             w.destroy()
         if not active:
             tk.Label(self.body, text="no characters found - play a bit first", bg=BG, fg=DIM,
                      font=self.normal).pack()
+            self._fit(scroll_pos)
             return
-        if active != self.last_active:
-            for c in data:
-                self.expanded[c] = c == active
-            self.last_active = active
         total = sum(len(mq.open_tasks(n)) for npcs in data.values() for n in npcs)
         self.title.config(text=f"Mo Betta Quests  ·  {total} open")
         if self.collapsed:
             return
+        self._build_body(data, active)
+        self._fit(scroll_pos)
+
+    def _fit(self, scroll_pos: float = 0.0) -> None:
+        """Size the canvas to the content, capped at 75% of the screen; show the scrollbar only when needed."""
+        self.body.update_idletasks()
+        req_h, req_w = self.body.winfo_reqheight(), self.body.winfo_reqwidth()
+        max_h = int(self.root.winfo_screenheight() * 0.75)
+        self.canvas.configure(height=min(req_h, max_h), scrollregion=(0, 0, req_w, req_h))
+        if req_h > max_h:
+            self.scroll.pack(side="right", fill="y")
+        else:
+            self.scroll.pack_forget()
+        self.canvas.yview_moveto(scroll_pos)
+
+    def _wheel(self, e: tk.Event) -> None:
+        if self.scroll.winfo_ismapped():
+            self.canvas.yview_scroll(int(-e.delta / 120), "units")
+
+    def _build_body(self, data: dict[str, list[mq.Npc]], active: str) -> None:
         for char in sorted(data, key=lambda c: (c != active, c)):
             npcs = data[char]
             n_open = sum(len(mq.open_tasks(n)) for n in npcs)
@@ -452,9 +499,10 @@ class App:
     def toggle_collapse(self) -> None:
         self.collapsed = not self.collapsed
         if self.collapsed:
-            self.body.pack_forget()
+            self.canvas.pack_forget()
+            self.scroll.pack_forget()
         else:
-            self.body.pack(fill="both", expand=True)
+            self.canvas.pack(side="left", fill="both", expand=True)
         self._render(self._data, self._active)
 
     # ---------------------------------------------------------------- window

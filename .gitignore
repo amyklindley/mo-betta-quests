@@ -10,3 +10,4 @@ dist/
 *.spec
 __pycache__/
 *.zip
+shot_*.png
