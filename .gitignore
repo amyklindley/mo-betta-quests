@@ -11,3 +11,7 @@ dist/
 __pycache__/
 *.zip
 shot_*.png
+
+# runtime output
+*.log
+unmatched.txt
