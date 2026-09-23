@@ -305,9 +305,10 @@ def wanted_quantity(text: str) -> tuple[int, list[str]] | None:
     return (items[0][0], items[0][1]) if items else None
 
 
-def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int]]:
-    """(time, item name, quantity) for corpse loot after `when`, from the Ledger."""
-    out: list[tuple[datetime, str, int]] = []
+def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int, str]]:
+    """(time, item name, signed quantity, corpse name) for loot / sales / drops after `when`.
+    The corpse name ("a dune scarab") lets "dune scarab eye" match loot called just "Scarab Eye"."""
+    out: list[tuple[datetime, str, int, str]] = []
     ledger = char_dir / "Ledger"
     if not ledger.is_dir():
         return out
@@ -329,7 +330,13 @@ def loot_since(char_dir: Path, when: datetime) -> list[tuple[datetime, str, int]
             except (ValueError, KeyError, json.JSONDecodeError):
                 continue
             if t >= when and d.get("d04"):
-                out.append((t, d["d04"], sign * int(d.get("d01") or 1)))
+                corpse = ""
+                if sign > 0 and d.get("d02"):
+                    try:
+                        corpse = base64.b64decode(d["d02"] + "=" * (-len(d["d02"]) % 4)).decode("utf-8", "replace")
+                    except (ValueError, UnicodeDecodeError):
+                        corpse = ""
+                out.append((t, d["d04"], sign * int(d.get("d01") or 1), corpse))
     return out
 
 
@@ -344,16 +351,26 @@ def match_loot(nouns: list[str], must_intact: bool, loot: list[tuple[datetime, s
     key = nouns[-1]  # last word is the head noun: "bone chips" -> chip, "bat wings" -> wing
     per_name: dict[str, int] = {}
     score: dict[str, int] = {}
-    for _, name, qty in loot:
+    # Sales and drops carry no corpse name, so they are matched on the item name alone and
+    # subtracted from whichever names the loot matched.
+    matched_names: set[str] = set()
+    for _, name, qty, corpse in loot:
+        if qty <= 0:
+            continue
         words = [singular(w) for w in re.findall(r"[a-z]+", name.lower())]
+        corpse_words = [singular(w) for w in re.findall(r"[a-z]+", corpse.lower()) if w not in ("a", "an", "the")]
         if key not in words:
             continue
-        if len(nouns) > 1 and not all(n in words for n in nouns[:-1]):
-            continue  # "bat wings" should not count "moth wings"
+        if len(nouns) > 1 and not all(n in words or n in corpse_words for n in nouns[:-1]):
+            continue  # "bat wings" should not count "moth wings"; "dune scarab eye" needs a dune scarab corpse
         if must_intact and "broken" in words:
             continue
         per_name[name] = per_name.get(name, 0) + qty
-        score[name] = sum(1 for w in words if w != key and w in text_words)
+        matched_names.add(name)
+        score[name] = max(score.get(name, 0), sum(1 for w in words + corpse_words if w != key and w in text_words))
+    for _, name, qty, _corpse in loot:
+        if qty < 0 and name in matched_names:
+            per_name[name] = per_name.get(name, 0) + qty
     if not per_name:
         return 0, ""
     top = max(score.values())
@@ -377,7 +394,15 @@ def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[It
             continue
         have, loot_name = match_loot(nouns, must_intact, loot, scope if scope is not None else text_words)
         # A vague source keeps the NPC's wording, since several loot names may be counted together.
-        name = phrase if scope is not None else (loot_name or (("intact " if must_intact else "") + phrase))
+        if scope is not None:
+            name = phrase
+        elif loot_name:
+            loot_words = {singular(w) for w in re.findall(r"[a-z]+", loot_name.lower())}
+            missing = [n for n in nouns[:-1] if n not in loot_words]
+            # "Scarab Eye" from a dune scarab: keep the creature so it is not confused with the crypt scarab's.
+            name = f"{loot_name} ({' '.join(missing + [nouns[-1]])})" if missing else loot_name
+        else:
+            name = ("intact " if must_intact else "") + phrase
         items.append(Item(name, count, have))
     return items
 
