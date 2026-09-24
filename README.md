@@ -129,10 +129,30 @@ matched word for word against those walkthroughs, so under each NPC you get:
 - **the reward**
 
 When several NPCs belong to one quest, progress is worked out from whichever
-conversation is most recent; that NPC shows the full block and the others say
-"part of". To refresh the walkthroughs after the wiki changes, run
-`python wiki_quests.py` and drop the new `quests.json` next to the exe (a file
-next to the exe beats the bundled one).
+conversation is most recent.
+
+It also ships the wiki's item pages (`items.json`, about 4,900 items) and NPC
+and mob pages (`npcs.json`, about 1,800), which add:
+
+- **where:** the location of the NPC for the current step ("Tannery, in a room
+  upstairs from Leatherworker Haiat")
+- **from:** under each wanted item, which creature drops it and where it lives,
+  or which vendor sells it
+- **riddle items resolved:** "a natural light source, butchered from a proximal
+  creature" becomes Fire Beetle Eye, because that item's description says it
+  can be used as a light source; "venom gland from the snakes" becomes Snake
+  Poison Gland. The NPC's wording stays in parentheses so you can see what was
+  guessed.
+
+### Keeping the wiki data fresh
+
+The three JSON files are scraped centrally (`wiki_quests.py`, `wiki_data.py`)
+and committed to this repo. Once a day the app checks GitHub for newer copies
+and downloads them in the background, so nobody's PC crawls the wiki and nobody
+has to reinstall for a data update. That is the app's only network access.
+`/mobetta updates off` disables it, `updates now` forces a check, and the tray
+menu has "Check for wiki data updates". A JSON file placed next to the exe
+always wins over the bundled one.
 
 ## How status is decided
 

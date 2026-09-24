@@ -3,7 +3,7 @@ rem Builds dist\MoBettaQuests.exe and dist\MoBettaQuests-win64.zip (exe + instal
 cd /d "%~dp0"
 python -m pip install --quiet -r requirements.txt
 python make_icon.py
-python -m PyInstaller --onefile --noconsole --icon icon.ico --name MoBettaQuests --clean --add-data "quests.json;." overlay.py
+python -m PyInstaller --onefile --noconsole --icon icon.ico --name MoBettaQuests --clean --add-data "quests.json;." --add-data "items.json;." --add-data "npcs.json;." overlay.py
 if errorlevel 1 exit /b 1
 copy /y README.md dist\ >nul
 copy /y install.bat dist\ >nul

@@ -69,6 +69,132 @@ def load_quests() -> dict:
     return _QUESTS
 
 
+_ITEMS: dict | None = None
+_NPCS: dict | None = None
+
+
+def _data_file(name: str) -> Path:
+    return HERE / name if (HERE / name).exists() else _BUNDLED / name
+
+
+def reset_caches() -> None:
+    """Forget loaded wiki data (after a data refresh downloaded newer files)."""
+    global _QUESTS, _ITEMS, _NPCS
+    _QUESTS = _ITEMS = _NPCS = None
+
+
+def load_items() -> dict:
+    """{'by_id': {item id: item}, 'by_name': {lower name: item}, 'all': [...]}"""
+    global _ITEMS
+    if _ITEMS is None:
+        rows: list[dict] = []
+        try:
+            rows = json.loads(_data_file("items.json").read_text("utf-8")).get("items", [])
+        except (OSError, json.JSONDecodeError):
+            pass
+        _ITEMS = {"all": rows, "by_id": {r["id"]: r for r in rows if r.get("id")},
+                  "by_name": {r["name"].lower(): r for r in rows}}
+    return _ITEMS
+
+
+def load_npcs() -> dict:
+    """{'by_name': {lower name: npc}}"""
+    global _NPCS
+    if _NPCS is None:
+        rows: list[dict] = []
+        try:
+            rows = json.loads(_data_file("npcs.json").read_text("utf-8")).get("npcs", [])
+        except (OSError, json.JSONDecodeError):
+            pass
+        _NPCS = {"by_name": {r["name"].lower(): r for r in rows}}
+    return _NPCS
+
+
+def npc_where(name: str) -> str:
+    """'Tannery, in a room upstairs from Leatherworker Haiat' for an NPC the wiki knows."""
+    r = load_npcs()["by_name"].get(name.lower())
+    if not r:
+        return ""
+    return " · ".join(x for x in (r.get("location", ""), r.get("zone", "") if not r.get("location") else "") if x)
+
+
+def item_drops(item_name: str, limit: int = 2) -> str:
+    """'a grain beetle (Shaded Bloom Inn cellar), a rotting skeleton' for an item the wiki knows."""
+    r = load_items()["by_name"].get(item_name.lower())
+    if not r:
+        return ""
+    out: list[str] = []
+    for grp in r.get("drops_from", []):
+        for mob in grp.get("mobs", []):
+            where = npc_where(mob)
+            out.append(f"{mob} ({where})" if where else (f"{mob} [{grp['zone']}]" if grp.get("zone") else mob))
+            if len(out) >= limit:
+                return ", ".join(out)
+    if not out and r.get("sold_by"):
+        return "sold by " + ", ".join(r["sold_by"][:2])
+    return ", ".join(out)
+
+
+_RIDDLE_STOP = {"natural", "some", "from", "with", "that", "this", "which", "kind", "type", "sort", "piece", "bit",
+                "thing", "creature", "beast", "animal", "proximal", "nearby", "local", "young", "younger", "old",
+                "one", "ones", "any", "the", "and", "for", "you", "your", "might", "help", "avoid", "carefully"}
+
+
+def resolve_wiki_item(nouns: list[str], phrase: str, source: str = "") -> dict | None:
+    """Turn an NPC's wording into a wiki item.
+
+    1. Name match: wiki items whose name contains every noun ('venom gland' -> 'Snake Venom Gland'),
+       preferring one that drops from the named creature.
+    2. Riddle match: the phrase's significant words against item descriptions
+       ('natural light source' -> Fire Beetle Eye, 'It can be used as a cheap light source')."""
+    items = load_items()["all"]
+    if not items or not nouns:
+        return None
+    head = nouns[-1]
+    cands = []
+    for r in items:
+        words = {singular(w) for w in re.findall(r"[a-z]+", r["name"].lower())}
+        if head in words and all(n in words for n in nouns[:-1]):
+            cands.append(r)
+    def name_words(r: dict) -> set[str]:
+        return {singular(w) for w in re.findall(r"[a-z]+", r["name"].lower())}
+
+    if cands:
+        exact = [r for r in cands if name_words(r) == set(nouns)]  # "Ashira Tail" beats "Ashira Tail Charm"
+        if exact:
+            return exact[0]
+        if source:
+            src = singular(source.lower())
+            hit = [r for r in cands if any(src in singular(m.lower()) for g in r.get("drops_from", []) for m in g.get("mobs", []))]
+            if hit:
+                cands = hit
+        cands.sort(key=lambda r: (len(r["name"]), r["name"]))  # shortest name is the base item
+        return cands[0]
+    # riddle: description words
+    keys = {singular(w) for w in re.findall(r"[a-z]+", phrase.lower()) if len(w) > 3 and w not in _RIDDLE_STOP}
+    if len(keys) < 1:
+        return None
+    scored: list[tuple[int, dict]] = []
+    for r in items:
+        desc = r.get("description", "")
+        if not desc:
+            continue
+        dwords = {singular(w) for w in re.findall(r"[a-z]+", desc.lower())}
+        score = len(keys & dwords)
+        if source and singular(source.lower()) in dwords | name_words(r):
+            score += 1
+        if score >= 2:
+            scored.append((score, r))
+    if not scored:
+        return None
+    top = max(s for s, _ in scored)
+    tied = [r for s, r in scored if s == top]
+    # Tie-breaks: name contains the head noun ("gland"), then something that drops from a
+    # creature over something sold, then the shortest name (Fire Beetle Eye over Giant Fire Beetle Eye).
+    tied.sort(key=lambda r: (head not in name_words(r), not r.get("drops_from"), len(r["name"]), r["name"]))
+    return tied[0]
+
+
 def match_wiki_line(text: str) -> list[tuple[int, int]]:
     """Which wiki quests contain this NPC line, as (quest index, line number)."""
     db = load_quests()
@@ -539,6 +665,17 @@ def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[It
         if not nouns:
             continue
         have, loot_name = match_loot(nouns, must_intact, loot, scope if scope is not None else text_words)
+        resolved = ""
+        if not loot_name and scope is None:
+            # Nothing looted yet (or a riddle): ask the wiki what the NPC means.
+            src = re.search(r"\(from (?:the |a |an )?([a-z]+)\)", phrase)
+            wiki = resolve_wiki_item(nouns, phrase, src.group(1) if src else "")
+            if wiki:
+                wiki_nouns = [singular(w) for w in re.findall(r"[a-z]+", wiki["name"].lower()) if len(w) > 2]
+                have2, loot_name2 = match_loot(wiki_nouns, must_intact, loot, set(wiki_nouns))
+                loot_name, have = wiki["name"], max(have, have2)
+                if wiki["name"].lower() != phrase.lower():
+                    resolved = phrase  # show the NPC's wording next to the wiki's name
         # A vague source keeps the NPC's wording, since several loot names may be counted together.
         if scope is not None:
             name = phrase
@@ -546,10 +683,13 @@ def task_items(task_text: str, loot: list[tuple[datetime, str, int]]) -> list[It
             loot_words = {singular(w) for w in re.findall(r"[a-z]+", loot_name.lower())}
             missing = [n for n in nouns[:-1] if n not in loot_words]
             # "Scarab Eye" from a dune scarab: keep the creature so it is not confused with the crypt scarab's.
-            name = f"{loot_name} ({phrase})" if missing else loot_name
+            name = f"{loot_name} ({phrase})" if missing and not resolved else loot_name
         else:
             name = ("intact " if must_intact else "") + phrase
-        items.append(Item(name, count, have))
+        it = Item(name, count, have, resolved=resolved)
+        if not it.done:
+            it.drops = item_drops(loot_name or name)
+        items.append(it)
     return items
 
 
@@ -613,6 +753,8 @@ class Item:
     want: int
     have: int
     manual: bool = False  # marked obtained by hand (bought, traded, found in a chest: the Ledger cannot see those)
+    drops: str = ""  # where it comes from, per the wiki ("a grain beetle (Shaded Bloom Inn cellar)")
+    resolved: str = ""  # how the wiki resolved the NPC's wording, e.g. "natural light source"
 
     @property
     def done(self) -> bool:
@@ -838,6 +980,7 @@ class Card:
     key: str  # wiki quest title, or "npc:<name>" when the wiki does not know the NPC
     title: str
     subtitle: str  # "lvl 1 · Night Harbor"
+    where: str  # where to find the NPC for the current step, per the wiki
     now: str  # the wiki's next step, else the newest open instruction from the NPC
     say: str | None
     url: str
@@ -893,6 +1036,18 @@ def build_cards(npcs: list[Npc]) -> list[Card]:
         else:
             title, subtitle = group[0].name, group[0].zone
         now = qd["next_step"] if qd and qd["next_step"] else (short(open_tasks[0].text) if open_tasks else "")
+        # Where: the NPC named in the step if the wiki knows them, else the NPC you spoke to last.
+        where = ""
+        for n in sorted(load_npcs()["by_name"], key=len, reverse=True):
+            if now and n in now.lower() and len(n) > 4:
+                where = npc_where(n)
+                if where:
+                    where = f"{load_npcs()['by_name'][n]['name']}: {where}"
+                    break
+        if not where:
+            where = npc_where(group[0].name)
+            if where:
+                where = f"{group[0].name}: {where}"
         items: list[tuple[Item, str | None, int]] = []
         seen: set[str] = set()
         if qd:
@@ -905,7 +1060,7 @@ def build_cards(npcs: list[Npc]) -> list[Card]:
                     items.append((it, t.id, i))
                     seen.add(it.name.lower())
         cards.append(Card(
-            key=key, title=title, subtitle=subtitle, now=now, say=qd["say"] if qd else None,
+            key=key, title=title, subtitle=subtitle, where=where, now=now, say=qd["say"] if qd else None,
             url=qd["url"] if qd else "", by_name=bool(qd and qd.get("by_name")), items=items, tasks=tasks,
             npcs=group, rewards=qd["rewards"] if qd else [], given=[g for n in group for _, g in n.given],
             last_seen=max(n.last_seen for n in group),
@@ -936,7 +1091,10 @@ def resolve_quests(npcs: list[Npc], char_dir: Path, state: dict | None = None) -
                 nouns = [singular(w) for w in re.findall(r"[a-z]+", it["name"].lower()) if len(w) > 2]
                 if nouns:
                     have, _ = match_loot(nouns, False, loot, set(nouns))
-                    lead.quest_items.append(Item(it["name"], it["qty"], have))
+                    qi_item = Item(it["name"], it["qty"], have)
+                    if not qi_item.done:
+                        qi_item.drops = item_drops(it["name"])
+                    lead.quest_items.append(qi_item)
             for n in (state or {}).get("got", {}).get(f"wiki:{title}", []):
                 if 1 <= n <= len(lead.quest_items):
                     lead.quest_items[n - 1].manual = True
@@ -1059,10 +1217,14 @@ def render_notes_block(data: dict[str, list[Npc]], active: str | None, help_text
                 continue
             sub = f" [{card.subtitle}]" if card.subtitle else ""
             out.append(f"* {card.title}{sub}")
+            if card.where:
+                out.append(f"  where: {card.where}")
             if card.now:
                 out.append(f"  now: {card.now}")
             for it, _tid, _i in card.items:
                 out.append(f"      {'x' if it.done else '.'} {it.name}  {it.counter}")
+                if it.drops and not it.done:
+                    out.append(f"          from: {it.drops}")
             if card.say:
                 out.append(f"  say: \"{card.say}\"")
             for t in card.open_tasks:
@@ -1125,6 +1287,7 @@ HELP_TEXT = """/mobetta commands (/mbq works too) - type one on its own line up 
   char <name> | auto       pin the overlay to one character / follow the game
   remove <name>            drop a character from the overlay and this note (restore <name> brings it back)
   startup on | off         start with Windows
+  updates on | off | now   daily wiki data refresh from GitHub (quests, items, NPCs)
   quit                     close the app
   help                     show this text (goes away on the next command)"""
 MARK_RE = re.compile(r"^\s*([xX+]|-\s*[xX]|\[[xX]\])\s*\(([0-9a-f]{6})\)|^\s*-\s*\(([0-9a-f]{6})\).*\s(x|X|done)\s*$")

@@ -33,6 +33,7 @@ from pathlib import Path
 from tkinter import font as tkfont
 
 import mnm_quests as mq
+import wikidata
 
 try:
     import pystray
@@ -56,7 +57,7 @@ HOTKEY_ID = 1
 WM_HOTKEY = 0x0312
 MOD_CONTROL, MOD_SHIFT, VK_Q = 0x0002, 0x0004, 0x51
 WINDOW_CMDS = ("open", "show", "hide", "close", "toggle", "reload", "refresh", "collapse", "expand",
-               "char", "auto", "remove", "restore", "startup", "quit", "exit", "help")
+               "char", "auto", "remove", "restore", "startup", "updates", "quit", "exit", "help")
 
 
 def log(msg: str) -> None:
@@ -198,6 +199,7 @@ class App:
         self._last_sig: tuple | None = None
 
         threading.Thread(target=hotkey_loop, args=(self.q,), daemon=True).start()
+        threading.Thread(target=self._data_refresh, daemon=True).start()
         self._start_tray()
         self.refresh()
         self.root.after(TICK_MS, self._tick)
@@ -205,6 +207,18 @@ class App:
             self.root.after(3000, self.quit)
         log("started")
         self.root.mainloop()
+
+    # ---------------------------------------------------------------- wiki data refresh
+
+    def _data_refresh(self, force: bool = False) -> None:
+        """Background: fetch newer quests/items/npcs JSON from GitHub (once a day), then reload."""
+        try:
+            updated = wikidata.refresh(force=force, log=log)
+        except Exception:  # noqa: BLE001
+            log("data refresh failed:\n" + traceback.format_exc())
+            return
+        if updated:
+            self.q.put(("reload-data", None))
 
     # ---------------------------------------------------------------- tray
 
@@ -214,6 +228,7 @@ class App:
         menu = pystray.Menu(
             pystray.MenuItem("Show / hide overlay", lambda: self.q.put(("toggle", None)), default=True),
             pystray.MenuItem("Reload quests", lambda: self.q.put(("reload", None))),
+            pystray.MenuItem("Check for wiki data updates", lambda: self.q.put(("updates", "now"))),
             pystray.MenuItem("Start with Windows", lambda: self.q.put(("startup", "toggle")),
                              checked=lambda item: startup_enabled()),
             pystray.MenuItem("Open log", lambda: self.q.put(("log", None))),
@@ -248,6 +263,19 @@ class App:
         elif verb == "auto":
             self.view_char = None
             self._render(self._data, self._active)
+        elif verb == "reload-data":
+            mq.reset_caches()
+            self._last_sig = None
+            self.refresh()
+            log("wiki data reloaded")
+        elif verb == "updates":
+            if arg == "now":
+                threading.Thread(target=self._data_refresh, kwargs={"force": True}, daemon=True).start()
+            elif arg in ("on", "off"):
+                state = mq.load_state()
+                state["updates"] = arg == "on"
+                mq.save_state(state)
+                log(f"daily wiki data updates: {arg}")
         elif verb in ("remove", "restore") and arg:
             match = [c for c in self._data if c.lower() == arg.lower()]
             if match:
@@ -361,7 +389,8 @@ class App:
             view, active, self.collapsed, tuple(sorted(self.open_cards)), self.show_archive.get(view or "", False),
             tuple(sorted(self.show_ctx)), tuple(sorted(self.hidden_chars)),
             tuple((c, sum(len(mq.open_tasks(n)) for n in npcs)) for c, npcs in data.items()),
-            tuple((k.key, k.title, k.subtitle, k.now, k.say, tuple((i.name, i.counter, i.done) for i, _, _ in k.items),
+            tuple((k.key, k.title, k.subtitle, k.where, k.now, k.say,
+                   tuple((i.name, i.counter, i.done, i.drops, i.resolved) for i, _, _ in k.items),
                    tuple((t.id, t.status, t.text) for t in k.tasks), tuple(k.given), tuple(k.rewards)) for k in cards),
         )
 
@@ -501,6 +530,9 @@ class App:
         if k.subtitle or k.by_name:
             sub = k.subtitle + ("   (wiki match by NPC name)" if k.by_name else "")
             tk.Label(f, text=sub, bg=CARD, fg=DIM, font=self.small, anchor="w", padx=10).pack(fill="x")
+        if k.where:
+            tk.Label(f, text="where: " + k.where, bg=CARD, fg="#b8a77a", font=self.small, anchor="w", padx=10,
+                     wraplength=WRAP - 20, justify="left").pack(fill="x")
         if k.now:
             tk.Label(f, text=k.now, bg=CARD, fg=FG, font=self.normal, anchor="w", padx=10, pady=2,
                      wraplength=WRAP - 20, justify="left").pack(fill="x")
@@ -511,9 +543,13 @@ class App:
                          width=2, cursor="hand2")
             g.pack(side="left")
             g.bind("<Button-1>", lambda e, t=tid, i=idx, on=not it.manual: self._got(t, i, on))
-            tk.Label(row, text=it.name, bg=CARD, fg=DIM if it.done else FG, font=self.small, anchor="w",
+            label = it.name + (f"   ({it.resolved})" if it.resolved else "")
+            tk.Label(row, text=label, bg=CARD, fg=DIM if it.done else FG, font=self.small, anchor="w",
                      wraplength=WRAP - 90, justify="left").pack(side="left", fill="x", expand=True)
             tk.Label(row, text=it.counter, bg=CARD, fg=ACCENT if it.done else FG, font=self.small).pack(side="right")
+            if it.drops and not it.done:
+                tk.Label(f, text="from: " + it.drops, bg=CARD, fg=DIM, font=self.small, anchor="w", padx=40,
+                         wraplength=WRAP - 50, justify="left").pack(fill="x")
         if k.say:
             tk.Label(f, text=f'say: "{k.say}"', bg=CARD, fg="#9fd3a8", font=self.small, anchor="w", padx=10,
                      wraplength=WRAP - 20, justify="left").pack(fill="x", pady=(2, 0))
