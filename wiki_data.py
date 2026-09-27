@@ -167,12 +167,21 @@ def parse_item(title: str, text: str) -> dict | None:
 # ---------------------------------------------------------------- npcs / mobs
 
 def parse_npc(title: str, text: str) -> dict | None:
+    kind = "npc"
     box = template(text, "Namedmobpage") or template(text, "Mobpage") or template(text, "NPCpage")
     if box is None:
+        box = template(text, "Merchantpage")
+        kind = "merchant"
+    if box is None:
         return None
+    bullets = [plain(re.sub(r"^\*+\s*", "", l)) for l in (box.get("buys") or "").splitlines() if l.strip().startswith("*")]
     return {
         "title": title,
-        "name": plain(box.get("caption", "")) or title,
+        "kind": kind,
+        "name": (plain(box.get("caption", "")) if not re.search(r"place ?holder", box.get("caption", ""), re.I) else "") or title,
+        "sells": links(box.get("sells", "")),
+        "buys": bullets,
+        "dialog": plain(box.get("dialog", ""))[:600],
         "race": plain(box.get("race", "")),
         "class": plain(box.get("class", "")),
         "level": plain(box.get("level", "")),
