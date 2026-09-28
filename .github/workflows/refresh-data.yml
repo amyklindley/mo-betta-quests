@@ -5,9 +5,7 @@ name: Refresh wiki data
 # so a wiki edit reaches everyone within about a day with nobody doing anything.
 
 on:
-  schedule:
-    - cron: "17 9 * * *"   # 09:17 UTC daily
-  workflow_dispatch:
+  workflow_dispatch:   # manual only: the wiki returns 403 to GitHub-hosted runners, so the nightly run happens from a home PC (nightly-refresh.bat)
 
 permissions:
   contents: write
