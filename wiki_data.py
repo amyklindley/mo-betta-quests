@@ -24,7 +24,7 @@ from pathlib import Path
 
 API = "https://monstersandmemories.miraheze.org/w/api.php?"
 WIKI = "https://monstersandmemories.miraheze.org/wiki/"
-UA = "MoBettaQuests/0.4 (community quest overlay; data refresh)"
+UA = "MoBettaQuests/0.4 (+https://github.com/amyklindley/mo-betta-quests; contact: amyklindley@gmail.com) community quest tool"
 HERE = Path(__file__).resolve().parent
 
 LINK_RE = re.compile(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]")
