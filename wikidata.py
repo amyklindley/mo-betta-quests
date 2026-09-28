@@ -16,7 +16,7 @@ from pathlib import Path
 import mnm_quests as mq
 
 RAW = "https://raw.githubusercontent.com/amyklindley/mo-betta-quests/main/"
-FILES = ("quests.json", "items.json", "npcs.json")
+FILES = ("quests.json", "items.json", "npcs.json", "zones.json")
 CHECK_EVERY = 24 * 3600  # seconds
 STAMP = mq.HERE / "data-updates.json"  # {name: {"etag": ..., "checked": epoch}}
 

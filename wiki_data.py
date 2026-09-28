@@ -9,6 +9,7 @@ fetch date for credit.
   python wiki_data.py            fetch both
   python wiki_data.py items      just items.json
   python wiki_data.py npcs       just npcs.json
+  python wiki_data.py zones      just zones.json
 """
 from __future__ import annotations
 
@@ -147,6 +148,8 @@ def parse_item(title: str, text: str) -> dict | None:
         "name": plain(box.get("item_name", "")) or title,
         "id": plain(box.get("item_link_id", "")),
         "icon": plain(box.get("icon_id", "")),
+        "image_file": ("File:" + plain(box.get("icon_id", "")) + ".png") if plain(box.get("icon_id", "")) else "",
+        "image": "",  # filled in by dump() from image_file
         "slot": plain(box.get("slot", "")),
         "skill": plain(box.get("skill", "")),
         "classes": plain(box.get("class", "")),
@@ -166,6 +169,32 @@ def parse_item(title: str, text: str) -> dict | None:
 
 # ---------------------------------------------------------------- npcs / mobs
 
+def image_urls(file_titles: list[str]) -> dict[str, str]:
+    """{'File:X.png': 'https://static...'} for wiki files, 50 per request. Missing files are left out."""
+    out: dict[str, str] = {}
+    titles = sorted({t for t in file_titles if t})
+    for i in range(0, len(titles), 50):
+        chunk = titles[i:i + 50]
+        r = api(action="query", prop="imageinfo", iiprop="url", titles="|".join(chunk))
+        for p in r.get("query", {}).get("pages", []):
+            info = p.get("imageinfo") or []
+            if info and info[0].get("url"):
+                out[p["title"]] = info[0]["url"]
+        # the API normalises titles (first letter upper-cased, underscores); map the originals too
+        for n in r.get("query", {}).get("normalized", []):
+            if n["to"] in out:
+                out[n["from"]] = out[n["to"]]
+    return out
+
+
+def file_title(name: str) -> str:
+    name = (name or "").strip()
+    if not name or re.search(r"phicon|placeholder", name, re.I):
+        return ""
+    name = re.sub(r"^\[\[File:|\]\]$", "", name).split("|")[0].strip()
+    return "File:" + name if not name.lower().startswith("file:") else name
+
+
 def parse_npc(title: str, text: str) -> dict | None:
     kind = "npc"
     box = template(text, "Namedmobpage") or template(text, "Mobpage") or template(text, "NPCpage")
@@ -178,6 +207,8 @@ def parse_npc(title: str, text: str) -> dict | None:
     return {
         "title": title,
         "kind": kind,
+        "image_file": file_title(box.get("imagefilename", "")),
+        "image": "",  # filled in by dump() from image_file
         "name": (plain(box.get("caption", "")) if not re.search(r"place ?holder", box.get("caption", ""), re.I) else "") or title,
         "sells": links(box.get("sells", "")),
         "buys": bullets,
@@ -197,6 +228,40 @@ def parse_npc(title: str, text: str) -> dict | None:
     }
 
 
+# ---------------------------------------------------------------- zones
+
+def parse_zone(title: str, text: str) -> dict | None:
+    box = template(text, "ZoneDetails")
+    if box is None:
+        return None
+    # description: the first prose line before the template
+    intro = ""
+    for line in text.split("{{ZoneDetails")[0].splitlines():
+        s = plain(line)
+        if s and not s.startswith(("[[File:", "__", "<")) and len(s) > 20:
+            intro = s
+            break
+    files = re.findall(r"\[\[File:([^\]|]+)", text)
+    image = next((f for f in files if "map" not in f.lower()), "")
+    map_img = next((f for f in files if "map" in f.lower()), "")
+    return {
+        "title": title,
+        "name": title,
+        "description": intro,
+        "level": plain(box.get("level", "")).strip(" -") or "",
+        "monsters": [m.strip() for m in plain(box.get("monstertypes", "")).split(",") if m.strip()],
+        "notable_npcs": links(box.get("notablenpc", "")),
+        "notable_items": links(box.get("items", "")),
+        "quests": links(box.get("relatedquests", "")),
+        "adjacent": links(box.get("adjacentzones", "")),
+        "image_file": "File:" + image.strip() if image else "",
+        "map_file": "File:" + map_img.strip() if map_img else "",
+        "image": "",
+        "map": "",
+        "url": WIKI + urllib.parse.quote(title.replace(" ", "_")),
+    }
+
+
 def dump(name: str, category: str, parser, key_of) -> None:
     rows, n_pages = [], 0
     for title, text in pages_in(category):
@@ -207,6 +272,14 @@ def dump(name: str, category: str, parser, key_of) -> None:
         if n_pages % 500 == 0:
             print(f"  {name}: {n_pages} pages...")
     rows.sort(key=key_of)
+    # resolve wiki image files to URLs, 50 per request
+    wanted = [r.get("image_file", "") for r in rows] + [r.get("map_file", "") for r in rows]
+    urls = image_urls([w for w in wanted if w])
+    for r in rows:
+        r["image"] = urls.get(r.get("image_file", ""), "")
+        if "map_file" in r:
+            r["map"] = urls.get(r.get("map_file", ""), "")
+    print(f"  {name}: {sum(1 for r in rows if r.get('image'))} images resolved")
     out = HERE / f"{name}.json"
     out.write_text(json.dumps({"source": WIKI + category.replace(" ", "_"), "fetched": str(date.today()), name: rows},
                               ensure_ascii=False), "utf-8")
@@ -219,6 +292,8 @@ def main(argv: list[str]) -> None:
         dump("items", "Category:Items", parse_item, lambda r: r["name"].lower())
     if what in ("all", "npcs"):
         dump("npcs", "Category:NPCs", parse_npc, lambda r: r["name"].lower())
+    if what in ("all", "zones"):
+        dump("zones", "Category:Zones", parse_zone, lambda r: r["name"].lower())
 
 
 if __name__ == "__main__":
