@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-09-23",
+ "fetched": "2026-09-28",
  "quests": [
   {
    "title": "A Quick Quest",
@@ -19,7 +19,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -29,396 +29,18 @@
    "title": "A Sweet Treat",
    "url": "https://monstersandmemories.miraheze.org/wiki/A_Sweet_Treat",
    "zone": "Evershade Weald",
-   "giver": "Guard Pippi Pinecone",
+   "giver": "",
    "min_level": "1",
    "classes": "ALL",
    "related": [
-    "Mierra Willowshade",
-    "a wasp drone",
-    "Guard Halfsies",
-    "Chef Violyn"
+    "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ],
-   "rewards": [
-    "Stein of Baker's Scorn",
-    "Experience",
-    "5 Silver",
-    "Faction with Citizens of Faelindral",
-    "Faction with Defenders of Faelindral",
-    "Faction with Smallfolk Alliance"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Guard Pippi Pinecone has ambient dialogue that clues the observant player on how to initiate this quest.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 3,
-     "text": "Give Guard Pippi Pinecone 1 x Jelly Cupcake.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 11,
-     "text": "Head to Mierra Willowshade near the inn.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 15,
-     "text": "Deliver 12 x Royal Jelly and 1 x Satchel to Mierra Willowshade.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 19,
-     "text": "You receive Packaged Cupcakes from Mierra Willowshade.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 20,
-     "text": "Deliver 1 x Packaged Cupcakes to Guard Pippi Pinecone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 24,
-     "text": "You receive Packaged Cupcakes from Guard Pippi Pinecone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 25,
-     "text": "Travel to the Smallfolk District in Night Harbor.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 29,
-     "text": "Deliver 1 x Packaged Cupcakes to Guard Halfsies.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 36,
-     "text": "Travel to Chef Violyn, who is located at the Crimson Oasis Inn near the North Gate of Night Harbor.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 37,
-     "text": "Deliver 1 x Half of a Jelly Cupcake to Chef Violyn.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 41,
-     "text": "combine 2 x Dried Dragon's Breath pepper, 1 x Baladi Brew, 4 x basilisk seasoning, and 2 x Viper's Kick in Violyn's Grocery Basket.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "Guard Pippi Pinecone has ambient dialogue that clues the observant player on how to initiate this quest.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "I'm famished! What I wouldn't do for a sweet treat right about now.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "step",
-     "text": "Give Guard Pippi Pinecone 1 x Jelly Cupcake.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Oh, for me? You shouldn't have!",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Such decadence! Thank you, my friend. I'll never not enjoy one of Mierra's cupcakes. It makes my brother so jealous that I'm able to indulge in such confectionery!",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "say",
-     "text": "Your brother?",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Oh yes, I have a brother posted in the smallfolk district of Night Harbor, far from the Weald. Do you think that you'll be traveling that way any time soon?",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "You see, my brother always complains that there's nothing sweet for him to eat in Szuur. I've always wanted to send my brother a full dozen of Mierra's beautiful cupcakes as a tease- I mean a gift!",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Mostly a gift.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Could you ask Mierra to pack up a dozen for me? Then, if you bring the packed cupcakes to me, I'll write a note telling my brother to compensate you for playing the part of the courier.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "step",
-     "text": "Head to Mierra Willowshade near the inn.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 12,
-     "kind": "say",
-     "text": "Could you pack up a dozen of the jelly cupcakes?",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "A whole dozen?! Sleepers rest, I suppose I could... though you'd still have to provide me with the royal jelly I require for the batch.",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Not to mention the packaging... hmm. If you bring me twelve royal jelly and a satchel from the bag vendor, I should be able to pack everything up for you.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "step",
-     "text": "Deliver 12 x Royal Jelly and 1 x Satchel to Mierra Willowshade.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 16,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "I'm impressed that you found so much! Did you locate a secret hive? Hmm, hmm. You might just have to become my main supplier!",
-     "part": ""
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Regardless, let me get this dozen baked perfectly for you!",
-     "part": ""
-    },
-    {
-     "n": 18,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Here you are, my friend. I must say, you're probably the biggest fan of my cupcakes! Thank you once again for your business.",
-     "part": ""
-    },
-    {
-     "n": 19,
-     "kind": "step",
-     "text": "You receive Packaged Cupcakes from Mierra Willowshade.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 20,
-     "kind": "step",
-     "text": "Deliver 1 x Packaged Cupcakes to Guard Pippi Pinecone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 21,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Oh, how wonderful! I'm very tempted to keep these cupcakes for myself, but I could never spoil the effort you went through to get these!",
-     "part": ""
-    },
-    {
-     "n": 22,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "My brother should compensate you well for your travel time as he earns a guard's wage in Night Harbor.",
-     "part": ""
-    },
-    {
-     "n": 23,
-     "kind": "npc",
-     "npc": "Guard Pippi Pinecone",
-     "text": "Pete Pinecone is his name. Thank you for doing this for me, friend!",
-     "part": ""
-    },
-    {
-     "n": 24,
-     "kind": "step",
-     "text": "You receive Packaged Cupcakes from Guard Pippi Pinecone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 25,
-     "kind": "step",
-     "text": "Travel to the Smallfolk District in Night Harbor.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 26,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "Never you fear when Guard Halfsies is near! I'll kick evil-doers right in their rear!",
-     "part": ""
-    },
-    {
-     "n": 27,
-     "kind": "say",
-     "text": "Do you know a Pete Pinecone?",
-     "part": ""
-    },
-    {
-     "n": 28,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "That's me, Pete Pinecone! Though I go by Guard Halfsies around here. Not on account of my size, but due to how generously I share half of my shift with my fellow guards!",
-     "part": ""
-    },
-    {
-     "n": 29,
-     "kind": "step",
-     "text": "Deliver 1 x Packaged Cupcakes to Guard Halfsies.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 30,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "From my dear sister, Pippi? What a sweetheart, not to mention a sweet tooth! I suppose it runs in the family. Hmm, let's have a taste, shall we?",
-     "part": ""
-    },
-    {
-     "n": 31,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "Exquisite! Delightful! Masterworks, all! I cannot thank you enough, my new best friend!",
-     "part": ""
-    },
-    {
-     "n": 32,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "Here, some coin for your services. If only my cousin knew how to bake such wonderful delicacies, my sweet tooth wouldn't be so starved out here in Szuur!",
-     "part": ""
-    },
-    {
-     "n": 33,
-     "kind": "say",
-     "text": "Your cousin?",
-     "part": ""
-    },
-    {
-     "n": 34,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "Oh, my cousin? Violyn is her name. She cooks at the Crimson Oasis over in Sageside these days.",
-     "part": ""
-    },
-    {
-     "n": 35,
-     "kind": "npc",
-     "npc": "Guard Halfsies",
-     "text": "In fact, you should show her that last portion of cupcake as a measure of what she should strive toward! I'm sure she'll be nothing but grateful to receive an example of premium baking to learn from!",
-     "part": ""
-    },
-    {
-     "n": 36,
-     "kind": "step",
-     "text": "Travel to Chef Violyn, who is located at the Crimson Oasis Inn near the North Gate of Night Harbor.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 37,
-     "kind": "step",
-     "text": "Deliver 1 x Half of a Jelly Cupcake to Chef Violyn.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 38,
-     "kind": "npc",
-     "npc": "Chef Violyn",
-     "text": "That half-hearted, half-brained, half-witted, half-halfling Halfsies! Ooh, if he weren't my cousin I'd thrash him with my cooking iron!",
-     "part": ""
-    },
-    {
-     "n": 39,
-     "kind": "npc",
-     "npc": "Chef Violyn",
-     "text": "He thinks he can tell me how I'm to do my baking? Oh, I'll bake him a batch of extra special cupcakes, you can be sure of that!",
-     "part": ""
-    },
-    {
-     "n": 40,
-     "kind": "npc",
-     "npc": "Chef Violyn",
-     "text": "Go fill that grocery basket with the ingredients on the list! I'll make it worth your while, don't you worry. This will be a batch of cupcakes that he never forgets!",
-     "part": ""
-    },
-    {
-     "n": 41,
-     "kind": "step",
-     "text": "combine 2 x Dried Dragon's Breath pepper, 1 x Baladi Brew, 4 x basilisk seasoning, and 2 x Viper's Kick in Violyn's Grocery Basket.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 42,
-     "kind": "npc",
-     "npc": "Chef Violyn",
-     "text": "Kidding, of course. Thanks again.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
-    "Chef Violyn",
-    "Guard Halfsies",
-    "Guard Pippi Pinecone",
-    "Mierra Willowshade",
-    "a wasp drone"
+    "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
   },
   {
@@ -431,11 +53,7 @@
    "related": [
     "Night Terror"
    ],
-   "rewards": [
-    "Mantle of Night",
-    "Tunic of Night",
-    "Necklace of Night"
-   ],
+   "rewards": [],
    "steps": [
     {
      "n": 7,
@@ -589,34 +207,11 @@
      ]
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad",
     "Witcher Sayyadd"
-   ]
-  },
-  {
-   "title": "A key to the hollow",
-   "url": "https://monstersandmemories.miraheze.org/wiki/A_key_to_the_hollow",
-   "zone": "Evershade Weald",
-   "giver": "Scout Brightleaf",
-   "min_level": "| Classes =",
-   "classes": "",
-   "related": [
-    "Sporeweaver Underveil",
-    "Lilac Latespring",
-    "Sersil Tangleroot"
-   ],
-   "rewards": [],
-   "steps": [],
-   "lines": [],
-   "fetched": "2026-09-23",
-   "npcs": [
-    "Lilac Latespring",
-    "Scout Brightleaf",
-    "Sersil Tangleroot",
-    "Sporeweaver Underveil"
    ]
   },
   {
@@ -632,7 +227,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -642,169 +237,44 @@
    "title": "Ail'Vorith Starter Quest",
    "url": "https://monstersandmemories.miraheze.org/wiki/Ail%27Vorith_Starter_Quest",
    "zone": "Ail'Vorith",
-   "giver": "Toilmistress Rallvessa, Toilmaster Verith",
+   "giver": "Toilmaster Verith",
    "min_level": "1",
    "classes": "ALL",
    "related": [
     "Toilmistress Rallvessa"
    ],
    "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "You are looking for Toilmistress Rallvessa or Toilmaster Verith, who are mere feet away from where you spawn as a new character in Ail'Vorith.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "For some reason either NPC will do the quest through the _Mining_ section. The dialog is mostly the same, but there are differences.Sigh. So, these might be actual differences or maybe the Toilmaster's text was updated at the same time? Not sure, so I just added her dialog in-line here. - It can be cleaned up, as necessary, when someone runs through again with Toilmaster.Note: you can interleave NPCs for this quest.Hence, this may read a bit oddly.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 3,
-     "text": "Hand Toilmistress Rallvessa or Toilmaster Verith your Imbued Parchment.",
-     "part": "",
-     "items": [
-      {
-       "name": "Toilmistress Rallvessa",
-       "qty": 1
-      }
-     ]
-    }
-   ],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "You are looking for Toilmistress Rallvessa or Toilmaster Verith, who are mere feet away from where you spawn as a new character in Ail'Vorith.",
-     "part": "",
-     "items": []
+     "kind": "receive",
+     "item": "Satchel of Questionable Spoils",
+     "qty": 1,
+     "npc": "Toilmaster Verith",
+     "part": "Finally, some killing!"
     },
     {
      "n": 2,
-     "kind": "step",
-     "text": "For some reason either NPC will do the quest through the _Mining_ section. The dialog is mostly the same, but there are differences.Sigh. So, these might be actual differences or maybe the Toilmaster's text was updated at the same time? Not sure, so I just added her dialog in-line here. - It can be cleaned up, as necessary, when someone runs through again with Toilmaster.Note: you can interleave NPCs for this quest.Hence, this may read a bit oddly.",
-     "part": "",
-     "items": []
+     "kind": "receive",
+     "item": "Vorith's Recommendation",
+     "qty": 1,
+     "npc": "Toilmaster Verith",
+     "part": "A recommendation!"
     },
     {
      "n": 3,
-     "kind": "step",
-     "text": "Hand Toilmistress Rallvessa or Toilmaster Verith your Imbued Parchment.",
-     "part": "",
-     "items": [
-      {
-       "name": "Toilmistress Rallvessa",
-       "qty": 1
-      }
-     ]
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "What do you want?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "Yet another shadowless exile comes barking at my quarry for a morsel? Very well.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "I care not for your status so long as you're able to toil for me like any good meat should.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "First you'll have to prove to me that you're not completely blind, deaf or dumb.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "There are crates with pickaxes next to Toilmistress Rallvessa, look for a pickaxe that isn't broken or damaged.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "You know how to give them a good look, don't you?",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Toilmistress Rallvessa",
-     "text": "Once you find one that isn't damaged, bring it here and show it to me.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "What's this, then?",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "Yet another shadowless exile comes barking at my quarry for a morsel? Very well.",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "I care not for your status so long as you're able to toil for me like any good meat should.",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "First you'll have to prove to me that you're not completely blind, deaf or dumb.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "There are crates with pickaxes next to us, open those so-called eyes of yours and look for a pickaxe that isn't broken or damaged.",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "You do at least know how to look, don't you?",
-     "part": ""
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Toilmaster Verith",
-     "text": "Once you find one that isn't damaged, take it. Then bring it here and show it to me.",
-     "part": ""
+     "kind": "receive",
+     "item": "Obsidian Shackle",
+     "qty": 1,
+     "npc": "Provost Xan'shorn",
+     "part": "The Houses"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Toilmaster Verith",
-    "Toilmistress Rallvessa",
-    "Toilmistress Rallvessa, Toilmaster Verith"
+    "Toilmistress Rallvessa"
    ]
   },
   {
@@ -817,772 +287,134 @@
    "related": [
     "Captain Keyaryn Thornshade"
    ],
-   "rewards": [
-    "Experience",
-    "Novice Scout Bracer",
-    "Weald Scout Bracer",
-    "Scout's Longbow of the Wyrdguard",
-    "Faction: +Wyrdguard, -Fellstone Orcs"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Pine Brightreed",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "Taelin Goldstem",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 3,
-     "text": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 103,
-     "text": "(THIS IS A TEMPORARY LOCATION. PLEASE UPDATE AFTER THE UPPER TIER IS ADDED INTO THE GAME)",
-     "part": "Part 3 - Req. Lvl 8?",
-     "items": []
-    }
-   ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "Pine Brightreed",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "step",
-     "text": "Taelin Goldstem",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 3,
-     "kind": "step",
-     "text": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 4,
      "kind": "receive",
      "item": "Briefing for Scout Faeweald",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 5,
+     "n": 2,
      "kind": "receive",
      "item": "Briefing for Scout Gladebow",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 6,
+     "n": 3,
      "kind": "receive",
      "item": "Briefing for Scout Stonebranch",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 7,
+     "n": 4,
      "kind": "receive",
      "item": "Briefing for Scout Amber Ward",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You'll start off easy, new blood. Show me that those eyes of yours really do work by seeking out the scouts that I have posted around Faelindral.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Deliver these new briefings to each of them, then return to me with a bag full of their reports.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Should be easy for a sureshot like you, right? Or do you need directions?",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 11,
-     "kind": "say",
-     "text": "I could use some directions.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You'll find three of my scouts posted near the bottom of each of the great lifts around Faelindral. They should be easy enough to spot for any with a keen eye.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "The fourth scout, Gladebow, has been temporarily posted to Overlook Terrace due to a recently compromised platform infested with spiders. Lucky for you, that's just one span away, past the druids.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 14,
-     "kind": "say",
-     "text": "Infested with spiders?",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "An entire brood of widow spiders descended from the northern cliffs not long ago. They took over a terrace and seem to be forming a nest within the great tree itself.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 16,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "It's one sticky situation after another with those pests, so we always need to have eyes on them.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Scout Gladebow",
-     "text": "Ah, my thanks. You must be new to the Wyrdguard. Give the captain my regards, but try not to let his quips get to you. He can be a bit wry.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 18,
+     "n": 5,
      "kind": "receive",
      "item": "Gladebow's Report",
      "qty": 1,
      "npc": "Scout Gladebow",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 19,
+     "n": 6,
      "kind": "receive",
      "item": "Amberward's Report",
      "qty": 1,
      "npc": "Scout Amberward",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 20,
-     "kind": "npc",
-     "npc": "Scout Faeweald",
-     "text": "Ah, new briefings? Thank you for saving me the trek, and here's my report for Captain Thornshade.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 21,
+     "n": 7,
      "kind": "receive",
      "item": "Faeweald's Report",
      "qty": 1,
      "npc": "Scout Faeweald",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 22,
-     "kind": "npc",
-     "npc": "Scout Stonebranch",
-     "text": "Oh, that time already? Here you go. Nothing much to report down here, aside from some nasty wasps.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 23,
+     "n": 8,
      "kind": "receive",
      "item": "Stonebranch's Report",
      "qty": 1,
      "npc": "Scout Stonebranch",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 24,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "That's just great. It seems the orcish threat has grown bolder of late, sending scouts into the lower reaches of Faelindral.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 25,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You did well getting these reports, though. Take this, it'll help identify you as a novice archer for the Wyrdguard.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 26,
+     "n": 9,
      "kind": "receive",
      "item": "Novice Scout Bracer",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 1 - Req. Lvl 1 - Scout Courier"
     },
     {
-     "n": 27,
-     "kind": "say",
-     "text": "Yes, I love to perform counter-espionage!",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 28,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Aside from being a blight on the land, we're still not sure what the orcs' goal is within Evershade.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 29,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Briefings like the ones I had you deliver are not unique to the Faelewyn, though.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 30,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "If orcish scouts have been spotted in the Weald, then there's a chance that they're writing and sending their own reports to some... higher authority.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 31,
-     "kind": "say",
-     "text": "What authority?",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 32,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "That's what I'd like you to find out. Return to Scout Amberward and tell him that you're there to gather intelligence.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 33,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You're to follow his orders and see if you can determine what the ores' goal is here in the Weald.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 34,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Return with what you find. If we know what they're after, we can start taking direct action to prevent it.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 35,
-     "kind": "say",
-     "text": "Hail, Scout Amberward",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 36,
-     "kind": "say",
-     "text": "The captain wants me to gather some intelligence on the orcs.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 37,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "If you were sent here to gather intelligence, then you'll have to show me some evidence that you've been accepted as a scout.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 38,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Thank the Sleepers. I've been watching the Fellstone movements for days to no avail.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 39,
+     "n": 10,
      "kind": "receive",
      "item": "Scout's Satchel",
      "qty": 1,
      "npc": "Scout Amberward",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 2 - Req. Lvl 1 - Orc Intelligence Gathering"
     },
     {
-     "n": 40,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Take this satchel. It's about time we strike back. I hope you're ready to take a more... direct approach,",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 41,
-     "kind": "say",
-     "text": "I love a direct approach, especially if it means killing!",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 42,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Fellstone scouts have been spotted all across the lower Weald, far closer to Faelindral than ever before.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 43,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Some are carrying odd reports, and I believe we may be able to learn their plans if we can translate them.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 44,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "I've already eliminated a few myself, but we're going to need more of those strange scribbles if we're to have any chance at deciphering their horrendous language.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 45,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Eliminate as many scouts as it takes to fll the satchel, then return it to me. May your arrows fly true, novice,",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 46,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "You're a keen shot, that's for sure! Well done, novice.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 47,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "The captain won't enjoy the fact that we only have these scriblings, but it's better than nothing. Perhaps he has an idea of who can translate them...",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 48,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "I'Il remain here and keep watch over the orc's movements. Return to the Sentinels Gaze as soon as possible.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 49,
+     "n": 11,
      "kind": "receive",
      "item": "Full Scout Satchel",
      "qty": 1,
      "npc": "Scout Amberward",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 2 - Req. Lvl 1 - Orc Intelligence Gathering"
     },
     {
-     "n": 50,
-     "kind": "npc",
-     "npc": "Scout Amberward",
-     "text": "Fair shades to you, Ianthe, and thank you.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 51,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "This is what they're carrying out there? Wonderful.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 52,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "I suppose I should've expected as much... trying to gathe intelligence from creatures that don't have any brains to begin with.",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 53,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You're getting the real scout experience now. How do you about even more paperwork?",
-     "part": "Part 1 - Req. Lvl 1"
-    },
-    {
-     "n": 54,
+     "n": 12,
      "kind": "receive",
      "item": "Full Scout Satchel",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 1 - Req. Lvl 1"
+     "part": "Part 2 - Req. Lvl 1 - Orc Intelligence Gathering"
     },
     {
-     "n": 55,
-     "kind": "say",
-     "text": "Ugh, I hate paperwork!",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 56,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "There's a researcher who spends her time in the Heartwood Archives deciphering ancient texts. Fairgrove. A kind girl, but rather timid.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 57,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "She's aided the Wyrdguard in the past, so deliver these writings to her and see if she can make heads or tails of this gibberish. I'll send word ahead so that you don't spook her.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 58,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "The sooner we know their meaning the better. You have my leave to assist her in any way you can. Who knows, maybe you can shoot some books off the top shelves for her.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 59,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "Tell me, do you r-recognize anything about these particular... s-symbols?",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 60,
-     "kind": "say",
-     "text": "These two symbols?",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 61,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "Y-yes, the two symbols that I've circled there on the parchment. They uhm... t-they look familiar to me, but it would be prudent if you could... v-verify something for m first.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 62,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "I believe I've seen a s-symbol just like this one etched into the bark of the smaller conifer trees near the Wyrdgate,",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 63,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "If you could t-travel to the gate and c-compare the symbols to those on this sheaf, it w-would affirm my initial suspicions.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 64,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "T'll g-go over these writings in the meantime. T-thank you, and I... I hope this isn't a bother.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 65,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "S-so it's true? What could it mean that the ores are r-reporting symbols that are near the Wrydgate itself? Surely they could n-not have gotten so close.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 66,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "H-here, take this bag. I now have an idea of what I can look for with these illegible texts, but I'll n-need you to help me once more in g-gathering some rather, uhm. morbid items.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 67,
-     "kind": "say",
-     "text": "Yay, morbid items!",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 68,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "It I-relates to the second symbol that I recognized in these orcish texts. imagine you've h-heard of the various undead that have risen from the ruins lately?",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 69,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "Among them are old elven skeletons from before the calamity. These skeletons are u-under the influence of a wicked magic that stinks of the... t-the Spirals.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 70,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "I need you to destroy some of the old skeletons and s-see if you can find evidence of m-magical runes etched into their bones.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 71,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "If I can c-compare those runes to the writings that you've brought me, I m-may be able to piece something t-together. Fill the bag with a-at least four examples, and I'll w-work on things here while you, umm... d-do your thing.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 72,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "Ah, P-perfect timing! I just finished going over the o-orcish writings that you brought me. Now if my hunch is correct...",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 73,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "It's as I f-feared. I cannot yet translate this orcish script, but there are c-clear correlations between the runes that were forced upon our ancestors and the s-scouting reports that were being written about the Wyrdgate.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 74,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "You must bring this to your captain at once. These undead are not raising out of mere circumstance, but because of a plot by the orcs. To what end, I do not know, but the Wyrdguard must be warned not to tarry with the undead disturbance!",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 75,
+     "n": 13,
      "kind": "receive",
      "item": "Hastily Written Note",
      "qty": 1,
      "npc": "Researcher Fairgrove",
-     "part": "Part 2 - Req. Lvl 4"
+     "part": "Part 3 - Req. Lvl 4 - Translating Orcish"
     },
     {
-     "n": 76,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "The undead are just a distraction? Hmm...",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 77,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "She makes a bold claim, but I have a feeling Fairgrove knows what she's talking about. She's a gentle soul, and not one to get worked up over something that isn't serious.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 78,
+     "n": 14,
      "kind": "receive",
      "item": "Arrowhead Token",
      "qty": 1,
      "npc": "Captain Keyaryn Thornshade",
-     "part": "Part 2 - Req. Lvl 4"
+     "part": "Part 3 - Req. Lvl 4 - Translating Orcish"
     },
     {
-     "n": 79,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You earned a little upgrade to that gear of yours, scout. Take this token, along with your scout bracers, to Craftguard Vinebrow and see if he can fix you up with something sturdier.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 80,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "You'll find him in the armory, here in the Sentinels Gaze. Once you're kitted out, return here and let me know when you're ready for the next step.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 81,
+     "n": 15,
      "kind": "receive",
      "item": "Weald Scout Bracer",
      "qty": 1,
      "npc": "Craftguard Vinebrow",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 82,
-     "kind": "npc",
-     "npc": "Craftguard Vinebrow",
-     "text": "There you are. Now this is worthy of a true scout of the Wyrdguard!",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 83,
-     "kind": "say",
-     "text": "I am ready for the next step!",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 84,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Yeah? Let's take a look at your scout bracer, in that case. We'll see if you're up to the task.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 85,
-     "kind": "npc",
-     "npc": "Captain Keyaryn Thornshade",
-     "text": "Hmm... still needs some working in, I think. Come back and show me again once I can see some bowstring wear on that bracer.",
-     "part": "Part 2 - Req. Lvl 4"
-    },
-    {
-     "n": 86,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "There are four elemental spirits, and thus four locations where you must look for a suitable sample. Which one do you seek? The spirit of air, fire, earth, or water?",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 87,
-     "kind": "say",
-     "text": "Spirit of air",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 88,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Unnatural things have been called upon in the Weald, Undead now roam the forest floor, and their very presence upsets the balance.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 89,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Would you help me, Archer, in bringing an end to these creatures most foul?",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 90,
-     "kind": "say",
-     "text": "location of air elemental",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 91,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "The spirits of the air surround us daily, though it is within the boughs of the trees where they are the most rich and vibrant.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 92,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Enter the lift to the upper tiers of Faelindral and look amongst the boughs. It is there that you shall find a sample in its purest form.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 93,
-     "kind": "say",
-     "text": "location of fire elemental",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 94,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "The spirits of flame burn brightest within the night sky, when they stand out starkly against a darkened canopy.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 95,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "You will have to capture a faefly that burns with the spirit of moonfire, and there is only one location I know of where they descend low enough to reach.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 96,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "You must travel up the cliffs to the south, high above the pass that leads to Keepers Bight. There, you will ind a small ruin where the faeflies often descend at night, basking in the open moonlight.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 97,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Capturing one may require forceful coercion, as the flames that burn within the faeflies are both fickle and ferocious if not tamed.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 98,
-     "kind": "say",
-     "text": "location of earth elemental",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 99,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "The earthen spirits are often utilized by the druids of the Circle of Spores, who reside beneath the city of Faelindral.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 100,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Looking in the deepest reaches of their caves should reveal a location where you can take an enriched sample for your receptacle. Perhaps you will find it in one of the many fungal circles where they perform their experiments.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 101,
-     "kind": "say",
-     "text": "location of water elemental",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 102,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "The spirits of water will always follow the flows and currents that weave their way throughout the forest.\" Moon Dances says, \"Follow the path toward their final destination at the end of the great river, and should you look there, you will find a suitable sample of their spiritual presence.",
-     "part": "Part 3 - Req. Lvl 8?"
-    },
-    {
-     "n": 103,
-     "kind": "step",
-     "text": "(THIS IS A TEMPORARY LOCATION. PLEASE UPDATE AFTER THE UPPER TIER IS ADDED INTO THE GAME)",
-     "part": "Part 3 - Req. Lvl 8?",
-     "items": []
+     "part": "Part 3 - Req. Lvl 4 - Translating Orcish"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Captain Keyaryn Thornshade",
-    "Commander Elydris Stormbough",
-    "Craftguard Vinebrow",
-    "Moon Dances",
-    "Researcher Fairgrove",
-    "Scout Amberward",
-    "Scout Faeweald",
-    "Scout Gladebow",
-    "Scout Stonebranch"
+    "Commander Elydris Stormbough"
    ]
   },
   {
@@ -1877,116 +709,11 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
     "Jacobin Yeats"
-   ]
-  },
-  {
-   "title": "Armor from Vex",
-   "url": "https://monstersandmemories.miraheze.org/wiki/Armor_from_Vex",
-   "zone": "Ail'Vorith",
-   "giver": "Leatherworker Vex",
-   "min_level": "4+",
-   "classes": "ALL",
-   "related": [
-    "a cave myconid"
-   ],
-   "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Hunt a cave myconid and loot 3x Perfect Fungus Cap, 2x Strong Fungus Hyphea and 1x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Coat",
-     "items": []
-    },
-    {
-     "n": 3,
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Cap and 1x Strong Fungus Hyphea. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Helm",
-     "items": []
-    },
-    {
-     "n": 5,
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Volva, 2x Strong Fungus Hyphea and 2x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Leggings",
-     "items": []
-    },
-    {
-     "n": 7,
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Volva and 2x Strong Fungus Hyphea. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Boots",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "Hunt a cave myconid and loot 3x Perfect Fungus Cap, 2x Strong Fungus Hyphea and 1x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Coat",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "receive",
-     "item": "Fungal Coat",
-     "qty": 1,
-     "npc": "Leatherworking Vex",
-     "part": "Fungal Coat"
-    },
-    {
-     "n": 3,
-     "kind": "step",
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Cap and 1x Strong Fungus Hyphea. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Helm",
-     "items": []
-    },
-    {
-     "n": 4,
-     "kind": "receive",
-     "item": "Fungal Helm",
-     "qty": 1,
-     "npc": "Leatherworking Vex",
-     "part": "Fungal Helm"
-    },
-    {
-     "n": 5,
-     "kind": "step",
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Volva, 2x Strong Fungus Hyphea and 2x Perfect Fungus Stem. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Leggings",
-     "items": []
-    },
-    {
-     "n": 6,
-     "kind": "receive",
-     "item": "Fungal Leggings",
-     "qty": 1,
-     "npc": "Leatherworking Vex",
-     "part": "Fungal Leggings"
-    },
-    {
-     "n": 7,
-     "kind": "step",
-     "text": "Hunt a cave myconid and loot 2x Perfect Fungus Volva and 2x Strong Fungus Hyphea. Hand these items to Leatherworker Vex.",
-     "part": "Fungal Boots",
-     "items": []
-    },
-    {
-     "n": 8,
-     "kind": "receive",
-     "item": "Fungal Boots",
-     "qty": 1,
-     "npc": "Leatherworking Vex",
-     "part": "Fungal Boots"
-    }
-   ],
-   "fetched": "2026-09-23",
-   "npcs": [
-    "Leatherworker Vex",
-    "a cave myconid"
    ]
   },
   {
@@ -2052,7 +779,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Jumthem",
     "Mayana",
@@ -2106,7 +833,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -2157,7 +884,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Quartermaster Obaid"
    ]
@@ -2175,7 +902,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -2562,7 +1289,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -3394,7 +2121,7 @@
      "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -3959,7 +2686,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -3977,152 +2704,10 @@
    "related": [
     "N/A"
    ],
-   "rewards": [
-    "Experience",
-    "Random cloth armor",
-    "Faction with Preservers"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Moon Dances is located near the Shaman Spell Merchant at The Balanced Branch, which is only reachable from the Ranger/Beastmaster Platform",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 13,
-     "text": "Hand in 5 Bone Chips to Moon Dances.",
-     "part": "",
-     "items": [
-      {
-       "name": "Bone Chips",
-       "qty": 5
-      }
-     ]
-    },
-    {
-     "n": 16,
-     "text": "You receive a Tattered Cloth Gorget from Moon Dances.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "Moon Dances is located near the Shaman Spell Merchant at The Balanced Branch, which is only reachable from the Ranger/Beastmaster Platform",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "say",
-     "text": "Hail, Moon Dances.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "I greet you. I am called Moon Dances, though I am afraid that my namesake is not so true these past nights.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "say",
-     "text": "What namesake?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "I would often dance along with the songs of the spirits during the moonlight. Lately, however, the nights are filled with anguished cries instead of song.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "The spirits of the Weald are distraught... Frightened even.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "say",
-     "text": "Why are they distraught?",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Unnatural things have been called upon in the Weald. Undead now roam the forest floor, and their very presence upsets the balance.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Would you help me in bringing an end to these creatures most foul?",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "say",
-     "text": "I will help.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "I will perform a rite of cleansing to put the spirits of the fallen to rest, should you bring me enough of their remains.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "I can part with some small tokens of appreciation for every five bone chips you bring me.",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "step",
-     "text": "Hand in 5 Bone Chips to Moon Dances.",
-     "part": "",
-     "items": [
-      {
-       "name": "Bone Chips",
-       "qty": 5
-      }
-     ]
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "Thank you for purging the land of another undead menace. I'll dispose of these remains.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Moon Dances",
-     "text": "You have my humble thanks. I shall see to performing the rite, so that these fallen spirits are put to proper rest.",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "step",
-     "text": "You receive a Tattered Cloth Gorget from Moon Dances.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -4135,7 +2720,9 @@
    "giver": "Squire Ryland",
    "min_level": "1",
    "classes": "All",
-   "related": [],
+   "related": [
+    "| Related Items = Bone Chips"
+   ],
    "rewards": [
     "Experience",
     "Faction with Penitent Knights of the Hospice"
@@ -4266,9 +2853,10 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
-    "Squire Ryland"
+    "Squire Ryland",
+    "| Related Items = Bone Chips"
    ]
   },
   {
@@ -4379,7 +2967,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Bree Weatherstoll"
    ]
@@ -4400,7 +2988,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "A Fishwife",
     "Bones",
@@ -4453,7 +3041,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -5061,7 +3649,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -5185,7 +3773,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -5214,7 +3802,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Hult Beetlewrangler",
     "Master Shipwright Huda",
@@ -5567,7 +4155,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -6030,7 +4618,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -6100,11 +4688,102 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "a rotting skeleton",
     "a shifty gnome",
     "an ashira scout"
+   ]
+  },
+  {
+   "title": "Crystals from the Deepcut miners",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Crystals_from_the_Deepcut_miners",
+   "zone": "Underdocks",
+   "giver": "Maude Astarace",
+   "min_level": "",
+   "classes": "any",
+   "related": [
+    "| Related Items ="
+   ],
+   "rewards": [
+    "Experience"
+   ],
+   "steps": [],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "say",
+     "text": "Hail, Maude.",
+     "part": ""
+    },
+    {
+     "n": 2,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "What is it?",
+     "part": ""
+    },
+    {
+     "n": 3,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "The Delvestone and Deepcut quarrel over rocks, and I wish to know why. Their petty conflict is our good fortune, since the mining company will pay us to reclaim their crystals.",
+     "part": ""
+    },
+    {
+     "n": 4,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "Venture into the Darrowdwell mine above the citadel and fill this box with crystals from the Deepcut miners.",
+     "part": ""
+    },
+    {
+     "n": 5,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "What is this?",
+     "part": ""
+    },
+    {
+     "n": 6,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "These are not diamonds, nor sapphires, nor even jaspers. Lusterless rocks, all!",
+     "part": ""
+    },
+    {
+     "n": 7,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "I suppose you have earned some coin for your part. The miners can have their rocks, but something is amiss. Take this to the paymaster along with your guild signet.",
+     "part": ""
+    },
+    {
+     "n": 8,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "I do not believe for a moment that the Delvestone would spill their blood or their coin for those worthless rocks. I require your assistance once more, .",
+     "part": ""
+    },
+    {
+     "n": 9,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "I must have a sample of whatever mineral lies at the heart of this territorial squabble. Deepcut, Delvestone, Darrowdwell. These are insignificant. Find the thing they fight and die for.",
+     "part": ""
+    },
+    {
+     "n": 10,
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "Do this, and I will reward you personally.",
+     "part": ""
+    }
+   ],
+   "fetched": "2026-09-28",
+   "npcs": [
+    "Maude Astarace",
+    "| Related Items ="
    ]
   },
   {
@@ -6115,16 +4794,14 @@
    "min_level": "1",
    "classes": "All",
    "related": [
-    "A Fellstone Warrior",
-    "A Fellstone shaman"
+    "A Fellstone warrior"
    ],
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
-    "A Fellstone Warrior",
-    "A Fellstone shaman",
+    "A Fellstone warrior",
     "Wyrdguard Oakenpine"
    ]
   },
@@ -6143,7 +4820,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -6165,7 +4842,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -6181,68 +4858,10 @@
    "related": [
     "a Fellstone scout"
    ],
-   "rewards": [
-    "Experience",
-    "Currency"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Researcher Fairgrove.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "Ah, h-hello, yes. You'll have to e-excuse me, I'm terribly busy with all these... w-writings!",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "What writings?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "O-oh yes, have you not heard? Fellstone scouts have been spotted roaming the Weald and... and w-writing things!",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "T-terrible things, no doubt. I'm doing what I can to a-aid the Wyrdguard by attempting to d-decipher their script, but it's so... s-so very alien.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "B-be that as it may, I w-would... still greatly appreciate any additional writings of theirs to study, should you happen to come a-across them in your journeys.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "T-thank you very much for your assistance! The m-more of these writings I can study, the... the closer I believe I am to uncovering their meanings.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Researcher Fairgrove",
-     "text": "It i-isn't much, but here is a little something for going o-out of your way for me.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-23",
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -6307,7 +4926,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -6316,110 +4935,17 @@
   {
    "title": "Diseased Wolf Pelts for Baewyn Mossfang",
    "url": "https://monstersandmemories.miraheze.org/wiki/Diseased_Wolf_Pelts_for_Baewyn_Mossfang",
-   "zone": "Evershade Weald",
+   "zone": "Faelindral",
    "giver": "Baewyn Mossfang",
    "min_level": "1",
    "classes": "ALL",
    "related": [
     "a rabid wolf"
    ],
-   "rewards": [
-    "75 copper",
-    "Experience",
-    "Faction with Ardent Keepers"
-   ],
-   "steps": [
-    {
-     "n": 10,
-     "text": "Deliver 1 x Diseased Wolf Pelt to Baewyn Mossfang.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Baewyn Mossfang.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "Hello, friend. Do not let the fierceness of my sister discourage you from visiting the Den. She is right to be upset as she is.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "Why is she upset?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "Many of the Weald's great wolves have fallen prey to a terrible malady, beset upon them by foul magic.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "There are many that we cannot cure in time before they throw themselves at travelers or guards.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "Their hides then rot and decay, spreading the sickness further. Would that I could descend to the forest floor myself, but my duties keep me here and there is no one to go on my behalf.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "say",
-     "text": "I could go on your behalf.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "Would you be willing to go? I would be indebted to you, Cleric.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "If you are forced to put down any of the mad wolves, bring their infected hides to me for purification. They will be of no use to you for craft or sale otherwise.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "step",
-     "text": "Deliver 1 x Diseased Wolf Pelt to Baewyn Mossfang.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "You have my appreciation for this, Cleric. My sister is on the hunt for the source, but we must always do what we can to prevent the spread of illness.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Baewyn Mossfang",
-     "text": "Please, accept this as a small measure of my gratitude. I am also able to provide cleansing to you if the illness has taken hold.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -7940,7 +6466,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -8259,7 +6785,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -8480,7 +7006,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Jumbe Odol",
     "Luskim",
@@ -8505,7 +7031,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "None",
     "Tenebrim Tam"
@@ -9310,7 +7836,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -9427,7 +7953,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -9441,12 +7967,19 @@
    "min_level": "15",
    "classes": "|Related NPCs = Fariha bint Nizar, Nizar al-Harith",
    "related": [],
-   "rewards": [
-    "Fariha's Shawl"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [],
-   "fetched": "2026-09-23",
+   "lines": [
+    {
+     "n": 1,
+     "kind": "receive",
+     "item": "Fariha's Shawl",
+     "qty": 1,
+     "npc": "Fariha bint Nizar",
+     "part": "Getting the Shawl"
+    }
+   ],
+   "fetched": "2026-09-28",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -9472,7 +8005,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -9865,7 +8398,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -9889,7 +8422,7 @@
    "steps": [
     {
      "n": 1,
-     "text": "Delilah is located just outside the left entrance to the newbie area in the Underdocks, standing next to the Guards at the gate.",
+     "text": "Delilah is located just outside the left (west) entrance to the newbie area in the Underdocks, standing next to the Guards at the gate.",
      "part": "",
      "items": []
     },
@@ -9926,7 +8459,7 @@
     {
      "n": 1,
      "kind": "step",
-     "text": "Delilah is located just outside the left entrance to the newbie area in the Underdocks, standing next to the Guards at the gate.",
+     "text": "Delilah is located just outside the left (west) entrance to the newbie area in the Underdocks, standing next to the Guards at the gate.",
      "part": "",
      "items": []
     },
@@ -10099,7 +8632,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Delilah"
    ]
@@ -10155,7 +8688,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -10498,12 +9031,64 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
     "Ngakepoto",
     "Tariq the Revealer"
+   ]
+  },
+  {
+   "title": "Fungal Armor Quests",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Fungal_Armor_Quests",
+   "zone": "Ail'Vorith",
+   "giver": "Leatherworker Vex",
+   "min_level": "1",
+   "classes": "ALL",
+   "related": [
+    "a cave myconid"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "receive",
+     "item": "Fungal Coat",
+     "qty": 1,
+     "npc": "Leatherworker Vex",
+     "part": "Fungal Coat"
+    },
+    {
+     "n": 2,
+     "kind": "receive",
+     "item": "Fungal Helm",
+     "qty": 1,
+     "npc": "Leatherworker Vex",
+     "part": "Fungal Helm"
+    },
+    {
+     "n": 3,
+     "kind": "receive",
+     "item": "Fungal Leggings",
+     "qty": 1,
+     "npc": "Leatherworker Vex",
+     "part": "Fungal Leggings"
+    },
+    {
+     "n": 4,
+     "kind": "receive",
+     "item": "Fungal Boots",
+     "qty": 1,
+     "npc": "Leatherworker Vex",
+     "part": "Fungal Boots"
+    }
+   ],
+   "fetched": "2026-09-28",
+   "npcs": [
+    "Leatherworker Vex",
+    "a cave myconid"
    ]
   },
   {
@@ -10595,7 +9180,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -10608,8 +9193,8 @@
    "url": "https://monstersandmemories.miraheze.org/wiki/Glinting_Hollow_Key_Quest",
    "zone": "Evershade Weald",
    "giver": "Scout Brightleaf",
-   "min_level": "| Classes =",
-   "classes": "",
+   "min_level": "35+",
+   "classes": "ALL",
    "related": [
     "Sporeweaver Underveil",
     "Lilac Latespring",
@@ -10618,7 +9203,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -10911,7 +9496,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -10928,15 +9513,10 @@
    "related": [
     "a green drakeling"
    ],
-   "rewards": [
-    "Green Drakeling Scale Boots",
-    "Green Drakeling Scale Cloak",
-    "Green Drakeling Scale Pants",
-    "Green Drakeling Scale Coat"
-   ],
+   "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -11136,7 +9716,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "De",
     "Detective Brunsworth",
@@ -11284,7 +9864,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -11370,88 +9950,93 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Captain Hale",
     "N/A"
    ]
   },
   {
-   "title": "House Drezzorith",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Drezzorith",
+   "title": "House Drezzorith (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Drezzorith_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Zalethra Drezzorith",
    "min_level": "8+",
    "classes": "CLR PAL",
    "related": [
-    "an angry cultist an agitated cultist a cultist priestess"
+    "an angry cultist an agitated cultist a cultist priestess a Deepgulp warrior a Deepgulp scavenger a Deepgulp hunter a Deepgulp berserker"
    ],
-   "rewards": [
-    "Experience",
-    "Lexicon of Mysteries",
-    "Faction with House of Drezzorith increased to High Indifferent",
-    "Faction with Citizens of Ail'vorith increased to High Amicably",
-    "Access to the city (Update 0.30.0.0)"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
-    }
-   ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
+     "kind": "receive",
+     "item": "Small Burlap Pouch",
+     "qty": 1,
+     "npc": "Zalethra Drezzorith",
+     "part": "House Acceptance"
+    },
+    {
+     "n": 2,
+     "kind": "receive",
+     "item": "Lexicon of Mysteries",
+     "qty": 1,
+     "npc": "Zalethra Drezzorith",
+     "part": "House Acceptance"
+    },
+    {
+     "n": 3,
+     "kind": "receive",
+     "item": "Letter for Alarys",
+     "qty": 1,
+     "npc": "Zalethra Drezzorith",
+     "part": "House Acceptance"
+    },
+    {
+     "n": 4,
+     "kind": "receive",
+     "item": "Empty Sample Box",
+     "qty": 1,
+     "npc": "Alarys Drezzorith",
+     "part": "Goblin Samples"
+    },
+    {
+     "n": 5,
+     "kind": "receive",
+     "item": "Intermediate Lexicon of Mysteries",
+     "qty": 1,
+     "npc": "Alarys Drezzorith",
+     "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Zalethra Drezzorith",
-    "an angry cultist an agitated cultist a cultist priestess"
+    "an angry cultist an agitated cultist a cultist priestess a Deepgulp warrior a Deepgulp scavenger a Deepgulp hunter a Deepgulp berserker"
    ]
   },
   {
-   "title": "House Hal'kareth",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Hal%27kareth",
+   "title": "House Hal'kareth (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Hal%27kareth_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Myal Vehear",
    "min_level": "1",
-   "classes": "SPB",
+   "classes": "SPB WIZ",
    "related": [],
    "rewards": [
     "??"
    ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - ? - Req. Lvl ?",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - ? - Req. Lvl ?",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Myal Vehear"
    ]
   },
   {
-   "title": "House Ith'vayen",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Ith%27vayen",
+   "title": "House Ith'vayen (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Ith%27vayen_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Amarah Ith'vayen",
    "min_level": "1",
@@ -11460,115 +10045,142 @@
     "Aleyz Ith'vayen a cave myconid an enraged elemental"
    ],
    "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - A Letter of Recommendation - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "Begins when you turn in a Letter to Aleyz to Aleyz Ith'vayen inside the main city.",
-     "part": "Part 2 - A Letter of Recommendation - Req. Lvl 1",
-     "items": [
-      {
-       "name": "Letter to Aleyz",
-       "qty": 1
-      }
-     ]
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - A Letter of Recommendation - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "step",
-     "text": "Begins when you turn in a Letter to Aleyz to Aleyz Ith'vayen inside the main city.",
-     "part": "Part 2 - A Letter of Recommendation - Req. Lvl 1",
-     "items": [
-      {
-       "name": "Letter to Aleyz",
-       "qty": 1
-      }
-     ]
-    }
-   ],
-   "fetched": "2026-09-23",
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Aleyz Ith'vayen a cave myconid an enraged elemental",
     "Amarah Ith'vayen"
    ]
   },
   {
-   "title": "House Vael'xirith",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Vael%27xirith",
+   "title": "House Vael'xirith (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Vael%27xirith_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Laren Drin'dar",
    "min_level": "8+",
    "classes": "Archer Ranger",
    "related": [
-    "?"
+    "a Deepgulp runt a Deepgulp explorer"
    ],
    "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
-    "?",
-    "Laren Drin'dar"
+    "Laren Drin'dar",
+    "a Deepgulp runt a Deepgulp explorer"
    ]
   },
   {
-   "title": "House Varros",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Varros",
+   "title": "House Varros (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Varros_%28Quest%29",
    "zone": "Ail'Vorith",
-   "giver": "Vaslir Naiyth",
+   "giver": "",
    "min_level": "1",
    "classes": "ELE NEC",
-   "related": [],
-   "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - ? - Req. Lvl 2",
-     "items": []
-    }
+   "related": [
+    "| Related Items = Naiyth's Mushroom Pouch"
    ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "Part 1 - ? - Req. Lvl 2",
-     "items": []
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "[Player], young aspirant. What brings you to this vaslir of House Varros?",
+     "part": "Part 1"
+    },
+    {
+     "n": 2,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Does your ambition lead you towards the path of the vaslir?",
+     "part": "Part 1"
+    },
+    {
+     "n": 3,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "All Airtrist must have ambition if they wish to survive, let alone thrive. We are not like zor'thez cousins, content to frolic in their woods or sit pompously on their mountain.",
+     "part": "Part 1"
+    },
+    {
+     "n": 4,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "As you have yourself, it is kill or be killed.",
+     "part": "Part 1"
+    },
+    {
+     "n": 5,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "The work of House Varros can break a lesser mind. Let's put to a little test.",
+     "part": "Part 1"
+    },
+    {
+     "n": 6,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "There are many species of fungi here in the Deep. I seek a specific kind. Do you think you could find a patch for me? Or is that task beneath you?",
+     "part": "Part 1"
+    },
+    {
+     "n": 7,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Excellent. Those oafs in House Vael'Xirith might care only about your prowess in battle, but in House Varros, we value mental strength.",
+     "part": "Part 1"
+    },
+    {
+     "n": 8,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Those with weak minds soon find themselves unraveled by the dark realms that we explore.",
+     "part": "Part 1"
+    },
+    {
+     "n": 9,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Here's a test of your perspicacity. There's a book on the shelves next to me, Thelyen's Encyclopaedia. It is the most complete compendium of the flora of the Deep. Find the page on Vhelzzil's Vow and tell me what power causes these mushrooms to grow.",
+     "part": "Part 1"
+    },
+    {
+     "n": 10,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Go on—look at the bookshelf and open the encyclopedia.",
+     "part": "Part 1"
+    },
+    {
+     "n": 11,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Indeed. This particular species is nourished by the necromantic energies that linger after an undead body has been disanimated.",
+     "part": "Part 1"
+    },
+    {
+     "n": 12,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "The anarchic wilds beyond the walls of the Foreign Quarter are rife with walking skeletons that have been dispatched by ambitious young Airtrist such as yourself.",
+     "part": "Part 1"
+    },
+    {
+     "n": 13,
+     "kind": "npc",
+     "npc": "Vaslir Naiyth",
+     "text": "Go there and find remains old enough for Vhelzzil's Vow to have sprouted. Put a handful of the mushrooms in this pouch and bring it back to me.",
+     "part": "Part 1"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
-    "Vaslir Naiyth"
+    "Vaslir Naiyth",
+    "| Related Items = Naiyth's Mushroom Pouch"
    ]
   },
   {
@@ -11582,192 +10194,69 @@
     "| Quest Rewards = (exp); (money:25)"
    ],
    "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest begins in Ail'Vorith in the Obsidian Academy courtyard by talking with Apprentice Esveth. Esveth is located directly across from the academy under a light post.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "Upon finding Apprentice Esveth, set your language to Deep Common (right-click Main Chat window > Languages > Deep Common)",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 5,
-     "text": "The corpses may be referring to the Sullen Corpse item.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 6,
-     "text": "Upon handing 1x Bone Chips to Apprentice Esveth...",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 7,
-     "text": "Upon handing 20x Bone Chips to Apprentice Esveth...",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "This quest begins in Ail'Vorith in the Obsidian Academy courtyard by talking with Apprentice Esveth. Esveth is located directly across from the academy under a light post.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "step",
-     "text": "Upon finding Apprentice Esveth, set your language to Deep Common (right-click Main Chat window > Languages > Deep Common)",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Apprentice Esveth",
-     "text": "Karzzul, I am Apprentice Esveth. My master, Vaslir Naiyth, has tasked me with acquiring raw materials for House Varros.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Apprentice Esveth",
-     "text": "I will pay you for ghoul skin, stacks of bone chips, and, of course, corpses.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "step",
-     "text": "The corpses may be referring to the Sullen Corpse item.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 6,
-     "kind": "step",
-     "text": "Upon handing 1x Bone Chips to Apprentice Esveth...",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 7,
-     "kind": "step",
-     "text": "Upon handing 20x Bone Chips to Apprentice Esveth...",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Apprentice Esveth",
     "| Quest Rewards = (exp); (money:25)"
    ]
   },
   {
-   "title": "House Xal'tharn",
-   "url": "https://monstersandmemories.miraheze.org/wiki/House_Xal%27tharn",
+   "title": "House Velgarrith (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Velgarrith_%28Quest%29",
+   "zone": "Ail'Vorith",
+   "giver": "Xilonen Velgarrith",
+   "min_level": "1",
+   "classes": "FTR SHD",
+   "related": [],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
+   "npcs": [
+    "Xilonen Velgarrith"
+   ]
+  },
+  {
+   "title": "House Xal'tharn (Quest)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/House_Xal%27tharn_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Klavel Sul",
    "min_level": "8+",
-   "classes": "INQ MNK SHD",
+   "classes": "INQ MNK",
    "related": [
     "a separated skull a spectral remnant"
    ],
-   "rewards": [
-    "Experience",
-    "Xal'tharn Pendant",
-    "Simple Chestwrap for MNK (Update 0.30.0.0)",
-    "Access to the city (Update 0.30.0.0)"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "Klavel Sul is located in the Obsidian Academy with the melee class instructors. From the bridge and gate into the Foreign Quarter, enter the building on the left and head to the back of the room.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 3,
-     "text": "Klavel's introduction text varies depending on your class, but the conversation is identical after the introduction line.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 5,
-     "text": "Combine the container and return it to Klavel Sul.",
-     "part": "",
-     "items": []
-    }
-   ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "This quest starts at the conclusion of the Ail'Vorith Starter Quest after you receive your Obsidian Shackle.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "step",
-     "text": "Klavel Sul is located in the Obsidian Academy with the melee class instructors. From the bridge and gate into the Foreign Quarter, enter the building on the left and head to the back of the room.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 3,
-     "kind": "step",
-     "text": "Klavel's introduction text varies depending on your class, but the conversation is identical after the introduction line.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 4,
      "kind": "receive",
      "item": "Remnant Satchel",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": ""
+     "part": "Part 1 - ?"
     },
     {
-     "n": 5,
-     "kind": "step",
-     "text": "Combine the container and return it to Klavel Sul.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 6,
+     "n": 2,
      "kind": "receive",
      "item": "Xal'tharn Pendant",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": ""
+     "part": "Part 1 - ?"
     },
     {
-     "n": 7,
+     "n": 3,
      "kind": "receive",
      "item": "Simple Chestwrap",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": ""
+     "part": "Part 1 - ?"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Klavel Sul",
     "a separated skull a spectral remnant"
@@ -11788,7 +10277,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -11800,183 +10289,50 @@
    "zone": "Night Harbor",
    "giver": "",
    "min_level": "1",
-   "classes": "Inquisitor",
+   "classes": "INQ",
    "related": [
-    "Jaffar Jhaym",
-    "Petra Gyle",
-    "Sahir Muzalal",
-    "Inquisitor Selpha"
+    "Jaffar Jhaym; Petra Gyle; Sahir Muzalal; Inquisitor Selpha; Spellbinder Kharash; Haredi; Farmer Lubern; Lubern the Heretic"
    ],
-   "rewards": [
-    "Spellbinder's Inquisitor Talisman",
-    "Tarnished Spellbinder Cuirass",
-    "Experience"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Begin heading to Jaffar Jhaym",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "text": "Hand Rune-Etched Note to Jaffar Jhaym.",
-     "part": "Part 1",
-     "items": [
-      {
-       "name": "Rune-Etched Note",
-       "qty": 1
-      }
-     ]
-    },
-    {
-     "n": 9,
-     "text": "Head down the spire and hand your Rune-Etched Note \"Petra Gyle\" to Petra Gyle.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 21,
-     "text": "Head down the confinement cells and hold your Spellbinder's Cell Key and click the cell door next to Inquisitor Selpha.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 22,
-     "text": "Cast Torment on one of the prisoners three times, they will then tell you about a secret pocket in their cloaks.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 23,
-     "text": "There will be a table with some knives on it in the room outside. /Look at the table, then /inspect cloak, then /inspect seam, then /take note. Give it to Inquisitor Selpha.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 26,
-     "text": "Return to Petra Gyle, and give her the Mysterious Rolled Note, the Mysterious Iron Spike and the Spellbinder's Cell Key.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 37,
-     "text": "Path Choice",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 44,
-     "text": "You receive Revealed Cultist Note.",
-     "part": "Note Path",
-     "items": []
-    },
-    {
-     "n": 52,
-     "text": "Head to the Shaded Bloom Inn near the west gate.",
-     "part": "Note Path",
-     "items": []
-    },
-    {
-     "n": 53,
-     "text": "Hand the Tarellian Seer Stone and Small Bag of Spikes to Petra Gyle.",
-     "part": "Note Path",
-     "items": [
-      {
-       "name": "Tarellian Seer Stone",
-       "qty": 1
-      }
-     ]
-    },
-    {
-     "n": 99,
-     "text": "Hand the filled Ashira Herb Pouch and Filthy Leather Herb Pouch to Petra Gyle.",
-     "part": "Part 2",
-     "items": []
-    },
-    {
-     "n": 106,
-     "text": "Head to the Bends part of Night Harbor. There is a teleporter just before north bank that will take you to the shipyard area. Take the teleporter and go left to get to the Bends.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 107,
-     "text": "Kill Sahir Muzalal and loot his Bloodied Wizard Head.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 108,
-     "text": "Head back to Petra Gyle.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 109,
-     "text": "Hand the filled Rune Covered Black Silk Bag to Petra Gyle.",
-     "part": "Part 3",
-     "items": []
-    }
-   ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "Begin heading to Jaffar Jhaym",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "step",
-     "text": "Hand Rune-Etched Note to Jaffar Jhaym.",
-     "part": "Part 1",
-     "items": [
-      {
-       "name": "Rune-Etched Note",
-       "qty": 1
-      }
-     ]
-    },
-    {
-     "n": 3,
      "kind": "npc",
      "npc": "Jaffar Jhaym",
      "text": "Very well met! You have arrived safely, and I am indeed who you seek. Welcome to the Spellbinders Spire!",
      "part": "Part 1"
     },
     {
-     "n": 4,
+     "n": 2,
      "kind": "npc",
      "npc": "Jaffar Jhaym",
      "text": "The desert grows more dangerous by the day, so you have arrived none too soon.",
      "part": "Part 1"
     },
     {
-     "n": 5,
+     "n": 3,
      "kind": "npc",
      "npc": "Jaffar Jhaym",
      "text": "I am sure we will get better acquainted in the days to come, but you must be tired, so I’ll delay your introduction to your trainer no longer.",
      "part": "Part 1"
     },
     {
-     "n": 6,
+     "n": 4,
      "kind": "npc",
      "npc": "Jaffar Jhaym",
      "text": "As an aspiring inquisitor, you will be under the tutelage of Petra Gyle.",
      "part": "Part 1"
     },
     {
-     "n": 7,
+     "n": 5,
      "kind": "npc",
      "npc": "Jaffar Jhaym",
      "text": "Deliver your note to her, and she will get you started.",
      "part": "Part 1"
     },
     {
-     "n": 8,
+     "n": 6,
      "kind": "receive",
      "item": "Rune-Etched Note",
      "qty": 1,
@@ -11984,42 +10340,35 @@
      "part": "Part 1"
     },
     {
-     "n": 9,
-     "kind": "step",
-     "text": "Head down the spire and hand your Rune-Etched Note \"Petra Gyle\" to Petra Gyle.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 10,
+     "n": 7,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Hmm...",
      "part": "Part 1"
     },
     {
-     "n": 11,
+     "n": 8,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "So you wish to be an inquisitor of the spire, do you? You'll have to prove to me you have the mettle to take on such a responsibility.",
      "part": "Part 1"
     },
     {
-     "n": 12,
+     "n": 9,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Magic is a powerful, yet extremely dangerous talent. Especially when used by those who collude with, or seek to benefit from, corrupted forces.",
      "part": "Part 1"
     },
     {
-     "n": 13,
+     "n": 10,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Our role as inquisitors is to protect our colleagues from such forces, while also routing out corruption before it has a chance to take hold.",
      "part": "Part 1"
     },
     {
-     "n": 14,
+     "n": 11,
      "kind": "receive",
      "item": "Spellbinder's Cell Key",
      "qty": 1,
@@ -12027,248 +10376,182 @@
      "part": "Part 1"
     },
     {
-     "n": 15,
+     "n": 12,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Are you prepared to take on this role?",
      "part": "Part 1"
     },
     {
-     "n": 16,
-     "kind": "say",
-     "text": "Yes I am.",
-     "part": "Part 1"
-    },
-    {
-     "n": 17,
+     "n": 13,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "We shall see if there's truth to your words, or if they ring hollow.",
      "part": "Part 1"
     },
     {
-     "n": 18,
+     "n": 14,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Descend to the bottom floor of the Spire and use the key I've given you to enter the confinement cells. We've captured a number of cultists that have yet to reveal to us their intentions.",
      "part": "Part 1"
     },
     {
-     "n": 19,
+     "n": 15,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Even a novice like yourself should have the aptitude to force them to talk.",
      "part": "Part 1"
     },
     {
-     "n": 20,
+     "n": 16,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Speak to the Inquisitor Selpha outside the cells should you have any questions regarding interrogation, then return to me with anything you uncover, along with the key to the cells.",
      "part": "Part 1"
     },
     {
-     "n": 21,
-     "kind": "step",
-     "text": "Head down the confinement cells and hold your Spellbinder's Cell Key and click the cell door next to Inquisitor Selpha.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 22,
-     "kind": "step",
-     "text": "Cast Torment on one of the prisoners three times, they will then tell you about a secret pocket in their cloaks.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 23,
-     "kind": "step",
-     "text": "There will be a table with some knives on it in the room outside. /Look at the table, then /inspect cloak, then /inspect seam, then /take note. Give it to Inquisitor Selpha.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 24,
+     "n": 17,
      "kind": "npc",
      "npc": "Inquisitor Selpha",
      "text": "What's this? You found this hidden within one of their cloaks? Hmm...",
      "part": "Part 1"
     },
     {
-     "n": 25,
+     "n": 18,
      "kind": "npc",
      "npc": "Inquisitor Selpha",
      "text": "You'd best show these to Petra right away. The spike carries a malevolent aura that she may be able to unravel, along with the meaning behind that blank note.",
      "part": "Part 1"
     },
     {
-     "n": 26,
-     "kind": "step",
-     "text": "Return to Petra Gyle, and give her the Mysterious Rolled Note, the Mysterious Iron Spike and the Spellbinder's Cell Key.",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 27,
+     "n": 19,
      "kind": "npc",
      "npc": "Petra Gyle",
-     "text": "You did well to bring these finds to me, Name, while also proving that you have the resolve to be a true inquisitor.",
+     "text": "You did well to bring these finds to me, [Player], while also proving that you have the resolve to be a true inquisitor.",
      "part": "Part 1"
     },
     {
-     "n": 28,
+     "n": 20,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Take this, it will serve as a symbol that you're now a member of our order. You'll need it, along with this seer stone, if you're to look further into these matters.",
      "part": "Part 1"
     },
     {
-     "n": 29,
+     "n": 21,
      "kind": "npc",
      "npc": "Petra Gyle",
-     "text": "Tell me, Name, are you familiar with the Tarellian Seer Stones?",
+     "text": "Tell me, [Player], are you familiar with the Tarellian Seer Stones?",
      "part": "Part 1"
     },
     {
-     "n": 30,
-     "kind": "say",
-     "text": "What Seer Stones?",
-     "part": "Part 1"
-    },
-    {
-     "n": 31,
+     "n": 22,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "The seer stone that I've given you is magically imbued. It enables us to see through minor illusions and masking spells, which is how you'll use it to thwart the cultists.",
      "part": "Part 1"
     },
     {
-     "n": 32,
+     "n": 23,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "These so-called spikes have been revealed to scrying anchors. They would allow anyone attuned to them to view, and potentially overhear, anything in their vicinity.",
      "part": "Part 1"
     },
     {
-     "n": 33,
+     "n": 24,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "I've also used the power of the Tarellian Seer Stone to dispel the illusion concealing what information the note contained.",
      "part": "Part 1"
     },
     {
-     "n": 34,
+     "n": 25,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "It appears that out Easthymnite guests have been directed to discreetly affix these spikes at various locations throughout Night Harbor, likely in an effort to spy and sow discord.",
      "part": "Part 1"
     },
     {
-     "n": 35,
+     "n": 26,
      "kind": "npc",
      "npc": "Petra Gyle",
-     "text": "So now, Name, to continue your investigations you must make a choice.",
+     "text": "So now, [Player], to continue your investigations you must make a choice.",
      "part": "Part 1"
     },
     {
-     "n": 36,
-     "kind": "say",
-     "text": "What choice?",
-     "part": "Part 1"
-    },
-    {
-     "n": 37,
-     "kind": "step",
-     "text": "Path Choice",
-     "part": "Part 1",
-     "items": []
-    },
-    {
-     "n": 38,
+     "n": 27,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Your first option is to pursue the cultists that have been sent to plant these spikes, either by following them or discerning the clues revealed in the note about their intended locations. For this, you'll need the note.",
      "part": "Part 1"
     },
     {
-     "n": 39,
+     "n": 28,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "The second option is to track down and eliminate the individual who is attuned to the spikes, so that even if they're planted, they'll remain nothing more than a potential snag on someone's clothing. To do this, you'll require the spike.",
      "part": "Part 1"
     },
     {
-     "n": 40,
+     "n": 29,
      "kind": "npc",
      "npc": "Petra Gyle",
-     "text": "As this is your first investigation, I leave the choice to you, Name.",
+     "text": "As this is your first investigation, I leave the choice to you, [Player].",
      "part": "Part 1"
     },
     {
-     "n": 41,
+     "n": 30,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Note or spike?",
      "part": "Part 1"
     },
     {
-     "n": 42,
-     "kind": "say",
-     "text": "Give me the note.",
-     "part": "Note Path"
-    },
-    {
-     "n": 43,
+     "n": 31,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Very well, the note is yours.",
      "part": "Note Path"
     },
     {
-     "n": 44,
-     "kind": "step",
-     "text": "You receive Revealed Cultist Note.",
-     "part": "Note Path",
-     "items": []
-    },
-    {
-     "n": 45,
+     "n": 32,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "There are three travelers from Easthymn who've caught our eye at the Shaded Bloom Inn. You'll recognize them by their black garb and the thin silver chains they wear around their waists. Identify them and follow them.",
      "part": "Note Path"
     },
     {
-     "n": 46,
+     "n": 33,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Two of them have been reported to wander the streets, making brief stops at nondescript locations. With the seer stone, look closely at the areas where they stop. You're to pull out any spikes they affix to these locations.",
      "part": "Note Path"
     },
     {
-     "n": 47,
+     "n": 34,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "You may be able to use the note to discern the locations yourself without having to following them, if you're keen enough.",
      "part": "Note Path"
     },
     {
-     "n": 48,
+     "n": 35,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "The third traveler never leaves the inn, but we're not sure why. Follow him as well, but if he doesn't affix the spikes anywhere... take them from him. The spire authorizes the use of force, once he is out of sight of the locals.",
      "part": "Note Path"
     },
     {
-     "n": 49,
+     "n": 36,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Fill the bag with each unique spike, combine it, and then return it to me, along with the seer stone.",
      "part": "Note Path"
     },
     {
-     "n": 50,
+     "n": 37,
      "kind": "receive",
      "item": "Tarellian Seer Stone",
      "qty": 1,
@@ -12276,7 +10559,7 @@
      "part": "Note Path"
     },
     {
-     "n": 51,
+     "n": 38,
      "kind": "receive",
      "item": "Small Leather Bag",
      "qty": 1,
@@ -12284,75 +10567,56 @@
      "part": "Note Path"
     },
     {
-     "n": 52,
-     "kind": "step",
-     "text": "Head to the Shaded Bloom Inn near the west gate.",
-     "part": "Note Path",
-     "items": []
-    },
-    {
-     "n": 53,
-     "kind": "step",
-     "text": "Hand the Tarellian Seer Stone and Small Bag of Spikes to Petra Gyle.",
-     "part": "Note Path",
-     "items": [
-      {
-       "name": "Tarellian Seer Stone",
-       "qty": 1
-      }
-     ]
-    },
-    {
-     "n": 54,
+     "n": 39,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Well done. You've returned, so I must assume you were able to trail them safely.",
      "part": "Note Path"
     },
     {
-     "n": 55,
+     "n": 40,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Oh, did you get into a tussle?.",
      "part": "Note Path"
     },
     {
-     "n": 56,
+     "n": 41,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Seems you can handle a more direct challenge then.",
      "part": "Note Path"
     },
     {
-     "n": 57,
+     "n": 42,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "We're tasked with tracking down and dealing with mages, wizards, and other arcane filth. However, we are also charged, at times, to deal with adversaries of a more spiritual nature.",
      "part": "Note Path"
     },
     {
-     "n": 58,
+     "n": 43,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Seek out two camps in the desert to the west. There are shamans amongst the Ashira. Gather medicinal herbs from them to replenish the first pouch.",
      "part": "Note Path"
     },
     {
-     "n": 59,
+     "n": 44,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "You'll find a group of smugglers along the coast. They work for Jens Vermahn, so take care to engage them during the day. Gather whatever leafy filth they're using to heal themselves in the second bag.",
      "part": "Note Path"
     },
     {
-     "n": 60,
+     "n": 45,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Now go.",
      "part": "Note Path"
     },
     {
-     "n": 61,
+     "n": 46,
      "kind": "receive",
      "item": "Ashira Herb Pouch",
      "qty": 1,
@@ -12360,7 +10624,7 @@
      "part": "Note Path"
     },
     {
-     "n": 62,
+     "n": 47,
      "kind": "receive",
      "item": "Filthy Leather Herb Pouch",
      "qty": 1,
@@ -12368,7 +10632,7 @@
      "part": "Note Path"
     },
     {
-     "n": 63,
+     "n": 48,
      "kind": "receive",
      "item": "Tarnished Spellbinder Cuirass",
      "qty": 1,
@@ -12376,48 +10640,42 @@
      "part": "Note Path"
     },
     {
-     "n": 64,
-     "kind": "say",
-     "text": "Spike",
-     "part": "Spike Path"
-    },
-    {
-     "n": 65,
+     "n": 49,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "The spike is yours, then.",
      "part": "Spike Path"
     },
     {
-     "n": 66,
+     "n": 50,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "If you're going to find out who has attuned themselves to the spike, you'll need the assistance of another member of our order.",
      "part": "Spike Path"
     },
     {
-     "n": 67,
+     "n": 51,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Bring the spike to Spellbinder Kharash. I imagine he'll be in the archives on the bottom floor, opposite the hallway where you found the containment cells.",
      "part": "Spike Path"
     },
     {
-     "n": 68,
+     "n": 52,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "He's an expert at unraveling divination magics and will be able to help you trace its origin.",
      "part": "Spike Path"
     },
     {
-     "n": 69,
+     "n": 53,
      "kind": "npc",
      "npc": "Petra Gyle",
-     "text": "Good hunting, Name.",
+     "text": "Good hunting, [Player].",
      "part": "Spike Path"
     },
     {
-     "n": 70,
+     "n": 54,
      "kind": "receive",
      "item": "Cultist's Iron Spike",
      "qty": 1,
@@ -12425,7 +10683,7 @@
      "part": "Spike Path"
     },
     {
-     "n": 71,
+     "n": 55,
      "kind": "receive",
      "item": "Tarellian Seer Stone",
      "qty": 1,
@@ -12433,173 +10691,206 @@
      "part": "Spike Path"
     },
     {
-     "n": 72,
+     "n": 56,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "You bring me a cursed object, inquisitor. I sense foul magics tied to it... divine in origin. Likely a dark gift granted by a malevolent benefactor.",
      "part": "Spike Path"
     },
     {
-     "n": 73,
+     "n": 57,
+     "kind": "npc",
+     "npc": "Spellbinder Kharash",
+     "text": "Let us not waste time with further details. I will retain the spike here and prevent those who are attuned to it from scrying its location, or potentially, overhearing our plans.",
+     "part": "Spike Path"
+    },
+    {
+     "n": 58,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "In the meanwhile, take this bag. You must fill it With the components I need to trace the magic of the spike back to its source.",
      "part": "Spike Path"
     },
     {
-     "n": 74,
-     "kind": "say",
-     "text": "what components?",
+     "n": 59,
+     "kind": "receive",
+     "item": "Spellbinder's Bag",
+     "qty": 1,
+     "npc": "Spellbinder Kharash",
      "part": "Spike Path"
     },
     {
-     "n": 75,
+     "n": 60,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "Good of you to ask.",
      "part": "Spike Path"
     },
     {
-     "n": 76,
+     "n": 61,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "The components I need to seek this foe rely on the vision of those who scour the sands. You must acquire the eye of a bat, a fire beetle, a dune scarab, a spiderling, and a crypt scarab.",
      "part": "Spike Path"
     },
     {
-     "n": 77,
+     "n": 62,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "I will also need a mirror to reflect the gaze back to its source. I believe Haredi sells such trinkets to other students of the academy in the Grand Library.",
      "part": "Spike Path"
     },
     {
-     "n": 78,
+     "n": 63,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "Once you have an of the eyes and the mirror, combine them in the bag and return it to me. I Will then conduct the ritual to reverse the attunement Of the spike.",
      "part": "Spike Path"
     },
     {
-     "n": 79,
+     "n": 64,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
-     "text": "Take it, Drixquist. I have reversed the attunement of the object and directed the eyes to assist you in locating the cultist leader.",
+     "text": "Well done, recruit With this, I can refocus the vision of the desert creatures and reflect the sinister gaze on this scrying device back to its source. Allow me a moment to redirect this foul magic.",
      "part": "Spike Path"
     },
     {
-     "n": 80,
+     "n": 65,
+     "kind": "npc",
+     "npc": "Spellbinder Kharash",
+     "text": "Take it, [Player]. I have reversed the attunement of the object and directed the eyes to assist you in locating the cultist leader.",
+     "part": "Spike Path"
+    },
+    {
+     "n": 66,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "There is now one final thing you must do.",
      "part": "Spike Path"
     },
     {
-     "n": 81,
-     "kind": "say",
-     "text": "What must I do?",
+     "n": 67,
+     "kind": "receive",
+     "item": "Revealing Iron Spike",
+     "qty": 1,
+     "npc": "Spellbinder Kharash",
      "part": "Spike Path"
     },
     {
-     "n": 82,
+     "n": 68,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "Before you depart, you must be sure to bring your Tarellian Seer Stone with you.",
      "part": "Spike Path"
     },
     {
-     "n": 83,
+     "n": 69,
+     "kind": "npc",
+     "npc": "Spellbinder Kharash",
+     "text": "It is capable Of removing illusions and can be used to unmask those attempting to hide their true selves. They must simply touch the stone.",
+     "part": "Spike Path"
+    },
+    {
+     "n": 70,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "When you are ready, proceed down to the Northern Gate. While standing beneath it, focus your will into the spike and it shall conjure an eye that will lead you to the cultist scryer.",
      "part": "Spike Path"
     },
     {
-     "n": 84,
+     "n": 71,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "If an eye does not immediately appear, the villain may be momentarily out of sight. Simply wait a short moment before trying once again.",
      "part": "Spike Path"
     },
     {
-     "n": 85,
+     "n": 72,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "When an eye appears, follow it. After that, you must use your own judgment on how best to deliver the Spellbinder's justice to your foe.",
      "part": "Spike Path"
     },
     {
-     "n": 86,
+     "n": 73,
      "kind": "npc",
      "npc": "Spellbinder Kharash",
      "text": "Bring anything you find from you investigation back to Petra, as my part here has concluded. May Tilustra illuminate path, inquisitor.",
      "part": "Spike Path"
     },
     {
-     "n": 87,
+     "n": 74,
      "kind": "npc",
      "npc": "Lubern the Heretic",
      "text": "No! How did you...?",
      "part": "Spike Path"
     },
     {
-     "n": 88,
+     "n": 75,
+     "kind": "receive",
+     "item": "Tarellian Seer Stone",
+     "qty": 1,
+     "npc": "Farmer Lubern",
+     "part": "Spike Path"
+    },
+    {
+     "n": 76,
      "kind": "npc",
      "npc": "Lubern the Heretic",
      "text": "Your blood will serve as a sacrifice for Kravvin!",
      "part": "Spike Path"
     },
     {
-     "n": 89,
+     "n": 77,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Well done. It seems you may have what it takes to be a real inquisitor after all.",
      "part": "Spike Path"
     },
     {
-     "n": 90,
+     "n": 78,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Oh, did you get into a tussle?.",
      "part": "Spike Path"
     },
     {
-     "n": 91,
+     "n": 79,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Seems you can handle a more direct challenge then.",
      "part": "Spike Path"
     },
     {
-     "n": 92,
+     "n": 80,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "We're tasked with tracking down and dealing with mages, wizards, and other arcane filth. However, we are also charged, at times, to deal with adversaries of a more spiritual nature.",
      "part": "Spike Path"
     },
     {
-     "n": 93,
+     "n": 81,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Seek out two camps in the desert to the west. There are shamans amongst the Ashira. Gather medicinal herbs from them to replenish the first pouch.",
      "part": "Spike Path"
     },
     {
-     "n": 94,
+     "n": 82,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "You'll find a group of smugglers along the coast. They work for Jens Vermahn, so take care to engage them during the day. Gather whatever leafy filth they're using to heal themselves in the second bag.",
      "part": "Spike Path"
     },
     {
-     "n": 95,
+     "n": 83,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Now go.",
      "part": "Spike Path"
     },
     {
-     "n": 96,
+     "n": 84,
      "kind": "receive",
      "item": "Ashira Herb Pouch",
      "qty": 1,
@@ -12607,7 +10898,7 @@
      "part": "Spike Path"
     },
     {
-     "n": 97,
+     "n": 85,
      "kind": "receive",
      "item": "Filthy Leather Herb Pouch",
      "qty": 1,
@@ -12615,7 +10906,7 @@
      "part": "Spike Path"
     },
     {
-     "n": 98,
+     "n": 86,
      "kind": "receive",
      "item": "Tarnished Spellbinder Cuirass",
      "qty": 1,
@@ -12623,49 +10914,42 @@
      "part": "Spike Path"
     },
     {
-     "n": 99,
-     "kind": "step",
-     "text": "Hand the filled Ashira Herb Pouch and Filthy Leather Herb Pouch to Petra Gyle.",
-     "part": "Part 2",
-     "items": []
-    },
-    {
-     "n": 100,
+     "n": 87,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Fantastic Work. We've been using these herbs to formulate a better understanding of how to disrupt the enemy's healing magics.",
      "part": "Part 2"
     },
     {
-     "n": 101,
+     "n": 88,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "The spiritual nature of Ashira magic is more challenging to understand, but Jens' rats appear to be using simple alchemy. We'll know soon enough.",
      "part": "Part 2"
     },
     {
-     "n": 102,
+     "n": 89,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Well, young recruit, you're proving to be quite the find. I've got one last task, then we'll let you get some rest.",
      "part": "Part 2"
     },
     {
-     "n": 103,
+     "n": 90,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "I've just been made aware of a powerful, yet still up-in-coming wizard, in league with Jens. He can occasionally be found in a small house in the Bends.",
      "part": "Part 2"
     },
     {
-     "n": 104,
+     "n": 91,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "You're to kill him and bring me his head. Pack it in this bag so you don't draw any unwanted attention.",
      "part": "Part 2"
     },
     {
-     "n": 105,
+     "n": 92,
      "kind": "receive",
      "item": "Rune Covered Black Silk Bag",
      "qty": 1,
@@ -12673,56 +10957,28 @@
      "part": "Part 2"
     },
     {
-     "n": 106,
-     "kind": "step",
-     "text": "Head to the Bends part of Night Harbor. There is a teleporter just before north bank that will take you to the shipyard area. Take the teleporter and go left to get to the Bends.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 107,
-     "kind": "step",
-     "text": "Kill Sahir Muzalal and loot his Bloodied Wizard Head.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 108,
-     "kind": "step",
-     "text": "Head back to Petra Gyle.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 109,
-     "kind": "step",
-     "text": "Hand the filled Rune Covered Black Silk Bag to Petra Gyle.",
-     "part": "Part 3",
-     "items": []
-    },
-    {
-     "n": 110,
+     "n": 93,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "Good work. He was on his way to becoming a powerful adversary, so it benefits us to be rid of him.",
      "part": "Part 3"
     },
     {
-     "n": 111,
+     "n": 94,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "For now, consider yourself well on your way down the proper path. Continue to explore the city and familiarize yourself with the people here. If you run into anything suspicious, come back to me. Otherwise, get some rest.",
      "part": "Part 3"
     },
     {
-     "n": 112,
+     "n": 95,
      "kind": "npc",
      "npc": "Petra Gyle",
      "text": "And keep this with you.",
      "part": "Part 3"
     },
     {
-     "n": 113,
+     "n": 96,
      "kind": "receive",
      "item": "Spellbinder's Inquisitor Talisman",
      "qty": 1,
@@ -12730,13 +10986,13 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
+    "Jaffar Jhaym; Petra Gyle; Sahir Muzalal; Inquisitor Selpha; Spellbinder Kharash; Haredi; Farmer Lubern; Lubern the Heretic",
     "Lubern the Heretic",
     "Petra Gyle",
-    "Sahir Muzalal",
     "Spellbinder Kharash"
    ]
   },
@@ -12833,7 +11089,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -12848,135 +11104,10 @@
    "related": [
     "Tora'Galdo"
    ],
-   "rewards": [
-    "Small Mur'Hua Trinket"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "This quest starts with hailing Mar'Tem.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "step",
-     "text": "This quest starts with hailing Mar'Tem.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "Hail, Yes, I speak your language, though I am the only one in our gathering who does.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "We mean no harm to your kind. In fact, we are the ones who fear harm. We have fled to this shelter to escape the hunters tracking us.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "The undead here have done well to keep them in the tunnel but it is only a matter of time before they come for us.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "say",
-     "text": "What hunters?",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "A group of us were able to flee the Skri'Var taskmasters before they could cause us to degenerate.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "We escaped here, but if the hunters leave, we will eventually make our way out of this place and return to our village.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "Or, if you can force them away, we would also be grateful. Just bring me proof that you have dealt with them.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "say",
-     "text": "Degenerate?",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "The Skri'Var were once like us Mur'Hua. But those with bad spirits wander away from our people and devolve into what you see here. We take care of each other, and we love to explore and create. They are selfish and kill and steal.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "They can force us to become like them by isolating us from each other, torturing us, and making us cannibals like them.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "Once this process beings, our spirits change and our minds give way. We serve them, protect them, and become like them. So, take care if you see any Mur'Hua among them. They are already likely lost.",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "say",
-     "text": "What Village?",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "We come from a small village on a lake deep below the surface... but I do not know you well enough to tell you more.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "say",
-     "text": "What proof?",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "It is a shame that one of our own can cause so much death and hardship. We are immensely grateful for this act of kindness.",
-     "part": ""
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Mar'Tem",
-     "text": "Please take this as a small token of my gratitude. It may help you, should you encounter more of my people.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -12995,7 +11126,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -13012,7 +11143,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": []
   },
   {
@@ -13718,7 +11849,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "A wash maiden",
     "Guard Iskandar",
@@ -13757,7 +11888,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Fendris the Forsaken",
     "Poacher Garrus",
@@ -13845,7 +11976,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -13859,82 +11990,15 @@
    "min_level": "1",
    "classes": "All",
    "related": [
-    "a wasp drone",
-    "a wasp worker"
+    "a wasp drone; a wasp worker"
    ],
-   "rewards": [
-    "Experience",
-    "Jelly Cupcake x4",
-    "Faction increase with Citizens of Faelindral"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Mierra Willowshade.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Fair shades to you! We have plenty of delicious goods for sale if you're looking for something scrumptious. Though, I'm unfortunately out of my famed jelly cupcakes.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "Famed jelly cupcakes?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "They're sold out faster than I can whip them up! You look like a capable sort, though. Tell you what... could you gather more of my special ingredient? I'll make it worth your while!",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "say",
-     "text": "What special ingredient?",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Shh, not so loud! It's special, but also secret! You'll need to gather some royal jelly from the wasps down on the forest floor.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Bring me four helpings of that precious jelly and I'll bake a special batch of my jelly cupcakes, just for you! You'll be the talk of the terrace!",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Oh, this is perfect! You wait right there while I get these prepared for you!",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Mierra Willowshade",
-     "text": "Here you are, Soandso! Thank you so much for your help. I'll use the extra jelly to bake cupcakes for tomorrow's batch. If you ever come across more, you know where to find me!",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-23",
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Mierra Willowshade",
-    "a wasp drone",
-    "a wasp worker"
+    "a wasp drone; a wasp worker"
    ]
   },
   {
@@ -14060,7 +12124,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Hull Orbel"
    ]
@@ -14274,7 +12338,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Chahaya Tam"
    ]
@@ -14476,7 +12540,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -14578,7 +12642,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -14595,162 +12659,10 @@
     "a beguiled bluecap",
     "a beguiled water elemental"
    ],
-   "rewards": [
-    "Staff of Spores",
-    "Experience, faction"
-   ],
-   "steps": [
-    {
-     "n": 12,
-     "text": "Collect Prismatic gills from a beguiled bluecap during the night and deliver them to Sporeweaver Underveil.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 20,
-     "text": "Collect 4 Enchanted water from a beguiled water elemental in the naiad cave upstream and combine them in Underveil's phial.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Sporeweaver Underveil.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "I welcome you to the depths of Sporehaven Karst, [class]. Our myconids are of no threat under normal circumstances, though it appears something has tampered with the latest strain.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "Strain?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "I cannot say for certain what is causing the aggression in our latest strain, but I do have my suspicion. They seem to get riled when the sun sets and a mysterious foam builds along the riverbanks of the Karst.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "say",
-     "text": "Foam?",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "I have discovered traces of the mysterious foam caught in the gills of some of our myconid children, though I have not yet procured enough to get an understanding of what it truly is.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Should a myconid become enthralled by the substance, they soon begin sending out messages of warning through the nerve structures of their surrounding kin, riling them into a defensive frenzy.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "I am loathe to ask this of you, stranger, but I am not strong enough to bring low any of my children. Would you be able to take a stand against my beguiled creations?",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "say",
-     "text": "I will take a stand.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Then I entrust the deed to you. Seek out my beguiled children here in the Karst; the bluecaps appear to be the most susceptible at night.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Cull what you must to procure a section of their gills that shimmers with traces of the prismatic foam. Bring what you find to me, so I can save what remains of our latest strain.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "step",
-     "text": "Collect Prismatic gills from a beguiled bluecap during the night and deliver them to Sporeweaver Underveil.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Such a waste of a beatiful strain. I understand why it had to be done, but this goes against the balance of the Weald. My poor children were never meant to be enthralled by something not of this world.",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Which is precisely what this magic resembles... the machinations of the naiads. I had my suspicions, but this evidence you brought me confirms them.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "They have tainted the river with their influence. To what end, I care not. I only ask, will you provide me the opportunity to avenge my fallen kin?",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "say",
-     "text": "I will avenge your fallen kin.",
-     "part": ""
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Thank you, stranger. Enter the domain of the naiads and use what force or guile is necessary to reach the pools that dwell within.",
-     "part": ""
-    },
-    {
-     "n": 18,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Rumors tell of their ability to enthrall beings of pure water. If these rumors hold true, I need you to collect at least four samples of this enchanted water so that I can study it and develop a countermeasure for my own creations.",
-     "part": ""
-    },
-    {
-     "n": 19,
-     "kind": "npc",
-     "npc": "Sporeweaver Underveil",
-     "text": "Do this for me, and you will have the eternal gratitude of the Circle of Spores. I wish you luck, stranger.",
-     "part": ""
-    },
-    {
-     "n": 20,
-     "kind": "step",
-     "text": "Collect 4 Enchanted water from a beguiled water elemental in the naiad cave upstream and combine them in Underveil's phial.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -14768,7 +12680,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Bones"
    ]
@@ -15068,7 +12980,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -15081,16 +12993,160 @@
    "zone": "Underdocks",
    "giver": "",
    "min_level": "1",
-   "classes": "Necromancer",
+   "classes": "NEC",
    "related": [
-    "Abbot Harrow"
+    "Abbot Harrow; Acolyte Vryar"
    ],
    "rewards": [],
    "steps": [],
-   "lines": [],
-   "fetched": "2026-09-23",
+   "lines": [
+    {
+     "n": 1,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "You appear before me as you were in my nightmare, [Player].",
+     "part": "Part 1"
+    },
+    {
+     "n": 2,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "Nightmares are visits from Ygorath, gifted upon the fearful of this land. It was my nightmare that called you here to begin his work.",
+     "part": "Part 1"
+    },
+    {
+     "n": 3,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "He is the fear and the terror that opens our eyes.",
+     "part": "Part 1"
+    },
+    {
+     "n": 4,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "It is the work of trembling hands to raise both the living and the dead upon his altar. It is for their salvation as much as our own.",
+     "part": "Part 1"
+    },
+    {
+     "n": 5,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "Many souls walk Eth-ur practicing feints of valor, but Ygorath's wisdom knows bravery to be a thin sheen upon a bottomless terror. We must usher them into his kingdom with right fear in their hearts.",
+     "part": "Part 1"
+    },
+    {
+     "n": 6,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "This you must do, Necromancer, whether by sign or by sword. If you pass the test.",
+     "part": "Part 1"
+    },
+    {
+     "n": 7,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "The rabble fear in their blood and their bones. Ours are borne by Ygorath. This is your test: take this Effigy to the chapel and make of it an offering. Place your effigy upon the altar and receive Ygorath's blessing. Return with what remains.",
+     "part": "Part 1"
+    },
+    {
+     "n": 8,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "But I must warn you... cast your gaze downward and look not upon the visage of Ygorath.",
+     "part": "Part 1"
+    },
+    {
+     "n": 9,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "Your eyes are open. Take this drape and rise a new servant of Ygorath.",
+     "part": "Part 1"
+    },
+    {
+     "n": 10,
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "Now go, and do his work. I believe Abbot Harrow has tasks suited to an aspirant such as yourself. You may find him below.",
+     "part": "Part 1"
+    },
+    {
+     "n": 11,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Are you the new aspirant?",
+     "part": "Part 2"
+    },
+    {
+     "n": 12,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Yes, you have that look about you. Like a beaten dog. You might even be commended for tucking tail in the master's temple, but you must learn to stand upright if you are to walk the path.",
+     "part": "Part 2"
+    },
+    {
+     "n": 13,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Fortunate for you, I have a task suitable for a pup.",
+     "part": "Part 2"
+    },
+    {
+     "n": 14,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Our work requires material. Test yourself against the risen dead outside the temple.",
+     "part": "Part 2"
+    },
+    {
+     "n": 15,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Take this satchel and collect four femurs. Combine and deliver them to my pupil, Vryar.",
+     "part": "Part 2"
+    },
+    {
+     "n": 16,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "He should be in the cemetery, where he communes with the dead.",
+     "part": "Part 2"
+    },
+    {
+     "n": 17,
+     "kind": "npc",
+     "npc": "Acolyte Vryar",
+     "text": "Ah, a delivery. Sister Morvea and I will put these to good use.",
+     "part": "Part 3"
+    },
+    {
+     "n": 18,
+     "kind": "npc",
+     "npc": "Acolyte Vryar",
+     "text": "Take this receipt and thank the Abbot for giving you this opportunity. Our paths will cross again.",
+     "part": "Part 3"
+    },
+    {
+     "n": 19,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "I am glad to see you did not embarrass yourself today. There will be future opportunities.",
+     "part": "Part 3"
+    },
+    {
+     "n": 20,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Until that day comes, heed the word of Ygorath.",
+     "part": "Part 3"
+    }
+   ],
+   "fetched": "2026-09-28",
    "npcs": [
-    "Abbot Harrow"
+    "Abbot Harrow",
+    "Abbot Harrow; Acolyte Vryar",
+    "Acolyte Vryar",
+    "Soren Akedd"
    ]
   },
   {
@@ -15600,7 +13656,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -15626,7 +13682,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -15666,7 +13722,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "a wise elder"
    ]
@@ -15818,7 +13874,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -15914,7 +13970,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -15980,7 +14036,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -16002,7 +14058,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -16128,7 +14184,7 @@
      "part": "Part 2 - Ample Samples"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Tust Brookturner"
    ]
@@ -16906,7 +14962,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -17173,7 +15229,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -17484,7 +15540,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -18179,7 +16235,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -19155,7 +17211,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -19187,7 +17243,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -19519,7 +17575,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -20447,7 +18503,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Delugia Coldsong",
     "Eraeldor Lowmist",
@@ -20470,7 +18526,9 @@
    "giver": "Errol Shrewtender",
    "min_level": "1",
    "classes": "Shaman",
-   "related": [],
+   "related": [
+    "| Related Items = Bone Chips"
+   ],
    "rewards": [
     "Awakened Spirit Pouch",
     "Dusty Spiritist Tunic",
@@ -20478,9 +18536,10 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
-    "Errol Shrewtender"
+    "Errol Shrewtender",
+    "| Related Items = Bone Chips"
    ]
   },
   {
@@ -20500,7 +18559,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Picci Manifold"
    ]
@@ -20513,115 +18572,15 @@
    "min_level": "1",
    "classes": "All",
    "related": [
-    "a black widow"
+    "a black widow; an elder widow"
    ],
-   "rewards": [
-    "Experience",
-    "Faction with Court of Summer",
-    "Pixie Glitter x 1"
-   ],
-   "steps": [
-    {
-     "n": 9,
-     "text": "Deliver 6 x Widow Eyes to Polietta Two-tone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 12,
-     "text": "You receive Pixie Glitter from Polietta Two-tone.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Polietta Two-tone.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Yes-yes! Polietta does have-have much glitter to spare, if one is willing-willing to perform for her a simple favor-favor!",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "What favor-favor?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "The large-large one has seen the many-many-eyed ones skittering up and down the tree-trees of late, yes-yes?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Widows I hear-hear them being called, yet Polietta has never-never seen a single husband. The eyes, though! Polietta has-has seen the eyes.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Eight eyes is simply too-too many, I say-say! Proper tings have two-two eyes, one-by-one and not four-by-four!",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "You'll bring-bring back to Polietta six of these eye-eyes, so that they're properly down to two-two like things should be-be!",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Six eyes for glitter-glitter is a fair and good trade-trade. No more, no less-less. No hatchling eyes, either! The bigger-bigger ones are best.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "step",
-     "text": "Deliver 6 x Widow Eyes to Polietta Two-tone.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Oh, how lovely-lovely! Eight eyes down to two-two, just how things should be-be.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Polietta Two-tone",
-     "text": "Many thanks-thanks for your favor, large-large one. Here's some of Polietta's famed glitter-glitter!",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "step",
-     "text": "You receive Pixie Glitter from Polietta Two-tone.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-23",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
    "npcs": [
     "Polietta Two-tone",
-    "a black widow"
+    "a black widow; an elder widow"
    ]
   },
   {
@@ -20664,7 +18623,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -20681,7 +18640,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "a master blacksmith"
    ]
@@ -21187,7 +19146,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -21737,7 +19696,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -21764,12 +19723,31 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
     "Taskmaster Gitch",
     "Taskmaster Urka"
+   ]
+  },
+  {
+   "title": "Thanetal's Samples",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Thanetal%27s_Samples",
+   "zone": "Ail'Vorith",
+   "giver": "Thanetal",
+   "min_level": "?",
+   "classes": "All",
+   "related": [
+    "Unknown"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-28",
+   "npcs": [
+    "Thanetal",
+    "Unknown"
    ]
   },
   {
@@ -21787,7 +19765,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -21930,7 +19908,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -22039,7 +20017,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -22058,7 +20036,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -22409,7 +20387,7 @@
      "part": "part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Jalwa Noor",
     "Leatherworking Haiat",
@@ -22432,7 +20410,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -23054,7 +21032,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -23073,7 +21051,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -23234,25 +21212,25 @@
     {
      "n": 58,
      "text": "Return to Simrut the Green and Hail him.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 64,
      "text": "At this point, you are on the search for Riddrick the Cursed, a rare wererat spawn. You will need to be level 12-14 and you may need a group to successfully find and put an end to Riddrick.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 65,
      "text": "Upon killing Riddrick the Cursed, loot Riddrick's Head and return to Simrut the Green.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 66,
      "text": "Hand Riddrick's Head to Simrut the Green.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": [
       {
        "name": "Riddrick's Head",
@@ -23771,61 +21749,61 @@
      "n": 58,
      "kind": "step",
      "text": "Return to Simrut the Green and Hail him.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 59,
      "kind": "say",
      "text": "Hail, Simrut the Green.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 60,
      "kind": "npc",
      "npc": "Simrut the Green",
      "text": "Hrumm. No help from council, no. Must find Riddrick.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 61,
      "kind": "say",
      "text": "But Riddrick is dead. We found his ring!",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 62,
      "kind": "npc",
      "npc": "Simrut the Green",
      "text": "Not dead, I says. Lost his ring, not dead. The rats have him!",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 63,
      "kind": "npc",
      "npc": "Simrut the Green",
      "text": "Find Riddrick!",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 64,
      "kind": "step",
      "text": "At this point, you are on the search for Riddrick the Cursed, a rare wererat spawn. You will need to be level 12-14 and you may need a group to successfully find and put an end to Riddrick.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 65,
      "kind": "step",
      "text": "Upon killing Riddrick the Cursed, loot Riddrick's Head and return to Simrut the Green.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": []
     },
     {
      "n": 66,
      "kind": "step",
      "text": "Hand Riddrick's Head to Simrut the Green.",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5",
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+",
      "items": [
       {
        "name": "Riddrick's Head",
@@ -23839,7 +21817,7 @@
      "item": "Ratkiller",
      "qty": 1,
      "npc": "Simrut the Green",
-     "part": "Part 2 for Archer/Ranger - Wererats - Req. Level 5"
+     "part": "Part 3 for Archer/Ranger - Riddrick - Req. Level 8+"
     },
     {
      "n": 68,
@@ -24006,7 +21984,7 @@
     {
      "n": 90,
      "kind": "receive",
-     "item": "Overseer Head Bag",
+     "item": "Empty Overseer Bag",
      "qty": 1,
      "npc": "Gunder Dinnig",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
@@ -24169,7 +22147,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -24194,14 +22172,10 @@
     "a Szuurian viper",
     "Nerida Thinblade"
    ],
-   "rewards": [
-    "Viper's Kick",
-    "Experience",
-    "Faction"
-   ],
+   "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -24273,7 +22247,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -24442,7 +22416,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Draznax"
    ]
@@ -24463,7 +22437,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -25239,7 +23213,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -25386,7 +23360,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Marshal Harding"
    ]
@@ -25526,7 +23500,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-23",
+   "fetched": "2026-09-28",
    "npcs": [
     "Ariblast the Wicked",
     "Dario Numas",
