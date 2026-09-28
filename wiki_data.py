@@ -209,7 +209,8 @@ def parse_npc(title: str, text: str) -> dict | None:
         "kind": kind,
         "image_file": file_title(box.get("imagefilename", "")),
         "image": "",  # filled in by dump() from image_file
-        "name": (plain(box.get("caption", "")) if not re.search(r"place ?holder", box.get("caption", ""), re.I) else "") or title,
+        "name": title,  # the page title is the in-game name; captions are sometimes descriptions or photo credits
+        "caption": plain(box.get("caption", "")) if not re.search(r"place ?holder", box.get("caption", ""), re.I) else "",
         "sells": links(box.get("sells", "")),
         "buys": bullets,
         "dialog": plain(box.get("dialog", ""))[:600],
@@ -237,8 +238,11 @@ def parse_zone(title: str, text: str) -> dict | None:
     # description: the first prose line before the template
     intro = ""
     for line in text.split("{{ZoneDetails")[0].splitlines():
-        s = plain(line)
-        if s and not s.startswith(("[[File:", "__", "<")) and len(s) > 20:
+        raw = line.strip()
+        if not raw or raw.startswith(("[[File:", "__", "<", "{{", "|")) or "thumb" in raw:
+            continue
+        s = plain(raw)
+        if len(s) > 20:
             intro = s
             break
     files = re.findall(r"\[\[File:([^\]|]+)", text)
