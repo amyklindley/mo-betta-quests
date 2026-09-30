@@ -1,30 +1,7 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-09-29",
+ "fetched": "2026-09-30",
  "quests": [
-  {
-   "title": "A Quick Quest",
-   "url": "https://monstersandmemories.miraheze.org/wiki/A_Quick_Quest",
-   "zone": "Sungreet Strand",
-   "giver": "Mercenary Captain Hulg",
-   "min_level": "1",
-   "classes": "All",
-   "related": [
-    "Nerguk"
-   ],
-   "rewards": [
-    "5 Silver",
-    "Experience",
-    "Pyrmos Mercenaries Faction"
-   ],
-   "steps": [],
-   "lines": [],
-   "fetched": "2026-09-29",
-   "npcs": [
-    "Mercenary Captain Hulg",
-    "Nerguk"
-   ]
-  },
   {
    "title": "A Sweet Treat",
    "url": "https://monstersandmemories.miraheze.org/wiki/A_Sweet_Treat",
@@ -38,7 +15,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -207,7 +184,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad",
@@ -227,7 +204,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -271,7 +248,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -411,7 +388,7 @@
      "part": "Part 3 - Req. Lvl 4 - Translating Orcish"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -709,7 +686,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -779,7 +756,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Jumthem",
     "Mayana",
@@ -833,7 +810,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -884,7 +861,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Quartermaster Obaid"
    ]
@@ -902,7 +879,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1289,7 +1266,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -2121,7 +2098,7 @@
      "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2686,7 +2663,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2707,7 +2684,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2853,7 +2830,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2866,110 +2843,16 @@
    "giver": "Bree Weatherstoll",
    "min_level": "1",
    "classes": "All",
-   "related": [],
-   "rewards": [
-    "unknown"
+   "related": [
+    "|Quest Rewards ="
    ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Bree Weatherstoll.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "Hi there youngling. You seem to have wandered away from home.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "Stay with us a while if you like, eat some potato stew with blessings from the Warrenmother. Fayma provides for all of her children.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "say",
-     "text": "Warrenmother?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "She's even watching over us now.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "say",
-     "text": "Youngling?",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "Please take no offense by it. Fayma sees all the races of the world as her younglings.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "say",
-     "text": "Research?",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "We halflings have long sought out the ancient home of our people. It's our greatest hope that the desert of Szuur may have some answers.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "Recently, a passing farmer took shelter from a storm here and came across these ancient halfling bones.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "To the north, there is a quarry.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "West of the quarry is a winding path that leads up the ruins of Tel Ekir.",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "It's been long suspected to have once been home to Halin people. We intend to go there soon.",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Bree Weatherstoll",
-     "text": "If you go there and happen to find any artifacts of halfling make, please bring it to me.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
-    "Bree Weatherstoll"
+    "Bree Weatherstoll",
+    "|Quest Rewards ="
    ]
   },
   {
@@ -2988,7 +2871,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "A Fishwife",
     "Bones",
@@ -3041,10 +2924,29 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
+   ]
+  },
+  {
+   "title": "Captain Hulg's Mug",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Captain_Hulg%27s_Mug",
+   "zone": "Sungreet Strand",
+   "giver": "Mercenary Captain Hulg",
+   "min_level": "20",
+   "classes": "All",
+   "related": [
+    "Nerguk"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
+   "npcs": [
+    "Mercenary Captain Hulg",
+    "Nerguk"
    ]
   },
   {
@@ -3649,7 +3551,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -3667,113 +3569,10 @@
    "related": [
     "Chompers"
    ],
-   "rewards": [
-    "Chompers Hide Tunic"
-   ],
-   "steps": [
-    {
-     "n": 12,
-     "text": "Give Cheikho 1x Chomper's Hide.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 13,
-     "text": "Cheikho gives you Chompers' Hide Tunic.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Cheikho.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "Hail to you, friend!",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "We're hunting the nearby beach for crocodiles. If you have meat or skins for us, we're happy to purchase them. We also have some goods for sale. Take a look!",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "say",
-     "text": "Crocodiles?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "Yes, down along the shoreline. But take care... this area has more dangers than just the crocodiles.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "say",
-     "text": "More dangers?",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "Look around friend! How did you make it this far without dying?",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "There's undead just over the dunes to the northeast, smugglers to our west, and giant scouts prowling around at night... and to top it all off, there's a particularly large and hostile croc wandering about named Chompers.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "You'd best take care when running around here.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "say",
-     "text": "Chompers?",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Cheikho",
-     "text": "Yeah, Chompers. Nasty feller. I bet his hide would make one heck of a tunic, though.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "step",
-     "text": "Give Cheikho 1x Chomper's Hide.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 13,
-     "kind": "step",
-     "text": "Cheikho gives you Chompers' Hide Tunic.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-29",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -3802,7 +3601,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Hult Beetlewrangler",
     "Master Shipwright Huda",
@@ -4155,7 +3954,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -4618,7 +4417,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -4688,7 +4487,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "a rotting skeleton",
     "a shifty gnome",
@@ -4780,7 +4579,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -4799,7 +4598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -4820,7 +4619,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -4842,7 +4641,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -4861,7 +4660,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -4926,7 +4725,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -4945,10 +4744,33 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
+   ]
+  },
+  {
+   "title": "Dispose of the Onyx Outlaws",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Dispose_of_the_Onyx_Outlaws",
+   "zone": "Sungreet Strand",
+   "giver": "Foreman Stonehammer",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "Taskmaster Feeka",
+    "Taskmaster Gitch",
+    "Taskmaster Urka"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
+   "npcs": [
+    "Foreman Stonehammer",
+    "Taskmaster Feeka",
+    "Taskmaster Gitch",
+    "Taskmaster Urka"
    ]
   },
   {
@@ -6466,7 +6288,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -6785,7 +6607,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -7006,7 +6828,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Jumbe Odol",
     "Luskim",
@@ -7031,7 +6853,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "None",
     "Tenebrim Tam"
@@ -7836,7 +7658,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -7862,94 +7684,16 @@
     "a cultist"
    ],
    "rewards": [],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Combine all 6 Journal Pages in Aashir's Journal to craeate the completed Aashir's Journal.",
-     "part": "Completing Aashir's Journal",
-     "items": []
-    },
-    {
-     "n": 11,
-     "text": "Give the Completed Aashir's Jorunal to Head Researcher Aashir.",
-     "part": "Part 2",
-     "items": []
-    }
-   ],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "Combine all 6 Journal Pages in Aashir's Journal to craeate the completed Aashir's Journal.",
-     "part": "Completing Aashir's Journal",
-     "items": []
-    },
-    {
-     "n": 2,
-     "kind": "say",
-     "text": "Hail, Head Researcher Aashir.",
-     "part": "Part 1"
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Head Researcher Aashir",
-     "text": "Help, get me out of here!",
-     "part": "Part 1"
-    },
-    {
-     "n": 4,
      "kind": "say",
      "text": "I will help escort you out of here.",
      "part": "Part 1"
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Head Researcher Aashir",
-     "text": "I thank Tilustra for your assistance! I can make it alone from here. Please go check on my men, then meet me at the tent overlooking the excavation site for the old tomb near Night Harbor.",
-     "part": "Part 1"
-    },
-    {
-     "n": 6,
-     "kind": "say",
-     "text": "Hail, Head Researcher Aashir.",
-     "part": "Part 2"
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Head Researcher Aashir",
-     "text": "H-h-hello... M-my apologies, I'm still trying to calm down after escaping the attack on our dig site.",
-     "part": "Part 2"
-    },
-    {
-     "n": 8,
-     "kind": "say",
-     "text": "What Dig Site?",
-     "part": "Part 2"
-    },
-    {
-     "n": 9,
-     "kind": "say",
-     "text": "What Cultists?",
-     "part": "Part 2"
-    },
-    {
-     "n": 10,
-     "kind": "say",
-     "text": "What Journal?",
-     "part": "Part 2"
-    },
-    {
-     "n": 11,
-     "kind": "step",
-     "text": "Give the Completed Aashir's Jorunal to Head Researcher Aashir.",
-     "part": "Part 2",
-     "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -7975,7 +7719,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -8001,7 +7745,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -8394,7 +8138,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -8628,7 +8372,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Delilah"
    ]
@@ -8643,48 +8387,10 @@
    "related": [
     "?"
    ],
-   "rewards": [
-    "?",
-    "Experience"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Where is Dhug?",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Dhug is one of mine. I mean, he's on the payroll, but we go a ways back.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Findin' him shouldn't be too difficult. He'll be easy to spot for one, he's a dwarf, and he's always wearing his lucky charm 'round his neck.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "The last thing he told me was that he wanted to check out some glint along the north side of the quarry. Find him and send him back to me.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "If he tries to refuse, let him know I'll dock his pay!",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -9027,7 +8733,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -9081,7 +8787,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -9176,7 +8882,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -9199,7 +8905,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -9492,7 +9198,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -9512,7 +9218,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -9528,196 +9234,12 @@
    "related": [
     "Detective Brunsworth"
    ],
-   "rewards": [
-    "Sigil of Inquiry",
-    "Sigil of Honor"
-   ],
-   "steps": [
-    {
-     "n": 16,
-     "text": "/inspect crate",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 17,
-     "text": "/take scroll",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Reeve Thurston Winter",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Ree",
-     "text": "Greeting. I am Reeve Thurston Winter, charged with keeping order in Penshaw.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "These are hard times, and what peace we have left is easilyt broken. We have opened our doors to capale outsiders willing to help us face a growing threat.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "say",
-     "text": "What outside threat?",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "The Sangrel Fist has become a scourge on our roads and farms. They are ruthless thieves emboldened by their numbers, who prey on honest folk who can scarcely defend themselves.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "We cannot allow this to continue. Seek them out and then their ranks. They wear red wraps upon their hands. Bring me four as proof.",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "You certainly did your part. Well done. The Sangrel Fist has brought enough fear to this village. Perhaps they'll think twice before entering our gates.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "Every bandit brought down is one less threat to oue farms and homes.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "Take this sigil. Carrying it authorizes you to privileged information, should be needed to defend Penshaw.",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "say",
-     "text": "Hail, Detective Brunsworth.",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "De",
-     "text": "Hail, Adventurer, and well met. I have heard good things about your services in Penshaw.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "De",
-     "text": "I was sent here to investigate the growing threat of the Sangrel. Their numbers have sharply increased as of late. Perhaps you would be willing to dig a little further for us?",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "say",
-     "text": "I will dig a little further.",
-     "part": ""
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "De",
-     "text": "Very good. We know little of what binds these cult bandits together.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "De",
-     "text": "This type of organization requires leadership. Go to their camps and search for clues. Whether found among their belongings or taken from those who carry them matters little.",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "step",
-     "text": "/inspect crate",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 17,
-     "kind": "step",
-     "text": "/take scroll",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 18,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "How interesting... This text seems to be written in an old tongue.",
-     "part": ""
-    },
-    {
-     "n": 19,
-     "kind": "npc",
-     "npc": "Re",
-     "text": "We will need an expert to translate its meaning. The abbey outside of Penshaw is home to scribes versed in fortgotten tongues. Seek their aid, and when you return with their translation, present your sigil as well so you may be properly rewarded.",
-     "part": ""
-    },
-    {
-     "n": 20,
-     "kind": "npc",
-     "npc": "De",
-     "text": "This appears to be doctrine... a structure set of rites meant to be memorized by initiates of this cult. It attracts the sort who would rather blame fate than earn an honest living.",
-     "part": ""
-    },
-    {
-     "n": 21,
-     "kind": "npc",
-     "npc": "De",
-     "text": "This is no reason to assume any truth in it. If Eyzin has followers, it is because he is persuasive, or because he understands how to manipulate desperate men.",
-     "part": ""
-    },
-    {
-     "n": 22,
-     "kind": "npc",
-     "npc": "De",
-     "text": "Their success is far more likely to be practical than divine. Spies within the town, watches along the roads, or a vantage point over our docks. That is where we find answers, not in fire and ash.",
-     "part": ""
-    },
-    {
-     "n": 23,
-     "kind": "npc",
-     "npc": "De",
-     "text": "I will gather further intelligence. This investigation is not concluded.",
-     "part": ""
-    },
-    {
-     "n": 24,
-     "kind": "npc",
-     "npc": "De",
-     "text": "For now, you have proven capable. Take this. It is a sigil for one worthy of your skill, granted in recognition of your diligence.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
-    "De",
     "Detective Brunsworth",
-    "Re",
-    "Ree",
     "Reeve Thurston Winter"
    ]
   },
@@ -9731,136 +9253,10 @@
    "related": [
     "a cinder worker"
    ],
-   "rewards": [
-    "Boiled Beetle Legs",
-    "Experience"
-   ],
-   "steps": [
-    {
-     "n": 13,
-     "text": "Give Foreman Stonehammer six Tender Beetle Legs. They drop off a cinder worker.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 16,
-     "text": "You receive 2x Boiled Beetle Legs from Foreman Stonehammer.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "The miners are already grumbling that there's not enough chow.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Hmmm, I think I have an idea that will solve one of our problems and fill our bellies at the same time.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "What food?",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Yes, we need more food. I've had to portion out our rations since the shipment is late... but I think I've got an idea that could help us out...",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "say",
-     "text": "What idea?",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Have ya ever had steam crab legs fresh out of the harbor? Delicious aren't they?",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Well, I've been think'... maybe, just maybe, these cinder beetles are kinda like those crabs.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Bring me six tender beetle legs and I'll try cookin' them up for the crew.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "You know how to tell if the legs will be tender, don't ya?",
-     "part": ""
-    },
-    {
-     "n": 10,
-     "kind": "say",
-     "text": "How will I tell if they'll be tender?",
-     "part": ""
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Yes, Yes, it must be tender meat. Old meat is too tough.",
-     "part": ""
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "I'd look for cinder beetles that are younger... smaller... the hardest workers in the swarm. Their legs will have plenty of meat on 'em.",
-     "part": ""
-    },
-    {
-     "n": 13,
-     "kind": "step",
-     "text": "Give Foreman Stonehammer six Tender Beetle Legs. They drop off a cinder worker.",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "Yes, this will do perfectly. Wait here a moment.",
-     "part": ""
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Foreman Stonehammer",
-     "text": "This is delicious! Ya ought t' try it. Here, and a few copper for your troubles.",
-     "part": ""
-    },
-    {
-     "n": 16,
-     "kind": "step",
-     "text": "You receive 2x Boiled Beetle Legs from Foreman Stonehammer.",
-     "part": "",
-     "items": []
-    }
-   ],
-   "fetched": "2026-09-29",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -9876,77 +9272,10 @@
    "related": [
     "N/A"
    ],
-   "rewards": [
-    "20 Silver",
-    "Experience",
-    "Faction with Red Mantles",
-    "Faction with Langsdorfian League",
-    "Faction with Village of Penshaw"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Captain Hale.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "You've picked a fine day to be poking around. You might be able to help me, though. We're in a bit of a bind.",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "I can help.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "The storm that blew through last night shook part of the cargo load loose, and the Harbormaster's already been warning us that if we don't recover it, it'll be a disaster.",
-     "part": ""
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "We're waiting on our equipment to arrive to we can retrieve it, but my crew feels uneasy about what's been lurking down there. I can't blame them. We all saw their shadows gliding through the waves.",
-     "part": ""
-    },
-    {
-     "n": 6,
-     "kind": "say",
-     "text": "What is lurking?",
-     "part": ""
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "There's no mistaking it. Great bight sharks have been circling the shallows. Regardless, the cargo was heavy and wouldn't have floated too far. Whatever went over would've settled on the seabed just offshore.",
-     "part": ""
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "We estimate we've lost at least five creates. If you're willing to brave the water and bring them back, I'll see you paid for the trouble.",
-     "part": ""
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Captain Hale",
-     "text": "Good work, Almond! Anything left out there will be split or dragged out by tomorrow. You saved what could be saved. Here, as promised, take this for doing us a solid favor. My crew already looks relieved.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -10006,7 +9335,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist an agitated cultist a cultist priestess a Deepgulp warrior a Deepgulp scavenger a Deepgulp hunter a Deepgulp berserker"
@@ -10025,7 +9354,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Myal Vehear"
    ]
@@ -10043,7 +9372,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Aleyz Ith'vayen a cave myconid an enraged elemental",
     "Amarah Ith'vayen"
@@ -10062,7 +9391,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt a Deepgulp explorer"
@@ -10173,7 +9502,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Vaslir Naiyth",
     "| Related Items = Naiyth's Mushroom Pouch"
@@ -10192,7 +9521,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Apprentice Esveth",
     "| Quest Rewards = (exp); (money:25)"
@@ -10209,7 +9538,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Xilonen Velgarrith"
    ]
@@ -10252,7 +9581,7 @@
      "part": "Part 1 - ?"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Klavel Sul",
     "a separated skull a spectral remnant"
@@ -10273,7 +9602,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -10982,7 +10311,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -11085,7 +10414,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -11103,7 +10432,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -11122,7 +10451,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -11139,7 +10468,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": []
   },
   {
@@ -11845,7 +11174,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "A wash maiden",
     "Guard Iskandar",
@@ -11862,29 +11191,17 @@
    "url": "https://monstersandmemories.miraheze.org/wiki/Left_Behind",
    "zone": "",
    "giver": "Fendris the Forsaken",
-   "min_level": "1",
+   "min_level": "30",
    "classes": "All",
    "related": [
     "an undead poacher",
     "Poacher Tolan",
     "Poacher Garrus"
    ],
-   "rewards": [
-    "Debtcarver",
-    "Vest of Shattered Duty",
-    "Leggings of Reckoning",
-    "Boots of Vengeful Resolve"
-   ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Who betrayed you?",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "Fendris the Forsaken",
     "Poacher Garrus",
@@ -11972,7 +11289,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -11991,7 +11308,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -12120,7 +11437,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Hull Orbel"
    ]
@@ -12334,7 +11651,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Chahaya Tam"
    ]
@@ -12536,7 +11853,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -12638,7 +11955,7 @@
      ]
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -12658,7 +11975,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -12676,7 +11993,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Bones"
    ]
@@ -12976,7 +12293,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -13137,7 +12454,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar",
@@ -13652,7 +12969,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -13678,7 +12995,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -13718,7 +13035,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "a wise elder"
    ]
@@ -13870,7 +13187,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -13966,7 +13283,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -13985,54 +13302,10 @@
     "A poacher herbalist",
     "a poacher"
    ],
-   "rewards": [
-    "High Keeper's Vambrace"
-   ],
-   "steps": [
-    {
-     "n": 4,
-     "text": "Give 4x Poacher's Skinner to Ranger Rylin",
-     "part": "",
-     "items": []
-    }
-   ],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "npc",
-     "npc": "Ranger Rylin",
-     "text": "Greetings, Druid. I am Rylin of the Ardent Keepers, sworn warden of Evershade Weald's ancient forests and surrounding lands. I have been sent here to root out the poachers who scar this land with their blatant disregard of the natural order. If you are willing to aid our cause, I have a reward selected by the High Keeper himself for your efforts.",
-     "part": ""
-    },
-    {
-     "n": 2,
-     "kind": "say",
-     "text": "Willing to aid your cause",
-     "part": ""
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Ranger Rylin",
-     "text": "Your resolve honors our cause, Druid. The poachers wield skinning knives etched with their foul mark. Bring me four of them as proof of your deed, and I shall reward your service. May the forests' will guide you.",
-     "part": ""
-    },
-    {
-     "n": 4,
-     "kind": "step",
-     "text": "Give 4x Poacher's Skinner to Ranger Rylin",
-     "part": "",
-     "items": []
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Ranger Rylin",
-     "text": "You have done a great service for the Ardent Keepers and the Keepers Blight, Cilantro! The forest breathes easier thanks to your efforts. Now, take this bracer as a symbol of our gratitude and your bond to our cause.",
-     "part": ""
-    }
-   ],
-   "fetched": "2026-09-29",
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -14053,8 +13326,17 @@
    ],
    "rewards": [],
    "steps": [],
-   "lines": [],
-   "fetched": "2026-09-29",
+   "lines": [
+    {
+     "n": 1,
+     "kind": "receive",
+     "item": "Mixing Satchel",
+     "qty": 1,
+     "npc": "Veylith the Frosttongue",
+     "part": ""
+    }
+   ],
+   "fetched": "2026-09-30",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -14065,124 +13347,18 @@
    "url": "https://monstersandmemories.miraheze.org/wiki/Quarry_Samples",
    "zone": "Sungreet Strand",
    "giver": "Tust Brookturner",
-   "min_level": "unknown",
-   "classes": "|Related NPCs =",
-   "related": [],
-   "rewards": [
-    "Tust's Copper Earring",
-    "Wand of Heal",
-    "Survey Pack",
-    "Mining Pick of Trem",
-    "Rope, Blessed, 50 Length"
+   "min_level": "10",
+   "classes": "ALL",
+   "related": [
+    "|Quest Rewards ="
    ],
+   "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "say",
-     "text": "Hail, Tust Brookturner.",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Ah! You're finally here. This is great news, great news indeed! You brought the quarry samples, I presume?",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 3,
-     "kind": "say",
-     "text": "samples",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Oh, my mistake. I thought you were the laborer assigned to collect quarry samples for me.",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "You'll do, though! All you need is a mining pick. You're familiar with mining, yes?",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Here, take this ack, fill it with quality samples, and bring it back to me for inspection. In return, you'll receive coin!",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Yes, yes! This will do quite nicely. Here's the coin that was promised.",
-     "part": "Part 1 - Quality Samples"
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "You seem quite skilled with a pickaxe. Some of the workers here mentioned seeing traces of exceptional minerals at the site. If you're interested in a bit of a challenge, I could use your help.",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 9,
-     "kind": "say",
-     "text": "interested",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Good, good! Now, let me see... where did I put that list? Mrs. Pebblebank! Do you have the list of minerals I jotted down earlier?",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Ah, nevermind! Here it is.",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "The ample sample list is as follows... four pieces of pyrite ore, three clear crystal shards, two smoky shards, and a flawless clear quartz.",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Place the minerals in this case and seal it, then bring the case and note back to me. A full case of minerals means a full payout in coin! Good luck!",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Good... no, splendid work!",
-     "part": "Part 2 - Ample Samples"
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Tust Brookturner",
-     "text": "Well then, a reward is in order. Take this as a token of appreciation from the Church of Trem.",
-     "part": "Part 2 - Ample Samples"
-    }
-   ],
-   "fetched": "2026-09-29",
+   "lines": [],
+   "fetched": "2026-09-30",
    "npcs": [
-    "Tust Brookturner"
+    "Tust Brookturner",
+    "|Quest Rewards ="
    ]
   },
   {
@@ -14956,7 +14132,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -15223,7 +14399,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -15534,7 +14710,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -16229,7 +15405,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -17205,7 +16381,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -17237,7 +16413,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -17569,7 +16745,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -18497,7 +17673,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Delugia Coldsong",
     "Eraeldor Lowmist",
@@ -18530,7 +17706,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -18553,7 +17729,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Picci Manifold"
    ]
@@ -18571,7 +17747,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -18617,7 +17793,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -18634,7 +17810,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "a master blacksmith"
    ]
@@ -19140,7 +18316,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -19690,39 +18866,12 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
     "Njau Hansou",
     "Torn Note"
-   ]
-  },
-  {
-   "title": "Stonehammer's Stone Sack",
-   "url": "https://monstersandmemories.miraheze.org/wiki/Stonehammer%27s_Stone_Sack",
-   "zone": "Sungreet Strand",
-   "giver": "Foreman Stonehammer",
-   "min_level": "1",
-   "classes": "All",
-   "related": [
-    "Taskmaster Feeka",
-    "Taskmaster Gitch",
-    "Taskmaster Urka"
-   ],
-   "rewards": [
-    "Stone Sack",
-    "10 silver",
-    "Experience"
-   ],
-   "steps": [],
-   "lines": [],
-   "fetched": "2026-09-29",
-   "npcs": [
-    "Foreman Stonehammer",
-    "Taskmaster Feeka",
-    "Taskmaster Gitch",
-    "Taskmaster Urka"
    ]
   },
   {
@@ -19738,7 +18887,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -19759,7 +18908,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -19902,7 +19051,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -20011,7 +19160,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -20030,7 +19179,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -20381,7 +19530,7 @@
      "part": "part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Jalwa Noor",
     "Leatherworking Haiat",
@@ -20404,7 +19553,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -21026,7 +20175,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -21045,7 +20194,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -22141,7 +21290,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -22169,7 +21318,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -22241,7 +21390,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -22410,7 +21559,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Draznax"
    ]
@@ -22425,13 +21574,10 @@
    "related": [
     "Poacher Wilna"
    ],
-   "rewards": [
-    "Ring of Consequences",
-    "Experience"
-   ],
+   "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -23207,7 +22353,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -23354,7 +22500,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Marshal Harding"
    ]
@@ -23494,7 +22640,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-09-29",
+   "fetched": "2026-09-30",
    "npcs": [
     "Ariblast the Wicked",
     "Dario Numas",
