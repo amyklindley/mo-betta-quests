@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-10-02",
+ "fetched": "2026-10-03",
  "quests": [
   {
    "title": "A Sweet Treat",
@@ -15,7 +15,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -33,7 +33,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -52,7 +52,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -96,7 +96,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -234,9 +234,25 @@
      "qty": 1,
      "npc": "Craftguard Vinebrow",
      "part": "Part 3 - Req. Lvl 4 - Translating Orcish"
+    },
+    {
+     "n": 16,
+     "kind": "receive",
+     "item": "Forest Spirit Receptacle",
+     "qty": 1,
+     "npc": "Moon Dances",
+     "part": "Part 3 - Req. Lvl 8+ - Spiritual Guidance"
+    },
+    {
+     "n": 17,
+     "kind": "receive",
+     "item": "Blessing of the Forest Spirits",
+     "qty": 1,
+     "npc": "Captain Keyaryn Thornshade",
+     "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -534,7 +550,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -563,7 +579,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -582,7 +598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -601,7 +617,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Quartermaster Obaid",
     "an ashira warrior"
@@ -620,7 +636,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1007,7 +1023,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1839,7 +1855,7 @@
      "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2404,7 +2420,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2425,7 +2441,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2444,7 +2460,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2463,7 +2479,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
@@ -2485,7 +2501,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "A Fishwife",
     "Bones",
@@ -2538,7 +2554,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2557,7 +2573,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -2576,7 +2592,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -2605,7 +2621,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Hult Beetlewrangler",
     "Master Shipwright Huda",
@@ -2958,7 +2974,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3420,7 +3436,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3441,7 +3457,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
@@ -3532,7 +3548,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -3551,7 +3567,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -3570,7 +3586,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -3592,7 +3608,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -3611,7 +3627,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -3676,7 +3692,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -3695,7 +3711,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -3716,7 +3732,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5239,7 +5255,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -5558,7 +5574,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -5779,7 +5795,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Jumbe Odol",
     "Luskim",
@@ -5804,7 +5820,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "None",
     "Tenebrim Tam"
@@ -6609,7 +6625,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -6644,7 +6660,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -6670,7 +6686,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -6696,7 +6712,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7089,7 +7105,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7323,7 +7339,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Delilah"
    ]
@@ -7341,7 +7357,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -7684,7 +7700,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -7738,7 +7754,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -7833,7 +7849,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -7856,7 +7872,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8149,7 +8165,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8202,7 +8218,7 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -8221,7 +8237,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8240,7 +8256,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8259,7 +8275,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -8319,7 +8335,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8338,7 +8354,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Myal Vehear"
    ]
@@ -8356,7 +8372,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Aleyz Ith'vayen",
     "Amarah Ith'vayen"
@@ -8375,7 +8391,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -8484,11 +8500,89 @@
      "npc": "Vaslir Naiyth",
      "text": "Go there and find remains old enough for Vhelzzil's Vow to have sprouted. Put a handful of the mushrooms in this pouch and bring it back to me.",
      "part": "Part 1"
+    },
+    {
+     "n": 14,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Hmm... another hopeful apprentice, is it? Excellent, that last fool Naiyth sent me got herself torn apart by elementals. Or was it vivisected by deep gnomes? It's hard to tell one apprentice from another.",
+     "part": "Part 2"
+    },
+    {
+     "n": 15,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "So let's see what what we have to work with.",
+     "part": "Part 2"
+    },
+    {
+     "n": 16,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Well you're a weak looking thing. Do you believe one such as yourself can be of service to me, a vaslir who has dared to speak the Winding Words only to come out stronger?",
+     "part": "Part 2"
+    },
+    {
+     "n": 17,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Hmm... so you know how to cleave yourself to power. Good. There may be some honor in helping your ascent. But if you want the patronage of the great Vaslir Vharkith, you will need to prove you are more than just a good judge of character. Let's see how far that ambition can take you.",
+     "part": "Part 2"
+    },
+    {
+     "n": 18,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "How would you feel about a little quid pro quo? And in the process we will test your mettle a bit.",
+     "part": "Part 2"
+    },
+    {
+     "n": 19,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Good. I had a slave, a young Faelewyn, who was going to be used in a summoning. Ah, I had the most exquisite excruciation planned for him: it would have been perfect!",
+     "part": "Part 2"
+    },
+    {
+     "n": 20,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Sadly, the creature proved uncommonly clever and escaped while I was at a seminar hosted by the neth'vaslir himself.",
+     "part": "Part 2"
+    },
+    {
+     "n": 21,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Yes, I am a student of the immortal head of our house himself! Now you are realizing just how beneficial it will be for you to serve one with my connections.",
+     "part": "Part 2"
+    },
+    {
+     "n": 22,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "To that end, you shall find this escaped slave. Don't bother bringing him back alive. The requisite conjunction for the summoning has passed.",
+     "part": "Part 2"
+    },
+    {
+     "n": 23,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "However, there is the matter of some notes which that zor'thez stole from me. Reports are that he was headed towards the Great Cavern Sea. Find him and bring the notes back to me.",
+     "part": "Part 2"
+    },
+    {
+     "n": 24,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Do this and you shall have earned my patronage. Hunt well, young one!",
+     "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Vaslir Naiyth",
+    "Vaslir Vharkith",
     "| Related Items = Naiyth's Mushroom Pouch"
    ]
   },
@@ -8505,7 +8599,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Apprentice Esveth",
     "| Quest Rewards = (exp); (money:25)"
@@ -8768,7 +8862,7 @@
      "part": "Part 1 - Req. Lvl 2"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Cook Vashuk",
     "Kulzzara",
@@ -8815,7 +8909,7 @@
      "part": "Part 1 - Lvl 1+"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Klavel Sul",
     "a separated skull"
@@ -8843,7 +8937,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -9552,7 +9646,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -9655,7 +9749,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -9673,7 +9767,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -9692,7 +9786,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -9709,7 +9803,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": []
   },
   {
@@ -10415,7 +10509,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "A wash maiden",
     "Guard Iskandar",
@@ -10442,7 +10536,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Fendris the Forsaken",
     "Poacher Garrus",
@@ -10463,7 +10557,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -10482,7 +10576,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -10611,7 +10705,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Hull Orbel"
    ]
@@ -10825,7 +10919,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Chahaya Tam"
    ]
@@ -11027,7 +11121,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -11129,7 +11223,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -11149,7 +11243,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -11167,7 +11261,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Bones"
    ]
@@ -11467,7 +11561,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -11694,13 +11788,53 @@
      "npc": "Abbot Harrow",
      "text": "May the word of Ygorath guide you on the path.",
      "part": "Part 4"
+    },
+    {
+     "n": 31,
+     "kind": "say",
+     "text": "Hail, Abbot Harrow.",
+     "part": "Part 5"
+    },
+    {
+     "n": 32,
+     "kind": "npc",
+     "npc": "Abbot Harrow",
+     "text": "Embalmer Tyriel has need of your services. Find him below.",
+     "part": "Part 5"
+    },
+    {
+     "n": 33,
+     "kind": "say",
+     "text": "Hail, Embalmer TyrieL",
+     "part": "Part 5"
+    },
+    {
+     "n": 34,
+     "kind": "npc",
+     "npc": "Embalmer Tyriel",
+     "text": "I have a task suitable for an aspirant who has mastered the gifts of Ygorath.",
+     "part": "Part 5"
+    },
+    {
+     "n": 35,
+     "kind": "say",
+     "text": "what task",
+     "part": "Part 5"
+    },
+    {
+     "n": 36,
+     "kind": "npc",
+     "npc": "Embalmer Tyriel",
+     "text": "Use your gifts to spread Ygorath's fear in the Deep.",
+     "part": "Part 5"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar",
     "Acolyte Vryar",
+    "Embalmer Tyriel",
     "Lady Tabitha",
     "Soren Akedd"
    ]
@@ -11720,7 +11854,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -12235,7 +12369,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -12261,7 +12395,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -12281,7 +12415,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -12300,7 +12434,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -12396,7 +12530,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -12418,7 +12552,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -12449,7 +12583,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -12468,7 +12602,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -12808,62 +12942,62 @@
      "kind": "npc",
      "npc": "Captain Greenblade",
      "text": "Greetings initiate, how fares the state of your cloak?",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 44,
      "kind": "npc",
      "npc": "Captain Greenblade",
      "text": "Im glad to hear it. You look as though you're familiar with the forest's trails by now. Allow me to see your initiate cloak one last time to make sure it's donned properly.",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 45,
      "kind": "npc",
      "npc": "Captain Greenblade",
      "text": "Excellent. Your next task begins immediately, initiate. Take this satchel.",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 46,
      "kind": "npc",
      "npc": "Captain Greenblade",
      "text": "Carry yourself down to the forest floor and eliminate some of the threats that you witnessed, particularly the undead, the roaming fae, and the orcish threat.",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 47,
      "kind": "say",
      "text": "What Captain?",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 48,
      "kind": "npc",
      "npc": "Captain Greenblade",
-     "text": "You're to venture south to Keepers Blight with your full satchel, and head toward the village of Penshaw. Follow the edge of the forest and cross the river, you should come upon one of our camps.",
-     "part": "Part 2 === Req. Lvl 3"
+     "text": "You're to venture south to Keepers Bight with your full satchel, and head toward the village of Penshaw. Follow the edge of the forest and cross the river, you should come upon one of our camps.",
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 49,
      "kind": "npc",
      "npc": "Ranger Valegazer",
      "text": "Ah, what brings you to Keepers Bight, initiate? Do you carry news from the Weald?",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 50,
      "kind": "npc",
      "npc": "Ranger Valegazer",
      "text": "Undead of our ancestors in the Weald, as well as fae venturing out of their domain? This is disheartening news, but I can assure you they're not crossing the boundary from Keepers Bight, at least.",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 51,
      "kind": "npc",
      "npc": "Captain Greenblade",
      "text": "Return the belt to me after you've worked it in and I've had a time to speak with Caelen. Until then, you're free to explore the Weald and cull any threats. Be sure to keep that cloak as well, so others will recognize you as a Keeper.",
-     "part": "Part 2 === Req. Lvl 3"
+     "part": "Part 2 - Req. Lvl 3"
     },
     {
      "n": 52,
@@ -13245,7 +13379,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -13512,7 +13646,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -13823,7 +13957,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -14518,7 +14652,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -15494,7 +15628,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -15567,7 +15701,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -15899,7 +16033,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -15913,314 +16047,225 @@
    "title": "Shadow Knight Starter Quest (Underdocks)",
    "url": "https://monstersandmemories.miraheze.org/wiki/Shadow_Knight_Starter_Quest_%28Underdocks%29",
    "zone": "Underdocks",
-   "giver": "Soren Akedd",
+   "giver": "",
    "min_level": "1",
    "classes": "SHD",
    "related": [
-    "Father Fyod a rafter rat Lady Tabitha"
+    "Soren Akedd; Father Fyod; Lady Tabitha; a rafter rat; Myconid Gatherer; Myconid Truffian"
    ],
-   "rewards": [
-    "Experience",
-    "Worn Cassock, Initiate's Dull Greatsword, Initiate's Greatsword"
-   ],
-   "steps": [
-    {
-     "n": 1,
-     "text": "Give Weathered Note to Soren Akedd.",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 12,
-     "text": "You receive Worn Cassock from Soren Akedd.",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
-    },
-    {
-     "n": 14,
-     "text": "Go upstairs onto the balcony [left of center when facing the yard from inside] and hail Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
-    },
-    {
-     "n": 21,
-     "text": "Go up the lift to the mining camp and traverse out onto the rafters that are above the citadel. Kill a rafter rat (not the diseased ones) until you have 4 tails; fill the bag and combine for a bag of rafter rat tails. Return to Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
-    },
-    {
-     "n": 23,
-     "text": "You receive Initiate's Dull Greatsword from Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
-    },
-    {
-     "n": 35,
-     "text": "You receive Initiate's Greatsword from Father Fyod.",
-     "part": "Part 3 - Req. Lvl 5",
-     "items": []
-    }
-   ],
+   "rewards": [],
+   "steps": [],
    "lines": [
     {
      "n": 1,
-     "kind": "step",
-     "text": "Give Weathered Note to Soren Akedd.",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
+     "kind": "npc",
+     "npc": "Soren Akedd",
+     "text": "You have done well to come when called, [Player]. This is the House of Ygorath, which you may call home, if you are deemed worthy to carry out his work.",
+     "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 2,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "You have done well to come when called, [Name]. This is the House of Ygorath, which you may call home, if you are deemed worthy to carry out his work.",
+     "text": "You appear before me as you were in my nightmare, [Player].",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 3,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "You appear before me as you were in my nightmare, [Name].",
+     "text": "Nightmares are visits from Ygorath, gifted upon all the fearful of this land. It was my nightmare that called you here to begin his work.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 4,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "Nightmares are visits from Ygorath, gifted upon all the fearful of this land. It was my nightmare that called you here to begin his work.",
+     "text": "It is the work of trembling hands to raise both the living and the dead upon his altar. It is for their salvation as much as our own.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 5,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "It is the work of trembling hands to raise both the living and the dead upon his altar. It is for their salvation as much as our own.",
+     "text": "Many souls walk Eth-ur practicing feints of valor, but Ygorath's wisdom knows bravery to be a thin sheen upon a bottomless terror. We must usher them into his kingdom with right fear in their hearts.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 6,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "Many souls walk Eth-ur practicing feints of valor, but Ygorath's wisdom knows bravery to be a thin sheen upon a bottomless terror. We must usher them into his kingdom with right fear in their hearts.",
+     "text": "This you must do, Shadow Knight, whether by sign or by sword. If you pass the test.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 7,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "This you must do, Shadow Knight, whether by sign or by sword. If you pass the test.",
+     "text": "The rabble carry fear in their blood and their bones. Ours are borne by Ygorath. This is your test: take this effigy to the chapel and make of it an offering. Place your effigy upon the altar and receive Ygorath's blessing. Return with what remains.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 8,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "The rabble carry fear in their blood and their bones. Ours are borne by Ygorath. This is your test: take this effigy to the chapel and make of it an offering. Place your effigy upon the altar and receive Ygorath's blessing. Return with what remains.",
+     "text": "But I must warn you... cast your gaze downward and look not upon the visage of Ygorath.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 9,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "But I must warn you... cast your gaze downward and look not upon the visage of Ygorath.",
+     "text": "Your eyes are open. Take this drape and rise a new servant of Ygorath.",
      "part": "Part 1 - Req. Lvl 1"
     },
     {
      "n": 10,
      "kind": "npc",
      "npc": "Soren Akedd",
-     "text": "But I must warn you... cast your gaze downward and look not upon the visage of Ygorath.",
-     "part": "Part 1 - Req. Lvl 1"
+     "text": "Now go, and do his work. If you would prove yourself a belted knight, report to Father Fyod upstairs.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 11,
      "kind": "npc",
-     "npc": "Soren Akedd",
-     "text": "Your eyes are open. Take this drape and rise a new servant of Ygorath.",
-     "part": "Part 1 - Req. Lvl 1"
+     "npc": "Father Fyod",
+     "text": "What are you supposed to be?",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 12,
-     "kind": "step",
-     "text": "You receive Worn Cassock from Soren Akedd.",
-     "part": "Part 1 - Req. Lvl 1",
-     "items": []
+     "kind": "npc",
+     "npc": "Father Fyod",
+     "text": "How convincing.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 13,
      "kind": "npc",
-     "npc": "Soren Akedd",
-     "text": "Now go, and do his work. If you would prove yourself a belted knight, report to Father Fyod upstairs.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
+     "npc": "Father Fyod",
+     "text": "Stand to it, then. You're a sorry sight, but I've seen worse. Do you wish to become a servant of the Trembling Hand, the chosen of Ygorath?.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 14,
-     "kind": "step",
-     "text": "Go upstairs onto the balcony [left of center when facing the yard from inside] and hail Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
+     "kind": "npc",
+     "npc": "Father Fyod",
+     "text": "Very well. As knights of the temple, our fears guide but do not govern us.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 15,
      "kind": "npc",
      "npc": "Father Fyod",
-     "text": "What are you supposed to be?",
-     "part": "Part 2 - Req. Lvl 4 (?)"
+     "text": "You will go to the rafters above the citadel. It's infested with vermin. Fill this sack with their tails as testimony to your constitution.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 16,
      "kind": "npc",
      "npc": "Father Fyod",
-     "text": "How convincing.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
+     "text": "You'll return, or you'll die.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 17,
      "kind": "npc",
      "npc": "Father Fyod",
-     "text": "Stand to it, then. You're a sorry sight, but I've seen worse. Do you wish to become a servant of the Trembling Hand, the chosen of Ygorath?.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
+     "text": "Do not take pride in acquitting yourself of this task. You've proven only that you're not vermin. Whether you have the mettle to stand as a true knight of this temple remains to be seen. But you've earned the right to this blade.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 18,
      "kind": "npc",
      "npc": "Father Fyod",
-     "text": "Very well. As knights of the temple, our fears guide but do not govern us.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
+     "text": "... A right which can be revoked.",
+     "part": "Part 2 - Req. Lvl 1"
     },
     {
      "n": 19,
-     "kind": "npc",
-     "npc": "Father Fyod",
-     "text": "You will go to the rafters above the citadel. It's infested with vermin. Fill this sack with their tails as testimony to your constitution.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
-    },
-    {
-     "n": 20,
-     "kind": "npc",
-     "npc": "Father Fyod",
-     "text": "You'll return, or you'll die.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
-    },
-    {
-     "n": 21,
-     "kind": "step",
-     "text": "Go up the lift to the mining camp and traverse out onto the rafters that are above the citadel. Kill a rafter rat (not the diseased ones) until you have 4 tails; fill the bag and combine for a bag of rafter rat tails. Return to Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
-    },
-    {
-     "n": 22,
-     "kind": "npc",
-     "npc": "Father Fyod",
-     "text": "Do not take pride in acquitting yourself of this task. You've proven only that you're not vermin. Whether you have the mettle to stand as a true knight of this temple remains to be seen. But you've earned the right to this blade.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
-    },
-    {
-     "n": 23,
-     "kind": "step",
-     "text": "You receive Initiate's Dull Greatsword from Father Fyod.",
-     "part": "Part 2 - Req. Lvl 4 (?)",
-     "items": []
-    },
-    {
-     "n": 24,
-     "kind": "npc",
-     "npc": "Father Fyod",
-     "text": "... A right which can be revoked.",
-     "part": "Part 2 - Req. Lvl 4 (?)"
-    },
-    {
-     "n": 25,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "I do not require your assistance at this time, fledgling. Return when you're stronger.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 26,
+     "n": 20,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "If you'd like to be of use, go and find Lady Tabitha in her laboratory and see that she has what she needs.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 27,
+     "n": 21,
      "kind": "npc",
      "npc": "Lady Tabitha",
      "text": "Oh, here's a new one. Who sent you to me? Or have you become a nuisance of your own volition?",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 28,
+     "n": 22,
      "kind": "npc",
      "npc": "Lady Tabitha",
      "text": "Indeed! Each somehow less promising than the last, it seems. No matter. If you can furnish the ingredients I require, I will endorse your aspiration.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 29,
+     "n": 23,
      "kind": "npc",
      "npc": "Lady Tabitha",
      "text": "I brew many potions your kind rely on, Shadow Knight. Venture into the great cavern and fetch me as many myconid caps as this will carry.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 30,
+     "n": 24,
      "kind": "npc",
      "npc": "Lady Tabitha",
      "text": "I prefer the larger ones.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 31,
+     "n": 25,
      "kind": "npc",
      "npc": "Lady Tabitha",
      "text": "I thank you, Shadow Knight. The work continues. Give this letter to Father Fyod as a sign of your progress.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 32,
+     "n": 26,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "Adequate. That's what she wrote.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 33,
+     "n": 27,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "Better than the last one, to be fair. Hand me the alchemist's letter along with your initiate's sword, and I'll grant you a more capable blade.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 34,
+     "n": 28,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "Wield this in Ygorath's name. Now leave me be.",
      "part": "Part 3 - Req. Lvl 5"
     },
     {
-     "n": 35,
-     "kind": "step",
-     "text": "You receive Initiate's Greatsword from Father Fyod.",
-     "part": "Part 3 - Req. Lvl 5",
-     "items": []
-    },
-    {
-     "n": 36,
+     "n": 29,
      "kind": "npc",
      "npc": "Father Fyod",
      "text": "You're still too weak to call yourself a knight.",
      "part": "Part 4 - Req. Lvl ??"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Father Fyod",
-    "Father Fyod a rafter rat Lady Tabitha",
     "Lady Tabitha",
-    "Soren Akedd"
+    "Soren Akedd",
+    "Soren Akedd; Father Fyod; Lady Tabitha; a rafter rat; Myconid Gatherer; Myconid Truffian"
    ]
   },
   {
@@ -17141,7 +17186,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Delugia Coldsong",
     "Eraeldor Lowmist",
@@ -17174,7 +17219,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -17197,7 +17242,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Picci Manifold"
    ]
@@ -17215,7 +17260,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -17261,7 +17306,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -17278,7 +17323,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "a master blacksmith"
    ]
@@ -17825,7 +17870,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -17846,7 +17891,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -17867,7 +17912,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -18010,7 +18055,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -18032,7 +18077,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -18051,7 +18096,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18402,7 +18447,7 @@
      "part": "part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Jalwa Noor",
     "Leatherworking Haiat",
@@ -18425,7 +18470,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18509,7 +18554,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18528,7 +18573,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -19624,7 +19669,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19652,7 +19697,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -19724,7 +19769,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -19893,7 +19938,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Draznax"
    ]
@@ -19911,7 +19956,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -20687,7 +20732,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -20834,7 +20879,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Marshal Harding"
    ]
@@ -20974,7 +21019,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-02",
+   "fetched": "2026-10-03",
    "npcs": [
     "Ariblast the Wicked",
     "Dario Numas",
