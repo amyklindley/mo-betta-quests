@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-10-06",
+ "fetched": "2026-10-07",
  "quests": [
   {
    "title": "A Sweet Treat",
@@ -15,7 +15,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -33,7 +33,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -52,7 +52,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -96,7 +96,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -252,7 +252,7 @@
      "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -550,7 +550,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -579,7 +579,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -598,7 +598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -617,7 +617,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Quartermaster Obaid",
     "an ashira warrior"
@@ -636,7 +636,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1023,7 +1023,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1855,7 +1855,7 @@
      "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2420,7 +2420,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2441,7 +2441,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2460,7 +2460,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2479,7 +2479,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
@@ -2501,7 +2501,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "A Fishwife",
     "Bones",
@@ -2554,7 +2554,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2573,7 +2573,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -2592,7 +2592,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -2609,11 +2609,476 @@
     "a master blacksmith"
    ],
    "rewards": [],
-   "steps": [],
-   "lines": [],
-   "fetched": "2026-10-06",
+   "steps": [
+    {
+     "n": 1,
+     "text": "Knowing Hult Beetlewrangler is a master craftsman of fine beetle parts, you inquire about crafting armor from cinder beetle shells you've encountered during your travels.",
+     "part": "Cinder Beetle Shield",
+     "items": []
+    },
+    {
+     "n": 2,
+     "text": "Hult Beetlewrangler gives you a Cinder Beetle Shield and recommends you speak to a master blacksmith.",
+     "part": "Cinder Beetle Shield",
+     "items": []
+    },
+    {
+     "n": 3,
+     "text": "The master blacksmith only works at night (spawns at 6 PM in-game time). He is located in front of the Blacksmithing building in the Night Market.",
+     "part": "Cinder Beetle Boots",
+     "items": []
+    },
+    {
+     "n": 4,
+     "text": "You receive a pair of Cinder Beetle Boots from a master blacksmith. You can inquire if any recipes have been shared with him recently to continue the quest.",
+     "part": "Cinder Beetle Boots",
+     "items": []
+    },
+    {
+     "n": 15,
+     "text": "The Cinder Beetle Mandible is a rare drop off a cinder drone in Sungreet Strand",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 16,
+     "text": "You receive Cinder Beetle Helm and 10x Black Feather Arrow that may be used in another quest. ((more information required))",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 17,
+     "text": "Sielah Zefir mentions he does not like working with serrated mandibles. He recommends you visit Shipwright Benlink for the greaves. ((more information required))",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 18,
+     "text": "Shipwright Benlink is located behind some crates on the docks in Southwest Night Harbor (located near \"a first mate\" and \"a sailor\").",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 28,
+     "text": "Visit Dilshad Abolfazl, who is located at the Tannery in Night Harbor near the West Gate Bank. Hand him 1x Cinder Beetle Gland and 1x Cinder Beetle Blood.",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 31,
+     "text": "You receive 1x Cinder Tanning Agent from Dilshad Abolfazl.",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 32,
+     "text": "Give Shipwright Benlink 3x Cinder Beetle Carapace, 2x Cinder Beetle Legs, 1x Cinder Beetle Serrated Mandible, 1x Cinder Tanning Agent",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 46,
+     "text": "Make a trip to Hult Beetlewrangler and hand him 2x Resin, 2x Cinder Beetle Blood, 1x Crude Fish Oil, 1x Twilight Bay Rum",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 49,
+     "text": "You receive 1x Cinder Varnish from Hult Beetlewrangler.",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 50,
+     "text": "Hand Master Shipwright Huda 4x Cinder Beetle Carapace, 2x Cinder Beetle Serrated Mandible, 1x Giant Cinder Beetle Eye, 1x Special Varnish",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 54,
+     "text": "You receive Cinder Beetle Breastplate from Master Shipwright Huda.",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    }
+   ],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "step",
+     "text": "Knowing Hult Beetlewrangler is a master craftsman of fine beetle parts, you inquire about crafting armor from cinder beetle shells you've encountered during your travels.",
+     "part": "Cinder Beetle Shield",
+     "items": []
+    },
+    {
+     "n": 2,
+     "kind": "step",
+     "text": "Hult Beetlewrangler gives you a Cinder Beetle Shield and recommends you speak to a master blacksmith.",
+     "part": "Cinder Beetle Shield",
+     "items": []
+    },
+    {
+     "n": 3,
+     "kind": "step",
+     "text": "The master blacksmith only works at night (spawns at 6 PM in-game time). He is located in front of the Blacksmithing building in the Night Market.",
+     "part": "Cinder Beetle Boots",
+     "items": []
+    },
+    {
+     "n": 4,
+     "kind": "step",
+     "text": "You receive a pair of Cinder Beetle Boots from a master blacksmith. You can inquire if any recipes have been shared with him recently to continue the quest.",
+     "part": "Cinder Beetle Boots",
+     "items": []
+    },
+    {
+     "n": 5,
+     "kind": "say",
+     "text": "A master blacksmith mentioned you tried to make a cinder beetle helm?",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 6,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "Interested in cinder beetle armor, eh?",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 7,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "Yes, I once had a helm that I fashioned from cinder beetle pieces.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 8,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "I sold it some time ago to one of the watchmen. I could make you one if you have the pieces I need.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 9,
+     "kind": "say",
+     "text": "What pieces do you need?",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 10,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "If my memory serves me right, I'll need two cinder beetle carapaces, two cinder beetle legs, and a cinder beetle mandible.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 11,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "Be careful handling the mandibles. The serrated sort are especially nasty... I prefer not to use those.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 12,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "On top of the beetle parts, I'll need two extra pieces of charcoal for the helm. Cinder shells are fire-resistant and hard to work with, so my forge will need to be blazing hot for this to work.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 13,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "Those are just the materials for construction... now, let's talk payment.",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 14,
+     "kind": "npc",
+     "npc": "Weaponsmith Sielah Zefir",
+     "text": "How about you throw in a copper dagger to make it worth my trouble, Deal?",
+     "part": "Cinder Beetle Helm"
+    },
+    {
+     "n": 15,
+     "kind": "step",
+     "text": "The Cinder Beetle Mandible is a rare drop off a cinder drone in Sungreet Strand",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 16,
+     "kind": "step",
+     "text": "You receive Cinder Beetle Helm and 10x Black Feather Arrow that may be used in another quest. ((more information required))",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 17,
+     "kind": "step",
+     "text": "Sielah Zefir mentions he does not like working with serrated mandibles. He recommends you visit Shipwright Benlink for the greaves. ((more information required))",
+     "part": "Cinder Beetle Helm",
+     "items": []
+    },
+    {
+     "n": 18,
+     "kind": "step",
+     "text": "Shipwright Benlink is located behind some crates on the docks in Southwest Night Harbor (located near \"a first mate\" and \"a sailor\").",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 19,
+     "kind": "say",
+     "text": "Do you know anything about cinder beetles?",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 20,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "Cinder beetles from out in the quarry? I've actually happened upon a method to fashion some formidable greaves from their tough hides.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 21,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "Their carapaces even block Eth's rays when you can't escape her, like out on the high seas.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 22,
+     "kind": "say",
+     "text": "Would you fashion a pair of greaves for me?",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 23,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "I suppose I could spare a moment to craft you some, so long as you're able to get me the parts required.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 24,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "I'll need three cinder beetle carapaces, two cinder beetle legs, and a mandible... a serrated one. I'll also require a special tanning agent.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 25,
+     "kind": "say",
+     "text": "Can you tell me about the special tanning agent?",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 26,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "Despite looking like metal, I've always found that cinder carapaces mold better if they're treated like hardened leather.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 27,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "Dilshad Abolfazl at the tannery could mix up a tanning agent for you if you bring him a cinder beetle gland and some cinder blood.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 28,
+     "kind": "step",
+     "text": "Visit Dilshad Abolfazl, who is located at the Tannery in Night Harbor near the West Gate Bank. Hand him 1x Cinder Beetle Gland and 1x Cinder Beetle Blood.",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 29,
+     "kind": "npc",
+     "npc": "Dilshad Abolfazl",
+     "text": "What's this? Heh, the last time Benlink had me make some of this was when I owed him from my gambling debts... though if you're bringing the parts, I suppose there's no harm. One moment.",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 30,
+     "kind": "npc",
+     "npc": "Dilshad Abolfazl",
+     "text": "Here you are. Let Benlink know that fortune's going to smile upon me during our next game!",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 31,
+     "kind": "step",
+     "text": "You receive 1x Cinder Tanning Agent from Dilshad Abolfazl.",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 32,
+     "kind": "step",
+     "text": "Give Shipwright Benlink 3x Cinder Beetle Carapace, 2x Cinder Beetle Legs, 1x Cinder Beetle Serrated Mandible, 1x Cinder Tanning Agent",
+     "part": "Cinder Beetle Greaves",
+     "items": []
+    },
+    {
+     "n": 33,
+     "kind": "npc",
+     "npc": "Shipwright Benlink",
+     "text": "There you are, one pair of cinder beetle greaves! I always enjoy working with this stuff, though, not as much as Huda. They say he could make an entire ship out of beetle shells!",
+     "part": "Cinder Beetle Greaves"
+    },
+    {
+     "n": 34,
+     "kind": "say",
+     "text": "Hail, Master Shipwright Huda.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 35,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Fair winds to you, traveler. A great day for a sail at sea, don't you think?",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 36,
+     "kind": "say",
+     "text": "Do you know anything about cinder beetles?",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 37,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Cinder beetles? Why, yes, of course! Ever since I was a young boy, I'd use beetle carapaces as makeshift toy boats and float them out on the harbor.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 38,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "I always dreamed of making a full-sized craft out of their shells... but I could never find one large enough. I did manage to make an impressive breastplate, at least.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 39,
+     "kind": "say",
+     "text": "Can you make me a breastplate?",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 40,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Ah, that caught your attention, did it? Well, I suppose I could craft you one if you sought out all the proper pieces.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 41,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "For the breastplate, I'd need four cinder beetle carapaces, two of their serrated mandibles, a giant cinder beetle eye, as well as a special varnish.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 42,
+     "kind": "say",
+     "text": "What is the special varnish?",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 43,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Most people try to work the shells like steel, when really they're more like the wood of a ship!",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 44,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "For that reason, I use a varnish that's made up of two parts resin, two parts cinder blood, one part fish oil, and some Twilight Bay rum!",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 45,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Old Hult at the Sojourner camp knows how to make the varnish. Just bring him the proper ingredients.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 46,
+     "kind": "step",
+     "text": "Make a trip to Hult Beetlewrangler and hand him 2x Resin, 2x Cinder Beetle Blood, 1x Crude Fish Oil, 1x Twilight Bay Rum",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 47,
+     "kind": "npc",
+     "npc": "Hult Beetlewrangler",
+     "text": "It's been an age since I made any o' this for Huda! He's the reason I made my first bowl, he is. Gonna make his own ship one day, and ol' Hult is gonna cross the sea on a beetle's back!",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 48,
+     "kind": "npc",
+     "npc": "Hult Beetlewrangler",
+     "text": "Oof, that hits the spot! Thanks for the rum, boss. You tell Huda that his brother's makin' a big name for himself out here wit' the locals!",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 49,
+     "kind": "step",
+     "text": "You receive 1x Cinder Varnish from Hult Beetlewrangler.",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 50,
+     "kind": "step",
+     "text": "Hand Master Shipwright Huda 4x Cinder Beetle Carapace, 2x Cinder Beetle Serrated Mandible, 1x Giant Cinder Beetle Eye, 1x Special Varnish",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    },
+    {
+     "n": 51,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "You've gone and done it... wonderful! I'll get right to work.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 52,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "This shouldn't take long. In fact, I've been looking forward to your return!",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 53,
+     "kind": "npc",
+     "npc": "Master Shipwright Huda",
+     "text": "Here you are, friend. A fine piece, if I do say so myself. Thank you for allowing me to hone my skills. It's been far too long since I last dreamt of beetles.",
+     "part": "Cinder Beetle Breastplate"
+    },
+    {
+     "n": 54,
+     "kind": "step",
+     "text": "You receive Cinder Beetle Breastplate from Master Shipwright Huda.",
+     "part": "Cinder Beetle Breastplate",
+     "items": []
+    }
+   ],
+   "fetched": "2026-10-07",
    "npcs": [
+    "Dilshad Abolfazl",
     "Hult Beetlewrangler",
+    "Master Shipwright Huda",
+    "Shipwright Benlink",
+    "Weaponsmith Sielah Zefir",
     "a master blacksmith"
    ]
   },
@@ -2960,7 +3425,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3422,7 +3887,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3443,10 +3908,29 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
+   ]
+  },
+  {
+   "title": "Crude Prison Shiv",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Crude_Prison_Shiv",
+   "zone": "Blind Midden",
+   "giver": "Kalessa Velgarrith",
+   "min_level": "|Classes =",
+   "classes": "",
+   "related": [
+    "|Quest Rewards = (exp); (money:10)"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-07",
+   "npcs": [
+    "Kalessa Velgarrith",
+    "|Quest Rewards = (exp); (money:10)"
    ]
   },
   {
@@ -3534,7 +4018,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -3553,7 +4037,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -3572,7 +4056,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -3594,7 +4078,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -3613,7 +4097,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -3678,7 +4162,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -3697,7 +4181,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -3718,7 +4202,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5241,7 +5725,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -5515,7 +5999,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -5986,7 +6470,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "BBrugg Mulcher",
     "Brugg Mulcher",
@@ -6014,7 +6498,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "None",
     "Tenebrim Tam"
@@ -6819,7 +7303,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -6854,7 +7338,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -6880,7 +7364,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -6906,7 +7390,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7299,7 +7783,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7533,7 +8017,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Delilah"
    ]
@@ -7551,7 +8035,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -7894,7 +8378,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -7948,7 +8432,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -8043,7 +8527,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -8066,7 +8550,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8359,7 +8843,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8412,7 +8896,7 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -8431,7 +8915,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8450,7 +8934,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8469,7 +8953,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -8529,7 +9013,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8548,7 +9032,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Myal Vehear"
    ]
@@ -8566,7 +9050,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Aleyz Ith'vayen",
     "Amarah Ith'vayen"
@@ -8585,7 +9069,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -8595,14 +9079,75 @@
    "title": "House Varros (Quest)",
    "url": "https://monstersandmemories.miraheze.org/wiki/House_Varros_%28Quest%29",
    "zone": "Ail'Vorith",
-   "giver": "",
+   "giver": "Vaslir Naiyth",
    "min_level": "1",
    "classes": "ELE NEC",
    "related": [
-    "| Related Items = Naiyth's Mushroom Pouch"
+    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Mournful Outcast"
    ],
    "rewards": [],
-   "steps": [],
+   "steps": [
+    {
+     "n": 25,
+     "text": "Directions to Laeran Birchshade",
+     "part": "Find the Escaped Slave",
+     "items": []
+    },
+    {
+     "n": 34,
+     "text": "two confirmed routes",
+     "part": "Speak with Vaslir Maryn",
+     "items": []
+    },
+    {
+     "n": 39,
+     "text": "Directions to the elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 40,
+     "text": "left/south",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 41,
+     "text": "southern wall of the cavern",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 42,
+     "text": "four Air Essences",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 43,
+     "text": "four Earth Essences",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 44,
+     "text": "Air Elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 45,
+     "text": "Earth Elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 57,
+     "text": "northern edge of the Great Cavern",
+     "part": "Gather the Water Samples",
+     "items": []
+    }
+   ],
    "lines": [
     {
      "n": 1,
@@ -8771,13 +9316,245 @@
      "npc": "Vaslir Vharkith",
      "text": "Do this and you shall have earned my patronage. Hunt well, young one!",
      "part": "Part 2"
+    },
+    {
+     "n": 25,
+     "kind": "step",
+     "text": "Directions to Laeran Birchshade",
+     "part": "Find the Escaped Slave",
+     "items": []
+    },
+    {
+     "n": 26,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "My research!",
+     "part": "Part 3"
+    },
+    {
+     "n": 27,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Senior was sure you'd get yourself killed like the others.",
+     "part": "Part 3"
+    },
+    {
+     "n": 28,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Now, I don't suppose you know what essairyl is? Of course you don't. You'll have to start knowing these things if you expect to become a senior apprentice. Run along to Vaslir Maryn and tell her I need another flask of it.",
+     "part": "Part 3"
+    },
+    {
+     "n": 29,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Give her this in exchange.",
+     "part": "Part 3"
+    },
+    {
+     "n": 30,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "Karzzul, apprentice. I trust you have a good reason for interrupting my research?",
+     "part": "Speak with Vaslir Maryn"
+    },
+    {
+     "n": 31,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "Corpse dust, is it? I assume that means the idiot sent you and that he needs more essairyl.",
+     "part": "Speak with Vaslir Maryn"
+    },
+    {
+     "n": 32,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "I'm afraid I used up the last of my stock on yesterday's binding.",
+     "part": "Speak with Vaslir Maryn"
+    },
+    {
+     "n": 33,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "You'll have to talk to Vaslir Kiannes... unless you feel like gathering more essences for me.",
+     "part": "Speak with Vaslir Maryn"
+    },
+    {
+     "n": 34,
+     "kind": "step",
+     "text": "two confirmed routes",
+     "part": "Speak with Vaslir Maryn",
+     "items": []
+    },
+    {
+     "n": 35,
+     "kind": "say",
+     "text": "I will gather essences for you.",
+     "part": "Route A: Gather Essences for Vaslir Maryn"
+    },
+    {
+     "n": 36,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "Yes, we elaborate essairyl from the essences left behind when an elemental is destroyed.",
+     "part": "Route A: Gather Essences for Vaslir Maryn"
+    },
+    {
+     "n": 37,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "If you wish to hone your skills somewhat, I suggest traveling beyond the walls of the city and hunting down elementals in the southern part of this cavern. A rogue group of summoners has established a presence there. The type of elementals they are summoning are ideal sources reagents.",
+     "part": "Route A: Gather Essences for Vaslir Maryn"
+    },
+    {
+     "n": 38,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "Kill them and harvest four air and four earth essences. Give them to me along with the corpse dust.",
+     "part": "Route A: Gather Essences for Vaslir Maryn"
+    },
+    {
+     "n": 39,
+     "kind": "step",
+     "text": "Directions to the elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 40,
+     "kind": "step",
+     "text": "left/south",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 41,
+     "kind": "step",
+     "text": "southern wall of the cavern",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 42,
+     "kind": "step",
+     "text": "four Air Essences",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 43,
+     "kind": "step",
+     "text": "four Earth Essences",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 44,
+     "kind": "step",
+     "text": "Air Elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 45,
+     "kind": "step",
+     "text": "Earth Elementals",
+     "part": "Gather the Elemental Essences",
+     "items": []
+    },
+    {
+     "n": 46,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "You return and with the essences. That is a welcome surprise, although competence while in the service of the idiot may not work in your favor.",
+     "part": "Return to Vaslir Maryn"
+    },
+    {
+     "n": 47,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "You are a promising young elementalist. In the future, should you desire to work for a competent instructor, you know where my laboratory is.",
+     "part": "Return to Vaslir Maryn"
+    },
+    {
+     "n": 48,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "May you hear, kulzzan.",
+     "part": "Return to Vaslir Maryn"
+    },
+    {
+     "n": 49,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "Karzzul, varsa ai Neth'xan! What brings you to me today?",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 50,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "You want essairyl? I need it for my bindings, and you are obviously not ready to perform a binding of your own.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 51,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "I assume you are one of our dear Vharkith's pawns. He's always sending you poor fellows to ask for the fruits of our labor. I assume you are hoping to trade us some corpse dust for the essairyl, as usual.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 52,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "Well, I'm afraid my price has gone up. If you want to please your master, you'll have to earn my essairyl.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 53,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "There are a group of deep gnomes near the northern edge of our great cavern. They are conducting experiments on the impurities in the water there.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 54,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "Industrious little fellows. Almost a shame to dispose of them. Quite useful, they can be. Yes, indeed. Quite useful.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 55,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "But research needs as they say. Research needs. Bring me some of their water samples. Ten should be enough for my current project.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 56,
+     "kind": "npc",
+     "npc": "Vaslir Kiannes",
+     "text": "Give me the samples along with the corpse dust, and you'll have your essairyl.",
+     "part": "Route B: Earn Essairyl from Vaslir Kiannes"
+    },
+    {
+     "n": 57,
+     "kind": "step",
+     "text": "northern edge of the Great Cavern",
+     "part": "Gather the Water Samples",
+     "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
+    "Vaslir Kiannes",
+    "Vaslir Maryn",
     "Vaslir Naiyth",
     "Vaslir Vharkith",
-    "| Related Items = Naiyth's Mushroom Pouch"
+    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Mournful Outcast"
    ]
   },
   {
@@ -8793,7 +9570,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Apprentice Esveth",
     "| Quest Rewards = (exp); (money:25)"
@@ -9056,7 +9833,7 @@
      "part": "Part 1 - Req. Lvl 2"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Cook Vashuk",
     "Kulzzara",
@@ -9089,7 +9866,7 @@
     {
      "n": 2,
      "kind": "receive",
-     "item": "Xal'tharn Pendant",
+     "item": "Dull Iron Cuirass",
      "qty": 1,
      "npc": "Klavel Sul",
      "part": "Part 1 - Lvl 1+"
@@ -9103,7 +9880,7 @@
      "part": "Part 1 - Lvl 1+"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Klavel Sul",
     "a separated skull"
@@ -9131,7 +9908,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -9840,7 +10617,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -9943,7 +10720,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -9961,7 +10738,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -9980,7 +10757,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -9997,7 +10774,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": []
   },
   {
@@ -10701,7 +11478,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "A wash maiden",
     "Guard Iskandar",
@@ -10728,7 +11505,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Fendris the Forsaken",
     "Poacher Garrus",
@@ -10749,10 +11526,61 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
+   ]
+  },
+  {
+   "title": "Mark of Merit",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Mark_of_Merit",
+   "zone": "",
+   "giver": "Receptionist Naleth'ra",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "Gorgeous",
+    "Flavic the Fisher",
+    "Mucky Morgurah",
+    "Mother Gummer",
+    "Forager Davra",
+    "Sethrine the Unblinking",
+    "Underboss Vekrizin",
+    "Cedrius the Cutter",
+    "Blacksmith Jerictus",
+    "Wikket Two-Wands",
+    "Reviver Vlarek",
+    "Biomass",
+    "Knuttoc Grobbins",
+    "Gurm the Half-Woken",
+    "Elixa the Experimentalist",
+    "Flashfreeze Fraegra",
+    "Enthraller Gnorah"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-07",
+   "npcs": [
+    "Biomass",
+    "Blacksmith Jerictus",
+    "Cedrius the Cutter",
+    "Elixa the Experimentalist",
+    "Enthraller Gnorah",
+    "Flashfreeze Fraegra",
+    "Flavic the Fisher",
+    "Forager Davra",
+    "Gorgeous",
+    "Gurm the Half-Woken",
+    "Knuttoc Grobbins",
+    "Mother Gummer",
+    "Mucky Morgurah",
+    "Receptionist Naleth'ra",
+    "Reviver Vlarek",
+    "Sethrine the Unblinking",
+    "Underboss Vekrizin",
+    "Wikket Two-Wands"
    ]
   },
   {
@@ -10768,7 +11596,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -10897,7 +11725,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Hull Orbel"
    ]
@@ -11111,7 +11939,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Chahaya Tam"
    ]
@@ -11313,7 +12141,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -11439,7 +12267,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -11540,7 +12368,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -11560,7 +12388,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -11578,7 +12406,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Bones"
    ]
@@ -11878,7 +12706,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -12179,7 +13007,7 @@
      "part": "Part 5"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar; Lady Tabitha; Embalmer Tyriel",
@@ -12204,7 +13032,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -12719,7 +13547,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -12745,7 +13573,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -12765,7 +13593,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -12784,7 +13612,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -12880,7 +13708,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -12902,7 +13730,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -12933,7 +13761,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -12952,7 +13780,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -13729,7 +14557,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -13996,7 +14824,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -14307,7 +15135,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -15002,7 +15830,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -15978,7 +16806,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -16051,7 +16879,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -16383,7 +17211,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -16663,7 +17491,7 @@
      "part": "Part 4 - Req. Lvl 13"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Father Fyod",
     "Father General Lorak",
@@ -16789,7 +17617,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Varilis Thornvine",
     "a mischievous faerie",
@@ -16813,7 +17641,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -16834,9 +17662,37 @@
     "Mycelial Spear",
     "Experience"
    ],
-   "steps": [],
-   "lines": [],
-   "fetched": "2026-10-06",
+   "steps": [
+    {
+     "n": 1,
+     "text": "Give 'Moldy Note' to Picci Manifold.",
+     "part": "Part 1 - Starting Note and Shredded Cloak",
+     "items": []
+    },
+    {
+     "n": 2,
+     "text": "Requires Level 5",
+     "part": "Part 3 - Gather the Specimens",
+     "items": []
+    }
+   ],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "step",
+     "text": "Give 'Moldy Note' to Picci Manifold.",
+     "part": "Part 1 - Starting Note and Shredded Cloak",
+     "items": []
+    },
+    {
+     "n": 2,
+     "kind": "step",
+     "text": "Requires Level 5",
+     "part": "Part 3 - Gather the Specimens",
+     "items": []
+    }
+   ],
+   "fetched": "2026-10-07",
    "npcs": [
     "Picci Manifold"
    ]
@@ -16854,7 +17710,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -16900,7 +17756,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -16917,7 +17773,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "a master blacksmith"
    ]
@@ -17464,12 +18320,40 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
     "Njau Hansou",
     "Torn Note"
+   ]
+  },
+  {
+   "title": "Stolen Gems",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Stolen_Gems",
+   "zone": "Ail'Vorith",
+   "giver": "Glaeron Kes'tel",
+   "min_level": "10+",
+   "classes": "RNG",
+   "related": [
+    "a Deepgulp warrior"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "receive",
+     "item": "Legion Recurve",
+     "qty": 1,
+     "npc": "Glaeron Kes'tel",
+     "part": "Lvl 14+"
+    }
+   ],
+   "fetched": "2026-10-07",
+   "npcs": [
+    "Glaeron Kes'tel",
+    "a Deepgulp warrior"
    ]
   },
   {
@@ -17479,7 +18363,9 @@
    "giver": "Senior Apprentice Syrsil",
    "min_level": "| Classes =",
    "classes": "",
-   "related": [],
+   "related": [
+    "| Related Items = Vharkith's Order"
+   ],
    "rewards": [
     "Unknown at time of writing."
    ],
@@ -17492,7 +18378,13 @@
     },
     {
      "n": 2,
-     "text": "Valkrieth's Order",
+     "text": "Vharkith's Order",
+     "part": "",
+     "items": []
+    },
+    {
+     "n": 3,
+     "text": "North Gate East",
      "part": "",
      "items": []
     }
@@ -17508,14 +18400,22 @@
     {
      "n": 2,
      "kind": "step",
-     "text": "Valkrieth's Order",
+     "text": "Vharkith's Order",
+     "part": "",
+     "items": []
+    },
+    {
+     "n": 3,
+     "kind": "step",
+     "text": "North Gate East",
      "part": "",
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
-    "Senior Apprentice Syrsil"
+    "Senior Apprentice Syrsil",
+    "| Related Items = Vharkith's Order"
    ]
   },
   {
@@ -17531,7 +18431,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -17552,7 +18452,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -17695,7 +18595,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -17717,7 +18617,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -17736,7 +18636,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18100,7 +19000,7 @@
      "part": "part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Jalwa Noor",
     "Leatherworking Haiat",
@@ -18123,7 +19023,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18207,7 +19107,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18226,7 +19126,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -18455,18 +19355,24 @@
     },
     {
      "n": 86,
+     "text": "Return to Maude Astarace and give her the crystal.",
+     "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+",
+     "items": []
+    },
+    {
+     "n": 87,
      "text": "After receiving your Hammered Iron Ring, ask Gunder Dinnig about work...",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
      "items": []
     },
     {
-     "n": 91,
+     "n": 92,
      "text": "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
      "items": []
     },
     {
-     "n": 92,
+     "n": 93,
      "text": "Hand in the Full Bag of Overseer Heads to Gunder Dinnig",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
      "items": [
@@ -18477,25 +19383,25 @@
      ]
     },
     {
-     "n": 96,
+     "n": 97,
      "text": "Return to Gunder Dinnig and hail him.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 105,
+     "n": 106,
      "text": "Travel to the Deepcut bandit camps which can be found if you keep going east a little way in the Underdocks newbie yard and slay them until you acquire a Dull Coin. Bring this coin back to Gunder.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 107,
+     "n": 108,
      "text": "Take the token over to the blacksmith shop in the citadel and give it to Blacksmith Hargrul.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 111,
+     "n": 112,
      "text": "You now have the option to trade it for a one-handed weapon.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
@@ -19132,32 +20038,39 @@
     {
      "n": 86,
      "kind": "step",
+     "text": "Return to Maude Astarace and give her the crystal.",
+     "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+",
+     "items": []
+    },
+    {
+     "n": 87,
+     "kind": "step",
      "text": "After receiving your Hammered Iron Ring, ask Gunder Dinnig about work...",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
      "items": []
     },
     {
-     "n": 87,
+     "n": 88,
      "kind": "say",
      "text": "What work?",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
-    },
-    {
-     "n": 88,
-     "kind": "npc",
-     "npc": "Gunder Dinnig",
-     "text": "Aye, there are domestic matters we might resolve to our profit. The Delvestone Mining Company quarrel with the Deepcut bandits in Darrowdwell. The company is ill-equipped to to protect their interests, but their pockets run deep.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
      "n": 89,
      "kind": "npc",
      "npc": "Gunder Dinnig",
-     "text": "There is a standing bounty of the heads of Deepcut overseers. Fill this bag and earn your share. Send them packing!",
+     "text": "Aye, there are domestic matters we might resolve to our profit. The Delvestone Mining Company quarrel with the Deepcut bandits in Darrowdwell. The company is ill-equipped to to protect their interests, but their pockets run deep.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
      "n": 90,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "There is a standing bounty of the heads of Deepcut overseers. Fill this bag and earn your share. Send them packing!",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+    },
+    {
+     "n": 91,
      "kind": "receive",
      "item": "Empty Overseer Bag",
      "qty": 1,
@@ -19165,14 +20078,14 @@
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
-     "n": 91,
+     "n": 92,
      "kind": "step",
      "text": "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
      "items": []
     },
     {
-     "n": 92,
+     "n": 93,
      "kind": "step",
      "text": "Hand in the Full Bag of Overseer Heads to Gunder Dinnig",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
@@ -19184,14 +20097,14 @@
      ]
     },
     {
-     "n": 93,
+     "n": 94,
      "kind": "npc",
      "npc": "Gunder Dinning",
      "text": "Gruesome work, Player Name. Would that you had a sharper blade... yet a crown hewn is a copper earned. Bring this to Elara, the pay-master, along with your ring.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
-     "n": 94,
+     "n": 95,
      "kind": "receive",
      "item": "Deepcut Overseer Bounty",
      "qty": 1,
@@ -19199,130 +20112,130 @@
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
-     "n": 95,
+     "n": 96,
      "kind": "npc",
      "npc": "Elara Venn",
      "text": "You acquit yourself well, Class. Here is your coin, and a signet that might serve you better.",
      "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
     },
     {
-     "n": 96,
+     "n": 97,
      "kind": "step",
      "text": "Return to Gunder Dinnig and hail him.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 97,
+     "n": 98,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "There is more business with the Deepcut.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 98,
+     "n": 99,
      "kind": "say",
      "text": "what business?",
-     "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
-    },
-    {
-     "n": 99,
-     "kind": "npc",
-     "npc": "Gunder Dinnig",
-     "text": "The bandits have an encampment, a mine where the Delvestone dare not go. My peers wish to rout the blaggards, claim their quarries, and lease them to fill our coffers.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
      "n": 100,
      "kind": "npc",
      "npc": "Gunder Dinnig",
-     "text": "But we must exercise caution. I have a new assignment for you.",
+     "text": "The bandits have an encampment, a mine where the Delvestone dare not go. My peers wish to rout the blaggards, claim their quarries, and lease them to fill our coffers.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
      "n": 101,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "But we must exercise caution. I have a new assignment for you.",
+     "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
+    },
+    {
+     "n": 102,
      "kind": "say",
      "text": "what assignment?",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 102,
+     "n": 103,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "Find their lair, Player Name, and take no quarter. You may claim a bounty for every six hands of the bandits you slay. Bring them to the clerk, Traven, and he will see that you are paid. But that is not your task.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 103,
+     "n": 104,
      "kind": "say",
      "text": "what task?",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 104,
+     "n": 105,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "I wish to know who is behind this sordid outfit. If we are to extend our reach father into the Deep, we must know. Bring me any evidence you can find, however insignificant it might seem to your eye.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 105,
+     "n": 106,
      "kind": "step",
      "text": "Travel to the Deepcut bandit camps which can be found if you keep going east a little way in the Underdocks newbie yard and slay them until you acquire a Dull Coin. Bring this coin back to Gunder.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 106,
+     "n": 107,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "One of the bandits carried this? It is an elvish coin, though I do not recognize the sigil. Should it belong to one of the great houses...",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 107,
+     "n": 108,
      "kind": "step",
      "text": "Take the token over to the blacksmith shop in the citadel and give it to Blacksmith Hargrul.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 108,
+     "n": 109,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "Hmm, 'Tis my token.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 109,
+     "n": 110,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "I haven't a blade suited to a young Class such as yourself. But a skullcracker will do.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 110,
+     "n": 111,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "If ye cannot wield it, return it to me to receive a smaller battle hammer.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 111,
+     "n": 112,
      "kind": "step",
      "text": "You now have the option to trade it for a one-handed weapon.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 112,
+     "n": 113,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "Haven't the strength, I see. Perhaps it's meant for a more capable Class.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19349,7 +20262,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -19421,7 +20334,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -19603,7 +20516,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Draznax"
    ]
@@ -19621,7 +20534,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -20397,7 +21310,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -20417,13 +21330,14 @@
    "zone": "Underdocks",
    "giver": "",
    "min_level": "1",
-   "classes": "Wizard",
+   "classes": "Wizard Enchanter",
    "related": [
     "Marshal Harding"
    ],
    "rewards": [
     "Experience",
-    "Musty Tunic"
+    "Musty Tunic",
+    "Hammered Iron Ring"
    ],
    "steps": [
     {
@@ -20443,6 +21357,29 @@
      "text": "Facing Northwest, follow the tunnel out of the Eastern District to the Underdocks wall where you can begin hunting a deep beetle.",
      "part": "Part 1 - Req. Lvl 1",
      "items": []
+    },
+    {
+     "n": 15,
+     "text": "Combine 6 deep beetle carapace in the Beetle Shell Collection Bag and turn the bag into Marshal Harding",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": []
+    },
+    {
+     "n": 18,
+     "text": "Head to Maude Asterace. She is in the building to the left of Quartermaster LLarne above the bounty office.",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": []
+    },
+    {
+     "n": 19,
+     "text": "Hand in the Note to Maude Asterace",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": [
+      {
+       "name": "Note",
+       "qty": 1
+      }
+     ]
     }
    ],
    "lines": [
@@ -20542,11 +21479,103 @@
      "text": "Facing Northwest, follow the tunnel out of the Eastern District to the Underdocks wall where you can begin hunting a deep beetle.",
      "part": "Part 1 - Req. Lvl 1",
      "items": []
+    },
+    {
+     "n": 15,
+     "kind": "step",
+     "text": "Combine 6 deep beetle carapace in the Beetle Shell Collection Bag and turn the bag into Marshal Harding",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": []
+    },
+    {
+     "n": 16,
+     "kind": "npc",
+     "npc": "Marshal Harding",
+     "text": "An adequate performance for a scullion. Bring this letter to Maude Asterace. She will judge your worth.",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 17,
+     "kind": "receive",
+     "item": "Note",
+     "qty": 1,
+     "npc": "Marshal Harding",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 18,
+     "kind": "step",
+     "text": "Head to Maude Asterace. She is in the building to the left of Quartermaster LLarne above the bounty office.",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": []
+    },
+    {
+     "n": 19,
+     "kind": "step",
+     "text": "Hand in the Note to Maude Asterace",
+     "part": "Part 1 - Req. Lvl 1",
+     "items": [
+      {
+       "name": "Note",
+       "qty": 1
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "kind": "npc",
+     "npc": "Maude Asterace",
+     "text": "A new recruit! I hope you live a little longer than the last one. The marshal is not always the most discerning fellow. Never mind about that. Take this ring and assist me with my research.",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 21,
+     "kind": "receive",
+     "item": "Hammered Iron Ring",
+     "qty": 1,
+     "npc": "Maude Asterace",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 22,
+     "kind": "say",
+     "text": "What research?",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 23,
+     "kind": "npc",
+     "npc": "Maude Asterace",
+     "text": "The Delvestone and Deepcut quarrel over rocks, and I wish to know why. Their petty conflict is our good fortune, since the mining company will pay us to reclaim their crystals.",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 24,
+     "kind": "npc",
+     "npc": "Maude Asterace",
+     "text": "Venture into the Darrowdwell mine above the citadel and fill this box with crystals from the Deepcut miners.",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 25,
+     "kind": "receive",
+     "item": "Empty Crystal Box",
+     "qty": 1,
+     "npc": "Maude Asterace",
+     "part": "Part 1 - Req. Lvl 1"
+    },
+    {
+     "n": 26,
+     "kind": "npc",
+     "npc": "Maude Asterace",
+     "text": "In truth, I care not how you acquire these crystals.",
+     "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
-    "Marshal Harding"
+    "Marshal Harding",
+    "Maude Asterace"
    ]
   },
   {
@@ -20684,7 +21713,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-06",
+   "fetched": "2026-10-07",
    "npcs": [
     "Ariblast the Wicked",
     "Dario Numas",
