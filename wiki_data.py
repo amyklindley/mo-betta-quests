@@ -48,16 +48,36 @@ def api(**params) -> dict:
 
 def pages_in(category: str):
     """Yield (title, wikitext) for every page in a category, 50 per request."""
+    yield from _pages(generator="categorymembers", gcmtitle=category, gcmlimit=50, gcmnamespace=0)
+
+
+def pages_using(template: str):
+    """Yield (title, wikitext) for every page that uses a template, 50 per request. Category:Items was split
+    into sub-categories in October 2026 and many item pages sit in none of them, but every item page
+    has an {{ItemBox}}, so the template is the reliable list."""
+    yield from _pages(generator="embeddedin", geititle=template, geilimit=50, geinamespace=0)
+
+
+def _pages(**gen):
     cont: dict = {}
     while True:
-        r = api(action="query", generator="categorymembers", gcmtitle=category, gcmlimit=50, gcmnamespace=0,
-                prop="revisions", rvprop="content", rvslots="main", **cont)
+        r = api(action="query", prop="revisions", rvprop="content", rvslots="main", **gen, **cont)
         for p in r.get("query", {}).get("pages", []):
             revs = p.get("revisions") or []
             if revs:
                 yield p["title"], revs[0]["slots"]["main"]["content"]
         if "continue" not in r:
             return
+        cont = r["continue"]
+
+
+def titles_in(category: str) -> set[str]:
+    out, cont = set(), {}
+    while True:
+        r = api(action="query", list="categorymembers", cmtitle=category, cmlimit=500, cmnamespace=0, **cont)
+        out |= {m["title"] for m in r.get("query", {}).get("categorymembers", [])}
+        if "continue" not in r:
+            return out
         cont = r["continue"]
 
 
@@ -266,10 +286,12 @@ def parse_zone(title: str, text: str) -> dict | None:
     }
 
 
-def dump(name: str, category: str, parser, key_of) -> None:
+def dump(name: str, category: str, parser, key_of, pages=None, skip: set[str] = frozenset()) -> None:
     rows, n_pages = [], 0
-    for title, text in pages_in(category):
+    for title, text in (pages or pages_in(category)):
         n_pages += 1
+        if title in skip:
+            continue
         row = parser(title, text)
         if row:
             rows.append(row)
@@ -288,12 +310,15 @@ def dump(name: str, category: str, parser, key_of) -> None:
     out.write_text(json.dumps({"source": WIKI + category.replace(" ", "_"), "fetched": str(date.today()), name: rows},
                               ensure_ascii=False), "utf-8")
     print(f"wrote {out.name}: {len(rows)} of {n_pages} pages parsed")
+    if len(rows) < 100:
+        raise SystemExit(f"{out.name}: only {len(rows)} rows, which can't be right; not publishing it")
 
 
 def main(argv: list[str]) -> None:
     what = argv[0] if argv else "all"
     if what in ("all", "items"):
-        dump("items", "Category:Items", parse_item, lambda r: r["name"].lower())
+        dump("items", "Category:Items", parse_item, lambda r: r["name"].lower(),
+             pages=pages_using("Template:ItemBox"), skip=titles_in("Category:Removed Items"))
     if what in ("all", "npcs"):
         dump("npcs", "Category:NPCs", parse_npc, lambda r: r["name"].lower())
     if what in ("all", "zones"):
