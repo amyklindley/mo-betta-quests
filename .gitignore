@@ -16,3 +16,7 @@ shot_*.png
 *.log
 unmatched.txt
 nightly-refresh.log
+
+# nightly alert settings and the last run's counts
+alert.env
+data-counts.json
