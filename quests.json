@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-10-16",
+ "fetched": "2026-10-17",
  "quests": [
   {
    "title": "A Sweet Treat",
@@ -15,7 +15,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -33,7 +33,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -52,7 +52,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -69,10 +69,24 @@
     "Toilmistress Rallvessa"
    ],
    "rewards": [],
-   "steps": [],
+   "steps": [
+    {
+     "n": 1,
+     "text": "Since you skill up in Stone Cutting as you make the Fragile Sharpening Stones, feel free to collect extra rocks (trivial at 5).",
+     "part": "The Supplier",
+     "items": []
+    }
+   ],
    "lines": [
     {
      "n": 1,
+     "kind": "step",
+     "text": "Since you skill up in Stone Cutting as you make the Fragile Sharpening Stones, feel free to collect extra rocks (trivial at 5).",
+     "part": "The Supplier",
+     "items": []
+    },
+    {
+     "n": 2,
      "kind": "receive",
      "item": "Satchel of Questionable Spoils",
      "qty": 1,
@@ -80,7 +94,7 @@
      "part": "Finally, some killing!"
     },
     {
-     "n": 2,
+     "n": 3,
      "kind": "receive",
      "item": "Vorith's Recommendation",
      "qty": 1,
@@ -88,7 +102,7 @@
      "part": "A recommendation!"
     },
     {
-     "n": 3,
+     "n": 4,
      "kind": "receive",
      "item": "Obsidian Shackle",
      "qty": 1,
@@ -96,7 +110,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -252,7 +266,7 @@
      "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -550,7 +564,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -579,7 +593,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -598,7 +612,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -617,7 +631,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Quartermaster Obaid;an ashira warrior",
     "Watch Captain Badawi"
@@ -636,7 +650,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1023,7 +1037,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1855,7 +1869,7 @@
      "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2420,7 +2434,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2441,7 +2455,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2460,7 +2474,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2479,7 +2493,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
@@ -2498,7 +2512,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Bones",
     "Cordellius Hollmion"
@@ -2546,7 +2560,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2565,7 +2579,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -2584,7 +2598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -3064,7 +3078,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Dilshad Abolfazl",
     "Hult Beetlewrangler",
@@ -3417,7 +3431,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3879,7 +3893,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3900,7 +3914,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
@@ -3919,7 +3933,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Kalessa Velgarrith",
     "|Quest Rewards = (exp); (money:10)"
@@ -4010,7 +4024,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -4029,7 +4043,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -4048,7 +4062,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -4067,7 +4081,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -4086,7 +4100,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -4151,7 +4165,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -4170,7 +4184,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -4191,7 +4205,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5714,7 +5728,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -6002,7 +6016,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -6473,7 +6487,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "BBrugg Mulcher",
     "Brugg Mulcher",
@@ -6499,7 +6513,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Tenebrim Tam",
     "| Related Items ="
@@ -7291,7 +7305,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -7326,7 +7340,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -7352,7 +7366,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -7374,11 +7388,12 @@
     "Experience",
     "Tarnished Elven Blade",
     "Novice Chain of the Wyrdguard",
-    "Striker's Chain of the Wyrdguard"
+    "Striker's Chain of the Wyrdguard",
+    "Tempered Blade of the Fae-Bound"
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7771,7 +7786,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7807,7 +7822,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Delilah"
    ]
@@ -7825,7 +7840,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -8168,7 +8183,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -8181,7 +8196,7 @@
    "url": "https://monstersandmemories.miraheze.org/wiki/Fungal_Armor_Quests",
    "zone": "Ail'Vorith",
    "giver": "Leatherworker Vex",
-   "min_level": "1",
+   "min_level": "5",
    "classes": "ALL",
    "related": [
     "a cave myconid"
@@ -8222,7 +8237,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -8317,7 +8332,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -8340,7 +8355,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8633,7 +8648,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8654,7 +8669,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Halveth Velgarrith",
     "a goblin stone-sorter"
@@ -8706,7 +8721,7 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -8725,7 +8740,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8744,7 +8759,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8763,10 +8778,29 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Captain Hale",
     "N/A"
+   ]
+  },
+  {
+   "title": "Handfed Bors' Runts",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Handfed_Bors%27_Runts",
+   "zone": "Night Harbor",
+   "giver": "Gatekeeper Nusder",
+   "min_level": "> 16, < 46",
+   "classes": "All",
+   "related": [
+    "a razorwing runt"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-17",
+   "npcs": [
+    "Gatekeeper Nusder",
+    "a razorwing runt"
    ]
   },
   {
@@ -8828,7 +8862,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8932,7 +8966,7 @@
      "part": "a note for vhaleth hal'kareth"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Ailis Hal'arketh",
     "Myal Vehear",
@@ -8953,7 +8987,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Aleyz Ith'vayen",
     "Amarah Ith'vayen"
@@ -8981,7 +9015,7 @@
      "part": "Part 1 - Goblin Scalps"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -9631,7 +9665,7 @@
      "part": "Find Freysia Riftrend"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Freysia Riftrend",
     "Miral the Dark Elf",
@@ -9656,7 +9690,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Apprentice Esveth",
     "| Related Items ="
@@ -9919,7 +9953,7 @@
      "part": "Part 1 - Req. Lvl 2"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Cook Vashuk",
     "Kulzzara",
@@ -9943,7 +9977,7 @@
     {
      "n": 2,
      "text": "The mobs needed for the next step are levels 8-11",
-     "part": "Part 1 - Lvl 1+",
+     "part": "Part 1 - Lvl 8+",
      "items": []
     },
     {
@@ -9996,13 +10030,13 @@
      "item": "Remnant Satchel",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": "Part 1 - Lvl 1+"
+     "part": "Part 1 - Lvl 8+"
     },
     {
      "n": 2,
      "kind": "step",
      "text": "The mobs needed for the next step are levels 8-11",
-     "part": "Part 1 - Lvl 1+",
+     "part": "Part 1 - Lvl 8+",
      "items": []
     },
     {
@@ -10011,7 +10045,7 @@
      "item": "Dull Iron Cuirass",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": "Part 1 - Lvl 1+"
+     "part": "Part 1 - Lvl 8+"
     },
     {
      "n": 4,
@@ -10019,7 +10053,7 @@
      "item": "Simple Chestwrap",
      "qty": 1,
      "npc": "Klavel Sul",
-     "part": "Part 1 - Lvl 1+"
+     "part": "Part 1 - Lvl 8+"
     },
     {
      "n": 5,
@@ -10087,7 +10121,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Klavel Sul",
     "a separated skull"
@@ -10115,7 +10149,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -10132,7 +10166,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": []
   },
   {
@@ -10838,7 +10872,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -10941,7 +10975,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -10959,7 +10993,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Isrothen Vael'xirith"
    ]
@@ -10977,7 +11011,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -10996,7 +11030,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -11013,7 +11047,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": []
   },
   {
@@ -11158,7 +11192,7 @@
      "part": "Part 2 - Tailoring the Robe"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Mason Steinn; Layith Kharem; Guard Iskandar; Noura the Tailor; Mira Gables; Riham",
     "a wash maiden"
@@ -11177,7 +11211,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Fendris the Forsaken",
     "an undead poacher"
@@ -11196,7 +11230,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -11231,7 +11265,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Biomass",
     "Blacksmith Jerictus",
@@ -11266,7 +11300,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -11395,7 +11429,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Hull Orbel"
    ]
@@ -11767,7 +11801,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Chahaya Tam",
     "Chayaha Tam"
@@ -11970,7 +12004,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -12072,7 +12106,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -12092,7 +12126,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -12112,7 +12146,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Bones",
     "| Related Items ="
@@ -12413,7 +12447,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -12721,7 +12755,7 @@
      "part": "Part 5"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar; Lady Tabitha; Embalmer Tyriel",
@@ -12746,7 +12780,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -13261,7 +13295,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -13287,7 +13321,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -13307,7 +13341,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -13326,7 +13360,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -13417,7 +13451,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -13439,7 +13473,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -13470,7 +13504,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -13489,7 +13523,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -14266,7 +14300,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -14533,7 +14567,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -14844,7 +14878,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -15539,7 +15573,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -16515,7 +16549,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -16547,7 +16581,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "| Related Items =",
     "| Start Zone = underdocks"
@@ -16607,7 +16641,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -16939,7 +16973,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -17225,7 +17259,7 @@
      "part": "Part 4 - Req. Lvl 13"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Father Fyod",
     "Father General Lorak",
@@ -17345,7 +17379,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Varilis Thornvine",
     "a mischievous faerie",
@@ -17369,7 +17403,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -17392,7 +17426,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Picci Manifold"
    ]
@@ -17410,7 +17444,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -17456,7 +17490,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -17473,7 +17507,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "a master blacksmith"
    ]
@@ -18018,7 +18052,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -18039,7 +18073,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Glaeron Kes'tel",
     "a Deepgulp warrior"
@@ -18058,7 +18092,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Sereth Vael'xirith"
    ]
@@ -18117,7 +18151,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Belot",
     "Senior Apprentice Syrsil"
@@ -18136,7 +18170,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -18157,7 +18191,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -18176,7 +18210,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Chaplain Cranely"
    ]
@@ -18316,7 +18350,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -18338,7 +18372,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -18357,7 +18391,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18556,7 +18590,7 @@
      "part": "Part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Jalwa Noor",
     "Mayana",
@@ -18577,7 +18611,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18661,7 +18695,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18680,7 +18714,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -18915,26 +18949,50 @@
     },
     {
      "n": 88,
-     "text": "Return to Maude Astarace and give her the crystal.",
+     "text": "Return to Maude Astarace and give her the Faintly Glowing Crystal.",
      "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+",
      "items": []
     },
     {
-     "n": 89,
+     "n": 91,
      "text": "After receiving your Hammered Iron Ring, ask Gunder Dinnig about work...",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
      "items": []
     },
     {
-     "n": 94,
+     "n": 101,
+     "text": "To get to the Darrowdwell, leave Gunder Dunnig and head to the Citadel by the way of the raft. Go up the ramp, then turn right and make your way around, keeping the Citadel on your left. You will see Munk and what looks like a large, stone elevated square platform nearby. That is the lift to the Overreach. Take the lift all the way up to the top, and enjoy the view! Step off the lift and turn right. The next lift is the one we want, the one labeled \"Lift to Darrowdwell Mine.\"",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 102,
+     "text": "WARNING! There are empty spaces in the rafters at the mines. Be careful, as you will fall all the way down to the Citadel and die.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 103,
+     "text": "WARNING! The deepcut miner may aggro along with the overseer and assist in combat. (needs verification)",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 104,
+     "text": "Carefully make your way across the rafters, ignoring the different rafter rats as they aren't aggro. Your goal is the cave/tunnel you see to your left with a torch lighting the entrance.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 105,
      "text": "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
      "items": []
     },
     {
-     "n": 95,
+     "n": 106,
      "text": "Hand in the Full Bag of Overseer Heads to Gunder Dinnig",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
      "items": [
       {
        "name": "Full Bag of Overseer Heads",
@@ -18943,25 +19001,25 @@
      ]
     },
     {
-     "n": 99,
+     "n": 110,
      "text": "Return to Gunder Dinnig and hail him.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 108,
+     "n": 119,
      "text": "Travel to the Deepcut bandit camps which can be found if you keep going east a little way in the Underdocks newbie yard and slay them until you acquire a Dull Coin. Bring this coin back to Gunder.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 110,
+     "n": 121,
      "text": "Take the token over to the blacksmith shop in the citadel and give it to Blacksmith Hargrul.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 114,
+     "n": 125,
      "text": "You now have the option to trade it for a one-handed weapon.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
@@ -19612,57 +19670,132 @@
     {
      "n": 88,
      "kind": "step",
-     "text": "Return to Maude Astarace and give her the crystal.",
+     "text": "Return to Maude Astarace and give her the Faintly Glowing Crystal.",
      "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+",
      "items": []
     },
     {
      "n": 89,
-     "kind": "step",
-     "text": "After receiving your Hammered Iron Ring, ask Gunder Dinnig about work...",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
-     "items": []
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "Oh, yes. Something lingers within this crystal... but what? I shall find out.",
+     "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+"
     },
     {
      "n": 90,
-     "kind": "say",
-     "text": "What work?",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "kind": "npc",
+     "npc": "Maude Astarace",
+     "text": "I thank you, Player. You are most useful. Run along now, for i have much work to do.",
+     "part": "Part 3 for Enchanter/Elementalist/Wizard - Deepcut, Delvestone, Darrowdwell. - Req. Level 8+"
     },
     {
      "n": 91,
-     "kind": "npc",
-     "npc": "Gunder Dinnig",
-     "text": "Aye, there are domestic matters we might resolve to our profit. The Delvestone Mining Company quarrel with the Deepcut bandits in Darrowdwell. The company is ill-equipped to to protect their interests, but their pockets run deep.",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "kind": "step",
+     "text": "After receiving your Hammered Iron Ring, ask Gunder Dinnig about work...",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
     },
     {
      "n": 92,
-     "kind": "npc",
-     "npc": "Gunder Dinnig",
-     "text": "There is a standing bounty of the heads of Deepcut overseers. Fill this bag and earn your share. Send them packing!",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "kind": "say",
+     "text": "What work?",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
     },
     {
      "n": 93,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "Aye, there are domestic matters we might resolve to our profit. The Delvestone Mining Company quarrel with the Deepcut bandits in Darrowdwell. The company is ill-equipped to to protect their interests, but their pockets run deep.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 94,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "There is a standing bounty of the heads of Deepcut overseers. Fill this bag and earn your share. Send them packing!",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 95,
      "kind": "receive",
      "item": "Empty Overseer Bag",
      "qty": 1,
      "npc": "Gunder Dinnig",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
     },
     {
-     "n": 94,
+     "n": 96,
+     "kind": "say",
+     "text": "Deepcut overseers?",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 97,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "A vicious lot. They will give no quarter, and I advise you to do the same. Their miners know how to swing a battleaxe as well as a pick.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 98,
+     "kind": "say",
+     "text": "Where is Darrowdwell?",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 99,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "The mine is carved out of the rock above us. The lift will take you to the rafters.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 100,
+     "kind": "npc",
+     "npc": "Gunder Dinnig",
+     "text": "Watch your step.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
+    },
+    {
+     "n": 101,
      "kind": "step",
-     "text": "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
+     "text": "To get to the Darrowdwell, leave Gunder Dunnig and head to the Citadel by the way of the raft. Go up the ramp, then turn right and make your way around, keeping the Citadel on your left. You will see Munk and what looks like a large, stone elevated square platform nearby. That is the lift to the Overreach. Take the lift all the way up to the top, and enjoy the view! Step off the lift and turn right. The next lift is the one we want, the one labeled \"Lift to Darrowdwell Mine.\"",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
      "items": []
     },
     {
-     "n": 95,
+     "n": 102,
+     "kind": "step",
+     "text": "WARNING! There are empty spaces in the rafters at the mines. Be careful, as you will fall all the way down to the Citadel and die.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 103,
+     "kind": "step",
+     "text": "WARNING! The deepcut miner may aggro along with the overseer and assist in combat. (needs verification)",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 104,
+     "kind": "step",
+     "text": "Carefully make your way across the rafters, ignoring the different rafter rats as they aren't aggro. Your goal is the cave/tunnel you see to your left with a torch lighting the entrance.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 105,
+     "kind": "step",
+     "text": "Collect 6 Deepcut Overseer Head, place them in the Empty Overseer Bag and click combine to create Full Bag of Overseer Heads.",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
+     "items": []
+    },
+    {
+     "n": 106,
      "kind": "step",
      "text": "Hand in the Full Bag of Overseer Heads to Gunder Dinnig",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+",
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5",
      "items": [
       {
        "name": "Full Bag of Overseer Heads",
@@ -19671,145 +19804,145 @@
      ]
     },
     {
-     "n": 96,
+     "n": 107,
      "kind": "npc",
      "npc": "Gunder Dinning",
      "text": "Gruesome work, Player Name. Would that you had a sharper blade... yet a crown hewn is a copper earned. Bring this to Elara, the pay-master, along with your ring.",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
     },
     {
-     "n": 97,
+     "n": 108,
      "kind": "receive",
      "item": "Deepcut Overseer Bounty",
      "qty": 1,
      "npc": "Gunder Dinnig",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
     },
     {
-     "n": 98,
+     "n": 109,
      "kind": "npc",
      "npc": "Elara Venn",
      "text": "You acquit yourself well, Class. Here is your coin, and a signet that might serve you better.",
-     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 4+"
+     "part": "Part 2 for Beastmaster/Fighter - Deepcut Overseers in Darrowdwell Mines - Req. Level 5"
     },
     {
-     "n": 99,
+     "n": 110,
      "kind": "step",
      "text": "Return to Gunder Dinnig and hail him.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 100,
+     "n": 111,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "There is more business with the Deepcut.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 101,
+     "n": 112,
      "kind": "say",
      "text": "what business?",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 102,
+     "n": 113,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "The bandits have an encampment, a mine where the Delvestone dare not go. My peers wish to rout the blaggards, claim their quarries, and lease them to fill our coffers.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 103,
+     "n": 114,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "But we must exercise caution. I have a new assignment for you.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 104,
+     "n": 115,
      "kind": "say",
      "text": "what assignment?",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 105,
+     "n": 116,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "Find their lair, Player Name, and take no quarter. You may claim a bounty for every six hands of the bandits you slay. Bring them to the clerk, Traven, and he will see that you are paid. But that is not your task.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 106,
+     "n": 117,
      "kind": "say",
      "text": "what task?",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 107,
+     "n": 118,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "I wish to know who is behind this sordid outfit. If we are to extend our reach father into the Deep, we must know. Bring me any evidence you can find, however insignificant it might seem to your eye.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 108,
+     "n": 119,
      "kind": "step",
      "text": "Travel to the Deepcut bandit camps which can be found if you keep going east a little way in the Underdocks newbie yard and slay them until you acquire a Dull Coin. Bring this coin back to Gunder.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 109,
+     "n": 120,
      "kind": "npc",
      "npc": "Gunder Dinnig",
      "text": "One of the bandits carried this? It is an elvish coin, though I do not recognize the sigil. Should it belong to one of the great houses...",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 110,
+     "n": 121,
      "kind": "step",
      "text": "Take the token over to the blacksmith shop in the citadel and give it to Blacksmith Hargrul.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 111,
+     "n": 122,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "Hmm, 'Tis my token.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 112,
+     "n": 123,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "I haven't a blade suited to a young Class such as yourself. But a skullcracker will do.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 113,
+     "n": 124,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "If ye cannot wield it, return it to me to receive a smaller battle hammer.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     },
     {
-     "n": 114,
+     "n": 125,
      "kind": "step",
      "text": "You now have the option to trade it for a one-handed weapon.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+",
      "items": []
     },
     {
-     "n": 115,
+     "n": 126,
      "kind": "npc",
      "npc": "Blacksmith Hargrul",
      "text": "Haven't the strength, I see. Perhaps it's meant for a more capable Class.",
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19836,7 +19969,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -19908,7 +20041,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -20086,7 +20219,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Draznax",
     "Warerats in Underdocks"
@@ -20105,7 +20238,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -20881,7 +21014,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -21317,7 +21450,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Elara Venn",
     "Marshal Harding",
@@ -21452,7 +21585,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-16",
+   "fetched": "2026-10-17",
    "npcs": [
     "Matheus Griswald",
     "|Minimum Level = 1"
