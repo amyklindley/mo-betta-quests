@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-10-17",
+ "fetched": "2026-10-18",
  "quests": [
   {
    "title": "A Sweet Treat",
@@ -15,7 +15,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -33,7 +33,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -52,7 +52,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -110,7 +110,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -266,7 +266,7 @@
      "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -564,7 +564,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -593,7 +593,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -612,7 +612,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -631,7 +631,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Quartermaster Obaid;an ashira warrior",
     "Watch Captain Badawi"
@@ -650,7 +650,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1037,7 +1037,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1780,49 +1780,49 @@
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "If my duties didn't root me within the Den, I'd be more than willing to join you on this next hunt. though, my instincts tell me that the target you seek is not an expert poacher.",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 93,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "The human poachers in Keepers Bight are typically cunning, avoiding needless aggravation of the local wildlife. they understand they're one mistake away from being tracked down themselves.",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 94,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "Whoever attacked these black bears was sloppy...inexperienced. perhaps some fool wishing to prove themself to their foul brethren",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 95,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "You're going to find out where this would-be poacher is camping and act the part of their prey in order to lure them out",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 96,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "Take this potion. I challenged the raging ursine spirits to infuse it with their essence, and imbibing it will allow you to take on their form...if only for a short time.",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 97,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "You're going to act the part of the poacher's prey in order to lure them out of hiding, only to strike out at them with a fury they'll never suspect",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 98,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "Now all that remains is to find this poacher's location",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 99,
@@ -1830,35 +1830,35 @@
      "item": "Potion of Ursine Rage",
      "qty": 1,
      "npc": "Aerin Mossfang",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 100,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "Well done, Keeper!",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 101,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "you're proving to be a lethal hunter, . Good. The spirit within your claw is appeased for the time being, as is my own rage",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 102,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "i'm thankful to have a Keeper such as yourself to help enforce the will of the beastial spirits. While I don't dislike my role at the Den, I often find myself wishing to hunt alongside the packs oft he Weald.",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 103,
      "kind": "npc",
      "npc": "Aerin Mossfang",
      "text": "Relying on others is also not my strongest trait...Relgen can attest to that",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     },
     {
      "n": 104,
@@ -1866,10 +1866,10 @@
      "item": "Shroud of the Ardent Keeper",
      "qty": 1,
      "npc": "Aerin Mossfang",
-     "part": "Part 6 - Req. Lvl ? Was given at Lvl 11 but could be earlier"
+     "part": "Part 6 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2434,7 +2434,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2455,7 +2455,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2474,7 +2474,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2493,7 +2493,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
@@ -2512,7 +2512,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Bones",
     "Cordellius Hollmion"
@@ -2560,7 +2560,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2579,7 +2579,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -2598,7 +2598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -3078,7 +3078,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Dilshad Abolfazl",
     "Hult Beetlewrangler",
@@ -3431,7 +3431,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3893,7 +3893,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3914,7 +3914,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
@@ -3933,7 +3933,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Kalessa Velgarrith",
     "|Quest Rewards = (exp); (money:10)"
@@ -4024,7 +4024,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -4043,7 +4043,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -4062,7 +4062,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -4081,7 +4081,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -4100,7 +4100,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -4165,7 +4165,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -4184,7 +4184,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -4205,7 +4205,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5728,7 +5728,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -6016,7 +6016,7 @@
      "part": "Part 3 - Req. Lvl 15-17"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -6487,7 +6487,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "BBrugg Mulcher",
     "Brugg Mulcher",
@@ -6513,7 +6513,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Tenebrim Tam",
     "| Related Items ="
@@ -7305,7 +7305,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -7340,7 +7340,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -7366,7 +7366,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -7393,7 +7393,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7786,7 +7786,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7822,7 +7822,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Delilah"
    ]
@@ -7840,7 +7840,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -8183,7 +8183,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -8237,7 +8237,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -8332,7 +8332,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -8355,7 +8355,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8648,7 +8648,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8669,7 +8669,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Halveth Velgarrith",
     "a goblin stone-sorter"
@@ -8721,7 +8721,7 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -8740,7 +8740,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8759,7 +8759,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8778,7 +8778,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -8797,7 +8797,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Gatekeeper Nusder",
     "a razorwing runt"
@@ -8862,7 +8862,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8966,7 +8966,7 @@
      "part": "a note for vhaleth hal'kareth"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Ailis Hal'arketh",
     "Myal Vehear",
@@ -8987,7 +8987,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Aleyz Ith'vayen",
     "Amarah Ith'vayen"
@@ -9015,7 +9015,7 @@
      "part": "Part 1 - Goblin Scalps"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -9029,7 +9029,7 @@
    "min_level": "1",
    "classes": "ELE NEC",
    "related": [
-    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Nyxia Ak'kin; Mournful Outcast"
+    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Nyxia Ak'kin; Mournful Outcast; Miral the Dark Elf; Freysia Riftrend; Belot"
    ],
    "rewards": [],
    "steps": [
@@ -9520,42 +9520,42 @@
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "I don't know what took you so long. Next time I give you a task, I expect you to focus on that task alone. You've probably been wasting my time getting drunk in the Veiled Door with the other apprentices.",
-     "part": "Obtain Nerolir"
+     "part": "Obtain a Bottle of Nerolir"
     },
     {
      "n": 62,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Speaking of which, now that I have the essairyl, I need a good source of malic acid. Nerolir, an elven cider, has the perfect level of acidity for what I have in mind. As with most things elven, it is banned in the city, but you can sometimes find it in the Foreign Quarter. Go get me a bottle.",
-     "part": "Obtain Nerolir"
+     "part": "Obtain a Bottle of Nerolir"
     },
     {
      "n": 63,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Don't bother me again until you have some.",
-     "part": "Obtain Nerolir"
+     "part": "Obtain a Bottle of Nerolir"
     },
     {
      "n": 64,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "What's your poison?",
-     "part": "Ask Nyxia Ak'Kin About Nerolir"
+     "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
      "n": 65,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "Nerolir? That fancy elven swill from up top? Don't have any. Not much call for such things with this clientele.",
-     "part": "Ask Nyxia Ak'Kin About Nerolir"
+     "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
      "n": 66,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "The dark elf might have some.",
-     "part": "Ask Nyxia Ak'Kin About Nerolir"
+     "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
      "n": 67,
@@ -9588,7 +9588,7 @@
     {
      "n": 71,
      "kind": "receive",
-     "item": "Nerolir",
+     "item": "Bottle of Nerolir",
      "qty": 1,
      "npc": "Miral the Dark Elf",
      "part": "Purchase Nerolir from Miral"
@@ -9597,32 +9597,75 @@
      "n": 72,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
+     "text": "Warsa ai neth'zan, a competent apprentice! And about time. Senior isn't back from the errand I sent him on, which probably means he got himself killed as usual.",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 73,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "So, I need you to pick up where he left off. I've sent for a special order from Night Harbor. No human nirsavh can match the skill of an Ail'trist elementalist, of course, even with the pathetic examples we currently have at our disposal.",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 74,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Getting killed by the object of your own summoning. What an embarrassment!",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 75,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "Anyway, my point is that inadequate as they may be, our elementalists are superior to those in Night Harbor in all ways save one: the humans are removed from the politics of our house.",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 76,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
+     "text": "And that is important when discretion is needed. Therefore, you will go to Night Harbor. Find an elementalist in the Underdocks named Freysia Riftrend. Give her this note. And bring me back my package.",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 77,
+     "kind": "receive",
+     "item": "Letter to Freysia Riftrend",
+     "qty": 1,
+     "npc": "Vaslir Vharkith",
+     "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
+    },
+    {
+     "n": 78,
+     "kind": "npc",
+     "npc": "Vaslir Vharkith",
      "text": "So I need you to pick up where he left off. I've sent for a special order from the Night Harbor. No human nirsavh can match the skill of an Ail'trist elementalist, of course, even with the pathetic examples we currently have at our disposal.",
      "part": "The Note and the Order"
     },
     {
-     "n": 73,
+     "n": 79,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Getting killed by the object of your own summoning. What an embarassment!",
      "part": "The Note and the Order"
     },
     {
-     "n": 74,
+     "n": 80,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Anyway, my point is that inadequate as they may be, our elementalists are superior to those in Night Harbor in all ways save one: the humans are removed the politics of our house.",
      "part": "The Note and the Order"
     },
     {
-     "n": 75,
+     "n": 81,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "And that is important when discretion is needed. Therefore, you will go to Night Harbor. Find an elementalist in the Underdocks named Freysia Riftrend. Give her this note. And bring me back my package.",
      "part": "The Note and the Order"
     },
     {
-     "n": 76,
+     "n": 82,
      "kind": "receive",
      "item": "Letter to Freysia Riftrend",
      "qty": 1,
@@ -9630,42 +9673,42 @@
      "part": "The Note and the Order"
     },
     {
-     "n": 77,
+     "n": 83,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Varkith sent you, did he? I'll tell you the same thing I told his last messenger. I don't have his order. If you want it for your master, you'll have to retrieve it yourself.",
      "part": "Find Freysia Riftrend"
     },
     {
-     "n": 78,
+     "n": 84,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "One of our number, an elementalist named Belot, betrayed us to the Deepcut bandits and got several of her brethren killed. She also absconded with several valuable items including the package for your master.",
      "part": "Find Freysia Riftrend"
     },
     {
-     "n": 79,
+     "n": 85,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Now, the Descendian Order are mercenaries. I can't be sending our lads out to fight for free, but I also can't have the word getting out that you can double cross us.",
      "part": "Find Freysia Riftrend"
     },
     {
-     "n": 80,
+     "n": 86,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "So maybe we can help each other. The scuttlebutt is that Belot is holed up at one of the Deepcut Bandit camps... or maybe in the mines behind them. If you put down enough of them, you should find her. Once that treacherous little snake is dead, we save face and you get your master's package.",
      "part": "Find Freysia Riftrend"
     },
     {
-     "n": 81,
+     "n": 87,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Go out that big gate that the ships use and head into the caverns to your right, if you go in far enough, the place is lousy with them.",
      "part": "Find Freysia Riftrend"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Freysia Riftrend",
     "Miral the Dark Elf",
@@ -9674,7 +9717,7 @@
     "Vaslir Maryn",
     "Vaslir Naiyth",
     "Vaslir Vharkith",
-    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Nyxia Ak'kin; Mournful Outcast"
+    "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Nyxia Ak'kin; Mournful Outcast; Miral the Dark Elf; Freysia Riftrend; Belot"
    ]
   },
   {
@@ -9690,7 +9733,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Apprentice Esveth",
     "| Related Items ="
@@ -9953,7 +9996,7 @@
      "part": "Part 1 - Req. Lvl 2"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Cook Vashuk",
     "Kulzzara",
@@ -10121,7 +10164,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Klavel Sul",
     "a separated skull"
@@ -10149,7 +10192,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -10166,7 +10209,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": []
   },
   {
@@ -10872,7 +10915,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -10975,7 +11018,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -10993,9 +11036,25 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Isrothen Vael'xirith"
+   ]
+  },
+  {
+   "title": "Joining the Red Mantles",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Joining_the_Red_Mantles",
+   "zone": "Night Harbor",
+   "giver": "Commander Otieno",
+   "min_level": "1",
+   "classes": "|Related NPCs =",
+   "related": [],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-18",
+   "npcs": [
+    "Commander Otieno"
    ]
   },
   {
@@ -11011,7 +11070,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -11030,7 +11089,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -11047,7 +11106,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": []
   },
   {
@@ -11192,7 +11251,7 @@
      "part": "Part 2 - Tailoring the Robe"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Mason Steinn; Layith Kharem; Guard Iskandar; Noura the Tailor; Mira Gables; Riham",
     "a wash maiden"
@@ -11211,7 +11270,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Fendris the Forsaken",
     "an undead poacher"
@@ -11230,7 +11289,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -11265,7 +11324,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Biomass",
     "Blacksmith Jerictus",
@@ -11300,7 +11359,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -11429,7 +11488,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Hull Orbel"
    ]
@@ -11801,7 +11860,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Chahaya Tam",
     "Chayaha Tam"
@@ -12004,7 +12063,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -12106,7 +12165,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -12126,7 +12185,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -12146,7 +12205,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Bones",
     "| Related Items ="
@@ -12447,7 +12506,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -12755,7 +12814,7 @@
      "part": "Part 5"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar; Lady Tabitha; Embalmer Tyriel",
@@ -12780,7 +12839,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -13295,7 +13354,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -13321,7 +13380,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -13341,7 +13400,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -13360,7 +13419,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -13451,7 +13510,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -13473,7 +13532,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -13504,7 +13563,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -13523,7 +13582,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -14300,7 +14359,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -14567,7 +14626,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
@@ -14878,7 +14937,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -15573,7 +15632,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -16549,7 +16608,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -16581,7 +16640,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "| Related Items =",
     "| Start Zone = underdocks"
@@ -16641,7 +16700,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -16973,7 +17032,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -17259,7 +17318,7 @@
      "part": "Part 4 - Req. Lvl 13"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Father Fyod",
     "Father General Lorak",
@@ -17379,7 +17438,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Varilis Thornvine",
     "a mischievous faerie",
@@ -17403,7 +17462,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -17426,7 +17485,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Picci Manifold"
    ]
@@ -17444,7 +17503,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -17490,7 +17549,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -17507,7 +17566,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "a master blacksmith"
    ]
@@ -18052,7 +18111,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -18073,7 +18132,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Glaeron Kes'tel",
     "a Deepgulp warrior"
@@ -18092,7 +18151,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Sereth Vael'xirith"
    ]
@@ -18151,7 +18210,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Belot",
     "Senior Apprentice Syrsil"
@@ -18170,7 +18229,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -18191,7 +18250,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -18210,7 +18269,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Chaplain Cranely"
    ]
@@ -18350,7 +18409,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -18372,7 +18431,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -18391,7 +18450,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18590,7 +18649,7 @@
      "part": "Part 4 - Fallen Pass"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Jalwa Noor",
     "Mayana",
@@ -18611,7 +18670,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18695,7 +18754,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18714,7 +18773,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -19942,7 +20001,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19969,7 +20028,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -20041,7 +20100,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -20219,7 +20278,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Draznax",
     "Warerats in Underdocks"
@@ -20238,7 +20297,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -21014,7 +21073,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -21450,7 +21509,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Elara Venn",
     "Marshal Harding",
@@ -21585,7 +21644,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-17",
+   "fetched": "2026-10-18",
    "npcs": [
     "Matheus Griswald",
     "|Minimum Level = 1"
