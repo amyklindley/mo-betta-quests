@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-10-20",
+ "fetched": "2026-10-22",
  "quests": [
   {
    "title": "A Letter for Munir Halabi",
@@ -16,7 +16,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Munir Halabi",
     "Quessith Velgarrith"
@@ -35,7 +35,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -53,7 +53,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -72,7 +72,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -130,7 +130,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -286,7 +286,7 @@
      "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -584,7 +584,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -613,7 +613,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -632,7 +632,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -651,7 +651,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Quartermaster Obaid;an ashira warrior",
     "Watch Captain Badawi"
@@ -670,7 +670,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1057,7 +1057,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1889,7 +1889,7 @@
      "part": "Part 6 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2454,12 +2454,30 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
     "Whiskey",
     "Yorias"
+   ]
+  },
+  {
+   "title": "Blacktide Orders",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Blacktide_Orders",
+   "zone": "Great Cavern Sea",
+   "giver": "Drelith Vael'xirith",
+   "min_level": "16",
+   "classes": "All",
+   "related": [
+    "Drelith Vael'xirith"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-22",
+   "npcs": [
+    "Drelith Vael'xirith"
    ]
   },
   {
@@ -2475,7 +2493,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2494,7 +2512,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2513,7 +2531,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
@@ -2532,7 +2550,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Bones",
     "Cordellius Hollmion"
@@ -2580,7 +2598,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2599,10 +2617,28 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
+   ]
+  },
+  {
+   "title": "Cargo Inspection",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Cargo_Inspection",
+   "zone": "Great Cavern Sea",
+   "giver": "Ysmara velgarrith",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "Ysmara velgarrith"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-22",
+   "npcs": [
+    "Ysmara velgarrith"
    ]
   },
   {
@@ -2618,7 +2654,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -2774,7 +2810,7 @@
      "part": "Cinder Beetle Breastplate"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Hult Beetlewrangler",
     "a master blacksmith"
@@ -3123,7 +3159,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3585,7 +3621,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3606,7 +3642,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
@@ -3697,7 +3733,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -3716,7 +3752,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -3735,7 +3771,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -3754,7 +3790,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -3773,7 +3809,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -3838,7 +3874,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -3857,7 +3893,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -3878,7 +3914,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5401,7 +5437,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -5702,7 +5738,7 @@
      "part": "Part 3 - Req. Lvl 15"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -6173,7 +6209,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "BBrugg Mulcher",
     "Brugg Mulcher",
@@ -6199,7 +6235,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Tenebrim Tam",
     "| Related Items ="
@@ -6991,7 +7027,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -7026,7 +7062,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -7052,7 +7088,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -7079,7 +7115,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7472,7 +7508,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7508,7 +7544,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Delilah"
    ]
@@ -7526,7 +7562,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -7869,7 +7905,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -7923,7 +7959,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -8018,7 +8054,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -8041,7 +8077,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8334,7 +8370,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8355,7 +8391,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Halveth Velgarrith",
     "a goblin stone-sorter"
@@ -8407,7 +8443,7 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
@@ -8426,7 +8462,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8445,7 +8481,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8464,7 +8500,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -8483,7 +8519,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Gatekeeper Nusder",
     "a razorwing runt"
@@ -8548,7 +8584,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8562,102 +8598,82 @@
    "min_level": "1",
    "classes": "SPB WIZ",
    "related": [
-    "| Quest Rewards ="
+    "A spirals deepgnome researcher;Ailis Hal'arketh;Vhaleth Hal'kareth"
    ],
    "rewards": [],
    "steps": [
     {
-     "n": 6,
-     "text": "The halathian explorers are not called explorers they are called wizard's shamans and zombies and are located right next to him they eventually will drop the spire research",
-     "part": "a note for vhaleth hal'kareth",
+     "n": 1,
+     "text": "Take the binder back to Myal Vehear he then gives you a coin to take to Ailis Hal'arketh.",
+     "part": "Part 1 - ?",
+     "items": []
+    },
+    {
+     "n": 2,
+     "text": "Take the coin to Ailis Halkareth and she gives you a signet ring.",
+     "part": "Part 1 - ?",
+     "items": []
+    },
+    {
+     "n": 3,
+     "text": "Take him the note and then he goes on to say the following after you trade it to him.",
+     "part": "A note for Vhaleth Hal'kareth",
+     "items": []
+    },
+    {
+     "n": 4,
+     "text": "You will then take the Hathalian spire research notes back to Ailis Hal'kareth along with the ring",
+     "part": "A note for Vhaleth Hal'kareth",
+     "items": []
+    },
+    {
+     "n": 5,
+     "text": "She rewards you with an upgraded version of the ring you originally received. Need dialogue, item name, stats, etc",
+     "part": "A note for Vhaleth Hal'kareth",
      "items": []
     }
    ],
    "lines": [
     {
      "n": 1,
-     "kind": "npc",
-     "npc": "Valheth Hal'kareth",
-     "text": "If only you had been here sooner, I would have the research!",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Valheth Hal'kareth",
-     "text": "I spent several weeks studying the spire. Analyzing it with detection and divination magics.",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Valheth Hal'kareth",
-     "text": "I was so engrossed in my studies that I did not notice that each time I expended magical energy toward the spire, it awakened something below the surface.",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Valheth Hal'kareth",
-     "text": "Undead hathalian explorers rose from the sand and ambushed me. I dropped my research notes in haste and retreated a safe distance away from them.",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Valheth Hal'kareth",
-     "text": "They have the research that Allis desires. Slay them and retrieve it.",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 6,
      "kind": "step",
-     "text": "The halathian explorers are not called explorers they are called wizard's shamans and zombies and are located right next to him they eventually will drop the spire research",
-     "part": "a note for vhaleth hal'kareth",
+     "text": "Take the binder back to Myal Vehear he then gives you a coin to take to Ailis Hal'arketh.",
+     "part": "Part 1 - ?",
      "items": []
     },
     {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Ailis Hal'arketh",
-     "text": "You have done well.",
-     "part": "a note for vhaleth hal'kareth"
+     "n": 2,
+     "kind": "step",
+     "text": "Take the coin to Ailis Halkareth and she gives you a signet ring.",
+     "part": "Part 1 - ?",
+     "items": []
     },
     {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Ailis Hal'arketh",
-     "text": "This research should provide insight into the Hal'arkath ruins and the magic contained within.",
-     "part": "a note for vhaleth hal'kareth"
+     "n": 3,
+     "kind": "step",
+     "text": "Take him the note and then he goes on to say the following after you trade it to him.",
+     "part": "A note for Vhaleth Hal'kareth",
+     "items": []
     },
     {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Ailis Hal'arketh",
-     "text": "I will fortify the ring to strengthen it for you.",
-     "part": "a note for vhaleth hal'kareth"
+     "n": 4,
+     "kind": "step",
+     "text": "You will then take the Hathalian spire research notes back to Ailis Hal'kareth along with the ring",
+     "part": "A note for Vhaleth Hal'kareth",
+     "items": []
     },
     {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Ailis Hal'arketh",
-     "text": "You have shown great promise and ambition. These are needed within our House.",
-     "part": "a note for vhaleth hal'kareth"
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Ailis Hal'arketh",
-     "text": "Go out and practice. Strengthen yourself in magic and grow in strength.",
-     "part": "a note for vhaleth hal'kareth"
+     "n": 5,
+     "kind": "step",
+     "text": "She rewards you with an upgraded version of the ring you originally received. Need dialogue, item name, stats, etc",
+     "part": "A note for Vhaleth Hal'kareth",
+     "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
-    "Ailis Hal'arketh",
-    "Myal Vehear",
-    "Valheth Hal'kareth",
-    "| Quest Rewards ="
+    "A spirals deepgnome researcher;Ailis Hal'arketh;Vhaleth Hal'kareth",
+    "Myal Vehear"
    ]
   },
   {
@@ -8668,14 +8684,20 @@
    "min_level": "1",
    "classes": "ENC ROG",
    "related": [
-    "Aleyz Ith'vayen"
+    "Aleyz Ith'vayen;a cave myconid;an enraged elemental;Jerek D'shadow"
    ],
-   "rewards": [],
+   "rewards": [
+    "Enchanter - Cloth Belt of Runes ~> Fine Cloth Belt of Runes ~> Silk Belt of Runes",
+    "Rogue - Leather Belt of Runes ~> Strengthened Leather Belt of Runes ~> ?",
+    "Faction with House of Ith'vayen.",
+    "Faction with Citizens of Ail'vorith.",
+    "Access to the city."
+   ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
-    "Aleyz Ith'vayen",
+    "Aleyz Ith'vayen;a cave myconid;an enraged elemental;Jerek D'shadow",
     "Amarah Ith'vayen"
    ]
   },
@@ -8690,7 +8712,14 @@
     "a Deepgulp runt"
    ],
    "rewards": [],
-   "steps": [],
+   "steps": [
+    {
+     "n": 2,
+     "text": "You can now cross the bridge into the city without getting killed by the guards.",
+     "part": "Part 1 - Goblin Scalps",
+     "items": []
+    }
+   ],
    "lines": [
     {
      "n": 1,
@@ -8699,9 +8728,16 @@
      "qty": 1,
      "npc": "Laren Drin'dar",
      "part": "Part 1 - Goblin Scalps"
+    },
+    {
+     "n": 2,
+     "kind": "step",
+     "text": "You can now cross the bridge into the city without getting killed by the guards.",
+     "part": "Part 1 - Goblin Scalps",
+     "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -8720,73 +8756,79 @@
    "rewards": [],
    "steps": [
     {
-     "n": 25,
+     "n": 14,
+     "text": "You can now cross the bridge into the city without getting killed by the guards.",
+     "part": "Part 1",
+     "items": []
+    },
+    {
+     "n": 26,
      "text": "Directions to Laeran Birchshade",
      "part": "Find the Escaped Slave",
      "items": []
     },
     {
-     "n": 34,
+     "n": 35,
      "text": "two confirmed routes",
      "part": "Speak with Vaslir Maryn",
      "items": []
     },
     {
-     "n": 39,
+     "n": 40,
      "text": "Directions to the elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 40,
+     "n": 41,
      "text": "left/south",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 41,
+     "n": 42,
      "text": "southern wall of the cavern",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 42,
+     "n": 43,
      "text": "four Essence of Elemental Air",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 43,
+     "n": 44,
      "text": "four Essence of Elemental Earth",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 44,
+     "n": 45,
      "text": "Air Elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 45,
+     "n": 46,
      "text": "Earth Elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 57,
+     "n": 58,
      "text": "northern edge of the Great Cavern",
      "part": "Gather the Water Samples",
      "items": []
     },
     {
-     "n": 88,
+     "n": 89,
      "text": "Quest Progression Status (October 19, 2026)",
      "part": "Part 6? (TBD)",
      "items": []
     },
     {
-     "n": 89,
+     "n": 90,
      "text": "Amicable",
      "part": "Part 6? (TBD)",
      "items": []
@@ -8886,327 +8928,334 @@
     },
     {
      "n": 14,
+     "kind": "step",
+     "text": "You can now cross the bridge into the city without getting killed by the guards.",
+     "part": "Part 1",
+     "items": []
+    },
+    {
+     "n": 15,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Hmm... another hopeful apprentice, is it? Excellent, that last fool Naiyth sent me got herself torn apart by elementals. Or was it vivisected by deep gnomes? It's hard to tell one apprentice from another.",
      "part": "Part 2"
     },
     {
-     "n": 15,
+     "n": 16,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "So let's see what what we have to work with.",
      "part": "Part 2"
     },
     {
-     "n": 16,
+     "n": 17,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Well you're a weak looking thing. Do you believe one such as yourself can be of service to me, a vaslir who has dared to speak the Winding Words only to come out stronger?",
      "part": "Part 2"
     },
     {
-     "n": 17,
+     "n": 18,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Hmm... so you know how to cleave yourself to power. Good. There may be some honor in helping your ascent. But if you want the patronage of the great Vaslir Vharkith, you will need to prove you are more than just a good judge of character. Let's see how far that ambition can take you.",
      "part": "Part 2"
     },
     {
-     "n": 18,
+     "n": 19,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "How would you feel about a little quid pro quo? And in the process we will test your mettle a bit.",
      "part": "Part 2"
     },
     {
-     "n": 19,
+     "n": 20,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Good. I had a slave, a young Faelewyn, who was going to be used in a summoning. Ah, I had the most exquisite excruciation planned for him: it would have been perfect!",
      "part": "Part 2"
     },
     {
-     "n": 20,
+     "n": 21,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Sadly, the creature proved uncommonly clever and escaped while I was at a seminar hosted by the neth'vaslir himself.",
      "part": "Part 2"
     },
     {
-     "n": 21,
+     "n": 22,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Yes, I am a student of the immortal head of our house himself! Now you are realizing just how beneficial it will be for you to serve one with my connections.",
      "part": "Part 2"
     },
     {
-     "n": 22,
+     "n": 23,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "To that end, you shall find this escaped slave. Don't bother bringing him back alive. The requisite conjunction for the summoning has passed.",
      "part": "Part 2"
     },
     {
-     "n": 23,
+     "n": 24,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "However, there is the matter of some notes which that zor'thez stole from me. Reports are that he was headed towards the Great Cavern Sea. Find him and bring the notes back to me.",
      "part": "Part 2"
     },
     {
-     "n": 24,
+     "n": 25,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Do this and you shall have earned my patronage. Hunt well, young one!",
      "part": "Part 2"
     },
     {
-     "n": 25,
+     "n": 26,
      "kind": "step",
      "text": "Directions to Laeran Birchshade",
      "part": "Find the Escaped Slave",
      "items": []
     },
     {
-     "n": 26,
+     "n": 27,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "My research!",
      "part": "Part 3"
     },
     {
-     "n": 27,
+     "n": 28,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Senior was sure you'd get yourself killed like the others.",
      "part": "Part 3"
     },
     {
-     "n": 28,
+     "n": 29,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Now, I don't suppose you know what essairyl is? Of course you don't. You'll have to start knowing these things if you expect to become a senior apprentice. Run along to Vaslir Maryn and tell her I need another flask of it.",
      "part": "Part 3"
     },
     {
-     "n": 29,
+     "n": 30,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Give her this in exchange.",
      "part": "Part 3"
     },
     {
-     "n": 30,
+     "n": 31,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "Karzzul, apprentice. I trust you have a good reason for interrupting my research?",
      "part": "Speak with Vaslir Maryn"
     },
     {
-     "n": 31,
+     "n": 32,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "Corpse dust, is it? I assume that means the idiot sent you and that he needs more essairyl.",
      "part": "Speak with Vaslir Maryn"
     },
     {
-     "n": 32,
+     "n": 33,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "I'm afraid I used up the last of my stock on yesterday's binding.",
      "part": "Speak with Vaslir Maryn"
     },
     {
-     "n": 33,
+     "n": 34,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "You'll have to talk to Vaslir Kiannes... unless you feel like gathering more essences for me.",
      "part": "Speak with Vaslir Maryn"
     },
     {
-     "n": 34,
+     "n": 35,
      "kind": "step",
      "text": "two confirmed routes",
      "part": "Speak with Vaslir Maryn",
      "items": []
     },
     {
-     "n": 35,
+     "n": 36,
      "kind": "say",
      "text": "I will gather essences for you.",
-     "part": "Route A: Gather Essences for Vaslir Maryn"
-    },
-    {
-     "n": 36,
-     "kind": "npc",
-     "npc": "Vaslir Maryn",
-     "text": "Yes, we elaborate essairyl from the essences left behind when an elemental is destroyed.",
      "part": "Route A: Gather Essences for Vaslir Maryn"
     },
     {
      "n": 37,
      "kind": "npc",
      "npc": "Vaslir Maryn",
-     "text": "If you wish to hone your skills somewhat, I suggest traveling beyond the walls of the city and hunting down elementals in the southern part of this cavern. A rogue group of summoners has established a presence there. The type of elementals they are summoning are ideal sources reagents.",
+     "text": "Yes, we elaborate essairyl from the essences left behind when an elemental is destroyed.",
      "part": "Route A: Gather Essences for Vaslir Maryn"
     },
     {
      "n": 38,
      "kind": "npc",
      "npc": "Vaslir Maryn",
-     "text": "Kill them and harvest four air and four earth essences. Give them to me along with the corpse dust.",
+     "text": "If you wish to hone your skills somewhat, I suggest traveling beyond the walls of the city and hunting down elementals in the southern part of this cavern. A rogue group of summoners has established a presence there. The type of elementals they are summoning are ideal sources reagents.",
      "part": "Route A: Gather Essences for Vaslir Maryn"
     },
     {
      "n": 39,
+     "kind": "npc",
+     "npc": "Vaslir Maryn",
+     "text": "Kill them and harvest four air and four earth essences. Give them to me along with the corpse dust.",
+     "part": "Route A: Gather Essences for Vaslir Maryn"
+    },
+    {
+     "n": 40,
      "kind": "step",
      "text": "Directions to the elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 40,
+     "n": 41,
      "kind": "step",
      "text": "left/south",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 41,
+     "n": 42,
      "kind": "step",
      "text": "southern wall of the cavern",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 42,
+     "n": 43,
      "kind": "step",
      "text": "four Essence of Elemental Air",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 43,
+     "n": 44,
      "kind": "step",
      "text": "four Essence of Elemental Earth",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 44,
+     "n": 45,
      "kind": "step",
      "text": "Air Elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 45,
+     "n": 46,
      "kind": "step",
      "text": "Earth Elementals",
      "part": "Gather the Elemental Essences",
      "items": []
     },
     {
-     "n": 46,
+     "n": 47,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "You return and with the essences. That is a welcome surprise, although competence while in the service of the idiot may not work in your favor.",
      "part": "Return to Vaslir Maryn"
     },
     {
-     "n": 47,
+     "n": 48,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "You are a promising young elementalist. In the future, should you desire to work for a competent instructor, you know where my laboratory is.",
      "part": "Return to Vaslir Maryn"
     },
     {
-     "n": 48,
+     "n": 49,
      "kind": "npc",
      "npc": "Vaslir Maryn",
      "text": "May you hear, kulzzan.",
      "part": "Return to Vaslir Maryn"
     },
     {
-     "n": 49,
+     "n": 50,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Karzzul, varsa ai Neth'xan! What brings you to me today?",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 50,
+     "n": 51,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "You want essairyl? I need it for my bindings, and you are obviously not ready to perform a binding of your own.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 51,
+     "n": 52,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "I assume you are one of our dear Vharkith's pawns. He's always sending you poor fellows to ask for the fruits of our labor. I assume you are hoping to trade us some corpse dust for the essairyl, as usual.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 52,
+     "n": 53,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Well, I'm afraid my price has gone up. If you want to please your master, you'll have to earn my essairyl.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 53,
+     "n": 54,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "There are a group of deep gnomes near the northern edge of our great cavern. They are conducting experiments on the impurities in the water there.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 54,
+     "n": 55,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Industrious little fellows. Almost a shame to dispose of them. Quite useful, they can be. Yes, indeed. Quite useful.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 55,
+     "n": 56,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "But research needs as they say. Research needs. Bring me some of their water samples. Ten should be enough for my current project.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 56,
+     "n": 57,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Give me the samples along with the corpse dust, and you'll have your essairyl.",
      "part": "Route B: Earn Essairyl from Vaslir Kiannes"
     },
     {
-     "n": 57,
+     "n": 58,
      "kind": "step",
      "text": "northern edge of the Great Cavern",
      "part": "Gather the Water Samples",
      "items": []
     },
     {
-     "n": 58,
+     "n": 59,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Fascinating. This may be useful indeed.",
      "part": "Gather the Water Samples"
     },
     {
-     "n": 59,
+     "n": 60,
      "kind": "npc",
      "npc": "Vaslir Kiannes",
      "text": "Here is a vial of essairyl as promised, my dear gnome slayer.",
      "part": "Gather the Water Samples"
     },
     {
-     "n": 60,
+     "n": 61,
      "kind": "receive",
      "item": "Flask of Essairyl",
      "qty": 1,
@@ -9214,77 +9263,77 @@
      "part": "Gather the Water Samples"
     },
     {
-     "n": 61,
+     "n": 62,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "I don't know what took you so long. Next time I give you a task, I expect you to focus on that task alone. You've probably been wasting my time getting drunk in the Veiled Door with the other apprentices.",
      "part": "Obtain a Bottle of Nerolir"
     },
     {
-     "n": 62,
+     "n": 63,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Speaking of which, now that I have the essairyl, I need a good source of malic acid. Nerolir, an elven cider, has the perfect level of acidity for what I have in mind. As with most things elven, it is banned in the city, but you can sometimes find it in the Foreign Quarter. Go get me a bottle.",
      "part": "Obtain a Bottle of Nerolir"
     },
     {
-     "n": 63,
+     "n": 64,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Don't bother me again until you have some.",
      "part": "Obtain a Bottle of Nerolir"
     },
     {
-     "n": 64,
+     "n": 65,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "What's your poison?",
      "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
-     "n": 65,
+     "n": 66,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "Nerolir? That fancy elven swill from up top? Don't have any. Not much call for such things with this clientele.",
      "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
-     "n": 66,
+     "n": 67,
      "kind": "npc",
      "npc": "Nyxia Ak'Kin",
      "text": "The dark elf might have some.",
      "part": "Ask Nyxia Ak'kin About Nerolir"
     },
     {
-     "n": 67,
+     "n": 68,
      "kind": "npc",
      "npc": "Miral the Dark Elf",
      "text": "Karzzul. You another bounty hunter or you looking to volunteer?",
      "part": "Purchase Nerolir from Miral"
     },
     {
-     "n": 68,
+     "n": 69,
      "kind": "npc",
      "npc": "Miral the Dark Elf",
      "text": "Ah you heard about the raid, I take it? That was a fun one. Caught the fools flat footed heading towards the Bight.",
      "part": "Purchase Nerolir from Miral"
     },
     {
-     "n": 69,
+     "n": 70,
      "kind": "npc",
      "npc": "Miral the Dark Elf",
      "text": "I did snag a crate of Nerolir from them. Price is 10 silver a bottle.",
      "part": "Purchase Nerolir from Miral"
     },
     {
-     "n": 70,
+     "n": 71,
      "kind": "npc",
      "npc": "Miral the Dark Elf",
      "text": "Enjoy. One of the only things I miss from home.",
      "part": "Purchase Nerolir from Miral"
     },
     {
-     "n": 71,
+     "n": 72,
      "kind": "receive",
      "item": "Bottle of Nerolir",
      "qty": 1,
@@ -9292,42 +9341,42 @@
      "part": "Purchase Nerolir from Miral"
     },
     {
-     "n": 72,
+     "n": 73,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Warsa ai neth'zan, a competent apprentice! And about time. Senior isn't back from the errand I sent him on, which probably means he got himself killed as usual.",
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 73,
+     "n": 74,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "So, I need you to pick up where he left off. I've sent for a special order from Night Harbor. No human nirsavh can match the skill of an Ail'trist elementalist, of course, even with the pathetic examples we currently have at our disposal.",
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 74,
+     "n": 75,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Getting killed by the object of your own summoning. What an embarrassment!",
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 75,
+     "n": 76,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Anyway, my point is that inadequate as they may be, our elementalists are superior to those in Night Harbor in all ways save one: the humans are removed from the politics of our house.",
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 76,
+     "n": 77,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "And that is important when discretion is needed. Therefore, you will go to Night Harbor. Find an elementalist in the Underdocks named Freysia Riftrend. Give her this note. And bring me back my package.",
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 77,
+     "n": 78,
      "kind": "receive",
      "item": "Letter to Freysia Riftrend",
      "qty": 1,
@@ -9335,91 +9384,91 @@
      "part": "Return the Bottle of Nerolir to Vaslir Vharkith"
     },
     {
-     "n": 78,
+     "n": 79,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Varkith sent you, did he? I'll tell you the same thing I told his last messenger. I don't have his order. If you want it for your master, you'll have to retrieve it yourself.",
      "part": "Deliver the Letter to Freysia Riftrend"
     },
     {
-     "n": 79,
+     "n": 80,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "One of our number, an elementalist named Belot, betrayed us to the Deepcut bandits and got several of her brethren killed. She also absconded with several valuable items including the package for your master.",
      "part": "Deliver the Letter to Freysia Riftrend"
     },
     {
-     "n": 80,
+     "n": 81,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Now, the Descendian Order are mercenaries. I can't be sending our lads out to fight for free, but I also can't have the word getting out that you can double cross us.",
      "part": "Deliver the Letter to Freysia Riftrend"
     },
     {
-     "n": 81,
+     "n": 82,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "So maybe we can help each other. The scuttlebutt is that Belot is holed up at one of the Deepcut Bandit camps... or maybe in the mines behind them. If you put down enough of them, you should find her. Once that treacherous little snake is dead, we save face and you get your master's package.",
      "part": "Deliver the Letter to Freysia Riftrend"
     },
     {
-     "n": 82,
+     "n": 83,
      "kind": "npc",
      "npc": "Freysia Riftrend",
      "text": "Go out that big gate that the ships use and head into the caverns to your right, if you go in far enough, the place is lousy with them.",
      "part": "Deliver the Letter to Freysia Riftrend"
     },
     {
-     "n": 83,
+     "n": 84,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "My order! At last!",
      "part": "Return Vharkith's Order"
     },
     {
-     "n": 84,
+     "n": 85,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Varsa ai Neth'xan! You have finally lived up to my expectations, Senior. Yes, that's right. Since you completed Senior's task, you are now my new senior apprentice. If the old one should somehow find his way back here, you may do with him as you will.",
      "part": "Return Vharkith's Order"
     },
     {
-     "n": 85,
+     "n": 86,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "I don't have any more senior apprentice robes, so you'll have to find one for yourself. I mean really, I can't believe I was only given 20! How am I supposed to make do with only 20 robes when apprentices die so often?",
      "part": "Return Vharkith's Order"
     },
     {
-     "n": 86,
+     "n": 87,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Yet another thing I'll have to straighten out when I am in charge. For now, I must attend to my research. Come back later, and I'll have another task for you.",
      "part": "Return Vharkith's Order"
     },
     {
-     "n": 87,
+     "n": 88,
      "kind": "npc",
      "npc": "Vaslir Vharkith",
      "text": "Karzzul, Senior. I am still busy with my project. Return to me later.",
      "part": "Part 6? (TBD)"
     },
     {
-     "n": 88,
+     "n": 89,
      "kind": "step",
      "text": "Quest Progression Status (October 19, 2026)",
      "part": "Part 6? (TBD)",
      "items": []
     },
     {
-     "n": 89,
+     "n": 90,
      "kind": "step",
      "text": "Amicable",
      "part": "Part 6? (TBD)",
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Freysia Riftrend",
     "Miral the Dark Elf",
@@ -9444,7 +9493,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Apprentice Esveth",
     "| Related Items ="
@@ -9457,262 +9506,15 @@
    "giver": "Xilonen Velgarrith",
    "min_level": "1",
    "classes": "SHD",
-   "related": [],
+   "related": [
+    "Cook Vashuk;Kulzzara; Supplier Jul;juvenile shark;Vhalrek Velgarrith"
+   ],
    "rewards": [],
    "steps": [],
-   "lines": [
-    {
-     "n": 1,
-     "kind": "npc",
-     "npc": "Cook Vashuk",
-     "text": "Splendid! Such fine luster! Fit for the Queen in all Her glory!",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 2,
-     "kind": "npc",
-     "npc": "Cook Vashuk",
-     "text": "What do I have to trade for such a fine piece? Hmm. Ah!",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 3,
-     "kind": "npc",
-     "npc": "Cook Vashuk",
-     "text": "A fine blade to pay for such a fine shell. The Shadow blesses me this day!",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 4,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "You think this is worth at least one silver piece? Not even close, exile.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 5,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "You're going to need to try harder than that to earn a profit around here. Or maybe you're just not Velgarrith material.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 6,
-     "kind": "npc",
-     "npc": "Kulzzara",
-     "text": "Where did you find this hunk of scrap? Listen, I can tell that you're desperate, so I'll cut you a deal.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 7,
-     "kind": "npc",
-     "npc": "Kulzzara",
-     "text": "A client dropped this off earlier. Apparently the blade is hot, meaning it was recently used in an assassination.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 8,
-     "kind": "npc",
-     "npc": "Kulzzara",
-     "text": "I don't want Xal'tharn inspectors breathing down my neck about it, so it's all yours and no longer my problem.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 9,
-     "kind": "npc",
-     "npc": "Kulzzara",
-     "text": "Now get lost!",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 10,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Not quite there yet, exile. I'd say it might be worth half a silver on the best of days. I'm sure that you can do better.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 11,
-     "kind": "npc",
-     "npc": "Supplier Jul",
-     "text": "You know what? I think I do have a use for something like that.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 12,
-     "kind": "npc",
-     "npc": "Supplier Jul",
-     "text": "Here. In exhange you can have...",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 13,
-     "kind": "npc",
-     "npc": "Supplier Jul",
-     "text": "Hard to come by in these parts, but I'm willing to part with it to get my hands on a useful blade right about now.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 14,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Not an impressive haul, but I suppose this does meet the threshold I set for you. If only just.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 15,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "I probably shouldn't have expected too much from someone straight out of the quarry, but I think you're still capable enough to be honed into something more potent.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 16,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "So with that said, are you ready to move on to the second part of your test?",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 17,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "What, did I forget to mention this was a two-parter?",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 18,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "You've shown that you have at least some drive and guile, but the Hand of the Deep must also be able to maintain a firm hold over what is ours.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 19,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Velgarrith mercenary forces rival that of any other military, so part two is a much more straightforward one: a test of your combat ability.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 20,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Our smugglers have been complaining that the thresher population near the harbors of the foreign quarter have been disrupting their routes.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 21,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Show me that you can brave the waters of the Deep and bring me four juvenile thresher fins.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 22,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "And try not to become just another floating corpse.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 23,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "So it turns out that you both have a brain and a strong arm. Good",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 24,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Less vermin disrupting our trade means more profit. I think you'll fit in nicely",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 25,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "Bring this to my cousin, Vhalrek, down in our harbor stronghold. You won't be able to miss his grin.,",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 26,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "If you're going to be part of House Velgarrith, you'll need to learn the tunnels beneath the goreeign quarter eventually.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 27,
-     "kind": "npc",
-     "npc": "Xilonen Velgarrith",
-     "text": "That will be your next test.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 28,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "My cousin has an eye for talent, or so they say. I suppose I will see for myself soon enough.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 29,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "It seems that your efforts have earned you a position as a low ranking member of our great House Velgarrith.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 30,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "Congratulations, you are an exile no longer.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 31,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "You will wear our colors and as such be one of our representatives, though expect no fanfare if you are to enter the city.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 32,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "Many still view ours as the Bastard House due to our dealings with foreigners.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 33,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "It is a moniker we gladly accept, given our strength.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 34,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "Now, I can provide you with instruction if you wish, else you are free to make your own profits for a time.",
-     "part": "Part 1 - Req. Lvl 2"
-    },
-    {
-     "n": 35,
-     "kind": "npc",
-     "npc": "Vhalrek Velgarrith",
-     "text": "We will have use of you should you stay alive long enough.",
-     "part": "Part 1 - Req. Lvl 2"
-    }
-   ],
-   "fetched": "2026-10-20",
+   "lines": [],
+   "fetched": "2026-10-22",
    "npcs": [
-    "Cook Vashuk",
-    "Kulzzara",
-    "Supplier Jul",
-    "Vhalrek Velgarrith",
+    "Cook Vashuk;Kulzzara; Supplier Jul;juvenile shark;Vhalrek Velgarrith",
     "Xilonen Velgarrith"
    ]
   },
@@ -9721,57 +9523,50 @@
    "url": "https://monstersandmemories.miraheze.org/wiki/House_Xal%27tharn_%28Quest%29",
    "zone": "Ail'Vorith",
    "giver": "Klavel Sul",
-   "min_level": "8+",
+   "min_level": "8",
    "classes": "INQ MNK",
    "related": [
-    "a separated skull"
+    "a separated skull;a spectral remnant"
    ],
-   "rewards": [],
+   "rewards": [
+    "Experience",
+    "Inquisitor - Dull Iron Cuirass",
+    "Monks - Simple Chestwrap",
+    "Access to the city"
+   ],
    "steps": [
     {
      "n": 2,
-     "text": "The mobs needed for the next step are levels 8-11",
-     "part": "Part 1 - Lvl 8+",
-     "items": []
-    },
-    {
-     "n": 5,
-     "text": "For Inquisitor",
-     "part": "Part 2 - level 13+",
-     "items": []
-    },
-    {
-     "n": 6,
      "text": "Until you are level 13, Klavel Sul will only respond to you in the following manner",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 7,
+     "n": 3,
      "text": "Once you are level 13, he will give you the option to further serve the queen.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 8,
+     "n": 4,
      "text": "Klavel will provide you with a summons that you can deliver to Lady Miniel.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 9,
+     "n": 5,
      "text": "Once you give her the summons, she will provide you with a new duty.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 10,
+     "n": 6,
      "text": "The exiles can be found past the waterfall where snakes gather, on the bottom \"floor\", past the invisible hired Thug. You have to kill them to get 3 sigils of a lesser house. They are Sigil of a Lesser House (Unknown), Sigil of a Lesser House (Silver), and Sigil of a Lesser House (Gold). You can only have 1 of each, so you can loot them until you have all three. You can kill any exile to get a chance at a sigil drop, but Gullah Qtal'gar is a named that can only spawn in the place of the exiles on the bottom \"floor\" of that specific area behind the hired thug, so kill them all until he spawns and kill Gullah for Gullach's Head. Return the sigils and the head to Miniel Ubast.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 13,
+     "n": 9,
      "text": "She will then nod, affirming your good work. If you hail her after receiving the Iron Render, she will say the following",
      "part": "Part 2 - level 13+",
      "items": []
@@ -9789,70 +9584,40 @@
     {
      "n": 2,
      "kind": "step",
-     "text": "The mobs needed for the next step are levels 8-11",
-     "part": "Part 1 - Lvl 8+",
-     "items": []
-    },
-    {
-     "n": 3,
-     "kind": "receive",
-     "item": "Dull Iron Cuirass",
-     "qty": 1,
-     "npc": "Klavel Sul",
-     "part": "Part 1 - Lvl 8+"
-    },
-    {
-     "n": 4,
-     "kind": "receive",
-     "item": "Simple Chestwrap",
-     "qty": 1,
-     "npc": "Klavel Sul",
-     "part": "Part 1 - Lvl 8+"
-    },
-    {
-     "n": 5,
-     "kind": "step",
-     "text": "For Inquisitor",
-     "part": "Part 2 - level 13+",
-     "items": []
-    },
-    {
-     "n": 6,
-     "kind": "step",
      "text": "Until you are level 13, Klavel Sul will only respond to you in the following manner",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 7,
+     "n": 3,
      "kind": "step",
      "text": "Once you are level 13, he will give you the option to further serve the queen.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 8,
+     "n": 4,
      "kind": "step",
      "text": "Klavel will provide you with a summons that you can deliver to Lady Miniel.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 9,
+     "n": 5,
      "kind": "step",
      "text": "Once you give her the summons, she will provide you with a new duty.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 10,
+     "n": 6,
      "kind": "step",
      "text": "The exiles can be found past the waterfall where snakes gather, on the bottom \"floor\", past the invisible hired Thug. You have to kill them to get 3 sigils of a lesser house. They are Sigil of a Lesser House (Unknown), Sigil of a Lesser House (Silver), and Sigil of a Lesser House (Gold). You can only have 1 of each, so you can loot them until you have all three. You can kill any exile to get a chance at a sigil drop, but Gullah Qtal'gar is a named that can only spawn in the place of the exiles on the bottom \"floor\" of that specific area behind the hired thug, so kill them all until he spawns and kill Gullah for Gullach's Head. Return the sigils and the head to Miniel Ubast.",
      "part": "Part 2 - level 13+",
      "items": []
     },
     {
-     "n": 11,
+     "n": 7,
      "kind": "receive",
      "item": "Iron Render",
      "qty": 1,
@@ -9860,7 +9625,7 @@
      "part": "Part 2 - level 13+"
     },
     {
-     "n": 12,
+     "n": 8,
      "kind": "receive",
      "item": "Tarnished Iron Bo",
      "qty": 1,
@@ -9868,17 +9633,17 @@
      "part": "Part 2 - level 13+"
     },
     {
-     "n": 13,
+     "n": 9,
      "kind": "step",
      "text": "She will then nod, affirming your good work. If you hail her after receiving the Iron Render, she will say the following",
      "part": "Part 2 - level 13+",
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Klavel Sul",
-    "a separated skull"
+    "a separated skull;a spectral remnant"
    ]
   },
   {
@@ -9903,7 +9668,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -9920,7 +9685,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": []
   },
   {
@@ -10626,7 +10391,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -10729,7 +10494,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -10747,7 +10512,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Isrothen Vael'xirith"
    ]
@@ -10763,7 +10528,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Commander Otieno"
    ]
@@ -10781,7 +10546,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -10800,7 +10565,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Captain Harkan Saafir A landing lieutenant Tariq the Revealer",
     "Nadim Al-Saraf"
@@ -10817,7 +10582,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": []
   },
   {
@@ -10962,7 +10727,7 @@
      "part": "Part 2 - Tailoring the Robe"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mason Steinn; Layith Kharem; Guard Iskandar; Noura the Tailor; Mira Gables; Riham",
     "a wash maiden"
@@ -10981,7 +10746,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Fendris the Forsaken",
     "an undead poacher"
@@ -11000,7 +10765,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -11035,7 +10800,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Biomass",
     "Blacksmith Jerictus",
@@ -11135,7 +10900,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Nibs Mudknuckle",
     "|Quest Rewards = Sewer Sludge; Recipe: Double-Bladed Retractable Prison Shiv; Recipe: Morgurah's Mask of the Stifled Snitch; Recipe: Mudfish Wraps; Recipe: Prison Gruel; Recipe: Shale Weightstone; Recipe: Sewer Survival Salve"
@@ -11154,7 +10919,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -11283,7 +11048,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Hull Orbel"
    ]
@@ -11301,7 +11066,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Lorne Whitlock",
     "Lorne Whitlock; Wenna Thurlow"
@@ -11674,7 +11439,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Chahaya Tam",
     "Chayaha Tam"
@@ -11877,7 +11642,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -11979,7 +11744,7 @@
      ]
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -11999,7 +11764,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
@@ -12019,7 +11784,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Bones",
     "| Related Items ="
@@ -12320,7 +12085,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -12628,7 +12393,7 @@
      "part": "Part 5"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar; Lady Tabitha; Embalmer Tyriel",
@@ -12653,7 +12418,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -13168,7 +12933,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -13194,7 +12959,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -13214,7 +12979,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -13233,7 +12998,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -13324,7 +13089,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -13346,7 +13111,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -13377,7 +13142,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -13396,7 +13161,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Kalessa Velgarrith",
     "|Quest Rewards = (exp); (money:10)"
@@ -13415,7 +13180,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -14192,7 +13957,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -14459,11 +14224,68 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Fedamius Steele III",
     "Foss Dunestrider",
     "Foss Dunstrider"
+   ]
+  },
+  {
+   "title": "Repair the Mooring Post",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Repair_the_Mooring_Post",
+   "zone": "Great Cavern Sea",
+   "giver": "Jory Fennick",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "Ysmara velgarrith"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-22",
+   "npcs": [
+    "Jory Fennick",
+    "Ysmara velgarrith"
+   ]
+  },
+  {
+   "title": "Revenge for Chak'fel",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Revenge_for_Chak%27fel",
+   "zone": "",
+   "giver": "Blurgh the Blind",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "[[]]; Sethrine the Unblinking"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-22",
+   "npcs": [
+    "Blurgh the Blind",
+    "[[]]; Sethrine the Unblinking"
+   ]
+  },
+  {
+   "title": "Revenge for Gizor",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Revenge_for_Gizor",
+   "zone": "",
+   "giver": "Blurgh the Blind",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "[[]]; Forager Davra"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-10-22",
+   "npcs": [
+    "Blurgh the Blind",
+    "[[]]; Forager Davra"
    ]
   },
   {
@@ -14479,7 +14301,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Blurgh the Blind",
     "Wembit the Wandmaker; Wikket Two-Wands"
@@ -14789,7 +14611,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -15484,7 +15306,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -16460,7 +16282,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -16492,7 +16314,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "| Related Items =",
     "| Start Zone = underdocks"
@@ -16552,7 +16374,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -16884,7 +16706,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -17170,7 +16992,7 @@
      "part": "Part 4 - Req. Lvl 13"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Father Fyod",
     "Father General Lorak",
@@ -17290,7 +17112,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Varilis Thornvine",
     "a mischievous faerie",
@@ -17314,7 +17136,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -17337,7 +17159,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Picci Manifold"
    ]
@@ -17355,7 +17177,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -17401,7 +17223,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -17418,7 +17240,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "a master blacksmith"
    ]
@@ -17963,7 +17785,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -17984,7 +17806,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Glaeron Kes'tel",
     "a Deepgulp warrior"
@@ -18003,7 +17825,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Sereth Vael'xirith"
    ]
@@ -18048,7 +17870,7 @@
      "part": "Return the Package to Senior Apprentice Syrsil"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Senior Apprentice Syrsil"
    ]
@@ -18066,7 +17888,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -18087,7 +17909,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -18106,7 +17928,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Chaplain Cranely"
    ]
@@ -18246,7 +18068,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -18268,7 +18090,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -18287,7 +18109,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18326,13 +18148,13 @@
     {
      "n": 4,
      "text": "Make sure you are wearing the Ashira Pack Ring before you hand in the ears and heads.",
-     "part": "Part 4 - Fallen Pass - Req Lvl 19+",
+     "part": "Part 5 - Fallen Pass - Req Lvl 19+",
      "items": []
     },
     {
      "n": 5,
      "text": "Fallen Pass zone is level 19+.",
-     "part": "Part 4 - Fallen Pass - Req Lvl 19+",
+     "part": "Part 5 - Fallen Pass - Req Lvl 19+",
      "items": []
     }
    ],
@@ -18362,18 +18184,18 @@
      "n": 4,
      "kind": "step",
      "text": "Make sure you are wearing the Ashira Pack Ring before you hand in the ears and heads.",
-     "part": "Part 4 - Fallen Pass - Req Lvl 19+",
+     "part": "Part 5 - Fallen Pass - Req Lvl 19+",
      "items": []
     },
     {
      "n": 5,
      "kind": "step",
      "text": "Fallen Pass zone is level 19+.",
-     "part": "Part 4 - Fallen Pass - Req Lvl 19+",
+     "part": "Part 5 - Fallen Pass - Req Lvl 19+",
      "items": []
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Mayana",
     "an ashira shapeshifter"
@@ -18392,7 +18214,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18476,7 +18298,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18495,7 +18317,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -19723,7 +19545,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19750,7 +19572,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -19822,7 +19644,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -20000,7 +19822,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Draznax",
     "Warerats in Underdocks"
@@ -20019,7 +19841,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -20795,7 +20617,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -21231,7 +21053,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Elara Venn",
     "Marshal Harding",
@@ -21366,7 +21188,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-10-20",
+   "fetched": "2026-10-22",
    "npcs": [
     "Matheus Griswald",
     "|Minimum Level = 1"
