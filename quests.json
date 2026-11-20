@@ -1,6 +1,6 @@
 {
  "source": "https://monstersandmemories.miraheze.org/wiki/Category:Quests",
- "fetched": "2026-11-18",
+ "fetched": "2026-11-20",
  "quests": [
   {
    "title": "A Letter for Munir Halabi",
@@ -16,7 +16,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Munir Halabi",
     "Quessith Velgarrith"
@@ -35,7 +35,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mierra Willowshade; a wasp drone; Guard Halfsies; Chef Violyn"
    ]
@@ -53,7 +53,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Night Terror",
     "Witcher Sayyaad"
@@ -72,7 +72,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Klavel Sul",
     "Various"
@@ -130,7 +130,7 @@
      "part": "The Houses"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Toilmaster Verith",
     "Toilmistress Rallvessa"
@@ -147,7 +147,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": []
   },
   {
@@ -300,7 +300,7 @@
      "part": "Part 4 - Req. lvl 15+ - The Mysterious Robed Figure"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Captain Keyaryn Thornshade",
     "Commander Elydris Stormbough"
@@ -598,7 +598,7 @@
      "part": "Part 2 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Fedamius Steele III",
     "Garrison Quartermaster",
@@ -627,7 +627,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Red Mantle Quartermaster",
     "Red Mantle Quartermaster; Mayana; Jumthem"
@@ -646,7 +646,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Old Rankle",
     "an ashira scout"
@@ -665,7 +665,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Quartermaster Obaid;an ashira warrior",
     "Watch Captain Badawi"
@@ -684,7 +684,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Flerri Dawntender the Tailor",
     "Pine Brightreed"
@@ -1071,7 +1071,7 @@
      "part": "Part 2 - Req. Lvl 2 to start"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Assistant Researcher Farland",
     "Cordellius Hollmion",
@@ -1095,7 +1095,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Riff",
     "| Quest Rewards ="
@@ -1922,7 +1922,7 @@
      "part": "Part 6 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Aerin Mossfang",
     "Captain Relgen Greenblade",
@@ -2487,7 +2487,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Kilia",
     "Leila Ghasem",
@@ -2508,7 +2508,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Drelith Vael'xirith"
    ]
@@ -2526,7 +2526,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Moon Dances",
     "N/A"
@@ -2545,7 +2545,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Squire Ryland",
     "| Related Items = Bone Chips"
@@ -2564,10 +2564,29 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Bree Weatherstoll",
     "|Quest Rewards ="
+   ]
+  },
+  {
+   "title": "Bounty Hunting for House Unheard",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Bounty_Hunting_for_House_Unheard",
+   "zone": "",
+   "giver": "Reviver Vlarek; an Unheard bounty hunter",
+   "min_level": "1",
+   "classes": "All",
+   "related": [
+    "|Quest Rewards = Sewer Sludge"
+   ],
+   "rewards": [],
+   "steps": [],
+   "lines": [],
+   "fetched": "2026-11-20",
+   "npcs": [
+    "Reviver Vlarek; an Unheard bounty hunter",
+    "|Quest Rewards = Sewer Sludge"
    ]
   },
   {
@@ -2586,7 +2605,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": []
   },
   {
@@ -2602,7 +2621,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Bones",
     "Cordellius Hollmion"
@@ -2650,7 +2669,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Jabir Ilhamar",
     "a willowisp"
@@ -2669,7 +2688,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mercenary Captain Hulg",
     "Nerguk"
@@ -2688,7 +2707,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Ysmara velgarrith"
    ]
@@ -2706,7 +2725,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Cheikho",
     "Chompers"
@@ -2862,7 +2881,7 @@
      "part": "Cinder Beetle Breastplate"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Hult Beetlewrangler",
     "a master blacksmith"
@@ -3211,7 +3230,7 @@
      "part": "Part 2 Millicent's List"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Dalinder Grammanoot",
     "Jiselle Heyley",
@@ -3673,7 +3692,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Lady Tabitha",
     "Sister Marwen",
@@ -3694,7 +3713,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "a shifty gnome",
     "an ashira scout; a rotting skeleton"
@@ -3764,7 +3783,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Maude Astarace",
     "| Related Items ="
@@ -3783,7 +3802,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "A Fellstone warrior",
     "Wyrdguard Oakenpine"
@@ -3802,7 +3821,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Drowned Zombies on Cube",
     "Maren Pike"
@@ -3821,7 +3840,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Njau Hansou",
     "a cultist"
@@ -3840,7 +3859,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Captain Harkan Saafir",
     "a landing lieutenant"
@@ -3859,7 +3878,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Researcher Fairgrove",
     "a Fellstone scout"
@@ -3924,7 +3943,7 @@
      ]
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elara Venn",
     "Traven Keldress"
@@ -3943,7 +3962,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Baewyn Mossfang",
     "a rabid wolf"
@@ -3964,7 +3983,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Foreman Stonehammer",
     "Taskmaster Feeka",
@@ -5487,7 +5506,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Almina Weepingwind",
     "Commander Elydris Stormbough",
@@ -5788,7 +5807,7 @@
      "part": "Part 3 - Req. Lvl 15"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Aaliyah",
     "Almina",
@@ -6259,7 +6278,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "BBrugg Mulcher",
     "Brugg Mulcher",
@@ -6285,7 +6304,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Tenebrim Tam",
     "| Related Items ="
@@ -7077,7 +7096,7 @@
      "part": "Part 2b - Req. Lvl 1 (Vauquelin path)"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Bieito Brightsmile",
     "Jaakima",
@@ -7112,7 +7131,7 @@
      "part": "Part 1"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Head Researcher Aashir",
     "a cultist"
@@ -7138,7 +7157,7 @@
      "part": "Getting the Shawl"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Fariha bint Nizar"
    ]
@@ -7165,7 +7184,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Commander Elydris Stormbough",
     "Dalinder Grammanoot",
@@ -7558,7 +7577,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elrind Steele",
     "Fedamius Steel III",
@@ -7594,7 +7613,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Delilah"
    ]
@@ -7612,7 +7631,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "?",
     "Foreman Stonehammer"
@@ -7975,7 +7994,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Cheikho",
     "Fizzle Screwtape",
@@ -8029,7 +8048,7 @@
      "part": "Fungal Boots"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Leatherworker Vex",
     "a cave myconid"
@@ -8124,7 +8143,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Barkeep Glior",
     "Crown Duval",
@@ -8147,7 +8166,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Lilac Latespring",
     "Scout Brightleaf",
@@ -8440,7 +8459,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Barkeeper Tull",
     "Chef Brigit",
@@ -8461,7 +8480,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Halveth Velgarrith",
     "a goblin stone-sorter"
@@ -8513,10 +8532,43 @@
      "part": "Green Drakeling Scale Boots"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Takalea Scaletender",
     "a green drakeling"
+   ]
+  },
+  {
+   "title": "Grimtide Goblin Ears",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Grimtide_Goblin_Ears",
+   "zone": "Shallow Shoals",
+   "giver": "",
+   "min_level": "",
+   "classes": "ALL",
+   "related": [
+    "| Related Items ="
+   ],
+   "rewards": [],
+   "steps": [
+    {
+     "n": 1,
+     "text": "On completion",
+     "part": "",
+     "items": []
+    }
+   ],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "step",
+     "text": "On completion",
+     "part": "",
+     "items": []
+    }
+   ],
+   "fetched": "2026-11-20",
+   "npcs": [
+    "| Related Items ="
    ]
   },
   {
@@ -8532,7 +8584,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Detective Brunsworth",
     "Reeve Thurston Winter"
@@ -8551,7 +8603,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Foreman Stonehammer",
     "a cinder worker"
@@ -8570,7 +8622,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Captain Hale",
     "N/A"
@@ -8589,7 +8641,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Gatekeeper Nusder",
     "a razorwing runt"
@@ -8608,7 +8660,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Calethra Ish"
    ]
@@ -8672,7 +8724,7 @@
      "part": "Goblin Samples"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Zalethra Drezzorith",
     "an angry cultist"
@@ -8758,7 +8810,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "A spirals deepgnome researcher;Ailis Hal'arketh;Vhaleth Hal'kareth",
     "Myal Vehear"
@@ -8783,7 +8835,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Aleyz Ith'vayen;a cave myconid;an enraged elemental;Jerek D'shadow",
     "Amarah Ith'vayen"
@@ -8833,7 +8885,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Laren Drin'dar",
     "a Deepgulp runt"
@@ -9263,7 +9315,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Vaslir Naiyth",
     "Vaslir Vharkith; Laeran Birchshade; Vaslir Maryn; Vaslir Kiannes; Nyxia Ak'kin; Mournful Outcast; Miral the Dark Elf; Freysia Riftrend; Belot; Senior Apprentice Syrsil"
@@ -9282,7 +9334,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Apprentice Esveth",
     "| Related Items ="
@@ -9444,7 +9496,7 @@
      "part": "Return the Recovered Items (Unconfirmed)"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Blacksmith Zorvek",
     "Vhalrek Velgarrith",
@@ -9574,7 +9626,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Klavel Sul",
     "a separated skull;a spectral remnant"
@@ -9602,7 +9654,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Hult Beetlewrangler",
     "a fire beetle"
@@ -9619,7 +9671,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": []
   },
   {
@@ -10325,7 +10377,7 @@
      "part": "Part 3"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Inquisitor Selpha",
     "Jaffar Jhaym",
@@ -10428,7 +10480,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Rais Alyssum"
    ]
@@ -10446,7 +10498,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Isrothen Vael'xirith"
    ]
@@ -10462,7 +10514,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Commander Otieno"
    ]
@@ -10480,7 +10532,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mar'Tem",
     "Tora'Galdo"
@@ -10499,7 +10551,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Captain Harkan Saafir",
     "Nadim Al-Saraf"
@@ -10516,7 +10568,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": []
   },
   {
@@ -10661,7 +10713,7 @@
      "part": "Part 2 - Tailoring the Robe"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mason Steinn; Layith Kharem; Guard Iskandar; Noura the Tailor; Mira Gables; Riham",
     "a wash maiden"
@@ -10680,7 +10732,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Fendris the Forsaken",
     "an undead poacher"
@@ -10699,7 +10751,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Little Tamsah",
     "Old Mother Roshan"
@@ -10718,7 +10770,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Biomass; Blacksmith Jerictus; Cedrius the Cutter; Dakkin the Diabolical; Davosin the Domineering; Elixa the Experimentalist; Enthraller Gnorah; Ferg the Filthy; Flashfreeze Fraegra; Flavic the Fisher; Forager Davra; Forager Frandrah; Gelmother Jiggol; Gorgeous; Gurm the Half-Woken; King Jekom the Ancient; Knuttoc Grobbins; Mother Gummer; Mucky Morgurah; Percy the Purse; Pragrok the Pickaxe; Reviver Vlarek; Sarveth the Unheard; Sethrine the Unblinking; Skizik the Schemer; Tormentor Tizzix; Underboss Vekrizin; Wikket Two-Wands; Willie the Watcher",
     "Receptionist Naleth'ra"
@@ -10802,7 +10854,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Nibs Mudknuckle",
     "|Quest Rewards = Sewer Sludge; Recipe: Double-Bladed Retractable Prison Shiv; Recipe: Morgurah's Mask of the Stifled Snitch; Recipe: Mudfish Wraps; Recipe: Prison Gruel; Recipe: Shale Weightstone; Recipe: Sewer Survival Salve; Recipe: Boots of the Sewer Sifter; Recipe: Blind Midden Barrier"
@@ -10821,7 +10873,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mierra Willowshade",
     "a wasp drone; a wasp worker"
@@ -10950,7 +11002,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Hull Orbel"
    ]
@@ -10968,7 +11020,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Lorne Whitlock",
     "Lorne Whitlock; Wenna Thurlow"
@@ -11341,7 +11393,7 @@
      "part": "Part 3 : Third Degree - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Chahaya Tam",
     "Chayaha Tam"
@@ -11544,7 +11596,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Apprentice Millen",
     "Ebba Dungor",
@@ -11646,7 +11698,7 @@
      ]
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -11666,11 +11718,70 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Sporeweaver Underveil",
     "a beguiled bluecap",
     "a beguiled water elemental"
+   ]
+  },
+  {
+   "title": "Myconid Parts Bounty (Underdocks)",
+   "url": "https://monstersandmemories.miraheze.org/wiki/Myconid_Parts_Bounty_%28Underdocks%29",
+   "zone": "Underdocks",
+   "giver": "",
+   "min_level": "1",
+   "classes": "ALL",
+   "related": [
+    "Elara Venn"
+   ],
+   "rewards": [],
+   "steps": [
+    {
+     "n": 1,
+     "text": "4 Myconid Parts",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    },
+    {
+     "n": 2,
+     "text": "same building",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    },
+    {
+     "n": 3,
+     "text": "On completion",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    }
+   ],
+   "lines": [
+    {
+     "n": 1,
+     "kind": "step",
+     "text": "4 Myconid Parts",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    },
+    {
+     "n": 2,
+     "kind": "step",
+     "text": "same building",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    },
+    {
+     "n": 3,
+     "kind": "step",
+     "text": "On completion",
+     "part": "Myconid Parts turn-in and payment",
+     "items": []
+    }
+   ],
+   "fetched": "2026-11-20",
+   "npcs": [
+    "Elara Venn"
    ]
   },
   {
@@ -11686,7 +11797,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Bones",
     "| Related Items ="
@@ -11987,7 +12098,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Buckmarr Gorstagg",
     "Marvion Hallows",
@@ -12295,7 +12406,7 @@
      "part": "Part 5"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Abbot Harrow",
     "Abbot Harrow; Acolyte Vryar; Lady Tabitha; Embalmer Tyriel",
@@ -12320,7 +12431,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Gatekeeper Nusder",
     "Liyna Esueiruc",
@@ -12835,7 +12946,7 @@
      "part": "Part 2"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Halrinn Grimsul",
     "Thibald Burlond",
@@ -12861,7 +12972,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Ashir the Protector",
     "Brother Luka",
@@ -12881,7 +12992,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "a wise elder",
     "|Quest Rewards = Wooden Bow; Wooden Claw; Wooden Club; Wooden Dagger; Wooden Scythe; Wooden Sword"
@@ -12900,7 +13011,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Fadila",
     "Farmer Ammar"
@@ -12991,7 +13102,7 @@
      "part": "Part 2 - The one that got away"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Corporal Theodora",
     "Lieutenant Jarovik Holt"
@@ -13013,7 +13124,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "A poacher bruiser",
     "A poacher herbalist",
@@ -13044,7 +13155,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Gazer",
     "Veylith the Frosttongue"
@@ -13063,7 +13174,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Kalessa Velgarrith",
     "|Quest Rewards = (exp); (money:10)"
@@ -13082,7 +13193,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Tust Brookturner",
     "| Related Items ="
@@ -13859,7 +13970,7 @@
      "part": "Part 4 - Req. Lvl 8"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Captain Greenblade",
     "Captain Relgan Greenblade",
@@ -14399,7 +14510,7 @@
      "part": "Part 3 - Req. Level ?? (Got it at 8, could be earlier)"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Assistant Researcher Nimvari",
     "Fedamius Steele III",
@@ -14423,7 +14534,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Commander Otieno"
    ]
@@ -14441,7 +14552,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Jory Fennick",
     "Ysmara velgarrith"
@@ -14469,7 +14580,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Blurgh the Blind",
     "[[]]; Sethrine the Unblinking"
@@ -14497,7 +14608,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Blurgh the Blind",
     "[[]]; Forager Davra"
@@ -14516,7 +14627,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Blurgh the Blind",
     "Wembit the Wandmaker; Wikket Two-Wands"
@@ -14826,7 +14937,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Corporal Theodora",
     "Karif Jamah",
@@ -15521,7 +15632,7 @@
      "part": "Part 4c - The Plan"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elyndiir Nightsade",
     "Elyndiir Nightshade",
@@ -16497,7 +16608,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Albrecht",
     "Captain Eilionoir",
@@ -16529,7 +16640,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "| Related Items =",
     "| Start Zone = underdocks"
@@ -16589,7 +16700,7 @@
      "part": "Scarab Shell Shield"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Hult Beetlewrangler",
     "a dunes scarab"
@@ -16921,7 +17032,7 @@
      "part": "Part 4 - Req. Lvl none(?) just a turn in for the tunic reward"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Brazzic Durraim",
     "Brazzic Durraim Noel Klares",
@@ -17207,7 +17318,7 @@
      "part": "Part 4 - Req. Lvl 13"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Father Fyod",
     "Father General Lorak",
@@ -17327,7 +17438,7 @@
      "part": "Part 6 -"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Varilis Thornvine",
     "a mischievous faerie",
@@ -17351,7 +17462,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Errol Shrewtender",
     "| Related Items = Bone Chips"
@@ -17374,7 +17485,7 @@
    ],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Picci Manifold"
    ]
@@ -17392,7 +17503,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Polietta Two-tone",
     "a black widow; an elder widow"
@@ -17409,7 +17520,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Warden Neh'Ma"
    ]
@@ -17454,7 +17565,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "a priest of the Matswar",
     "a rotting skeleton"
@@ -17471,7 +17582,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "a master blacksmith"
    ]
@@ -18016,7 +18127,7 @@
      "part": "Part 2 - Req. Lvl 5"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Buckmarr Gorstagg",
     "Jaffar Jhaym",
@@ -18037,7 +18148,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Glaeron Kes'tel",
     "a Deepgulp warrior"
@@ -18056,7 +18167,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Sereth Vael'xirith"
    ]
@@ -18074,7 +18185,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Quilla Dorn",
     "Quilla Dorn; a mold beetle"
@@ -18247,7 +18358,7 @@
      "part": "Return the Package to Senior Apprentice Syrsil"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Senior Apprentice Syrsil",
     "Senior Apprentice Syrsil; Vaslir Vharkith; Belot; Freysia Riftrend"
@@ -18266,7 +18377,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Thanetal",
     "Unknown"
@@ -18287,7 +18398,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Gemfog",
     "Jorvan Ironfist",
@@ -18306,7 +18417,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Chaplain Cranely"
    ]
@@ -18446,7 +18557,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "A Deepcut overseer",
     "Elara Venn",
@@ -18468,7 +18579,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Everett Graves",
     "an escaped minion"
@@ -18487,7 +18598,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Guard Darek",
     "| Related Items = Small Storage Box Vial of Flammable Oil Box of Oils"
@@ -18573,7 +18684,7 @@
      "items": []
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Mayana",
     "an ashira shapeshifter"
@@ -18592,7 +18703,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elara Venn",
     "Mikra Velrane"
@@ -18676,7 +18787,7 @@
      "part": "Part 3 - Math? I hate math"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Sproggets Bedsprings",
     "Tig Pebblebank"
@@ -18695,7 +18806,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Squeaker",
     "| Related Items = Bloody Finger"
@@ -19923,7 +20034,7 @@
      "part": "Part 3 for Beastmaster/Fighter - More business with the Deepcut - Req. Level 8+"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Blacksmith Hargrul",
     "Elara Venn",
@@ -19950,7 +20061,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Layla Faraj",
     "Nerida Thinblade",
@@ -20022,7 +20133,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Ayip",
     "Guard Atep",
@@ -20040,7 +20151,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Warden Neh'Ma"
    ]
@@ -20216,7 +20327,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Draznax",
     "Warerats in Underdocks"
@@ -20235,7 +20346,7 @@
    "rewards": [],
    "steps": [],
    "lines": [],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Poacher Wilna",
     "Tessa Kentwell"
@@ -21011,7 +21122,7 @@
      "part": "Part 3 - Req. Lvl TBD (above 16)"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Adimah Starseeker",
     "Domas Starseeker",
@@ -21447,7 +21558,7 @@
      "part": "Part 1 - Req. Lvl 1"
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Elara Venn",
     "Marshal Harding",
@@ -21584,7 +21695,7 @@
      "part": ""
     }
    ],
-   "fetched": "2026-11-18",
+   "fetched": "2026-11-20",
    "npcs": [
     "Forge Master Durthir; Tailor Thaddeus; Leathersmith Visali",
     "Matheus Griswald",
